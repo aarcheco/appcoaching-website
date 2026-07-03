@@ -7,47 +7,47 @@ export default function AppCoaching() {
   const vennSections = {
     finance: {
       title: 'Finance Coaching',
-      details: 'Personal & business finance. Profit margins, pricing, P&L, cash flow, debt paydown.'
+      details: '• Personal & business finance strategy\n• Profit margins, pricing, P&L optimization\n• Cash flow clarity & debt paydown plans\n• Financial benchmarking & analysis\n• Tax-efficient structures & planning'
     },
     excel: {
       title: 'Excel Coaching',
-      details: 'Data analysis, bespoke modeling, dashboards. How AI reads and outputs Excel.'
+      details: '• Data analysis & visualization\n• Custom modeling & dashboards\n• Pivot tables & advanced formulas\n• Automating repetitive tasks\n• Building spreadsheet systems that scale'
     },
     ai: {
       title: 'AI Coaching',
-      details: 'Master prompting. Agentic AI. Build custom apps—solo or co-build with you.'
+      details: '• Master prompting & AI workflows\n• Agentic AI & automation\n• Build custom AI tools (solo or co-build)\n• Integrate AI into existing processes\n• AI adoption strategy & implementation'
     },
     operations: {
       title: 'Operations & Workflow',
-      details: 'Process automation, CRM integration, workflow streamlining, task automation.'
+      details: '• Process automation & optimization\n• CRM integration & data management\n• Workflow streamlining & task automation\n• Operational dashboards\n• Systems thinking & efficiency'
     },
     financeExcel: {
       title: 'Finance + Excel',
-      details: 'Financial models, budgets, forecasting, analysis. Tools to understand your numbers.'
+      details: '• Financial models that tell your story\n• Budget & forecast automation\n• P&L analysis & reporting systems\n• Cash flow dashboards\n• Custom business intelligence'
     },
     financeAI: {
       title: 'Finance + AI',
-      details: 'AI-powered financial insights, automated analysis, faster decision-making.'
+      details: '• AI-powered financial analysis\n• Automated reporting & insights\n• Pattern detection in financial data\n• Faster decision-making tools\n• Predictive financial planning'
     },
     excelAI: {
       title: 'Excel + AI',
-      details: 'AI enhancing Excel workflows, intelligent data processing, next-level analysis.'
+      details: '• AI enhancing Excel workflows\n• Intelligent data processing\n• Next-level analysis & visualization\n• AI-powered formula generation\n• Workflow automation in Excel'
     },
     financeOps: {
       title: 'Finance + Operations',
-      details: 'Profitability through efficiency. Cost control, utilization, margin optimization.'
+      details: '• Profitability through efficiency\n• Cost control & margin optimization\n• Utilization tracking & improvement\n• Financial metrics for operations\n• Revenue per resource analysis'
     },
     excelOps: {
       title: 'Excel + Operations',
-      details: 'Process dashboards, workflow metrics, data-driven operations management.'
+      details: '• Process dashboards & monitoring\n• Workflow metrics & KPIs\n• Data-driven operations management\n• Capacity planning & resource tracking\n• Operational visibility systems'
     },
     aiOps: {
       title: 'AI + Operations',
-      details: 'Automation, workflow intelligence, AI-powered process optimization.'
+      details: '• Automation of manual processes\n• Workflow intelligence & optimization\n• AI-powered process improvement\n• Task automation & orchestration\n• Operational AI strategy'
     },
     center: {
       title: 'Unlock Hidden Potential',
-      details: 'Where all four converge. Custom solutions combining Finance, Excel, AI, and Operations.'
+      details: '• Custom solutions combining all four\n• Finance + Excel + AI + Operations\n• Your unique business problems solved\n• Co-built implementations\n• Results-driven approach'
     }
   };
 
@@ -56,44 +56,50 @@ export default function AppCoaching() {
     {
       id: 'excel',
       title: 'Excel Learners',
-      subtitle: 'No more VLOOKUP anxiety',
-      description: 'Master formulas, pivot tables, dashboards. Stop using Excel like a typewriter—start using it like the superpower it is. From "=SUM(A1:A2)" to custom dashboards that tell your story.',
-      icon: '📊'
+      subtitle: 'No more spreadsheet anxiety',
+      description: '• Formulas, pivot tables, dashboards\n• Stop using Excel like a typewriter\n• Build systems that scale\n• Data visualization & analysis\n• Automation of manual tasks',
+      icon: '📊',
+      cta: '=contact(me)'
     },
     {
       id: 'finance-personal',
       title: 'Personal Finance Coaching',
       subtitle: 'Your money, decoded',
-      description: 'Stop guessing. Build your real financial picture: budgeting that sticks, cash flow clarity, debt strategy that works. Know where every dollar goes and why.',
-      icon: '💰'
+      description: '• Build your real financial picture\n• Budgeting that sticks\n• Cash flow clarity\n• Debt strategy that works\n• Know where every dollar goes',
+      icon: '💰',
+      cta: 'show-me-the-$'
     },
     {
       id: 'finance-business',
       title: 'Business Finance Coaching',
       subtitle: 'Profit isn\'t complicated',
-      description: 'Custom P&L dashboards, cash flow strategy, margin optimization. See what\'s really happening in your business—not just what Xero shows.',
-      icon: '📈'
+      description: '• Custom P&L dashboards\n• Cash flow strategy & forecasting\n• Margin optimization\n• Financial benchmarking\n• See what\'s really happening',
+      icon: '📈',
+      cta: 'reveal-profit()'
     },
     {
       id: 'ai-personal',
       title: 'AI for Personal Use',
-      subtitle: 'AI without the AI-hype',
-      description: 'Master prompting, automate the boring stuff, build tools that actually work for you. Use AI to save hours every week—without the buzzwords.',
-      icon: '🤖'
+      subtitle: 'AI without the hype',
+      description: '• Master prompting workflows\n• Automate the boring stuff\n• Build tools that work for you\n• Save hours every week\n• No buzzwords, just results',
+      icon: '🤖',
+      cta: 'chat-gpt-me'
     },
     {
       id: 'ai-business',
       title: 'AI for Business',
       subtitle: 'The ROI is real',
-      description: 'AI strategy, workflow automation, custom AI apps. Solve your actual problems—not the problems AI vendors want you to have.',
-      icon: '⚙️'
+      description: '• AI strategy & implementation\n• Workflow automation\n• Custom AI apps\n• Solve your actual problems\n• Not vendor problems',
+      icon: '⚙️',
+      cta: 'build-with-ai()'
     },
     {
       id: 'career',
       title: 'Career Coaching',
-      subtitle: 'Your next move (on us)',
-      description: 'LinkedIn makeover, interview prep, career navigation. FREE for engaged clients—because building your network matters.',
+      subtitle: 'Your next move (free)',
+      description: '• LinkedIn profile optimization\n• Interview prep & negotiation\n• Career navigation & strategy\n• Network building\n• FREE for engaged clients',
       icon: '🎯',
+      cta: 'level-up()',
       isFree: true
     }
   ];
@@ -204,12 +210,13 @@ export default function AppCoaching() {
           borderRadius: '12px',
           maxWidth: '600px',
           margin: '2rem auto 0',
-          animation: 'fadeIn 0.3s ease'
+          animation: 'fadeIn 0.3s ease',
+          textAlign: 'left'
         }}>
           <h3 style={{
             fontSize: '1.2rem',
             color: colors.darkNavy,
-            marginBottom: '0.5rem',
+            marginBottom: '1rem',
             fontFamily: "'Poppins', sans-serif",
             fontWeight: '700'
           }}>
@@ -218,8 +225,9 @@ export default function AppCoaching() {
           <p style={{
             fontSize: '0.95rem',
             color: colors.textMuted,
-            lineHeight: '1.6',
-            margin: 0
+            lineHeight: '1.8',
+            margin: 0,
+            whiteSpace: 'pre-line'
           }}>
             {vennSections[hoveredSection].details}
           </p>
@@ -307,6 +315,73 @@ export default function AppCoaching() {
 
       <VennDiagram />
 
+      <section style={{ padding: '4rem 2rem', textAlign: 'center', background: 'white', maxWidth: '900px', margin: '0 auto' }}>
+        <h2 style={{
+          fontSize: '2rem',
+          color: colors.darkNavy,
+          marginBottom: '1.5rem',
+          fontFamily: "'Poppins', sans-serif",
+          fontWeight: '800'
+        }}>
+          Who's Your Study Buddy?
+        </h2>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr',
+          gap: '2rem',
+          alignItems: 'start',
+          marginTop: '2rem'
+        }}>
+          <div style={{ textAlign: 'center' }}>
+            <div style={{ width: '180px', height: '180px', background: `linear-gradient(135deg, rgba(0, 255, 65, 0.2) 0%, rgba(255, 217, 61, 0.2) 100%)`, border: `2px dashed ${colors.limeGreen}`, borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: colors.navy, fontWeight: '600', fontSize: '0.85rem', textAlign: 'center', padding: '1rem', margin: '0 auto' }}>
+              Aaron's photo
+            </div>
+          </div>
+          <div style={{ textAlign: 'left' }}>
+            <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '1rem' }}>
+              I'm a qualified accountant with years in audit, finance ops, and strategic planning. Excel was my superpower—until AI changed everything.
+            </p>
+            <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '1rem' }}>
+              I realized the opportunity wasn't defending Excel—it was helping people understand how AI does things faster. <span style={{ color: colors.limeGreen, fontWeight: '700' }}>That's when AppCoaching was born.</span>
+            </p>
+            <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8' }}>
+              I'm not your guru. <span style={{ color: colors.limeGreen, fontWeight: '700' }}>I'm your study buddy</span> who actually knows the answer. Real problems. Real solutions. No buzzwords.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ padding: '4rem 2rem', textAlign: 'center', background: colors.offWhite, maxWidth: '900px', margin: '0 auto' }}>
+        <h2 style={{
+          fontSize: '2rem',
+          color: colors.darkNavy,
+          marginBottom: '1.5rem',
+          fontFamily: "'Poppins', sans-serif",
+          fontWeight: '800'
+        }}>
+          Ready to Unlock Your Potential?
+        </h2>
+        <p style={{ fontSize: '1rem', color: colors.textMuted, marginBottom: '2rem', maxWidth: '600px', margin: '0 auto 2rem' }}>
+          Book a free 15-minute discovery call. Let's talk about your goals and how we can work together.
+        </p>
+        <a href="https://cal.com/app-coaching-xcgvda" target="_blank" rel="noopener noreferrer" style={{
+          background: colors.limeGreen,
+          color: colors.darkNavy,
+          border: 'none',
+          padding: '1rem 2.5rem',
+          fontSize: '1rem',
+          fontWeight: '700',
+          borderRadius: '8px',
+          cursor: 'pointer',
+          fontFamily: "'Poppins', sans-serif",
+          textDecoration: 'none',
+          display: 'inline-block',
+          marginBottom: '2rem'
+        }}>
+          BOOK DISCOVERY CALL →
+        </a>
+      </section>
+
       <section style={{ padding: '3rem 2rem', textAlign: 'center', background: colors.offWhite }}>
         <p style={{ color: colors.textMuted, fontSize: '1rem' }}>
           ✅ Step 2 Complete: Venn Diagram + How It All Connects Section
@@ -370,7 +445,7 @@ export default function AppCoaching() {
               <p style={{ fontSize: '0.95rem', color: colors.charcoal, fontWeight: '600', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif" }}>
                 {service.subtitle}
               </p>
-              <p style={{ fontSize: '0.95rem', color: colors.textMuted, lineHeight: '1.7', marginBottom: '1.5rem' }}>
+              <p style={{ fontSize: '0.9rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '1.5rem', textAlign: 'left', whiteSpace: 'pre-line' }}>
                 {service.description}
               </p>
               {service.isFree && <div style={{ background: colors.limeGreen, color: colors.darkNavy, padding: '0.5rem 1rem', borderRadius: '6px', fontWeight: '700', fontSize: '0.85rem', display: 'inline-block', marginBottom: '1.5rem' }}>FREE</div>}
@@ -389,7 +464,7 @@ export default function AppCoaching() {
                 textAlign: 'center',
                 textDecoration: 'none'
               }}>
-                BOOK A CALL
+                {service.cta.toUpperCase()}
               </a>
             </div>
           ))}
@@ -636,11 +711,24 @@ export default function AppCoaching() {
               <p style={{ fontSize: '0.9rem', color: colors.textMuted, marginBottom: '1rem' }}>
                 📅 <strong>15 minutes</strong> • FREE • All segments welcome
               </p>
-              <p style={{ fontSize: '1rem', color: colors.limeGreen, fontWeight: '700', marginBottom: '1.5rem' }}>
-                Cal.com booking link will be available soon
-              </p>
-              <p style={{ fontSize: '0.85rem', color: colors.textMuted, fontStyle: 'italic' }}>
-                In the meantime, fill out the form to the right and I'll be in touch.
+              <a href="https://cal.com/app-coaching-xcgvda" target="_blank" rel="noopener noreferrer" style={{
+                background: colors.limeGreen,
+                color: colors.darkNavy,
+                border: 'none',
+                padding: '0.85rem 2rem',
+                borderRadius: '6px',
+                fontWeight: '700',
+                fontSize: '0.9rem',
+                cursor: 'pointer',
+                fontFamily: "'Poppins', sans-serif",
+                display: 'inline-block',
+                textDecoration: 'none',
+                marginBottom: '1rem'
+              }}>
+                BOOK NOW
+              </a>
+              <p style={{ fontSize: '0.85rem', color: colors.textMuted, fontStyle: 'italic', marginTop: '1rem' }}>
+                Or fill out the form to the right and I'll be in touch.
               </p>
             </div>
           </div>

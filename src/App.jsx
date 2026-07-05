@@ -108,7 +108,7 @@ export default function AppCoaching() {
   const colors = {
     darkNavy: '#1F3A7D',
     navy: '#2A4FA8',
-    limeGreen: '#00FF41',
+    limeGreen: '#70AD47',
     warmYellow: '#FFD93D',
     mediumGreen: '#10B981',
     charcoal: '#2D3748',
@@ -116,7 +116,8 @@ export default function AppCoaching() {
     lightGray: '#f3f4f6',
     borderGray: '#e5e7eb',
     textDark: '#1a1a1a',
-    textMuted: '#666'
+    textMuted: '#666',
+    white: '#ffffff'
   };
 
   const styles = `
@@ -254,7 +255,7 @@ export default function AppCoaching() {
   const Navigation = () => (
     <nav style={{
       background: colors.darkNavy,
-      padding: '1.5rem 2rem',
+      padding: '1rem 1.5rem',
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
@@ -263,16 +264,18 @@ export default function AppCoaching() {
       top: 0,
       zIndex: 100,
       boxShadow: '0 2px 12px rgba(0,0,0,0.1)',
-      fontFamily: "'Poppins', sans-serif"
+      fontFamily: "'Poppins', sans-serif",
+      flexWrap: 'wrap',
+      gap: '1rem'
     }}>
-      <div onClick={() => setCurrentPage('home')} style={{ fontSize: '1.5rem', fontWeight: '800', letterSpacing: '0.5px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-        APP<span style={{ color: colors.limeGreen, fontSize: '1.3rem' }}>•</span>Coaching
+      <div onClick={() => setCurrentPage('home')} style={{ fontSize: '1.2rem', fontWeight: '800', letterSpacing: '0.5px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.25rem', minWidth: 'auto' }}>
+        APP<span style={{ color: colors.limeGreen, fontSize: '1rem' }}>•</span>Coaching
       </div>
-      <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-        <span onClick={() => setCurrentPage('services')} style={{ color: 'white', fontSize: '0.95rem', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>Services</span>
-        <span onClick={() => setCurrentPage('about')} style={{ color: 'white', fontSize: '0.95rem', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>About</span>
-        <span onClick={() => setCurrentPage('blog')} style={{ color: 'white', fontSize: '0.95rem', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>Blog</span>
-        <a href="https://cal.com/app-coaching-xcgvda" target="_blank" rel="noopener noreferrer" style={{ background: colors.limeGreen, color: colors.darkNavy, padding: '0.75rem 1.5rem', borderRadius: '6px', border: 'none', fontWeight: '700', fontSize: '0.9rem', cursor: 'pointer', fontFamily: "'Poppins', sans-serif", textDecoration: 'none', display: 'inline-block' }}>BOOK A CALL</a>
+      <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', flexWrap: 'wrap', justifyContent: 'flex-end', width: '100%', minHeight: '44px' }}>
+        <span onClick={() => setCurrentPage('services')} style={{ color: 'white', fontSize: '0.85rem', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>Services</span>
+        <span onClick={() => setCurrentPage('about')} style={{ color: 'white', fontSize: '0.85rem', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>About</span>
+        <span onClick={() => setCurrentPage('blog')} style={{ color: 'white', fontSize: '0.85rem', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>Blog</span>
+        <a href="https://cal.com/app-coaching-xcgvda" target="_blank" rel="noopener noreferrer" style={{ background: colors.limeGreen, color: colors.white, padding: '0.6rem 1.2rem', borderRadius: '6px', border: 'none', fontWeight: '700', fontSize: '0.8rem', cursor: 'pointer', fontFamily: "'Poppins', sans-serif", textDecoration: 'none', display: 'inline-block', whiteSpace: 'nowrap' }}>BOOK A CALL</a>
       </div>
     </nav>
   );
@@ -284,31 +287,31 @@ export default function AppCoaching() {
       <section style={{
         background: `linear-gradient(135deg, ${colors.darkNavy} 0%, ${colors.navy} 50%)`,
         color: 'white',
-        padding: '5rem 2rem',
+        padding: 'clamp(2rem, 5vh, 5rem) clamp(1rem, 4vw, 2rem)',
         textAlign: 'center',
-        minHeight: '90vh',
+        minHeight: '80vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center'
       }}>
-        <div style={{ marginBottom: '2rem', width: '220px', height: '220px', background: `linear-gradient(135deg, rgba(0, 255, 65, 0.2) 0%, rgba(255, 217, 61, 0.2) 100%)`, border: `2px dashed ${colors.limeGreen}`, borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: colors.navy, fontWeight: '600', fontSize: '0.85rem', textAlign: 'center', padding: '1rem' }}>
+        <div style={{ marginBottom: 'clamp(1rem, 3vh, 2rem)', width: 'clamp(120px, 25vw, 220px)', height: 'clamp(120px, 25vw, 220px)', background: `linear-gradient(135deg, rgba(112, 173, 71, 0.2) 0%, rgba(255, 217, 61, 0.2) 100%)`, border: `2px dashed ${colors.limeGreen}`, borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: colors.navy, fontWeight: '600', fontSize: 'clamp(0.7rem, 2vw, 0.85rem)', textAlign: 'center', padding: '1rem' }}>
           Your photo here
         </div>
 
-        <h1 style={{ fontSize: '3.5rem', marginBottom: '1.5rem', lineHeight: '1.2', fontWeight: '800', fontFamily: "'Poppins', sans-serif", maxWidth: '900px' }}>
+        <h1 style={{ fontSize: 'clamp(1.8rem, 6vw, 3.5rem)', marginBottom: 'clamp(1rem, 2vh, 1.5rem)', lineHeight: '1.2', fontWeight: '800', fontFamily: "'Poppins', sans-serif", maxWidth: '900px' }}>
           Coaching Plus Something Better:<br />
           <span style={{ color: colors.limeGreen }}>A Study Buddy.</span>
         </h1>
 
-        <p style={{ fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto 2rem', lineHeight: '1.8', opacity: '0.95', fontFamily: "'Inter', sans-serif" }}>
+        <p style={{ fontSize: 'clamp(0.95rem, 3vw, 1.2rem)', maxWidth: '800px', margin: '0 auto clamp(1rem, 2vh, 2rem)', lineHeight: '1.8', opacity: '0.95', fontFamily: "'Inter', sans-serif" }}>
           Most coaches outline options, teach you some theory and leave you to figure it out. I can take it one step further and develop and co-build solutions that help with your specific Finance, Excel, AI, operations challenges—whether <span style={{ color: colors.limeGreen, fontWeight: '700' }}>business</span> or <span style={{ color: colors.warmYellow, fontWeight: '700' }}>personal</span>.
           <br />
           <br />
           Listening to your real problems helps me learn which will ultimately help you learn through my guidance and partnership. Think of it as <span style={{ color: colors.limeGreen, fontWeight: '700' }}>co-learning</span>—or a friendly <span style={{ color: colors.limeGreen, fontWeight: '700' }}>study buddy</span> who's genuinely invested in your growth at a fraction of what premium coaching rates would cost.
         </p>
 
-        <button onClick={() => setCurrentPage('contact')} style={{ background: colors.limeGreen, color: colors.darkNavy, border: 'none', padding: '1rem 2.5rem', fontSize: '1rem', fontWeight: '700', borderRadius: '8px', cursor: 'pointer', fontFamily: "'Poppins', sans-serif" }}>
+        <button onClick={() => setCurrentPage('contact')} style={{ background: colors.limeGreen, color: colors.white, border: 'none', padding: 'clamp(0.6rem, 2vh, 1rem) clamp(1rem, 4vw, 2.5rem)', fontSize: 'clamp(0.8rem, 2vw, 1rem)', fontWeight: '700', borderRadius: '8px', cursor: 'pointer', fontFamily: "'Poppins', sans-serif", whiteSpace: 'nowrap' }}>
           BOOK A CALL →
         </button>
       </section>
@@ -448,7 +451,7 @@ export default function AppCoaching() {
               <p style={{ fontSize: '0.9rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '1.5rem', textAlign: 'left', whiteSpace: 'pre-line' }}>
                 {service.description}
               </p>
-              {service.isFree && <div style={{ background: colors.limeGreen, color: colors.darkNavy, padding: '0.5rem 1rem', borderRadius: '6px', fontWeight: '700', fontSize: '0.85rem', display: 'inline-block', marginBottom: '1.5rem' }}>FREE</div>}
+              {service.isFree && <div style={{ background: colors.limeGreen, color: colors.white, padding: '0.5rem 1rem', borderRadius: '6px', fontWeight: '700', fontSize: '0.85rem', display: 'inline-block', marginBottom: '1.5rem' }}>FREE</div>}
               <a href="https://cal.com/app-coaching-xcgvda" target="_blank" rel="noopener noreferrer" style={{
                 background: colors.limeGreen,
                 color: colors.darkNavy,

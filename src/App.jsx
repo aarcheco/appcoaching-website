@@ -359,15 +359,15 @@ export default function AppCoaching() {
             }
           `}</style>
           <div className="logo-carousel">
-            <div className="logo-item">Deloitte</div>
-            <div className="logo-item">EY</div>
             <div className="logo-item">PwC</div>
-            <div className="logo-item">KPMG</div>
-            <div className="logo-item">Big 4</div>
-            <div className="logo-item">Deloitte</div>
-            <div className="logo-item">EY</div>
+            <div className="logo-item">Flight Centre</div>
+            <div className="logo-item">Coronis Group</div>
+            <div className="logo-item">RACQ</div>
+            <div className="logo-item">Telstra</div>
+            <div className="logo-item">Aveo Group</div>
+            <div className="logo-item">YourTown</div>
+            <div className="logo-item">Tradies Success</div>
             <div className="logo-item">PwC</div>
-            <div className="logo-item">KPMG</div>
           </div>
         </div>
       </section>

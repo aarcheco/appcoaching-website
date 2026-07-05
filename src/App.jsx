@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 export default function AppCoaching() {
   const [currentPage, setCurrentPage] = useState('home');
   const [hoveredSection, setHoveredSection] = useState(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const vennSections = {
     finance: {
@@ -166,38 +167,6 @@ export default function AppCoaching() {
       border-color: ${colors.limeGreen};
       box-shadow: 0 0 0 3px rgba(0, 255, 65, 0.1);
     }
-
-    /* Mobile responsiveness */
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        gap: 1rem !important;
-        padding: 0.75rem 1rem !important;
-      }
-
-      nav > div:first-child {
-        width: 100%;
-        margin-bottom: 0.5rem;
-      }
-
-      nav > div:last-child {
-        width: 100%;
-        flex-direction: column;
-        gap: 0.75rem !important;
-      }
-
-      nav > div:last-child span,
-      nav > div:last-child a {
-        font-size: 0.7rem !important;
-        width: 100%;
-        text-align: center;
-        padding: 0.5rem !important;
-      }
-
-      nav > div:last-child a {
-        padding: 0.5rem 1rem !important;
-      }
-    }
   `;
 
   // ===== VENN DIAGRAM COMPONENT =====
@@ -284,33 +253,93 @@ export default function AppCoaching() {
 
   // ===== NAVIGATION =====
   const Navigation = () => (
-    <nav style={{
-      background: colors.darkNavy,
-      padding: 'clamp(0.75rem, 2vw, 1rem) clamp(1rem, 3vw, 1.5rem)',
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      color: 'white',
-      position: 'sticky',
-      top: 0,
-      zIndex: 100,
-      boxShadow: '0 2px 12px rgba(0,0,0,0.1)',
-      fontFamily: "'Poppins', sans-serif",
-      gap: 'clamp(1rem, 3vw, 2rem)',
-      flexWrap: 'wrap',
-      width: '100%'
-    }}>
-      <div onClick={() => setCurrentPage('home')} style={{ fontSize: 'clamp(1rem, 3vw, 1.2rem)', fontWeight: '800', letterSpacing: '0.5px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.25rem', whiteSpace: 'nowrap' }}>
-        APP<span style={{ color: colors.limeGreen, fontSize: '1rem' }}>•</span>Coaching
-      </div>
-      <div style={{ display: 'flex', gap: 'clamp(0.75rem, 2vw, 2rem)', alignItems: 'center', justifyContent: 'flex-end', flex: 1, flexWrap: 'wrap' }}>
-        <span onClick={() => setCurrentPage('home')} style={{ color: 'white', fontSize: 'clamp(0.65rem, 2vw, 0.85rem)', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>Home</span>
-        <span onClick={() => setCurrentPage('services')} style={{ color: 'white', fontSize: 'clamp(0.65rem, 2vw, 0.85rem)', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>Services</span>
-        <span onClick={() => setCurrentPage('about')} style={{ color: 'white', fontSize: 'clamp(0.65rem, 2vw, 0.85rem)', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>About</span>
-        <span onClick={() => setCurrentPage('blog')} style={{ color: 'white', fontSize: 'clamp(0.65rem, 2vw, 0.85rem)', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>Blog</span>
-        <a href="https://cal.com/app-coaching-xcgvda" target="_blank" rel="noopener noreferrer" style={{ background: colors.limeGreen, color: colors.darkNavy, padding: 'clamp(0.5rem, 1.5vw, 0.6rem) clamp(0.8rem, 2vw, 1.2rem)', borderRadius: '6px', border: 'none', fontWeight: '700', fontSize: 'clamp(0.65rem, 1.5vw, 0.8rem)', cursor: 'pointer', fontFamily: "'Poppins', sans-serif", textDecoration: 'none', display: 'inline-block', whiteSpace: 'nowrap' }}>BOOK A CALL</a>
-      </div>
-    </nav>
+    <>
+      <nav style={{
+        background: colors.darkNavy,
+        padding: '0.75rem 1.5rem',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        color: 'white',
+        position: 'sticky',
+        top: 0,
+        zIndex: 100,
+        boxShadow: '0 2px 12px rgba(0,0,0,0.1)',
+        fontFamily: "'Poppins', sans-serif",
+        gap: '2rem',
+        width: '100%'
+      }}>
+        <div onClick={() => setCurrentPage('home')} style={{ fontSize: '1.2rem', fontWeight: '800', letterSpacing: '0.5px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.25rem', whiteSpace: 'nowrap', flex: '0 0 auto' }}>
+          APP<span style={{ color: colors.limeGreen, fontSize: '1rem' }}>•</span>Coaching
+        </div>
+
+        {/* Desktop menu */}
+        <div style={{ display: 'none', gap: '2rem', alignItems: 'center', justifyContent: 'flex-end', flex: 1 }} className="desktop-menu">
+          <span onClick={() => setCurrentPage('home')} style={{ color: 'white', fontSize: '0.85rem', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>Home</span>
+          <span onClick={() => setCurrentPage('services')} style={{ color: 'white', fontSize: '0.85rem', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>Services</span>
+          <span onClick={() => setCurrentPage('about')} style={{ color: 'white', fontSize: '0.85rem', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>About</span>
+          <span onClick={() => setCurrentPage('blog')} style={{ color: 'white', fontSize: '0.85rem', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>Blog</span>
+          <a href="https://cal.com/app-coaching-xcgvda" target="_blank" rel="noopener noreferrer" style={{ background: colors.limeGreen, color: colors.darkNavy, padding: '0.6rem 1.2rem', borderRadius: '6px', border: 'none', fontWeight: '700', fontSize: '0.8rem', cursor: 'pointer', fontFamily: "'Poppins', sans-serif", textDecoration: 'none', display: 'inline-block', whiteSpace: 'nowrap' }}>BOOK A CALL</a>
+        </div>
+
+        {/* Mobile: Book a Call button + Hamburger (grouped on right) */}
+        <div style={{ display: 'none', gap: '0.75rem', alignItems: 'center', justifyContent: 'flex-end' }} className="mobile-nav-group">
+          <a href="https://cal.com/app-coaching-xcgvda" target="_blank" rel="noopener noreferrer" style={{ background: colors.limeGreen, color: colors.darkNavy, padding: '0.5rem 1rem', borderRadius: '4px', border: 'none', fontWeight: '700', fontSize: '0.75rem', cursor: 'pointer', fontFamily: "'Poppins', sans-serif", textDecoration: 'none', whiteSpace: 'nowrap' }} className="mobile-book-button">BOOK A CALL</a>
+          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} style={{ background: 'none', border: 'none', color: 'white', fontSize: '1.5rem', cursor: 'pointer', padding: 0, fontFamily: "'Poppins', sans-serif", display: 'flex', alignItems: 'center' }} className="mobile-hamburger">
+            ☰
+          </button>
+        </div>
+      </nav>
+
+      {/* Mobile menu dropdown */}
+      {mobileMenuOpen && (
+        <div style={{
+          display: 'none',
+          position: 'absolute',
+          top: '100%',
+          left: 0,
+          right: 0,
+          background: colors.darkNavy,
+          flexDirection: 'column',
+          gap: '0',
+          padding: '1rem',
+          zIndex: 99,
+          boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+          width: '100%'
+        }} className="mobile-menu-dropdown">
+          <span onClick={() => { setCurrentPage('home'); setMobileMenuOpen(false); }} style={{ color: 'white', fontSize: '0.95rem', cursor: 'pointer', padding: '0.75rem 0', borderBottom: `1px solid rgba(255,255,255,0.1)` }}>Home</span>
+          <span onClick={() => { setCurrentPage('services'); setMobileMenuOpen(false); }} style={{ color: 'white', fontSize: '0.95rem', cursor: 'pointer', padding: '0.75rem 0', borderBottom: `1px solid rgba(255,255,255,0.1)` }}>Services</span>
+          <span onClick={() => { setCurrentPage('about'); setMobileMenuOpen(false); }} style={{ color: 'white', fontSize: '0.95rem', cursor: 'pointer', padding: '0.75rem 0', borderBottom: `1px solid rgba(255,255,255,0.1)` }}>About</span>
+          <span onClick={() => { setCurrentPage('blog'); setMobileMenuOpen(false); }} style={{ color: 'white', fontSize: '0.95rem', cursor: 'pointer', padding: '0.75rem 0' }}>Blog</span>
+        </div>
+      )}
+
+      <style>{`
+        @media (min-width: 769px) {
+          .desktop-menu {
+            display: flex !important;
+          }
+          .mobile-nav-group {
+            display: none !important;
+          }
+          .mobile-menu-dropdown {
+            display: none !important;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .desktop-menu {
+            display: none !important;
+          }
+          .mobile-nav-group {
+            display: flex !important;
+          }
+          .mobile-menu-dropdown {
+            display: flex !important;
+          }
+        }
+      `}</style>
+    </>
   );
 
   // ===== HOME PAGE =====

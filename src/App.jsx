@@ -7,7 +7,7 @@ export default function AppCoaching() {
   const vennSections = {
     finance: {
       title: 'Finance Coaching',
-      details: '• Personal & business finance strategy\n• Profit margins, pricing, P&L optimization\n• Cash flow clarity & debt paydown plans\n• Financial benchmarking & analysis\n• Tax-efficient structures & planning'
+      details: '• Personal & business finance strategy\n• Profit margins, pricing, P&L optimization\n• Cash flow clarity & debt paydown plans\n• Financial benchmarking & analysis\n• Decision-making from your numbers'
     },
     excel: {
       title: 'Excel Coaching',
@@ -108,7 +108,7 @@ export default function AppCoaching() {
   const colors = {
     darkNavy: '#1F3A7D',
     navy: '#2A4FA8',
-    limeGreen: '#70AD47',
+    limeGreen: '#76D700',
     warmYellow: '#FFD93D',
     mediumGreen: '#10B981',
     charcoal: '#2D3748',
@@ -173,18 +173,15 @@ export default function AppCoaching() {
       margin: '0 auto'
     }}>
       <h2 style={{
-        fontSize: '2.2rem',
+        fontSize: '2.5rem',
         color: colors.darkNavy,
         marginBottom: '2rem',
         fontFamily: "'Poppins', sans-serif",
-        fontWeight: '800'
+        fontWeight: '800',
+        letterSpacing: '-1px'
       }}>
-        Where the Potential Unlocks
+        How I Can Help You
       </h2>
-
-      <p style={{ fontSize: '0.95rem', color: colors.textMuted, marginBottom: '2rem' }}>
-        Hover over any section to explore
-      </p>
 
       <div style={{ position: 'relative', display: 'inline-block', width: '100%', maxWidth: '800px' }}>
         <svg viewBox="0 0 900 650" style={{ maxWidth: '100%', height: 'auto', display: 'block', margin: '0 auto' }}>
@@ -197,8 +194,6 @@ export default function AppCoaching() {
           <text x="450" y="95" fontSize="20" fontWeight="700" fill={colors.darkNavy} fontFamily="'Poppins', sans-serif" textAnchor="middle" style={{ pointerEvents: 'none' }}>AI</text>
           <text x="450" y="575" fontSize="20" fontWeight="700" fill={colors.darkNavy} fontFamily="'Poppins', sans-serif" textAnchor="middle" style={{ pointerEvents: 'none' }}>OPERATIONS</text>
           <rect x="350" y="280" width="200" height="80" fill="white" stroke={colors.limeGreen} strokeWidth={hoveredSection === 'center' ? '3' : '2'} rx="8" style={{ cursor: 'pointer', transition: 'all 0.3s ease' }} onMouseEnter={() => setHoveredSection('center')} onMouseLeave={() => setHoveredSection(null)} opacity={hoveredSection === 'center' ? '1' : '0.9'} />
-          <text x="450" y="310" fontSize="16" fontWeight="700" fill={colors.darkNavy} fontFamily="'Poppins', sans-serif" textAnchor="middle" style={{ pointerEvents: 'none' }}>Unlock Hidden</text>
-          <text x="450" y="335" fontSize="16" fontWeight="700" fill={colors.darkNavy} fontFamily="'Poppins', sans-serif" textAnchor="middle" style={{ pointerEvents: 'none' }}>Potential</text>
         </svg>
       </div>
 
@@ -295,25 +290,69 @@ export default function AppCoaching() {
         justifyContent: 'center',
         alignItems: 'center'
       }}>
-        <div style={{ marginBottom: 'clamp(1rem, 3vh, 2rem)', width: 'clamp(120px, 25vw, 220px)', height: 'clamp(120px, 25vw, 220px)', background: `linear-gradient(135deg, rgba(112, 173, 71, 0.2) 0%, rgba(255, 217, 61, 0.2) 100%)`, border: `2px dashed ${colors.limeGreen}`, borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: colors.navy, fontWeight: '600', fontSize: 'clamp(0.7rem, 2vw, 0.85rem)', textAlign: 'center', padding: '1rem' }}>
-          Your photo here
-        </div>
+        <img src="/aaron-photo.jpg" alt="Aaron Pacheco" style={{ marginBottom: 'clamp(1rem, 3vh, 2rem)', width: 'clamp(120px, 25vw, 220px)', height: 'clamp(120px, 25vw, 220px)', borderRadius: '12px', objectFit: 'cover' }} />
 
         <h1 style={{ fontSize: 'clamp(1.8rem, 6vw, 3.5rem)', marginBottom: 'clamp(1rem, 2vh, 1.5rem)', lineHeight: '1.2', fontWeight: '800', fontFamily: "'Poppins', sans-serif", maxWidth: '900px' }}>
-          Coaching Plus Something Better:<br />
-          <span style={{ color: colors.limeGreen }}>A Study Buddy.</span>
+          Stop Pretending You Understand Your Numbers.
         </h1>
 
-        <p style={{ fontSize: 'clamp(0.95rem, 3vw, 1.2rem)', maxWidth: '800px', margin: '0 auto clamp(1rem, 2vh, 2rem)', lineHeight: '1.8', opacity: '0.95', fontFamily: "'Inter', sans-serif" }}>
-          Most coaches outline options, teach you some theory and leave you to figure it out. I can take it one step further and develop and co-build solutions that help with your specific Finance, Excel, AI, operations challenges—whether <span style={{ color: colors.limeGreen, fontWeight: '700' }}>business</span> or <span style={{ color: colors.warmYellow, fontWeight: '700' }}>personal</span>.
+        <p style={{ fontSize: 'clamp(0.95rem, 3vw, 1.2rem)', maxWidth: '900px', margin: '0 auto clamp(1rem, 2vh, 2rem)', lineHeight: '1.8', opacity: '0.95', fontFamily: "'Inter', sans-serif" }}>
+          <span style={{ color: colors.limeGreen, fontWeight: '700' }}>Business owner?</span> Your P&L, balance sheet, Xero reports—you nod like you get it. You don't. You can't spot cash leaks or know if you're actually profitable. In plain English: flying blind.
           <br />
           <br />
-          Listening to your real problems helps me learn which will ultimately help you learn through my guidance and partnership. Think of it as <span style={{ color: colors.limeGreen, fontWeight: '700' }}>co-learning</span>—or a friendly <span style={{ color: colors.limeGreen, fontWeight: '700' }}>study buddy</span> who's genuinely invested in your growth at a fraction of what premium coaching rates would cost.
+          <span style={{ color: colors.limeGreen, fontWeight: '700' }}>Young professional?</span> Excel models shouldn't take hours. Data analysis shouldn't be painful. With basic Excel + AI, you extract insights in seconds, build dashboards that impress, and feel confident with numbers.
+          <br />
+          <br />
+          <span style={{ color: colors.limeGreen, fontWeight: '700' }}>I empower you.</span> I give you Excel skills, AI knowledge, and the guidance to become self-sufficient. You go from confusion to confidence. You understand your data. You make better decisions.
         </p>
 
-        <button onClick={() => setCurrentPage('contact')} style={{ background: colors.limeGreen, color: colors.white, border: 'none', padding: 'clamp(0.6rem, 2vh, 1rem) clamp(1rem, 4vw, 2.5rem)', fontSize: 'clamp(0.8rem, 2vw, 1rem)', fontWeight: '700', borderRadius: '8px', cursor: 'pointer', fontFamily: "'Poppins', sans-serif", whiteSpace: 'nowrap' }}>
+        <button onClick={() => setCurrentPage('contact')} style={{ background: colors.limeGreen, color: '#4a5568', border: 'none', padding: 'clamp(0.6rem, 2vh, 1rem) clamp(1rem, 4vw, 2.5rem)', fontSize: 'clamp(0.8rem, 2vw, 1rem)', fontWeight: '700', borderRadius: '8px', cursor: 'pointer', fontFamily: "'Poppins', sans-serif", whiteSpace: 'nowrap' }}>
           BOOK A CALL →
         </button>
+      </section>
+
+      <section style={{ padding: '2rem 2rem', background: 'white', overflow: 'hidden' }}>
+        <p style={{ textAlign: 'center', fontSize: '0.9rem', color: colors.textMuted, marginBottom: '1.5rem', fontWeight: '600' }}>
+          I've worked with companies like:
+        </p>
+        <div style={{ position: 'relative', overflow: 'hidden', background: 'white' }}>
+          <style>{`
+            @keyframes scrollLogos {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-50%); }
+            }
+            .logo-carousel {
+              display: flex;
+              animation: scrollLogos 30s linear infinite;
+              gap: 2rem;
+            }
+            .logo-carousel:hover {
+              animation-play-state: paused;
+            }
+            .logo-item {
+              flex: 0 0 120px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 0.5rem 1rem;
+              background: ${colors.offWhite};
+              border-radius: 8px;
+              font-weight: 600;
+              font-size: 0.85rem;
+              color: ${colors.darkNavy};
+            }
+          `}</style>
+          <div className="logo-carousel">
+            <div className="logo-item">Deloitte</div>
+            <div className="logo-item">EY</div>
+            <div className="logo-item">PwC</div>
+            <div className="logo-item">KPMG</div>
+            <div className="logo-item">Big 4</div>
+            <div className="logo-item">Deloitte</div>
+            <div className="logo-item">EY</div>
+            <div className="logo-item">PwC</div>
+          </div>
+        </div>
       </section>
 
       <VennDiagram />
@@ -336,9 +375,7 @@ export default function AppCoaching() {
           marginTop: '2rem'
         }}>
           <div style={{ textAlign: 'center' }}>
-            <div style={{ width: '180px', height: '180px', background: `linear-gradient(135deg, rgba(0, 255, 65, 0.2) 0%, rgba(255, 217, 61, 0.2) 100%)`, border: `2px dashed ${colors.limeGreen}`, borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: colors.navy, fontWeight: '600', fontSize: '0.85rem', textAlign: 'center', padding: '1rem', margin: '0 auto' }}>
-              Aaron's photo
-            </div>
+            <img src="/aaron-photo.jpg" alt="Aaron Pacheco" style={{ width: '180px', height: '180px', borderRadius: '12px', objectFit: 'cover', margin: '0 auto' }} />
           </div>
           <div style={{ textAlign: 'left' }}>
             <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '1rem' }}>
@@ -385,11 +422,6 @@ export default function AppCoaching() {
         </a>
       </section>
 
-      <section style={{ padding: '3rem 2rem', textAlign: 'center', background: colors.offWhite }}>
-        <p style={{ color: colors.textMuted, fontSize: '1rem' }}>
-          ✅ Step 2 Complete: Venn Diagram + How It All Connects Section
-        </p>
-      </section>
     </div>
   );
 

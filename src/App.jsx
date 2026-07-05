@@ -108,7 +108,7 @@ export default function AppCoaching() {
   const colors = {
     darkNavy: '#1F3A7D',
     navy: '#2A4FA8',
-    limeGreen: '#76D700',
+    limeGreen: '#00FF00',
     warmYellow: '#FFD93D',
     mediumGreen: '#10B981',
     charcoal: '#2D3748',
@@ -127,6 +127,11 @@ export default function AppCoaching() {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
     }
 
     body {
@@ -160,6 +165,38 @@ export default function AppCoaching() {
       outline: none;
       border-color: ${colors.limeGreen};
       box-shadow: 0 0 0 3px rgba(0, 255, 65, 0.1);
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 1rem !important;
+        padding: 0.75rem 1rem !important;
+      }
+
+      nav > div:first-child {
+        width: 100%;
+        margin-bottom: 0.5rem;
+      }
+
+      nav > div:last-child {
+        width: 100%;
+        flex-direction: column;
+        gap: 0.75rem !important;
+      }
+
+      nav > div:last-child span,
+      nav > div:last-child a {
+        font-size: 0.7rem !important;
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem !important;
+      }
+
+      nav > div:last-child a {
+        padding: 0.5rem 1rem !important;
+      }
     }
   `;
 
@@ -249,7 +286,7 @@ export default function AppCoaching() {
   const Navigation = () => (
     <nav style={{
       background: colors.darkNavy,
-      padding: '1rem 1.5rem',
+      padding: 'clamp(0.75rem, 2vw, 1rem) clamp(1rem, 3vw, 1.5rem)',
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
@@ -259,17 +296,19 @@ export default function AppCoaching() {
       zIndex: 100,
       boxShadow: '0 2px 12px rgba(0,0,0,0.1)',
       fontFamily: "'Poppins', sans-serif",
-      gap: '2rem'
+      gap: 'clamp(1rem, 3vw, 2rem)',
+      flexWrap: 'wrap',
+      width: '100%'
     }}>
-      <div onClick={() => setCurrentPage('home')} style={{ fontSize: '1.2rem', fontWeight: '800', letterSpacing: '0.5px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.25rem', whiteSpace: 'nowrap' }}>
+      <div onClick={() => setCurrentPage('home')} style={{ fontSize: 'clamp(1rem, 3vw, 1.2rem)', fontWeight: '800', letterSpacing: '0.5px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.25rem', whiteSpace: 'nowrap' }}>
         APP<span style={{ color: colors.limeGreen, fontSize: '1rem' }}>•</span>Coaching
       </div>
-      <div style={{ display: 'flex', gap: '2rem', alignItems: 'center', justifyContent: 'flex-end', flex: 1 }}>
-        <span onClick={() => setCurrentPage('home')} style={{ color: 'white', fontSize: '0.85rem', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>Home</span>
-        <span onClick={() => setCurrentPage('services')} style={{ color: 'white', fontSize: '0.85rem', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>Services</span>
-        <span onClick={() => setCurrentPage('about')} style={{ color: 'white', fontSize: '0.85rem', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>About</span>
-        <span onClick={() => setCurrentPage('blog')} style={{ color: 'white', fontSize: '0.85rem', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>Blog</span>
-        <a href="https://cal.com/app-coaching-xcgvda" target="_blank" rel="noopener noreferrer" style={{ background: colors.limeGreen, color: colors.darkNavy, padding: '0.6rem 1.2rem', borderRadius: '6px', border: 'none', fontWeight: '700', fontSize: '0.8rem', cursor: 'pointer', fontFamily: "'Poppins', sans-serif", textDecoration: 'none', display: 'inline-block', whiteSpace: 'nowrap' }}>BOOK A CALL</a>
+      <div style={{ display: 'flex', gap: 'clamp(0.75rem, 2vw, 2rem)', alignItems: 'center', justifyContent: 'flex-end', flex: 1, flexWrap: 'wrap' }}>
+        <span onClick={() => setCurrentPage('home')} style={{ color: 'white', fontSize: 'clamp(0.65rem, 2vw, 0.85rem)', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>Home</span>
+        <span onClick={() => setCurrentPage('services')} style={{ color: 'white', fontSize: 'clamp(0.65rem, 2vw, 0.85rem)', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>Services</span>
+        <span onClick={() => setCurrentPage('about')} style={{ color: 'white', fontSize: 'clamp(0.65rem, 2vw, 0.85rem)', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>About</span>
+        <span onClick={() => setCurrentPage('blog')} style={{ color: 'white', fontSize: 'clamp(0.65rem, 2vw, 0.85rem)', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>Blog</span>
+        <a href="https://cal.com/app-coaching-xcgvda" target="_blank" rel="noopener noreferrer" style={{ background: colors.limeGreen, color: colors.darkNavy, padding: 'clamp(0.5rem, 1.5vw, 0.6rem) clamp(0.8rem, 2vw, 1.2rem)', borderRadius: '6px', border: 'none', fontWeight: '700', fontSize: 'clamp(0.65rem, 1.5vw, 0.8rem)', cursor: 'pointer', fontFamily: "'Poppins', sans-serif", textDecoration: 'none', display: 'inline-block', whiteSpace: 'nowrap' }}>BOOK A CALL</a>
       </div>
     </nav>
   );

@@ -58,30 +58,32 @@ One paragraph (30-50 words) summarizing the entire post. Include the main takeaw
 
 This matches the APP Coaching homepage fonts exactly. Don't worry if your preview looks like Arial—the live website will have proper brand fonts.
 
-### Styling: Colors & Emphasis
+### Styling: Emphasis (IMPORTANT - Pure Markdown Only)
 
-Use HTML tags in markdown to add visual interest with brand colors:
+**DO NOT use HTML tags** (`<mark>`, `<u>`, `<span>`, etc.). Use **only pure markdown syntax**:
 
-**Highlight key phrases in lime green:**
+**For emphasis/highlight key phrases:**
 ```markdown
-<mark style="background-color: rgba(0, 255, 0, 0.2);">key phrase here</mark>
+**key phrase here** — use bold for important concepts
 ```
 
-**Underline important concepts:**
+**For italics/secondary emphasis:**
 ```markdown
-<u>self-sufficient</u>
+*self-sufficient* — use italics for supporting ideas
 ```
 
-**Combine both:**
+**For special sections (PAUL's Quick Read, callouts):**
 ```markdown
-<mark style="background-color: rgba(0, 255, 0, 0.2);"><u>key concept</u></mark>
+> **Section Title**
+> 
+> Your content here. Blockquotes automatically render with lime green container styling.
 ```
 
-**Brand Colors Available:**
-- Lime Green: `#00FF00` or `rgba(0, 255, 0, 0.2)` for highlights
-- Dark Navy: `#1F3A7D`
-- Use highlights sparingly (3-5 per post, not every sentence)
-- Use underlines for core concepts (self-sufficient, independent, collaborate, etc.)
+**Examples:**
+- ✅ CORRECT: `**working together** to uplift your knowledge`
+- ❌ WRONG: `<mark style="...">working together</mark> to uplift your knowledge`
+- ✅ CORRECT: Use *italics* for emphasis
+- ❌ WRONG: Use `<u>underlines</u>` — this breaks rendering
 
 ### Example Post
 ```markdown
@@ -95,17 +97,19 @@ heroImage: https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80
 
 ![Descriptive alt text](https://images.unsplash.com/photo-xxxxx)
 
-## <span style="color: #00FF00;">📖 PAUL's Quick Read</span>
-
-This is where the one-paragraph summary goes. Include key concepts like <u>self-sufficient</u> and <mark style="background-color: rgba(0, 255, 0, 0.2);">highlight important phrases</mark>.
+> **📖 PAUL's Quick Read**
+>
+> This is where the one-paragraph summary goes. Include **key concepts** and emphasize important phrases that summarize the post. Keep it to 3-4 sentences max.
 
 ---
 
-Here's the actual post content...
-
 ## Section Heading
 
-Use <u>underlines</u> for concepts and <mark style="background-color: rgba(0, 255, 0, 0.2);">highlights</mark> for emphasis.
+Here's the actual post content. Use **bold** for emphasis and *italics* for secondary emphasis. Keep all text as pure markdown — no HTML tags.
+
+## Another Section
+
+**Key insight:** This is how you highlight important concepts in pure markdown. Much cleaner and renders consistently!
 ```
 
 ### What GRAM Should Do

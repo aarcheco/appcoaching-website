@@ -59,7 +59,7 @@ Fast forward. I'm working as an accounting coach at an organization with AI-forw
 
 And I started playing with it.
 
-**Claude for building apps, dashboards, automation, and managing workflows.**</mark> Gemini for asking smarter, more detailed questions and getting better answers. ChatGPT for image and video generation. Each tool, *affordable and accessible*, collapsing the distance from problem to solution.
+**Claude for building apps, dashboards, automation, and managing workflows.** Gemini for asking smarter, more detailed questions and getting better answers. ChatGPT for image and video generation. Each tool, *affordable and accessible*, collapsing the distance from problem to solution.
 
 Building tools that actually *work alongside* human thinking instead of replacing it.
 
@@ -72,7 +72,7 @@ And I'm watching AI solve all of this.
 
 It's not me teaching you Excel. It's not me telling you to use AI. It's not me being the expert while you sit and listen.
 
-It's **working together**</mark> to uplift your knowledge. Excel. AI. Apps. All of it.
+It's **working together** to uplift your knowledge. Excel. AI. Apps. All of it.
 
 The goal isn't to make you dependent on me. It's to work *with* you to build insights and outputs in the most efficient way possible. Then step back and let you become *self-sufficient* with it.
 
@@ -93,7 +93,7 @@ That changes everything.
 
 ## Why I'm Doing This Now
 
-Here's the honest truth: My current role as an accounting coach is honestly the best job I've ever had.</mark> Direct client impact is rewarding in a way I never experienced in corporate. In those roles, my client was my boss. I could grow—sometimes—but *title and pay* never filled the same cup as seeing someone actually get it, actually transform the way they work.
+Here's the honest truth: My current role as an accounting coach is honestly the best job I've ever had. Direct client impact is rewarding in a way I never experienced in corporate. In those roles, my client was my boss. I could grow—sometimes—but *title and pay* never filled the same cup as seeing someone actually get it, actually transform the way they work.
 
 When you're doing something 40 hours a week, every week, every year—fulfillment matters.
 
@@ -101,7 +101,7 @@ But I also know what I learned across all those corporate roles. I know what I w
 
 Am I the world's greatest Excel wizard? No. Am I an AI expert? Definitely not.
 
-But I've learned the paths that work.</mark> And I genuinely think that knowledge should be available to more people.
+But I've learned the paths that work. And I genuinely think that knowledge should be available to more people.
 
 So if you're tired of wasting time on inefficient routes. If you're curious about what AI can actually do for your business or personal finances (not the hype version—the real version). If you want to work _with_ someone who actually cares about you understanding this stuff and becoming *independent* with it—whether that's analyzing your business margins, building investment dashboards, or tracking personal wealth...
 

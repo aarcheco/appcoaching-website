@@ -1105,7 +1105,7 @@ export default function AppCoaching() {
                     borderTop: `2px solid ${colors.borderGray}`,
                     margin: '2rem 0'
                   }} />,
-                  img: ({node, ...props}) => <img {...props} style={{
+                  img: ({node, ...props}) => <img {...props} alt={props.alt || 'Blog post image'} style={{
                     maxWidth: '100%',
                     height: 'auto',
                     borderRadius: '8px',

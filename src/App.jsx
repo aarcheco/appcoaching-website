@@ -423,7 +423,7 @@ export default function AppCoaching() {
     <div>
       <style>{styles}</style>
       <section style={{
-        background: `linear-gradient(135deg, rgba(31, 58, 125, 0.5) 0%, rgba(42, 79, 168, 0.5) 50%), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=80')`,
+        background: `linear-gradient(135deg, rgba(20, 35, 80, 0.75) 0%, rgba(25, 50, 120, 0.75) 50%), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=80')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         color: 'white',

@@ -6,15 +6,13 @@ excerpt: From my mom's career to building forecasts that drive business decision
 heroImage: https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80
 ---
 
-> **📝 FONT NOTE FOR RENDERING:** This blog post uses Poppins (headers, weight 700-800) and Inter (body, weight 400) — same fonts as the APP Coaching homepage. The markdown preview may show generic fonts, but the live website will render with proper brand fonts. Letter-spacing applied to headers for visual consistency with the site design.
-
 ![Data analyst at work](https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80)
 
-## 📖 PAUL's Quick Read
-
-Aaron spent years across small, medium, and large Australian organizations—working as an accountant and finance professional—learning from mentors that there are always multiple paths to the same answer. **As an Excel wizard, he mastered efficiency.** Now passionately growing his AI knowledge the same way he did Excel in his grad years. He's launching APP Coaching because he watched smart people everywhere solve problems the hard way, never shown the efficient path. 
-
-He's genuinely rewarded by that lightbulb moment when someone realizes how much time they'll save by working smarter. And because learning *with* an actual human beats talking to a chatbot every time—whether coaching in areas where he has expertise *(Excel, finance, efficient processes)* or co-learning in areas where you're both growing *(AI capabilities, building apps, Claude's evolving potential)*. You bring problems. He brings perspective. Together you both get smarter.
+> **📖 PAUL's Quick Read**
+> 
+> Aaron spent years across small, medium, and large Australian organizations—working as an accountant and finance professional—learning from mentors that there are always multiple paths to the same answer. **As an Excel wizard, he mastered efficiency.** Now passionately growing his AI knowledge the same way he did Excel in his grad years. He's launching APP Coaching because he watched smart people everywhere solve problems the hard way, never shown the efficient path. 
+> 
+> He's genuinely rewarded by that lightbulb moment when someone realizes how much time they'll save by working smarter. And because learning *with* an actual human beats talking to a chatbot every time—whether coaching in areas where he has expertise *(Excel, finance, efficient processes)* or co-learning in areas where you're both growing *(AI capabilities, building apps, Claude's evolving potential)*. You bring problems. He brings perspective. Together you both get smarter.
 
 ---
 

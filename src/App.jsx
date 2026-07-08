@@ -1111,7 +1111,18 @@ export default function AppCoaching() {
                     borderRadius: '8px',
                     margin: '1.5rem 0',
                     display: 'block'
-                  }} />
+                  }} />,
+                  blockquote: ({node, children, ...props}) => <blockquote style={{
+                    background: `linear-gradient(135deg, ${colors.limeGreen} 0%, rgba(255, 255, 255, 0.9) 100%)`,
+                    border: `1px solid ${colors.borderGray}`,
+                    borderRadius: '12px',
+                    padding: '2rem',
+                    marginLeft: 0,
+                    marginRight: 0,
+                    marginBottom: '2rem',
+                    color: colors.darkNavy,
+                    borderLeft: `4px solid ${colors.limeGreen}`
+                  }}>{children}</blockquote>
                 }}
               >
                 {post.content}

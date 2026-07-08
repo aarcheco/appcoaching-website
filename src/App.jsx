@@ -9,10 +9,36 @@ export default function AppCoaching() {
   const [selectedBlogPost, setSelectedBlogPost] = useState(null);
   const [blogLoading, setBlogLoading] = useState(false);
 
+  // ===== URL ROUTING (hash-based) =====
+  useEffect(() => {
+    // Handle initial page load from URL hash
+    const path = window.location.hash.slice(1) || 'home';
+    if (['home', 'services', 'about', 'blog', 'contact'].includes(path)) {
+      setCurrentPage(path);
+    }
+
+    // Listen for hash changes (back/forward buttons)
+    const handleHashChange = () => {
+      const newPath = window.location.hash.slice(1) || 'home';
+      if (['home', 'services', 'about', 'blog', 'contact'].includes(newPath)) {
+        setCurrentPage(newPath);
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
   // ===== BLOG SYSTEM =====
   useEffect(() => {
     loadBlogPosts();
   }, []);
+
+  // Helper function to navigate to a page and update URL
+  const navigateTo = (page) => {
+    setCurrentPage(page);
+    window.location.hash = page;
+  };
 
   const loadBlogPosts = async () => {
     setBlogLoading(true);
@@ -319,16 +345,16 @@ export default function AppCoaching() {
         gap: '2rem',
         width: '100%'
       }}>
-        <div onClick={() => setCurrentPage('home')} style={{ fontSize: '1.2rem', fontWeight: '800', letterSpacing: '0.5px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.25rem', whiteSpace: 'nowrap', flex: '0 0 auto' }}>
+        <div onClick={() => navigateTo('home')} style={{ fontSize: '1.2rem', fontWeight: '800', letterSpacing: '0.5px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.25rem', whiteSpace: 'nowrap', flex: '0 0 auto' }}>
           APP<span style={{ color: colors.limeGreen, fontSize: '1rem' }}>•</span>Coaching
         </div>
 
         {/* Desktop menu */}
         <div style={{ display: 'none', gap: '2rem', alignItems: 'center', justifyContent: 'flex-end', flex: 1 }} className="desktop-menu">
-          <span onClick={() => setCurrentPage('home')} style={{ color: 'white', fontSize: '0.85rem', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>Home</span>
-          <span onClick={() => setCurrentPage('services')} style={{ color: 'white', fontSize: '0.85rem', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>Services</span>
-          <span onClick={() => setCurrentPage('about')} style={{ color: 'white', fontSize: '0.85rem', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>About</span>
-          <span onClick={() => setCurrentPage('blog')} style={{ color: 'white', fontSize: '0.85rem', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>Blog</span>
+          <span onClick={() => navigateTo('home')} style={{ color: 'white', fontSize: '0.85rem', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>Home</span>
+          <span onClick={() => navigateTo('services')} style={{ color: 'white', fontSize: '0.85rem', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>Services</span>
+          <span onClick={() => navigateTo('about')} style={{ color: 'white', fontSize: '0.85rem', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>About</span>
+          <span onClick={() => navigateTo('blog')} style={{ color: 'white', fontSize: '0.85rem', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>Blog</span>
           <a href="https://cal.com/app-coaching-xcgvda" target="_blank" rel="noopener noreferrer" style={{ background: colors.limeGreen, color: colors.darkNavy, padding: '0.6rem 1.2rem', borderRadius: '6px', border: 'none', fontWeight: '700', fontSize: '0.8rem', cursor: 'pointer', fontFamily: "'Poppins', sans-serif", textDecoration: 'none', display: 'inline-block', whiteSpace: 'nowrap' }}>BOOK A CALL</a>
         </div>
 
@@ -357,10 +383,10 @@ export default function AppCoaching() {
           boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
           width: '100%'
         }} className="mobile-menu-dropdown">
-          <span onClick={() => { setCurrentPage('home'); setMobileMenuOpen(false); }} style={{ color: 'white', fontSize: '0.95rem', cursor: 'pointer', padding: '0.75rem 0', borderBottom: `1px solid rgba(255,255,255,0.1)` }}>Home</span>
-          <span onClick={() => { setCurrentPage('services'); setMobileMenuOpen(false); }} style={{ color: 'white', fontSize: '0.95rem', cursor: 'pointer', padding: '0.75rem 0', borderBottom: `1px solid rgba(255,255,255,0.1)` }}>Services</span>
-          <span onClick={() => { setCurrentPage('about'); setMobileMenuOpen(false); }} style={{ color: 'white', fontSize: '0.95rem', cursor: 'pointer', padding: '0.75rem 0', borderBottom: `1px solid rgba(255,255,255,0.1)` }}>About</span>
-          <span onClick={() => { setCurrentPage('blog'); setMobileMenuOpen(false); }} style={{ color: 'white', fontSize: '0.95rem', cursor: 'pointer', padding: '0.75rem 0' }}>Blog</span>
+          <span onClick={() => { navigateTo('home'); setMobileMenuOpen(false); }} style={{ color: 'white', fontSize: '0.95rem', cursor: 'pointer', padding: '0.75rem 0', borderBottom: `1px solid rgba(255,255,255,0.1)` }}>Home</span>
+          <span onClick={() => { navigateTo('services'); setMobileMenuOpen(false); }} style={{ color: 'white', fontSize: '0.95rem', cursor: 'pointer', padding: '0.75rem 0', borderBottom: `1px solid rgba(255,255,255,0.1)` }}>Services</span>
+          <span onClick={() => { navigateTo('about'); setMobileMenuOpen(false); }} style={{ color: 'white', fontSize: '0.95rem', cursor: 'pointer', padding: '0.75rem 0', borderBottom: `1px solid rgba(255,255,255,0.1)` }}>About</span>
+          <span onClick={() => { navigateTo('blog'); setMobileMenuOpen(false); }} style={{ color: 'white', fontSize: '0.95rem', cursor: 'pointer', padding: '0.75rem 0' }}>Blog</span>
         </div>
       )}
 
@@ -425,7 +451,7 @@ export default function AppCoaching() {
           <span style={{ color: colors.limeGreen, fontWeight: '700' }}>I empower you.</span> I give you Excel skills, AI knowledge, and the guidance to become self-sufficient. You go from confusion to confidence. You understand your data. You make better decisions.
         </p>
 
-        <button onClick={() => setCurrentPage('contact')} style={{ background: colors.limeGreen, color: '#4a5568', border: 'none', padding: 'clamp(0.6rem, 2vh, 1rem) clamp(1rem, 4vw, 2.5rem)', fontSize: 'clamp(0.8rem, 2vw, 1rem)', fontWeight: '700', borderRadius: '8px', cursor: 'pointer', fontFamily: "'Poppins', sans-serif", whiteSpace: 'nowrap' }}>
+        <button onClick={() => navigateTo('contact')} style={{ background: colors.limeGreen, color: '#4a5568', border: 'none', padding: 'clamp(0.6rem, 2vh, 1rem) clamp(1rem, 4vw, 2.5rem)', fontSize: 'clamp(0.8rem, 2vw, 1rem)', fontWeight: '700', borderRadius: '8px', cursor: 'pointer', fontFamily: "'Poppins', sans-serif", whiteSpace: 'nowrap' }}>
           BOOK A CALL →
         </button>
       </section>
@@ -916,7 +942,7 @@ export default function AppCoaching() {
           <p style={{ fontSize: '1rem', color: colors.textMuted, marginBottom: '1.5rem' }}>
             Let's translate your numbers into action.
           </p>
-          <button onClick={() => setCurrentPage('contact')} style={{
+          <button onClick={() => navigateTo('contact')} style={{
             background: colors.limeGreen,
             color: colors.darkNavy,
             border: 'none',
@@ -1335,7 +1361,7 @@ export default function AppCoaching() {
       <Footer />
 
       {/* Floating "Get in Touch" CTA Button - Bottom Right */}
-      <button onClick={() => setCurrentPage('contact')} style={{
+      <button onClick={() => navigateTo('contact')} style={{
         position: 'fixed',
         bottom: '2rem',
         right: '2rem',

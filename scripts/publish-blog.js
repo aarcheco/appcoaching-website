@@ -24,13 +24,15 @@ try {
   const manifest = files.map(file => {
     const filePath = path.join(BLOG_DIR, file);
     const content = fs.readFileSync(filePath, 'utf-8');
-    const { data } = matter(content);
+    const { data, content: bodyContent } = matter(content);
 
     return {
       id: data.id,
       filename: file,
       title: data.title,
-      date: data.date
+      date: data.date,
+      excerpt: data.excerpt,
+      heroImage: data.heroImage
     };
   });
 

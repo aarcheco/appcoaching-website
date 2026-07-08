@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
-import matter from 'gray-matter';
 
 export default function AppCoaching() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -18,23 +17,28 @@ export default function AppCoaching() {
   const loadBlogPosts = async () => {
     setBlogLoading(true);
     try {
-      // Fetch manifest listing all blog posts
+      // Fetch manifest listing all blog posts (includes pre-parsed metadata)
       const manifestResponse = await fetch('/blog-posts.json');
       const manifest = await manifestResponse.json();
 
-      // Fetch and parse each markdown file listed in manifest
+      // Fetch markdown content for each post
       const posts = await Promise.all(manifest.map(async (item) => {
         try {
           const fileResponse = await fetch(`/blog/${item.filename}`);
           const fileContent = await fileResponse.text();
-          const { data, content } = matter(fileContent);
+
+          // Strip frontmatter using regex (YAML front matter between --- delimiters)
+          const frontmatterRegex = /^---\n([\s\S]*?)\n---\n([\s\S]*)$/;
+          const match = fileContent.match(frontmatterRegex);
+          const bodyContent = match ? match[2] : fileContent;
 
           return {
-            id: data.id,
-            title: data.title,
-            date: data.date,
-            excerpt: data.excerpt,
-            content: content,
+            id: item.id,
+            title: item.title,
+            date: item.date,
+            excerpt: item.excerpt,
+            heroImage: item.heroImage,
+            content: bodyContent,
             filename: item.filename
           };
         } catch (err) {
@@ -43,7 +47,7 @@ export default function AppCoaching() {
         }
       }));
 
-      // Filter out null values and sort by date descending
+      // Filter out null values (manifest already sorted by date, but re-sort to be safe)
       const validPosts = posts.filter(p => p !== null).sort((a, b) => new Date(b.date) - new Date(a.date));
       setBlogPosts(validPosts);
     } catch (err) {
@@ -1003,24 +1007,22 @@ export default function AppCoaching() {
             }}>
               <ReactMarkdown
                 components={{
-                  h2: ({node, ...props}) => <h2 style={{
+                  h2: ({node, children, ...props}) => <h2 style={{
                     fontSize: '1.8rem',
                     color: colors.darkNavy,
                     fontFamily: "'Poppins', sans-serif",
                     fontWeight: '700',
                     marginTop: '2rem',
-                    marginBottom: '1rem',
-                    ...props.style
-                  }} {...props} />,
-                  h3: ({node, ...props}) => <h3 style={{
+                    marginBottom: '1rem'
+                  }} {...props}>{children}</h2>,
+                  h3: ({node, children, ...props}) => <h3 style={{
                     fontSize: '1.4rem',
                     color: colors.darkNavy,
                     fontFamily: "'Poppins', sans-serif",
                     fontWeight: '700',
                     marginTop: '1.5rem',
-                    marginBottom: '1rem',
-                    ...props.style
-                  }} {...props} />,
+                    marginBottom: '1rem'
+                  }} {...props}>{children}</h3>,
                   p: ({node, ...props}) => <p style={{
                     marginBottom: '1.2rem',
                     ...props.style

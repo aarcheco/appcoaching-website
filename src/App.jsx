@@ -129,6 +129,18 @@ export default function AppCoaching() {
     }
   };
 
+  // ===== EMPLOYER LOGOS =====
+  const employers = [
+    { name: 'PwC', logo: 'https://www.pwc.com/content/dam/pwc/pwccom/en/assets/images/pwc-logo.svg' },
+    { name: 'Flight Centre', logo: 'https://flightcentre.com.au/content/dam/fcg/au/images/logo-flight-centre.svg' },
+    { name: 'Coronis Group', logo: 'https://www.coronis.com.au/images/logo.svg' },
+    { name: 'RACQ', logo: 'https://www.racq.com.au/-/media/project/racq/shared/logo/racq-logo-primary-blue.svg' },
+    { name: 'Telstra', logo: 'https://www.telstra.com.au/content/dam/tcom/logo-telstra.svg' },
+    { name: 'Aveo Group', logo: 'https://www.aveogroup.com.au/assets/images/aveo-group-logo.svg' },
+    { name: 'YourTown', logo: 'https://www.yourtown.com.au/images/logo.svg' },
+    { name: 'Tradies Success', logo: 'https://tradiessuccessacademy.com/images/logo.svg' }
+  ];
+
   // ===== SERVICE SEGMENTS =====
   const services = [
     {
@@ -495,28 +507,41 @@ export default function AppCoaching() {
               animation-play-state: paused;
             }
             .logo-item {
-              flex: 0 0 120px;
+              flex: 0 0 140px;
               display: flex;
               align-items: center;
               justify-content: center;
-              padding: 0.5rem 1rem;
+              padding: 1rem;
               background: white;
               border-radius: 8px;
               font-weight: 600;
-              font-size: 0.85rem;
+              font-size: 0.75rem;
               color: ${colors.darkNavy};
+              min-height: 80px;
+            }
+            .logo-item img {
+              max-width: 100%;
+              max-height: 60px;
+              object-fit: contain;
+              filter: brightness(0.9);
+              transition: filter 0.3s ease;
+            }
+            .logo-item:hover img {
+              filter: brightness(1);
             }
           `}</style>
           <div className="logo-carousel">
-            <div className="logo-item">PwC</div>
-            <div className="logo-item">Flight Centre</div>
-            <div className="logo-item">Coronis Group</div>
-            <div className="logo-item">RACQ</div>
-            <div className="logo-item">Telstra</div>
-            <div className="logo-item">Aveo Group</div>
-            <div className="logo-item">YourTown</div>
-            <div className="logo-item">Tradies Success</div>
-            <div className="logo-item">PwC</div>
+            {[...employers, employers[0]].map((employer, idx) => (
+              <div key={idx} className="logo-item">
+                <img
+                  src={employer.logo}
+                  alt={employer.name}
+                  onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }}
+                  style={{ display: 'block' }}
+                />
+                <span style={{ display: 'none' }}>{employer.name}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>

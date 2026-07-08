@@ -1,5 +1,5 @@
 ---
-title: Why I Built APP Coaching: A Founder's Origin Story
+title: "Why I Built APP Coaching: A Founder's Origin Story"
 date: 2026-07-08
 id: 001
 excerpt: From my mom's career to building forecasts that drive business decisions—how I discovered the power of efficient paths from problems to solutions

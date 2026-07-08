@@ -447,7 +447,7 @@ export default function AppCoaching() {
         justifyContent: 'center',
         alignItems: 'center'
       }}>
-        <img src="/aaron-archive-10.jpg" alt="Aaron Pacheco" style={{ marginBottom: 'clamp(1rem, 3vh, 2rem)', width: 'clamp(120px, 25vw, 220px)', height: 'clamp(120px, 25vw, 220px)', borderRadius: '12px', objectFit: 'cover' }} />
+        <img src="/aaron-archive-10.jpg" alt="Aaron Pacheco" style={{ marginBottom: 'clamp(1rem, 3vh, 2rem)', width: 'clamp(200px, 35vw, 320px)', height: 'auto', borderRadius: '12px', objectFit: 'contain' }} />
 
         <h1 style={{ fontSize: 'clamp(1.8rem, 6vw, 3.5rem)', marginBottom: 'clamp(1rem, 2vh, 1.5rem)', lineHeight: '1.2', fontWeight: '800', fontFamily: "'Poppins', sans-serif", maxWidth: '900px' }}>
           Stop Pretending You Understand Your Numbers.

@@ -840,7 +840,7 @@ export default function AppCoaching() {
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '2rem', marginBottom: '3rem' }}>
-            <div style={{ background: `linear-gradient(135deg, ${colors.limeGreen} 0%, rgba(255, 255, 255, 0.9) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
+            <div style={{ background: `linear-gradient(135deg, rgba(59, 91, 219, 1) 0%, rgba(200, 220, 255, 0.6) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
               <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>💰</div>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
                 Financial Literacy
@@ -850,7 +850,7 @@ export default function AppCoaching() {
               </p>
             </div>
 
-            <div style={{ background: `linear-gradient(135deg, ${colors.limeGreen} 0%, rgba(255, 255, 255, 0.9) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
+            <div style={{ background: `linear-gradient(135deg, rgba(59, 91, 219, 1) 0%, rgba(200, 220, 255, 0.6) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
               <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>📈</div>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
                 Excel & AI Skills
@@ -860,7 +860,7 @@ export default function AppCoaching() {
               </p>
             </div>
 
-            <div style={{ background: `linear-gradient(135deg, ${colors.limeGreen} 0%, rgba(255, 255, 255, 0.9) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
+            <div style={{ background: `linear-gradient(135deg, rgba(59, 91, 219, 1) 0%, rgba(200, 220, 255, 0.6) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
               <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>🚀</div>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
                 Career Coaching
@@ -898,7 +898,7 @@ export default function AppCoaching() {
             Why APP Coaching Stands Out
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
-            <div style={{ background: `linear-gradient(135deg, ${colors.limeGreen} 0%, rgba(255, 255, 255, 0.9) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
+            <div style={{ background: `linear-gradient(135deg, rgba(59, 91, 219, 1) 0%, rgba(200, 220, 255, 0.6) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
                 💼 Real Experience
               </h3>
@@ -907,7 +907,7 @@ export default function AppCoaching() {
               </p>
             </div>
 
-            <div style={{ background: `linear-gradient(135deg, ${colors.limeGreen} 0%, rgba(255, 255, 255, 0.9) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
+            <div style={{ background: `linear-gradient(135deg, rgba(59, 91, 219, 1) 0%, rgba(200, 220, 255, 0.6) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
                 🎯 Practical Focus
               </h3>
@@ -916,7 +916,7 @@ export default function AppCoaching() {
               </p>
             </div>
 
-            <div style={{ background: `linear-gradient(135deg, ${colors.limeGreen} 0%, rgba(255, 255, 255, 0.9) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
+            <div style={{ background: `linear-gradient(135deg, rgba(59, 91, 219, 1) 0%, rgba(200, 220, 255, 0.6) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
                 🚀 Your Success, Not My Ego
               </h3>
@@ -925,7 +925,7 @@ export default function AppCoaching() {
               </p>
             </div>
 
-            <div style={{ background: `linear-gradient(135deg, ${colors.limeGreen} 0%, rgba(255, 255, 255, 0.9) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
+            <div style={{ background: `linear-gradient(135deg, rgba(59, 91, 219, 1) 0%, rgba(200, 220, 255, 0.6) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
                 💰 Accessible Pricing
               </h3>

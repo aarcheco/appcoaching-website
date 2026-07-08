@@ -983,7 +983,10 @@ export default function AppCoaching() {
             maxWidth: '900px',
             margin: '0 auto'
           }}>
-            <button onClick={() => setSelectedBlogPost(null)} style={{
+            <button onClick={() => {
+              setSelectedBlogPost(null);
+              window.scrollTo(0, 0);
+            }} style={{
               background: 'transparent',
               border: 'none',
               color: colors.limeGreen,
@@ -1032,6 +1035,8 @@ export default function AppCoaching() {
               fontFamily: "'Inter', sans-serif"
             }}>
               <ReactMarkdown
+                allowElement={(element, index, parent) => true}
+                skipHtml={false}
                 components={{
                   h2: ({node, children, ...props}) => <h2 style={{
                     fontSize: '1.8rem',
@@ -1049,35 +1054,36 @@ export default function AppCoaching() {
                     marginTop: '1.5rem',
                     marginBottom: '1rem'
                   }} {...props}>{children}</h3>,
-                  p: ({node, ...props}) => <p style={{
-                    marginBottom: '1.2rem',
-                    ...props.style
-                  }} {...props} />,
-                  strong: ({node, ...props}) => <strong style={{
+                  p: ({node, children, ...props}) => <p style={{
+                    marginBottom: '1.2rem'
+                  }}>{children}</p>,
+                  strong: ({node, children, ...props}) => <strong style={{
                     fontWeight: '700',
-                    color: colors.darkNavy,
-                    ...props.style
-                  }} {...props} />,
-                  em: ({node, ...props}) => <em style={{
+                    color: colors.darkNavy
+                  }}>{children}</strong>,
+                  em: ({node, children, ...props}) => <em style={{
                     fontStyle: 'italic',
-                    color: colors.textMuted,
-                    ...props.style
-                  }} {...props} />,
-                  ul: ({node, ...props}) => <ul style={{
+                    color: colors.textMuted
+                  }}>{children}</em>,
+                  ul: ({node, children, ...props}) => <ul style={{
                     marginLeft: '1.5rem',
-                    marginBottom: '1.2rem',
-                    ...props.style
-                  }} {...props} />,
-                  li: ({node, ...props}) => <li style={{
-                    marginBottom: '0.5rem',
-                    ...props.style
-                  }} {...props} />,
+                    marginBottom: '1.2rem'
+                  }}>{children}</ul>,
+                  li: ({node, children, ...props}) => <li style={{
+                    marginBottom: '0.5rem'
+                  }}>{children}</li>,
                   hr: ({node, ...props}) => <hr style={{
                     border: 'none',
                     borderTop: `2px solid ${colors.borderGray}`,
-                    margin: '2rem 0',
-                    ...props.style
-                  }} {...props} />
+                    margin: '2rem 0'
+                  }} />,
+                  img: ({node, ...props}) => <img {...props} style={{
+                    maxWidth: '100%',
+                    height: 'auto',
+                    borderRadius: '8px',
+                    margin: '1.5rem 0',
+                    display: 'block'
+                  }} />
                 }}
               >
                 {post.content}

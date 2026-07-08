@@ -1,9 +1,56 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import ReactMarkdown from 'react-markdown';
+import matter from 'gray-matter';
 
 export default function AppCoaching() {
   const [currentPage, setCurrentPage] = useState('home');
   const [hoveredSection, setHoveredSection] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [blogPosts, setBlogPosts] = useState([]);
+  const [selectedBlogPost, setSelectedBlogPost] = useState(null);
+  const [blogLoading, setBlogLoading] = useState(false);
+
+  // ===== BLOG SYSTEM =====
+  useEffect(() => {
+    loadBlogPosts();
+  }, []);
+
+  const loadBlogPosts = async () => {
+    setBlogLoading(true);
+    try {
+      // Fetch manifest listing all blog posts
+      const manifestResponse = await fetch('/blog-posts.json');
+      const manifest = await manifestResponse.json();
+
+      // Fetch and parse each markdown file listed in manifest
+      const posts = await Promise.all(manifest.map(async (item) => {
+        try {
+          const fileResponse = await fetch(`/blog/${item.filename}`);
+          const fileContent = await fileResponse.text();
+          const { data, content } = matter(fileContent);
+
+          return {
+            id: data.id,
+            title: data.title,
+            date: data.date,
+            excerpt: data.excerpt,
+            content: content,
+            filename: item.filename
+          };
+        } catch (err) {
+          console.error(`Error loading blog post ${item.filename}:`, err);
+          return null;
+        }
+      }));
+
+      // Filter out null values and sort by date descending
+      const validPosts = posts.filter(p => p !== null).sort((a, b) => new Date(b.date) - new Date(a.date));
+      setBlogPosts(validPosts);
+    } catch (err) {
+      console.error('Error loading blog posts:', err);
+    }
+    setBlogLoading(false);
+  };
 
   const vennSections = {
     finance: {
@@ -66,7 +113,7 @@ export default function AppCoaching() {
       id: 'finance-personal',
       title: 'Personal Finance Coaching',
       subtitle: 'Your money, decoded',
-      description: '• Build your real financial picture\n• Budgeting that sticks\n• Cash flow clarity\n• Debt strategy that works\n• Know where every dollar goes',
+      description: '• Build your real financial picture\n• Property investment & ROI analysis\n• Budgeting that sticks\n• Build spreadsheets/apps for clarity\n• Unlock a different view of your finances\n• Know where every dollar goes',
       icon: '💰',
       cta: 'show me the money'
     },
@@ -74,34 +121,33 @@ export default function AppCoaching() {
       id: 'finance-business',
       title: 'Business Finance Coaching',
       subtitle: 'Profit isn\'t complicated',
-      description: '• Custom P&L dashboards\n• Cash flow strategy & forecasting\n• Margin optimization\n• Financial benchmarking\n• See what\'s really happening',
+      description: '• Build spreadsheets/apps for clarity\n• Connect AI/Claude to Xero systems\n• Understand profit margins\n• Price your services to make money\n• Unlock a different view of your business\n• See what\'s really happening',
       icon: '📈',
-      cta: 'reveal-profit()'
+      cta: 'help me grow'
     },
     {
       id: 'ai-personal',
       title: 'AI for Personal Use',
       subtitle: 'AI without the hype',
-      description: '• Master prompting workflows\n• Automate the boring stuff\n• Build tools that work for you\n• Save hours every week\n• No buzzwords, just results',
+      description: '• Use Claude/ChatGPT/Gemini to design graphics & images\n• Link AI to your email & calendar\n• Query your data straight from Claude\n• Write emails directly from AI\n• Build apps like party games & photobooths\n• No buzzwords, just results',
       icon: '🤖',
-      cta: 'chat gpt me'
+      cta: 'build an app? finally!'
     },
     {
       id: 'ai-business',
       title: 'AI for Business',
       subtitle: 'The ROI is real',
-      description: '• AI strategy & implementation\n• Workflow automation\n• Custom AI apps\n• Solve your actual problems\n• Not vendor problems',
+      description: '• Connect Claude to Xero & accounting systems\n• Custom AI apps & dashboards\n• AI for job management & operations\n• Agentic AI - agents that do the work\n• Build better marketing tactics\n• Replace & streamline workflows',
       icon: '⚙️',
-      cta: 'build-with-ai()'
+      cta: 'automate and save'
     },
     {
       id: 'career',
       title: 'Career Coaching',
-      subtitle: 'Your next move (free)',
-      description: '• LinkedIn profile optimization\n• Interview prep & negotiation\n• Career navigation & strategy\n• Network building\n• FREE for engaged clients',
+      subtitle: 'Your next move',
+      description: '• Resume review & optimization\n• Interview prep & negotiation\n• For finance & accounting professionals\n• Young CAs & high school students\n• Firm vs industry career paths\n• Career navigation & strategy',
       icon: '🎯',
-      cta: 'level-up()',
-      isFree: true
+      cta: 'be real with me'
     }
   ];
 
@@ -294,12 +340,12 @@ export default function AppCoaching() {
       {/* Mobile menu dropdown */}
       {mobileMenuOpen && (
         <div style={{
-          display: 'none',
-          position: 'absolute',
-          top: '100%',
+          position: 'fixed',
+          top: '54px',
           left: 0,
           right: 0,
           background: colors.darkNavy,
+          display: 'flex',
           flexDirection: 'column',
           gap: '0',
           padding: '1rem',
@@ -347,7 +393,9 @@ export default function AppCoaching() {
     <div>
       <style>{styles}</style>
       <section style={{
-        background: `linear-gradient(135deg, ${colors.darkNavy} 0%, ${colors.navy} 50%)`,
+        background: `linear-gradient(135deg, rgba(31, 58, 125, 0.5) 0%, rgba(42, 79, 168, 0.5) 50%), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=80')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
         color: 'white',
         padding: 'clamp(2rem, 5vh, 5rem) clamp(1rem, 4vw, 2rem)',
         textAlign: 'center',
@@ -357,7 +405,7 @@ export default function AppCoaching() {
         justifyContent: 'center',
         alignItems: 'center'
       }}>
-        <img src="/aaron-hero.jpg" alt="Aaron Pacheco" style={{ marginBottom: 'clamp(1rem, 3vh, 2rem)', width: 'clamp(120px, 25vw, 220px)', height: 'clamp(120px, 25vw, 220px)', borderRadius: '12px', objectFit: 'cover' }} />
+        <img src="/aaron-archive-10.jpg" alt="Aaron Pacheco" style={{ marginBottom: 'clamp(1rem, 3vh, 2rem)', width: 'clamp(120px, 25vw, 220px)', height: 'clamp(120px, 25vw, 220px)', borderRadius: '12px', objectFit: 'cover' }} />
 
         <h1 style={{ fontSize: 'clamp(1.8rem, 6vw, 3.5rem)', marginBottom: 'clamp(1rem, 2vh, 1.5rem)', lineHeight: '1.2', fontWeight: '800', fontFamily: "'Poppins', sans-serif", maxWidth: '900px' }}>
           Stop Pretending You Understand Your Numbers.
@@ -390,6 +438,9 @@ export default function AppCoaching() {
         }}>
           A Little About Me
         </h2>
+        <div style={{ marginBottom: '2rem' }}>
+          <img src="/aaron-headshot-professional.jpg" alt="Aaron" style={{ width: '100%', maxWidth: '300px', borderRadius: '12px', objectFit: 'cover', margin: '0 auto 1.5rem' }} />
+        </div>
         <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', maxWidth: '750px', margin: '0 auto' }}>
           I'm a qualified accountant with 10+ years of real-world experience in finance, operations, and strategic planning. I've built financial models, designed dashboards, and helped teams extract insight from data. But more than that, I'm passionate about something specific: closing the knowledge gap. When I work with you, my goal isn't to be your permanent crutch—it's to empower you with the skills, tools, and confidence to understand your own data and make decisions independently. The reward for me is seeing that moment when it clicks for you. When you realize you CAN read your P&L, you CAN build a dashboard, you CAN prompt AI to analyze your data. That's when I know I've succeeded. Not because you're dependent on me, but because you're self-sufficient.
         </p>
@@ -479,7 +530,9 @@ export default function AppCoaching() {
     <div>
       <style>{styles}</style>
       <section style={{
-        background: `linear-gradient(135deg, ${colors.darkNavy} 0%, ${colors.navy} 100%)`,
+        background: `linear-gradient(135deg, rgba(31, 58, 125, 0.5) 0%, rgba(42, 79, 168, 0.5) 100%), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1600&q=80')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
         color: 'white',
         padding: '4rem 2rem',
         textAlign: 'center'
@@ -532,7 +585,6 @@ export default function AppCoaching() {
               <p style={{ fontSize: '0.9rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '1.5rem', textAlign: 'left', whiteSpace: 'pre-line' }}>
                 {service.description}
               </p>
-              {service.isFree && <div style={{ background: colors.limeGreen, color: colors.white, padding: '0.5rem 1rem', borderRadius: '6px', fontWeight: '700', fontSize: '0.85rem', display: 'inline-block', marginBottom: '1.5rem' }}>FREE</div>}
               <a href="https://cal.com/app-coaching-xcgvda" target="_blank" rel="noopener noreferrer" style={{
                 background: colors.limeGreen,
                 color: colors.darkNavy,
@@ -562,7 +614,9 @@ export default function AppCoaching() {
     <div>
       <style>{styles}</style>
       <section style={{
-        background: `linear-gradient(135deg, ${colors.darkNavy} 0%, ${colors.navy} 100%)`,
+        background: `linear-gradient(135deg, rgba(31, 58, 125, 0.5) 0%, rgba(42, 79, 168, 0.5) 100%), url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&q=80')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
         color: 'white',
         padding: '4rem 2rem',
         textAlign: 'center'
@@ -586,22 +640,120 @@ export default function AppCoaching() {
           <h2 style={{ fontSize: '2.2rem', color: colors.darkNavy, marginBottom: '2rem', fontFamily: "'Poppins', sans-serif", fontWeight: '800', textAlign: 'center' }}>
             My Story
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'start', marginBottom: '2rem' }}>
+
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'start', marginBottom: '3rem' }}>
             <div>
+              <h3 style={{ fontSize: '1.3rem', color: colors.darkNavy, marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
+                Who I Am Beyond Work
+              </h3>
               <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '1.5rem' }}>
-                I'm a qualified accountant with over a decade of experience in audit, finance operations, and strategic planning at major organizations across Australia. I started my career making Excel do impossible things—building financial models that told stories, dashboards that brought clarity to chaos, and systems that replaced manual work.
+                I'm a Brisbane lad through and through. Born and raised here, and I breathe this city. But more than anything, I breathe soccer. I've been playing since I was 6—loyal to my local club (we won the league title once in division 7, and honestly? One of my greatest achievements). I also manage a social futsal team where I get together with mates every week. It's how I stay fit, stay sane, and stay connected. My football heroes are Cristiano Ronaldo, Everton, Real Madrid, Portugal. And of course, Brisbane Roar.
               </p>
               <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '1.5rem' }}>
-                For years, Excel was my superpower. I knew it inside out. And I was proud of that.
+                Off the pitch, I'm a maker. I love making music. I love traveling the world with my wife, discovering new restaurants, experiencing new things, catching great films. We're planning for parenthood, which honestly puts everything into perspective. Life's short. We've got one shot at this. So we should take ourselves and our potential as far as we can go.
+              </p>
+              <h3 style={{ fontSize: '1.3rem', color: colors.darkNavy, marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700', marginTop: '2rem' }}>
+                My Professional Journey
+              </h3>
+              <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '1.5rem' }}>
+                I'm a qualified accountant with over a decade of experience in audit, finance operations, and strategic planning across Australian organizations. I started my career making Excel do impossible things—building financial models that told stories, dashboards that brought clarity to chaos, and systems that replaced manual work.
+              </p>
+              <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '1.5rem' }}>
+                For years, Excel was my superpower. I knew it inside out. And I was proud of that. But here's what I've learned: <strong>the finance industry is changing fast.</strong> Skills that were essential 10 years ago are becoming obsolete. Will Excel formulas even be necessary in 5 years? Who knows. That uncertainty? It spurs me on. I refuse to be stuck in old ways. I'd rather take risks, learn constantly, and stay ahead than wake up regretting that I didn't adapt. Even if it costs me—the minimum I get is knowledge.
               </p>
               <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8' }}>
-                Then AI happened. And everything changed.
+                Then AI happened. And everything changed again. And I leaned in.
               </p>
             </div>
             <div style={{ textAlign: 'center' }}>
-              <img src="/aaron-story.jpg" alt="Aaron's story" style={{ width: '100%', height: '280px', borderRadius: '12px', objectFit: 'cover' }} />
+              <img src="/aaron-archive-2.jpg" alt="Aaron's story" style={{ width: '100%', height: '350px', borderRadius: '12px', objectFit: 'cover' }} />
             </div>
           </div>
+
+          <h3 style={{
+            fontSize: '1.3rem',
+            color: colors.darkNavy,
+            marginBottom: '1.5rem',
+            fontFamily: "'Poppins', sans-serif",
+            fontWeight: '700',
+            textAlign: 'center'
+          }}>
+            A Few Candid Moments
+          </h3>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+            gap: '1rem'
+          }}>
+            <img src="/aaron-headshot-casual-1.jpg" alt="Aaron casual" style={{ width: '100%', height: '250px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img src="/aaron-headshot-casual-2.jpg" alt="Aaron candid" style={{ width: '100%', height: '250px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img src="/aaron-action-outdoor.jpg" alt="Aaron outdoors" style={{ width: '100%', height: '250px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img src="/aaron-headshot-casual-3.jpg" alt="Aaron moment" style={{ width: '100%', height: '250px', borderRadius: '8px', objectFit: 'cover' }} />
+          </div>
+        </div>
+
+        {/* WHERE I'VE LEARNED - TRACK RECORD */}
+        <div style={{ marginBottom: '4rem', paddingTop: '3rem', borderTop: `2px solid ${colors.borderGray}` }}>
+          <h2 style={{ fontSize: '2.2rem', color: colors.darkNavy, marginBottom: '2rem', fontFamily: "'Poppins', sans-serif", fontWeight: '800', textAlign: 'center' }}>
+            Where I've Learned (The Track Record)
+          </h2>
+          <p style={{ fontSize: '1.1rem', color: colors.textMuted, textAlign: 'center', marginBottom: '3rem', lineHeight: '1.8' }}>
+            These aren't just jobs. They're places where I invested time to understand broken processes, rebuilt them, and watched the time savings compound. Here's what I learned.
+          </p>
+
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+            <div style={{ background: colors.offWhite, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}` }}>
+              <h3 style={{ fontSize: '1.1rem', color: colors.darkNavy, marginBottom: '0.5rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
+                Flight Centre Travel Group
+              </h3>
+              <p style={{ fontSize: '0.85rem', color: colors.textMuted, marginBottom: '1rem', fontStyle: 'italic' }}>
+                Accountant & Team Leader
+              </p>
+              <p style={{ fontSize: '0.95rem', color: colors.textMuted, lineHeight: '1.6' }}>
+                Found outdated Excel models everywhere. Broken VBA code. Manual data entry everywhere. I rebuilt countless workbooks from the ground up—making them lean, streamlined, formula-driven. Saved employees hours every single day. Those models? Still being used today. That's compound time savings. That's impact.
+              </p>
+            </div>
+
+            <div style={{ background: colors.offWhite, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}` }}>
+              <h3 style={{ fontSize: '1.1rem', color: colors.darkNavy, marginBottom: '0.5rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
+                Coronis Group
+              </h3>
+              <p style={{ fontSize: '0.85rem', color: colors.textMuted, marginBottom: '1rem', fontStyle: 'italic' }}>
+                Accountant
+              </p>
+              <p style={{ fontSize: '0.95rem', color: colors.textMuted, lineHeight: '1.6' }}>
+                Their finance was drowning in paper. No automation. No insight for leadership. I ripped it out. Implemented paperless processes. Built insightful reporting that actually meant something to the CFO and CEO. 40% efficiency gain in finance operations. That freed up capacity for people to do value-add work. That's the math that matters.
+              </p>
+            </div>
+
+            <div style={{ background: colors.offWhite, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}` }}>
+              <h3 style={{ fontSize: '1.1rem', color: colors.darkNavy, marginBottom: '0.5rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
+                Telstra
+              </h3>
+              <p style={{ fontSize: '0.85rem', color: colors.textMuted, marginBottom: '1rem', fontStyle: 'italic' }}>
+                Finance Analyst
+              </p>
+              <p style={{ fontSize: '0.95rem', color: colors.textMuted, lineHeight: '1.6' }}>
+                Presented to 70+ junior accountants. Topic? How to actually communicate with senior leaders. Finance pros speak their own language—jargon, complexity, numbers nobody gets. I learned that translating insight into plain English is a superpower. It's the difference between a number and a decision. This is the art I'm still mastering.
+              </p>
+            </div>
+
+            <div style={{ background: colors.offWhite, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}` }}>
+              <h3 style={{ fontSize: '1.1rem', color: colors.darkNavy, marginBottom: '0.5rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
+                Aveo Group
+              </h3>
+              <p style={{ fontSize: '0.85rem', color: colors.textMuted, marginBottom: '1rem', fontStyle: 'italic' }}>
+                Commercial Analyst
+              </p>
+              <p style={{ fontSize: '0.95rem', color: colors.textMuted, lineHeight: '1.6' }}>
+                Processes loaded with manual data entry. Took hours. Every week. I automated it with PowerQuery and Excel. Saved a colleague 16 hours per week. Also built a dashboard that exposed staff utilization across sites—nurses, domestic attendants. Suddenly leadership could see where capacity was bleeding. Better decisions. Better profitability. Time is money.
+              </p>
+            </div>
+          </div>
+
+          <p style={{ fontSize: '1rem', color: colors.textMuted, textAlign: 'center', marginTop: '2rem', lineHeight: '1.8' }}>
+            <strong>The pattern?</strong> Someone invests time to understand a broken system. They fix it. They document it. Then they walk away and the time savings compound forever. That's leverage. That's what I'm here to help you build.
+          </p>
         </div>
 
         {/* THE PROBLEM I REALIZED */}
@@ -611,17 +763,26 @@ export default function AppCoaching() {
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'start' }}>
             <div style={{ textAlign: 'center' }}>
-              <img src="/aaron-problem.jpg" alt="The problem realized" style={{ width: '100%', height: '280px', borderRadius: '12px', objectFit: 'cover' }} />
+              <img src="/aaron-archive-4.jpg" alt="The problem realized" style={{ width: '100%', height: '280px', borderRadius: '12px', objectFit: 'cover' }} />
             </div>
             <div>
+              <h3 style={{ fontSize: '1.2rem', color: colors.darkNavy, marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
+                Inefficiency Everywhere
+              </h3>
               <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '1.5rem' }}>
-                As I started using AI, I realized something sobering: most people I knew—colleagues, friends, small business owners—were drowning in data. They had Excel spreadsheets, CRM systems, financial reports from their accountants, dashboards they didn't understand.
+                Across every organization I worked in, the same pattern emerged: <strong>inefficiency from data/process to insight/output.</strong> People had data. Systems worked. But turning that into clear, actionable insight? That took forever. Manual spreadsheets. Repetitive data entry. Dashboards nobody understood. Reports that took days to build.
               </p>
+              <h3 style={{ fontSize: '1.2rem', color: colors.darkNavy, marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700', marginTop: '1.5rem' }}>
+                The Finance Industry's Dirty Secret
+              </h3>
               <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '1.5rem' }}>
-                But they couldn't extract insight. They were paralyzed by complexity. They couldn't answer simple questions: "Am I profitable?" "Where's my cash going?" "What does this pattern mean?" And they definitely couldn't imagine using AI to solve it.
+                The finance space is stubborn—set in its ways. "That's just how it's done." But here's the thing: with Excel and AI, we can streamline this. We can expose insights more efficiently. We can set up foundational processes and knowledge NOW to close the knowledge gap and reduce manual handling NOW. The time saved compounds over time.
               </p>
+              <h3 style={{ fontSize: '1.2rem', color: colors.darkNavy, marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700', marginTop: '1.5rem' }}>
+                But There's a Bigger Enemy: Fear
+              </h3>
               <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8' }}>
-                The real problem wasn't their data or their tools. It was that no one was translating complexity into clarity. No one was showing them how.
+                Fear of change. Fear of the unknown. Fear that new tools won't work. This fear <strong>holds us back.</strong> People don't realize the HUGE benefit of spending time thinking about a process BEFORE rolling it out—so it's streamlined from day one. Instead, we patch broken systems forever. And that's a massive waste.
               </p>
             </div>
           </div>
@@ -632,38 +793,50 @@ export default function AppCoaching() {
           <h2 style={{ fontSize: '2.2rem', color: colors.darkNavy, marginBottom: '2rem', fontFamily: "'Poppins', sans-serif", fontWeight: '800', textAlign: 'center' }}>
             The Solutions I Found
           </h2>
-          <p style={{ fontSize: '1.1rem', color: colors.textMuted, textAlign: 'center', marginBottom: '3rem', fontStyle: 'italic' }}>
-            I realized I could be that translator. I could bridge the gap between data and understanding.
-          </p>
+
+          <div style={{ marginBottom: '3rem', background: colors.offWhite, padding: '2rem', borderRadius: '12px' }}>
+            <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '1.5rem' }}>
+              Here's the truth I discovered: <strong>time invested upfront in understanding a process, tool, or system saves you HOURS and MONTHS later.</strong>
+            </p>
+            <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '1.5rem' }}>
+              You spend time NOW rebuilding that Excel model properly. You spend time NOW automating that manual process. You spend time NOW thinking about how to present data simply. And then? That investment compounds forever. Every single day after, you save time. That's leverage.
+            </p>
+            <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '1.5rem' }}>
+              Now add AI to the equation. AI takes this to another level entirely. You can process MORE data, faster. You can extract insights you didn't know existed. You can automate things you thought were impossible. But only if you understand the fundamentals—the processes, the tools, the systems. AI is the accelerant. Understanding is the fuel.
+            </p>
+            <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8' }}>
+              That's what I teach. That's what I help you build. Time invested now. Benefits compounding forever.
+            </p>
+          </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '2rem', marginBottom: '3rem' }}>
-            <div style={{ background: `linear-gradient(135deg, ${colors.darkNavy} 0%, ${colors.navy} 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: 'white' }}>
-              <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>📚</div>
+            <div style={{ background: `linear-gradient(135deg, ${colors.limeGreen} 0%, rgba(255, 255, 255, 0.9) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
+              <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>💰</div>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
-                Enable Skills
+                Financial Literacy
               </h3>
-              <p style={{ fontSize: '0.95rem', lineHeight: '1.6', opacity: 0.9 }}>
-                Teach people Excel and AI so they become self-sufficient, not dependent on me forever.
+              <p style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
+                Understand your numbers. Your P&L. Your cash flow. Your profitability. Make decisions from clarity, not guessing.
               </p>
             </div>
 
-            <div style={{ background: `linear-gradient(135deg, ${colors.darkNavy} 0%, ${colors.navy} 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: 'white' }}>
-              <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>📊</div>
+            <div style={{ background: `linear-gradient(135deg, ${colors.limeGreen} 0%, rgba(255, 255, 255, 0.9) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
+              <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>📈</div>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
-                Build Dashboards
+                Excel & AI Skills
               </h3>
-              <p style={{ fontSize: '0.95rem', lineHeight: '1.6', opacity: 0.9 }}>
-                Create dashboards and systems that turn messy data into clear, actionable insights.
+              <p style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
+                Build systems that work for you. Automate the boring stuff. Process data smarter. Save time. Every single day.
               </p>
             </div>
 
-            <div style={{ background: `linear-gradient(135deg, ${colors.darkNavy} 0%, ${colors.navy} 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: 'white' }}>
-              <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>🤖</div>
+            <div style={{ background: `linear-gradient(135deg, ${colors.limeGreen} 0%, rgba(255, 255, 255, 0.9) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
+              <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>🚀</div>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
-                Implement AI
+                Career Coaching
               </h3>
-              <p style={{ fontSize: '0.95rem', lineHeight: '1.6', opacity: 0.9 }}>
-                Use AI to automate analysis and uncover patterns humans would miss.
+              <p style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
+                Stand out. Build skills that matter. Advance your career. Be real about where you're at and where you want to go.
               </p>
             </div>
           </div>
@@ -673,42 +846,58 @@ export default function AppCoaching() {
           </p>
         </div>
 
+        {/* WHY IT'S CALLED APP COACHING */}
+        <div style={{ marginBottom: '4rem', paddingTop: '3rem', borderTop: `2px solid ${colors.borderGray}`, background: colors.offWhite, padding: '3rem 2rem', borderRadius: '12px' }}>
+          <h2 style={{ fontSize: '2rem', color: colors.darkNavy, marginBottom: '1.5rem', fontFamily: "'Poppins', sans-serif", fontWeight: '800', textAlign: 'center' }}>
+            Why It's Called "APP Coaching"
+          </h2>
+          <p style={{ fontSize: '1.05rem', color: colors.textMuted, lineHeight: '1.8', maxWidth: '900px', margin: '0 auto' }}>
+            "APP" stands for <strong>Aaron Paul Pacheco</strong>—that's me. But it's really about more than apps.
+            <br /><br />
+            <strong>It's about accepting new technology.</strong> Challenging whether it can really advantage your business or personal life. Apps are the new thing I'm learning and teaching right now, but the principle is bigger: staying curious. Understanding tools. Asking "how can this help me?"
+            <br /><br />
+            <strong>Ignorance is a disadvantage.</strong> The people crushing it? They're not afraid of new tools. They learn them. They ask questions. They experiment. Meanwhile, others sit on the sidelines, waiting for the "perfect moment" to upskill.
+            <br /><br />
+            <strong>APP Coaching represents my belief to continue learning new tech and understand how they help—not just be noise at the dinner table.</strong> I'm here to guide you through that. To show you that the tools you're intimidated by? They're actually tools you can master. And when you do, everything changes.
+          </p>
+        </div>
+
         {/* WHY APP COACHING STANDS OUT */}
         <div style={{ marginBottom: '4rem', paddingTop: '3rem', borderTop: `2px solid ${colors.borderGray}` }}>
           <h2 style={{ fontSize: '2.2rem', color: colors.darkNavy, marginBottom: '2rem', fontFamily: "'Poppins', sans-serif", fontWeight: '800', textAlign: 'center' }}>
             Why APP Coaching Stands Out
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
-            <div style={{ background: `linear-gradient(135deg, ${colors.limeGreen} 0%, ${colors.mediumGreen} 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: 'white' }}>
+            <div style={{ background: `linear-gradient(135deg, ${colors.limeGreen} 0%, rgba(255, 255, 255, 0.9) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
-                Real Experience
+                💼 Real Experience
               </h3>
               <p style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
                 10+ years in real organizations. Not theory. I've built systems at scale, debugged broken dashboards, and coached teams through complexity.
               </p>
             </div>
 
-            <div style={{ background: `linear-gradient(135deg, ${colors.limeGreen} 0%, ${colors.mediumGreen} 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: 'white' }}>
+            <div style={{ background: `linear-gradient(135deg, ${colors.limeGreen} 0%, rgba(255, 255, 255, 0.9) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
-                Practical Focus
+                🎯 Practical Focus
               </h3>
               <p style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
                 Every recommendation is tested. No buzzwords. No fluff. Just what actually works in the real world.
               </p>
             </div>
 
-            <div style={{ background: `linear-gradient(135deg, ${colors.limeGreen} 0%, ${colors.mediumGreen} 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: 'white' }}>
+            <div style={{ background: `linear-gradient(135deg, ${colors.limeGreen} 0%, rgba(255, 255, 255, 0.9) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
-                Your Success, Not My Ego
+                🚀 Your Success, Not My Ego
               </h3>
               <p style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
                 I succeed when you become self-sufficient. Not when you depend on me. My goal is to work myself out of a job with you.
               </p>
             </div>
 
-            <div style={{ background: `linear-gradient(135deg, ${colors.limeGreen} 0%, ${colors.mediumGreen} 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: 'white' }}>
+            <div style={{ background: `linear-gradient(135deg, ${colors.limeGreen} 0%, rgba(255, 255, 255, 0.9) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
-                Accessible Pricing
+                💰 Accessible Pricing
               </h3>
               <p style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
                 Expert guidance at a fraction of what premium coaches charge. Same quality. Better accessibility.
@@ -742,91 +931,216 @@ export default function AppCoaching() {
   );
 
   // ===== BLOG PAGE =====
-  const BlogPage = () => (
-    <div>
-      <style>{styles}</style>
-      <section style={{
-        background: `linear-gradient(135deg, ${colors.darkNavy} 0%, ${colors.navy} 100%)`,
-        color: 'white',
-        padding: '4rem 2rem',
-        textAlign: 'center'
-      }}>
-        <h1 style={{ fontSize: '2.8rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '800' }}>
-          Blog & Resources
-        </h1>
-        <p style={{ fontSize: '1.1rem', opacity: '0.95' }}>
-          Articles on Excel, Finance, AI, and career growth—from Gram & friends.
-        </p>
-      </section>
+  const BlogPage = () => {
+    if (selectedBlogPost) {
+      // Individual blog post view
+      const post = blogPosts.find(p => p.id === selectedBlogPost);
+      if (!post) return <div>Post not found</div>;
 
-      <section style={{
-        padding: '4rem 2rem',
-        background: colors.offWhite,
-        maxWidth: '1200px',
-        margin: '0 auto'
-      }}>
-        <div style={{ textAlign: 'center', marginBottom: '2rem', padding: '1.5rem', background: `linear-gradient(135deg, rgba(59, 91, 219, 0.05) 0%, rgba(255, 217, 61, 0.05) 100%)`, borderRadius: '12px', borderLeft: `4px solid ${colors.limeGreen}` }}>
-          <p style={{ fontSize: '1.1rem', color: colors.darkNavy, fontStyle: 'italic', fontFamily: "'Outfit', sans-serif", fontWeight: '700', letterSpacing: '0.5px' }}>
-            📚 Thoughts on Excel, Finance, AI—and why your spreadsheet isn't the problem.
-          </p>
-        </div>
+      const formatDate = (dateStr) => {
+        const date = new Date(dateStr);
+        return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+      };
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-          gap: '2rem',
-          marginTop: '2rem'
-        }}>
-          {[
-            { title: 'Excel Formulas That Changed My Life', date: 'Coming soon', topic: 'Excel', slug: '#' },
-            { title: 'Understanding Your P&L: A Founder\'s Guide', date: 'Coming soon', topic: 'Finance', slug: '#' },
-            { title: 'AI Agents Are Changing Business Operations', date: 'Coming soon', topic: 'AI', slug: '#' }
-          ].map((post, idx) => (
-            <a key={idx} href={post.slug} style={{
-              background: 'white',
-              border: `1px solid ${colors.borderGray}`,
-              borderRadius: '12px',
-              padding: '2rem',
-              textDecoration: 'none',
-              transition: 'all 0.3s ease',
-              display: 'block',
-              cursor: 'pointer',
-              boxShadow: '0 2px 8px rgba(0,0,0,0.06)'
-            }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = colors.limeGreen; e.currentTarget.style.boxShadow = `0 8px 24px rgba(0, 255, 65, 0.15)`; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = colors.borderGray; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)'; }}>
-              <div style={{ fontSize: '0.8rem', color: colors.limeGreen, fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '0.5rem' }}>
-                {post.topic}
-              </div>
-              <h3 style={{ fontSize: '1.3rem', color: colors.darkNavy, marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700', lineHeight: '1.4' }}>
-                {post.title}
-              </h3>
-              <p style={{ fontSize: '0.85rem', color: colors.textMuted }}>
-                {post.date}
-              </p>
-            </a>
-          ))}
-        </div>
-
-        <div style={{ marginTop: '3rem', textAlign: 'center', paddingTop: '2rem', borderTop: `2px solid ${colors.borderGray}` }}>
-          <p style={{ fontSize: '1rem', color: colors.textMuted, marginBottom: '1.5rem' }}>
-            New posts coming soon. Subscribe for updates.
-          </p>
-          <button onClick={() => setCurrentPage('contact')} style={{
-            background: colors.limeGreen,
-            color: colors.darkNavy,
-            border: 'none',
-            padding: '0.85rem 2rem',
-            borderRadius: '6px',
-            fontWeight: '700',
-            fontSize: '0.9rem',
-            cursor: 'pointer',
-            fontFamily: "'Poppins', sans-serif"
+      return (
+        <div>
+          <style>{styles}</style>
+          {/* Back button header */}
+          <section style={{
+            background: colors.offWhite,
+            padding: '1.5rem 2rem',
+            borderBottom: `1px solid ${colors.borderGray}`,
+            maxWidth: '900px',
+            margin: '0 auto'
           }}>
-            GET IN TOUCH
-          </button>
+            <button onClick={() => setSelectedBlogPost(null)} style={{
+              background: 'transparent',
+              border: 'none',
+              color: colors.limeGreen,
+              fontSize: '1rem',
+              fontWeight: '600',
+              cursor: 'pointer',
+              padding: 0,
+              fontFamily: "'Poppins', sans-serif"
+            }}>
+              ← Back to Blog
+            </button>
+          </section>
+
+          {/* Post content */}
+          <article style={{
+            maxWidth: '900px',
+            margin: '0 auto',
+            padding: '3rem 2rem',
+            background: 'white'
+          }}>
+            <header style={{ marginBottom: '2.5rem' }}>
+              <h1 style={{
+                fontSize: '2.5rem',
+                color: colors.darkNavy,
+                fontFamily: "'Poppins', sans-serif",
+                fontWeight: '800',
+                marginBottom: '1rem',
+                lineHeight: '1.3'
+              }}>
+                {post.title}
+              </h1>
+              <p style={{
+                fontSize: '1rem',
+                color: colors.textMuted,
+                margin: 0
+              }}>
+                {formatDate(post.date)}
+              </p>
+            </header>
+
+            {/* Markdown content */}
+            <div style={{
+              fontSize: '1.05rem',
+              lineHeight: '1.8',
+              color: colors.textDark,
+              fontFamily: "'Inter', sans-serif"
+            }}>
+              <ReactMarkdown
+                components={{
+                  h2: ({node, ...props}) => <h2 style={{
+                    fontSize: '1.8rem',
+                    color: colors.darkNavy,
+                    fontFamily: "'Poppins', sans-serif",
+                    fontWeight: '700',
+                    marginTop: '2rem',
+                    marginBottom: '1rem',
+                    ...props.style
+                  }} {...props} />,
+                  h3: ({node, ...props}) => <h3 style={{
+                    fontSize: '1.4rem',
+                    color: colors.darkNavy,
+                    fontFamily: "'Poppins', sans-serif",
+                    fontWeight: '700',
+                    marginTop: '1.5rem',
+                    marginBottom: '1rem',
+                    ...props.style
+                  }} {...props} />,
+                  p: ({node, ...props}) => <p style={{
+                    marginBottom: '1.2rem',
+                    ...props.style
+                  }} {...props} />,
+                  strong: ({node, ...props}) => <strong style={{
+                    fontWeight: '700',
+                    color: colors.darkNavy,
+                    ...props.style
+                  }} {...props} />,
+                  em: ({node, ...props}) => <em style={{
+                    fontStyle: 'italic',
+                    color: colors.textMuted,
+                    ...props.style
+                  }} {...props} />,
+                  ul: ({node, ...props}) => <ul style={{
+                    marginLeft: '1.5rem',
+                    marginBottom: '1.2rem',
+                    ...props.style
+                  }} {...props} />,
+                  li: ({node, ...props}) => <li style={{
+                    marginBottom: '0.5rem',
+                    ...props.style
+                  }} {...props} />,
+                  hr: ({node, ...props}) => <hr style={{
+                    border: 'none',
+                    borderTop: `2px solid ${colors.borderGray}`,
+                    margin: '2rem 0',
+                    ...props.style
+                  }} {...props} />
+                }}
+              >
+                {post.content}
+              </ReactMarkdown>
+            </div>
+          </article>
         </div>
-      </section>
-    </div>
-  );
+      );
+    }
+
+    // Blog list view
+    return (
+      <div>
+        <style>{styles}</style>
+        <section style={{
+          background: `linear-gradient(135deg, ${colors.darkNavy} 0%, ${colors.navy} 100%)`,
+          color: 'white',
+          padding: '4rem 2rem',
+          textAlign: 'center'
+        }}>
+          <h1 style={{ fontSize: '2.8rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '800' }}>
+            Blog & Resources
+          </h1>
+          <p style={{ fontSize: '1.1rem', opacity: '0.95' }}>
+            Articles on Excel, Finance, AI, and career growth.
+          </p>
+        </section>
+
+        <section style={{
+          padding: '4rem 2rem',
+          background: colors.offWhite,
+          maxWidth: '1200px',
+          margin: '0 auto'
+        }}>
+          <div style={{ textAlign: 'center', marginBottom: '3rem', padding: '1.5rem', background: `linear-gradient(135deg, rgba(59, 91, 219, 0.05) 0%, rgba(255, 217, 61, 0.05) 100%)`, borderRadius: '12px', borderLeft: `4px solid ${colors.limeGreen}` }}>
+            <p style={{ fontSize: '1.1rem', color: colors.darkNavy, fontStyle: 'italic', fontFamily: "'Outfit', sans-serif", fontWeight: '700', letterSpacing: '0.5px' }}>
+              📚 Thoughts on Excel, Finance, AI—and why your spreadsheet isn't the problem.
+            </p>
+          </div>
+
+          {blogLoading ? (
+            <div style={{ textAlign: 'center', padding: '2rem' }}>
+              <p style={{ color: colors.textMuted }}>Loading posts...</p>
+            </div>
+          ) : blogPosts.length === 0 ? (
+            <div style={{ textAlign: 'center', padding: '2rem' }}>
+              <p style={{ color: colors.textMuted, marginBottom: '1rem' }}>
+                No blog posts yet. Check back soon!
+              </p>
+            </div>
+          ) : (
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
+              gap: '2rem',
+              marginTop: '2rem'
+            }}>
+              {blogPosts.map((post) => (
+                <button key={post.id} onClick={() => setSelectedBlogPost(post.id)} style={{
+                  background: 'white',
+                  border: `1px solid ${colors.borderGray}`,
+                  borderRadius: '12px',
+                  padding: '2rem',
+                  textDecoration: 'none',
+                  transition: 'all 0.3s ease',
+                  display: 'block',
+                  cursor: 'pointer',
+                  boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
+                  textAlign: 'left',
+                  width: '100%'
+                }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = colors.limeGreen; e.currentTarget.style.boxShadow = `0 8px 24px rgba(0, 255, 65, 0.15)`; e.currentTarget.style.transform = 'translateY(-4px)'; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = colors.borderGray; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)'; e.currentTarget.style.transform = 'translateY(0)'; }}>
+                  <div style={{ fontSize: '0.8rem', color: colors.limeGreen, fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '0.75rem' }}>
+                    #{post.id}
+                  </div>
+                  <h3 style={{ fontSize: '1.4rem', color: colors.darkNavy, marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700', lineHeight: '1.4' }}>
+                    {post.title}
+                  </h3>
+                  <p style={{ fontSize: '0.95rem', color: colors.textMuted, marginBottom: '1rem', lineHeight: '1.6' }}>
+                    {post.excerpt}
+                  </p>
+                  <p style={{ fontSize: '0.85rem', color: colors.textMuted }}>
+                    {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                  </p>
+                </button>
+              ))}
+            </div>
+          )}
+        </section>
+      </div>
+    );
+  };
 
   // ===== CONTACT/BOOKING PAGE =====
   const ContactPage = () => (
@@ -1035,7 +1349,7 @@ export default function AppCoaching() {
         boxShadow: '0 4px 16px rgba(0, 255, 65, 0.3)',
         zIndex: 99,
         transition: 'all 0.3s ease'
-      }} onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.05)'; e.currentTarget.style.boxShadow = '0 6px 20px rgba(0, 255, 65, 0.4)'; }} onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.boxShadow = '0 4px 16px rgba(0, 255, 65, 0.3)'; }}>
+      }} onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.05)'; e.currentTarget.style.boxShadow = '0 6px 20px rgba(0, 0, 0, 0.4)'; }} onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.boxShadow = '0 4px 16px rgba(0, 0, 0, 0.3)'; }}>
         💬 Get in Touch
       </button>
     </div>

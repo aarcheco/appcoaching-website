@@ -5,10 +5,15 @@
   "dependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-scripts": "5.0.0"
+    "react-scripts": "5.0.0",
+    "react-markdown": "^8.0.0",
+    "gray-matter": "^4.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "generate-manifest": "node scripts/publish-blog.js --manifest-only",
+    "publish-blog": "node scripts/publish-blog.js",
+    "prebuild": "node scripts/publish-blog.js --manifest-only",
+    "start": "node scripts/publish-blog.js --manifest-only && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

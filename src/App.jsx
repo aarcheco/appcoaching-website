@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import ReactMarkdown from 'react-markdown';
 
 export default function AppCoaching() {
   // ===== GOOGLE ANALYTICS =====
@@ -25,25 +24,56 @@ export default function AppCoaching() {
   const [selectedBlogPost, setSelectedBlogPost] = useState(null);
   const [blogLoading, setBlogLoading] = useState(false);
 
+  // Helper function to generate slug from title
+  const generateSlug = (title) => {
+    return title
+      .toLowerCase()
+      .trim()
+      .replace(/[^\w\s-]/g, '')
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-');
+  };
+
   // ===== URL ROUTING (hash-based) =====
   useEffect(() => {
     // Handle initial page load from URL hash
     const path = window.location.hash.slice(1) || 'home';
-    if (['home', 'services', 'about', 'blog', 'contact'].includes(path)) {
-      setCurrentPage(path);
+    const pathParts = path.split('/');
+    const pageName = pathParts[0];
+    const postSlug = pathParts[1];
+
+    if (['home', 'services', 'about', 'blog', 'contact'].includes(pageName)) {
+      setCurrentPage(pageName);
+
+      // If viewing a specific blog post by slug
+      if (pageName === 'blog' && postSlug && blogPosts.length > 0) {
+        const post = blogPosts.find(p => generateSlug(p.title) === postSlug);
+        if (post) setSelectedBlogPost(post.id);
+      }
     }
 
     // Listen for hash changes (back/forward buttons)
     const handleHashChange = () => {
       const newPath = window.location.hash.slice(1) || 'home';
-      if (['home', 'services', 'about', 'blog', 'contact'].includes(newPath)) {
-        setCurrentPage(newPath);
+      const newPathParts = newPath.split('/');
+      const newPageName = newPathParts[0];
+      const newPostSlug = newPathParts[1];
+
+      if (['home', 'services', 'about', 'blog', 'contact'].includes(newPageName)) {
+        setCurrentPage(newPageName);
+
+        if (newPageName === 'blog' && newPostSlug && blogPosts.length > 0) {
+          const post = blogPosts.find(p => generateSlug(p.title) === newPostSlug);
+          if (post) setSelectedBlogPost(post.id);
+        } else if (newPageName === 'blog') {
+          setSelectedBlogPost(null);
+        }
       }
     };
 
     window.addEventListener('hashchange', handleHashChange);
     return () => window.removeEventListener('hashchange', handleHashChange);
-  }, []);
+  }, [blogPosts]);
 
   // ===== BLOG SYSTEM =====
   useEffect(() => {
@@ -1029,6 +1059,7 @@ export default function AppCoaching() {
           }}>
             <button onClick={() => {
               setSelectedBlogPost(null);
+              window.location.hash = 'blog';
               window.scrollTo(0, 0);
             }} style={{
               background: 'transparent',
@@ -1071,79 +1102,13 @@ export default function AppCoaching() {
               </p>
             </header>
 
-            {/* Markdown content */}
+            {/* HTML content */}
             <div style={{
               fontSize: '1.05rem',
               lineHeight: '1.8',
               color: colors.textDark,
               fontFamily: "'Inter', sans-serif"
-            }}>
-              <ReactMarkdown
-                allowElement={(element, index, parent) => true}
-                skipHtml={false}
-                components={{
-                  h2: ({node, children, ...props}) => <h2 style={{
-                    fontSize: '1.8rem',
-                    color: colors.darkNavy,
-                    fontFamily: "'Poppins', sans-serif",
-                    fontWeight: '700',
-                    marginTop: '2rem',
-                    marginBottom: '1rem'
-                  }} {...props}>{children}</h2>,
-                  h3: ({node, children, ...props}) => <h3 style={{
-                    fontSize: '1.4rem',
-                    color: colors.darkNavy,
-                    fontFamily: "'Poppins', sans-serif",
-                    fontWeight: '700',
-                    marginTop: '1.5rem',
-                    marginBottom: '1rem'
-                  }} {...props}>{children}</h3>,
-                  p: ({node, children, ...props}) => <p style={{
-                    marginBottom: '1.2rem'
-                  }}>{children}</p>,
-                  strong: ({node, children, ...props}) => <strong style={{
-                    fontWeight: '700',
-                    color: colors.darkNavy
-                  }}>{children}</strong>,
-                  em: ({node, children, ...props}) => <em style={{
-                    fontStyle: 'italic',
-                    color: colors.textMuted
-                  }}>{children}</em>,
-                  ul: ({node, children, ...props}) => <ul style={{
-                    marginLeft: '1.5rem',
-                    marginBottom: '1.2rem'
-                  }}>{children}</ul>,
-                  li: ({node, children, ...props}) => <li style={{
-                    marginBottom: '0.5rem'
-                  }}>{children}</li>,
-                  hr: ({node, ...props}) => <hr style={{
-                    border: 'none',
-                    borderTop: `2px solid ${colors.borderGray}`,
-                    margin: '2rem 0'
-                  }} />,
-                  img: ({node, ...props}) => <img {...props} alt={props.alt || 'Blog post image'} style={{
-                    maxWidth: '100%',
-                    height: 'auto',
-                    borderRadius: '8px',
-                    margin: '1.5rem 0',
-                    display: 'block'
-                  }} />,
-                  blockquote: ({node, children, ...props}) => <blockquote style={{
-                    background: `linear-gradient(135deg, ${colors.limeGreen} 0%, rgba(255, 255, 255, 0.9) 100%)`,
-                    border: `1px solid ${colors.borderGray}`,
-                    borderRadius: '12px',
-                    padding: '2rem',
-                    marginLeft: 0,
-                    marginRight: 0,
-                    marginBottom: '2rem',
-                    color: colors.darkNavy,
-                    borderLeft: `4px solid ${colors.limeGreen}`
-                  }}>{children}</blockquote>
-                }}
-              >
-                {post.content}
-              </ReactMarkdown>
-            </div>
+            }} dangerouslySetInnerHTML={{ __html: post.content }} />
           </article>
         </div>
       );
@@ -1197,7 +1162,11 @@ export default function AppCoaching() {
               marginTop: '2rem'
             }}>
               {blogPosts.map((post) => (
-                <button key={post.id} onClick={() => setSelectedBlogPost(post.id)} style={{
+                <button key={post.id} onClick={() => {
+                  const slug = generateSlug(post.title);
+                  window.location.hash = `blog/${slug}`;
+                  setSelectedBlogPost(post.id);
+                }} style={{
                   background: 'white',
                   border: `1px solid ${colors.borderGray}`,
                   borderRadius: '12px',

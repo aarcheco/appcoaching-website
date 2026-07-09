@@ -1102,8 +1102,52 @@ export default function AppCoaching() {
               </p>
             </header>
 
-            {/* HTML content */}
-            <div style={{
+            {/* HTML content with custom styling */}
+            <style>{`
+              .blog-content h2 {
+                color: ${colors.navy};
+                font-size: 1.8rem;
+                font-weight: 700;
+                margin-top: 2.5rem;
+                margin-bottom: 1.5rem;
+                font-family: 'Poppins', sans-serif;
+              }
+              .blog-content h3 {
+                color: ${colors.navy};
+                font-size: 1.4rem;
+                font-weight: 700;
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+                font-family: 'Poppins', sans-serif;
+              }
+              .blog-content p {
+                margin-bottom: 1.5rem;
+              }
+              .blog-content strong {
+                font-weight: 700;
+                color: ${colors.darkNavy};
+                background: rgba(118, 215, 0, 0.2);
+                padding: 0.2rem 0.4rem;
+                border-radius: 3px;
+              }
+              .blog-content em {
+                font-style: italic;
+                color: ${colors.navy};
+                text-decoration: underline;
+                text-decoration-color: ${colors.limeGreen};
+                text-decoration-thickness: 2px;
+                text-underline-offset: 2px;
+              }
+              .blog-content hr {
+                border: none;
+                border-top: 2px solid ${colors.borderGray};
+                margin: 2.5rem 0;
+              }
+              .blog-content blockquote {
+                margin: 2rem 0;
+              }
+            `}</style>
+            <div className="blog-content" style={{
               fontSize: '1.05rem',
               lineHeight: '1.8',
               color: colors.textDark,

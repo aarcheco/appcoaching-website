@@ -3,10 +3,10 @@ title: "Why I Built APP Coaching: A Founder's Origin Story"
 date: 2026-07-08
 id: 001
 excerpt: From my mom's career to building forecasts that drive business decisions—how I discovered the power of efficient paths from problems to solutions
-heroImage: https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80
+heroImage: /aaron-hero.jpg
 ---
 
-<img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80" alt="Data analyst at work" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0;">
+<img src="/aaron-hero.jpg" alt="Aaron" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0;">
 
 <blockquote style="background: linear-gradient(135deg, #00FF00 0%, rgba(255, 255, 255, 0.9) 100%); border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📖 PAUL's Quick Read</strong>

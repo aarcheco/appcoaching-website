@@ -631,7 +631,7 @@ export default function AppCoaching() {
     <div>
       <style>{styles}</style>
       <section style={{
-        background: `linear-gradient(135deg, rgba(31, 58, 125, 0.5) 0%, rgba(42, 79, 168, 0.5) 100%), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1600&q=80')`,
+        background: `linear-gradient(135deg, rgba(31, 58, 125, 0.2) 0%, rgba(42, 79, 168, 0.2) 100%), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1600&q=80')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         color: 'white',
@@ -642,7 +642,35 @@ export default function AppCoaching() {
           Services
         </h1>
         <p style={{ fontSize: '1.1rem', opacity: '0.95', maxWidth: '700px', margin: '0 auto' }}>
-          Six ways I can help you unlock your potential in Finance, Excel, AI, and Operations.
+          I help you go from confused to confident. Through patient, personalized 1:1 coaching—whether you're struggling with Excel, business finance, personal finance, or AI adoption. I'll explain things in simple language, use relatable analogies, and find the approach that clicks for you. That lightbulb moment? That's where I work best.
+        </p>
+      </section>
+
+      <section style={{
+        padding: '4rem 2rem',
+        background: 'white',
+        maxWidth: '1200px',
+        margin: '0 auto',
+        textAlign: 'center'
+      }}>
+        <h2 style={{
+          fontSize: '2rem',
+          color: colors.darkNavy,
+          marginBottom: '1rem',
+          fontFamily: "'Poppins', sans-serif",
+          fontWeight: '800'
+        }}>
+          My Approach & Pricing
+        </h2>
+        <p style={{
+          fontSize: '1.1rem',
+          color: colors.textMuted,
+          marginBottom: '2rem',
+          maxWidth: '700px',
+          margin: '0 auto 2rem',
+          lineHeight: '1.8'
+        }}>
+          All of my 1:1 coaching services are priced <strong style={{ color: colors.darkNavy, fontSize: '1.2rem' }}>under $200/hour</strong>. That's well below typical business coaching retainers. I do this because I genuinely love helping people learn and become self-sufficient—that's the real fulfillment for me.
         </p>
       </section>
 
@@ -652,11 +680,6 @@ export default function AppCoaching() {
         maxWidth: '1400px',
         margin: '0 auto'
       }}>
-        <div style={{ textAlign: 'center', marginBottom: '2rem', padding: '1.5rem', background: `linear-gradient(135deg, rgba(59, 91, 219, 0.05) 0%, rgba(255, 217, 61, 0.05) 100%)`, borderRadius: '12px', borderLeft: `4px solid ${colors.limeGreen}` }}>
-          <p style={{ fontSize: '1.1rem', color: colors.darkNavy, fontStyle: 'italic', fontFamily: "'Outfit', sans-serif", fontWeight: '700', letterSpacing: '0.5px' }}>
-            💡 Pick your play. We'll level up your game.
-          </p>
-        </div>
 
         <div style={{
           display: 'grid',

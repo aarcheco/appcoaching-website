@@ -113,12 +113,61 @@ Here's the actual post content. Use **bold** for emphasis and *italics* for seco
 ```
 
 ### What GRAM Should Do
-1. Create/finalize blog post content with Aaron
-2. Add front matter (title, date, id, excerpt)
-3. Save to `public/blog/` folder with proper naming
-4. Tell Aaron: "Blog post ready to publish"
+1. Create/finalize blog post content with Aaron (as markdown)
+2. **Convert markdown to HTML** (see HTML Conversion section below)
+3. Add front matter (title, date, id, excerpt)
+4. Save HTML to `public/blog/` folder with proper naming
+5. Tell Aaron: "Blog post ready to publish"
 
-That's it! Everything else is automatic.
+### HTML Conversion (Step 2 - Required)
+
+The website renders HTML, not markdown. GRAM must convert the markdown content to HTML before saving.
+
+**Quickest method:** Ask Claude "Convert this markdown to HTML" and paste your blog post (after the front matter). Takes 10 seconds.
+
+**Manual online tool:** https://www.markdowntohtml.com/ (paste markdown → get HTML)
+
+**Key conversions:**
+- `## Heading` → `<h2>Heading</h2>`
+- `**bold**` → `<strong>bold</strong>`
+- `*italic*` → `<em>italic</em>`
+- `> quote` → `<blockquote>quote</blockquote>`
+- Line breaks → `<p>` tags
+
+**Example:**
+
+❌ **BEFORE (markdown):**
+```
+## My Story
+
+My mum was an accountant. Growing up, I watched...
+
+**Here's the truth:** Time invested upfront saves hours later.
+```
+
+✅ **AFTER (HTML, what goes in file after front matter):**
+```
+<h2>My Story</h2>
+
+<p>My mum was an accountant. Growing up, I watched...</p>
+
+<p><strong>Here's the truth:</strong> Time invested upfront saves hours later.</p>
+```
+
+**Then save the full file:**
+```markdown
+---
+title: Why I Started APP Coaching
+date: 2026-07-08
+id: 001
+excerpt: My origin story
+heroImage: https://...
+---
+
+<h2>My Story</h2>
+<p>My mum was an accountant...</p>
+<p><strong>Here's the truth:</strong> Time invested upfront saves hours later.</p>
+```
 
 ---
 

@@ -1307,6 +1307,62 @@ export default function AppCoaching() {
     );
   };
 
+  // ===== EMAIL SIGNUP SECTION (APPEARS ON ALL PAGES) =====
+  const EmailSignupSection = () => (
+    <section style={{ padding: '3rem 2rem', background: 'white', borderTop: `1px solid ${colors.borderGray}` }}>
+      <div style={{ maxWidth: '600px', margin: '0 auto' }}>
+        <form method="POST" action="https://769edbac.sibforms.com/serve/MUIFAI68iMXllj39M23qWvg8WXTSI18vSaOLkcgq_FMHHqsKdxJyUM-hDTPk2VZoJECqpjMbOjchkBON3jNJid8LLLgUwQyECMmViX_L5G7qHjZxODx0ilAbRhxVaaJx-nggpmjDfbAQVMqHaPFQHNEkh5cSl3jRu2TCycbc9RnOpkwBXTL0enoMpvOloUurjV3i7kqBMPB6ItqRQA==" data-type="subscription">
+          <div style={{ textAlign: 'left', background: `rgba(255, 255, 255, 1)`, border: `1px solid ${colors.borderGray}`, borderRadius: '8px', padding: '2rem' }}>
+            <h3 style={{ fontSize: '1.5rem', fontWeight: '700', color: colors.darkNavy, fontFamily: "'Poppins', sans-serif", margin: '0 0 0.75rem 0', lineHeight: '1.3' }}>Subscribe to learn tips & follow my own learning journey!</h3>
+
+            <p style={{ fontSize: '0.95rem', color: colors.textDark, lineHeight: '1.6', margin: '0 0 1.5rem 0' }}>I share Excel tricks, financial tips (business + personal), and AI prompts I'm learning and applying across my day job, side hustles, and personal investments so I can build and grow fast! Real learnings from real work. Follow my progress!</p>
+
+            <div style={{ marginBottom: '1.5rem' }}>
+              <label style={{ display: 'block', fontSize: '0.9rem', fontWeight: '700', marginBottom: '0.5rem', color: colors.darkNavy }} htmlFor="EMAIL">Email address</label>
+              <input
+                type="email"
+                id="EMAIL"
+                name="EMAIL"
+                placeholder="your@email.com"
+                required
+                style={{
+                  width: '100%',
+                  padding: '0.75rem',
+                  border: `1px solid ${colors.borderGray}`,
+                  borderRadius: '6px',
+                  fontSize: '0.95rem',
+                  fontFamily: "'Inter', sans-serif",
+                  boxSizing: 'border-box'
+                }}
+              />
+            </div>
+
+            <button
+              type="submit"
+              style={{
+                width: '100%',
+                background: colors.limeGreen,
+                color: colors.darkNavy,
+                border: 'none',
+                padding: '0.85rem 2rem',
+                borderRadius: '6px',
+                fontWeight: '700',
+                fontSize: '0.9rem',
+                cursor: 'pointer',
+                fontFamily: "'Poppins', sans-serif",
+                transition: 'all 0.3s ease'
+              }}
+              onMouseOver={(e) => e.target.style.opacity = '0.9'}
+              onMouseOut={(e) => e.target.style.opacity = '1'}
+            >
+              SUBSCRIBE
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  );
+
   // ===== CONTACT/BOOKING PAGE =====
   const ContactPage = () => (
     <div>
@@ -1495,6 +1551,7 @@ export default function AppCoaching() {
       {currentPage === 'blog' && <BlogPage />}
       {currentPage === 'contact' && <ContactPage />}
 
+      <EmailSignupSection />
       <Footer />
 
       {/* Floating "Get in Touch" CTA Button - Bottom Right */}

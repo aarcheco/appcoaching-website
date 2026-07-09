@@ -500,13 +500,13 @@ export default function AppCoaching() {
         </h1>
 
         <p style={{ fontSize: 'clamp(0.95rem, 3vw, 1.2rem)', maxWidth: '900px', margin: '0 auto clamp(1rem, 2vh, 2rem)', lineHeight: '1.8', opacity: '0.95', fontFamily: "'Inter', sans-serif" }}>
-          <span style={{ color: colors.darkNavy, fontWeight: '700' }}>Business owner?</span> Your P&L, balance sheet, Xero reports—you nod like you get it. You don't. You can't spot cash leaks or know if you're actually profitable. In plain English: flying blind.
+          <span style={{ color: colors.limeGreen, fontWeight: '700' }}>Business owner?</span> Your P&L, balance sheet, Xero reports—you nod like you get it. You don't. You can't spot cash leaks or know if you're actually profitable. In plain English: flying blind.
           <br />
           <br />
-          <span style={{ color: colors.darkNavy, fontWeight: '700' }}>Young professional?</span> Excel models shouldn't take hours. Data analysis shouldn't be painful. With basic Excel + AI, you extract insights in seconds, build dashboards that impress, and feel confident with numbers.
+          <span style={{ color: colors.limeGreen, fontWeight: '700' }}>Young professional?</span> Excel models shouldn't take hours. Data analysis shouldn't be painful. With basic Excel + AI, you extract insights in seconds, build dashboards that impress, and feel confident with numbers.
           <br />
           <br />
-          <span style={{ color: colors.darkNavy, fontWeight: '700' }}>I empower you.</span> I give you Excel skills, AI knowledge, and the guidance to become self-sufficient. You go from confusion to confidence. You understand your data. You make better decisions.
+          <span style={{ color: colors.limeGreen, fontWeight: '700' }}>I empower you.</span> I give you Excel skills, AI knowledge, and the guidance to become self-sufficient. You go from confusion to confidence. You understand your data. You make better decisions.
         </p>
 
         <button onClick={() => navigateTo('contact')} style={{ background: colors.limeGreen, color: '#4a5568', border: 'none', padding: 'clamp(0.6rem, 2vh, 1rem) clamp(1rem, 4vw, 2.5rem)', fontSize: 'clamp(0.8rem, 2vw, 1rem)', fontWeight: '700', borderRadius: '8px', cursor: 'pointer', fontFamily: "'Poppins', sans-serif", whiteSpace: 'nowrap' }}>
@@ -741,7 +741,7 @@ export default function AppCoaching() {
     <div>
       <style>{styles}</style>
       <section style={{
-        background: `linear-gradient(135deg, rgba(31, 58, 125, 0.5) 0%, rgba(42, 79, 168, 0.5) 100%), url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&q=80')`,
+        background: `linear-gradient(135deg, rgba(31, 58, 125, 0.2) 0%, rgba(42, 79, 168, 0.2) 100%), url('/aaron-headshot-casual.jpg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         color: 'white',
@@ -1249,7 +1249,9 @@ export default function AppCoaching() {
       <div>
         <style>{styles}</style>
         <section style={{
-          background: `linear-gradient(135deg, ${colors.darkNavy} 0%, ${colors.navy} 100%)`,
+          background: `linear-gradient(135deg, rgba(31, 58, 125, 0.2) 0%, rgba(42, 79, 168, 0.2) 100%), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1600&q=80')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
           color: 'white',
           padding: '4rem 2rem',
           textAlign: 'center'
@@ -1258,7 +1260,7 @@ export default function AppCoaching() {
             Blog & Resources
           </h1>
           <p style={{ fontSize: '1.1rem', opacity: '0.95' }}>
-            Articles on Excel, Finance, AI, and career growth.
+            I share what I'm learning about Excel, finance, AI, and the efficient path to becoming self-sufficient. Here's my thinking.
           </p>
         </section>
 
@@ -1268,11 +1270,6 @@ export default function AppCoaching() {
           maxWidth: '1200px',
           margin: '0 auto'
         }}>
-          <div style={{ textAlign: 'center', marginBottom: '3rem', padding: '1.5rem', background: `linear-gradient(135deg, rgba(59, 91, 219, 0.05) 0%, rgba(255, 217, 61, 0.05) 100%)`, borderRadius: '12px', borderLeft: `4px solid ${colors.limeGreen}` }}>
-            <p style={{ fontSize: '1.1rem', color: colors.darkNavy, fontStyle: 'italic', fontFamily: "'Outfit', sans-serif", fontWeight: '700', letterSpacing: '0.5px' }}>
-              📚 Thoughts on Excel, Finance, AI—and why your spreadsheet isn't the problem.
-            </p>
-          </div>
 
           {blogLoading ? (
             <div style={{ textAlign: 'center', padding: '2rem' }}>
@@ -1309,8 +1306,8 @@ export default function AppCoaching() {
                   textAlign: 'left',
                   width: '100%'
                 }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = colors.limeGreen; e.currentTarget.style.boxShadow = `0 8px 24px rgba(0, 255, 65, 0.15)`; e.currentTarget.style.transform = 'translateY(-4px)'; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = colors.borderGray; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)'; e.currentTarget.style.transform = 'translateY(0)'; }}>
-                  <div style={{ fontSize: '0.8rem', color: colors.limeGreen, fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '0.75rem' }}>
-                    #{post.id}
+                  <div style={{ fontSize: '1.2rem', color: 'white', fontWeight: '700', marginBottom: '0.75rem', background: `linear-gradient(135deg, ${colors.navy} 0%, ${colors.limeGreen} 100%)`, width: '40px', height: '40px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    {post.id}
                   </div>
                   <h3 style={{ fontSize: '1.4rem', color: colors.darkNavy, marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700', lineHeight: '1.4' }}>
                     {post.title}
@@ -1318,7 +1315,7 @@ export default function AppCoaching() {
                   <p style={{ fontSize: '0.95rem', color: colors.textMuted, marginBottom: '1rem', lineHeight: '1.6' }}>
                     {post.excerpt}
                   </p>
-                  <p style={{ fontSize: '0.85rem', color: colors.textMuted }}>
+                  <p style={{ fontSize: '0.85rem', color: colors.darkNavy, fontStyle: 'italic', fontWeight: '500' }}>
                     {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
                   </p>
                 </button>

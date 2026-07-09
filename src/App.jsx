@@ -1153,6 +1153,69 @@ export default function AppCoaching() {
               color: colors.textDark,
               fontFamily: "'Inter', sans-serif"
             }} dangerouslySetInnerHTML={{ __html: post.content }} />
+
+            {/* About the Author section */}
+            <div style={{
+              borderTop: `2px solid ${colors.borderGray}`,
+              marginTop: '3rem',
+              paddingTop: '2rem',
+              background: `linear-gradient(135deg, rgba(59, 91, 219, 0.03) 0%, rgba(118, 215, 0, 0.03) 100%)`,
+              borderRadius: '12px',
+              padding: '2rem',
+              marginLeft: '-2rem',
+              marginRight: '-2rem',
+              marginBottom: '-2rem',
+              paddingLeft: '2rem',
+              paddingRight: '2rem'
+            }}>
+              <h3 style={{
+                fontSize: '1.2rem',
+                color: colors.darkNavy,
+                fontFamily: "'Poppins', sans-serif",
+                fontWeight: '700',
+                marginBottom: '1.5rem'
+              }}>
+                About the Author
+              </h3>
+
+              <div style={{
+                display: 'flex',
+                gap: '1.5rem',
+                alignItems: 'flex-start'
+              }}>
+                <img
+                  src="/aaron-headshot-professional.jpg"
+                  alt="Aaron Pacheco"
+                  style={{
+                    width: '80px',
+                    height: '80px',
+                    borderRadius: '50%',
+                    objectFit: 'cover',
+                    flexShrink: 0,
+                    border: `3px solid ${colors.limeGreen}`
+                  }}
+                />
+
+                <div>
+                  <p style={{
+                    margin: '0 0 0.8rem 0',
+                    fontSize: '0.95rem',
+                    lineHeight: '1.6',
+                    color: colors.textDark
+                  }}>
+                    <strong style={{ color: colors.darkNavy, fontSize: '1rem' }}>Aaron Pacheco</strong> is a finance analyst and AI coach who helps founders and professionals master Excel, finance strategy, and AI adoption. Over his career across leading Australian organizations (including Flight Centre, PwC, and Aveo), he's built financial models, dashboards, and systems that drive better business decisions. Now he's scaling that expertise through APP Coaching—helping smart people work smarter, not harder.
+                  </p>
+                  <p style={{
+                    margin: '0',
+                    fontSize: '0.9rem',
+                    color: colors.textMuted,
+                    fontStyle: 'italic'
+                  }}>
+                    🎯 Finance • Excel • AI • Career growth
+                  </p>
+                </div>
+              </div>
+            </div>
           </article>
         </div>
       );

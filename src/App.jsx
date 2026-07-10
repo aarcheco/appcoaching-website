@@ -30,6 +30,9 @@ export default function AppCoaching() {
   const [selectedBlogPost, setSelectedBlogPost] = useState(null);
   const [blogLoading, setBlogLoading] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('Everything Else');
+  const [blogViewMode, setBlogViewMode] = useState('post');
+  const [blogSnippetType, setBlogSnippetType] = useState('');
+  const [blogSearchTerm, setBlogSearchTerm] = useState('');
 
   // Helper function to generate slug from title
   const generateSlug = (title) => {
@@ -635,33 +638,23 @@ export default function AppCoaching() {
 
   // ===== SERVICES PAGE =====
   const ServicesPage = () => {
-    const [carouselIndex, setCarouselIndex] = useState(0);
-
     const principles = [
       {
         icon: '💡',
         title: 'Confusion → Confidence',
-        description: 'You come to me stuck. Excel formulas? No idea. Your P&L? Confusing. AI? Too much hype. I slow down, ask the right questions, and walk you through it step by step until the fog lifts and you actually get it.'
+        description: 'Transform what feels overwhelming into actionable clarity you can trust and act on.'
       },
       {
         icon: '📝',
-        title: 'Plain English Always',
-        description: 'I translate jargon into real language. No corporate speak. No showing off. I explain things like I\'m talking to a mate—using everyday analogies so it actually sticks. Finance, Excel, AI—all of it makes sense when you hear it right.'
+        title: 'Speaking Plain English',
+        description: 'No jargon. No corporate speak. Clear language that moves people from confusion to understanding.'
       },
       {
         icon: '🤝',
         title: 'Co-Learning Together',
-        description: 'This isn\'t one-way teaching. You bring real problems, I bring perspective and expertise. We figure it out together. Sometimes I\'m ahead on Excel, you\'re ahead on your business—that\'s how we both level up.'
+        description: 'We grow as partners. You become independent with these tools, not dependent on me.'
       }
     ];
-
-    const goToPrevious = () => {
-      setCarouselIndex((prev) => (prev === 0 ? principles.length - 1 : prev - 1));
-    };
-
-    const goToNext = () => {
-      setCarouselIndex((prev) => (prev === principles.length - 1 ? 0 : prev + 1));
-    };
 
     return (
       <div>
@@ -682,140 +675,6 @@ export default function AppCoaching() {
           </p>
         </section>
 
-      <section style={{
-        padding: '4rem 2rem',
-        background: 'white',
-        maxWidth: '1200px',
-        margin: '0 auto'
-      }}>
-        <h2 style={{
-          fontSize: '2rem',
-          color: colors.darkNavy,
-          marginBottom: '2rem',
-          fontFamily: "'Poppins', sans-serif",
-          fontWeight: '800',
-          textAlign: 'center'
-        }}>
-          How I Work
-        </h2>
-
-        <div style={{
-          position: 'relative',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          gap: '2rem',
-          marginBottom: '2rem'
-        }}>
-          {/* Left Arrow */}
-          <button
-            onClick={goToPrevious}
-            style={{
-              background: colors.navy,
-              color: 'white',
-              border: 'none',
-              width: '48px',
-              height: '48px',
-              borderRadius: '50%',
-              fontSize: '1.5rem',
-              cursor: 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              transition: 'all 0.3s ease',
-              flexShrink: 0
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = colors.darkNavy;
-              e.currentTarget.style.transform = 'scale(1.1)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = colors.navy;
-              e.currentTarget.style.transform = 'scale(1)';
-            }}
-          >
-            ←
-          </button>
-
-          {/* Carousel Card */}
-          <div style={{
-            width: '100%',
-            maxWidth: '500px',
-            background: `linear-gradient(135deg, rgba(118, 215, 0, 0.05) 0%, rgba(59, 130, 246, 0.05) 100%)`,
-            border: `1px solid ${colors.borderGray}`,
-            borderRadius: '12px',
-            padding: '2rem',
-            textAlign: 'center',
-            minHeight: '320px',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center'
-          }}>
-            <div style={{
-              fontSize: '3rem',
-              marginBottom: '1rem'
-            }}>
-              {principles[carouselIndex].icon}
-            </div>
-            <h3 style={{
-              fontSize: '1.3rem',
-              color: colors.darkNavy,
-              marginBottom: '1rem',
-              fontFamily: "'Poppins', sans-serif",
-              fontWeight: '700'
-            }}>
-              {principles[carouselIndex].title}
-            </h3>
-            <p style={{
-              fontSize: '0.95rem',
-              color: colors.textMuted,
-              lineHeight: '1.7'
-            }}>
-              {principles[carouselIndex].description}
-            </p>
-          </div>
-
-          {/* Right Arrow */}
-          <button
-            onClick={goToNext}
-            style={{
-              background: colors.navy,
-              color: 'white',
-              border: 'none',
-              width: '48px',
-              height: '48px',
-              borderRadius: '50%',
-              fontSize: '1.5rem',
-              cursor: 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              transition: 'all 0.3s ease',
-              flexShrink: 0
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = colors.darkNavy;
-              e.currentTarget.style.transform = 'scale(1.1)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = colors.navy;
-              e.currentTarget.style.transform = 'scale(1)';
-            }}
-          >
-            →
-          </button>
-        </div>
-
-        {/* Slide counter */}
-        <p style={{
-          textAlign: 'center',
-          color: colors.textMuted,
-          fontSize: '0.9rem',
-          fontWeight: '600'
-        }}>
-          Slide {carouselIndex + 1} of {principles.length}
-        </p>
-      </section>
 
       <section style={{
         padding: '4rem 2rem',
@@ -896,23 +755,91 @@ export default function AppCoaching() {
         <h2 style={{
           fontSize: '2rem',
           color: colors.darkNavy,
-          marginBottom: '1rem',
+          marginBottom: '2rem',
           fontFamily: "'Poppins', sans-serif",
           fontWeight: '800',
           textAlign: 'center'
         }}>
-          My Approach & Pricing
+          My Coaching Principles
+        </h2>
+
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gap: '2rem',
+          marginBottom: '4rem'
+        }}>
+          {principles.map((principle, idx) => (
+            <div key={idx} style={{
+              background: `linear-gradient(135deg, #00FF00 0%, rgba(255, 255, 255, 0.9) 100%)`,
+              border: `1px solid ${colors.borderGray}`,
+              borderRadius: '12px',
+              padding: '2rem',
+              textAlign: 'center'
+            }}>
+              <div style={{
+                fontSize: '2rem',
+                marginBottom: '1rem'
+              }}>
+                {principle.icon}
+              </div>
+              <h3 style={{
+                fontSize: '1.2rem',
+                color: colors.darkNavy,
+                marginBottom: '0.75rem',
+                fontFamily: "'Poppins', sans-serif",
+                fontWeight: '700'
+              }}>
+                {principle.title}
+              </h3>
+              <p style={{
+                fontSize: '0.95rem',
+                color: colors.darkNavy,
+                lineHeight: '1.6'
+              }}>
+                {principle.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section style={{
+        padding: '4rem 2rem',
+        background: 'white',
+        maxWidth: '1200px',
+        margin: '0 auto'
+      }}>
+        <h2 style={{
+          fontSize: '2rem',
+          color: colors.darkNavy,
+          marginBottom: '2rem',
+          fontFamily: "'Poppins', sans-serif",
+          fontWeight: '800',
+          textAlign: 'center'
+        }}>
+          Pricing
         </h2>
         <p style={{
           fontSize: '1.1rem',
           color: colors.textMuted,
-          marginBottom: '3rem',
+          marginBottom: '1.5rem',
           maxWidth: '800px',
-          margin: '0 auto 3rem',
+          margin: '0 auto 1.5rem',
           lineHeight: '1.8',
           textAlign: 'center'
         }}>
-          All of my 1:1 coaching services are priced <strong style={{ color: colors.darkNavy, fontSize: '1.2rem' }}>under $200/hour</strong>—well below typical business coaching retainers (which run $250-500+). I charge this because I genuinely love seeing people transform from stuck to confident. That's the real win for me. You get expert guidance without the premium agency markup.
+          One-on-one coaching starting at under $100 per session, up to under $200 depending on the service.
+        </p>
+        <p style={{
+          fontSize: '1rem',
+          color: colors.textMuted,
+          maxWidth: '800px',
+          margin: '0 auto',
+          lineHeight: '1.8',
+          textAlign: 'center'
+        }}>
+          Traditional business coaching runs $300–$500+ per session. I can charge less because I genuinely love closing knowledge gaps and seeing that lightbulb moment where someone realizes how much time they'll save. That fulfillment is worth more to me than the extra margin.
         </p>
       </section>
     </div>
@@ -1464,40 +1391,119 @@ export default function AppCoaching() {
           margin: '0 auto'
         }}>
 
-          {/* Category Filter */}
+          {/* Filters Grid */}
           <div style={{
-            display: 'flex',
-            gap: '1rem',
-            marginBottom: '2rem',
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-            alignItems: 'center'
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+            gap: '1.5rem',
+            marginBottom: '2rem'
           }}>
-            <label style={{ fontSize: '0.95rem', fontWeight: '600', color: colors.darkNavy }}>
-              Filter by:
-            </label>
-            <select
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
+            {/* View by toggle */}
+            <div>
+              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', marginBottom: '0.5rem', color: colors.darkNavy }}>
+                View by:
+              </label>
+              <select
+                value={blogViewMode}
+                onChange={(e) => setBlogViewMode(e.target.value)}
+                style={{
+                  width: '100%',
+                  padding: '0.6rem 0.75rem',
+                  fontSize: '0.9rem',
+                  borderRadius: '6px',
+                  border: `1px solid ${colors.borderGray}`,
+                  background: 'white',
+                  color: colors.darkNavy,
+                  fontWeight: '600',
+                  cursor: 'pointer',
+                  fontFamily: "'Poppins', sans-serif"
+                }}
+              >
+                <option value="post">Post</option>
+                <option value="snippet">Snippet</option>
+              </select>
+            </div>
+
+            {/* Snippet type filter (only show when Snippet view is selected) */}
+            {blogViewMode === 'snippet' && (
+              <div>
+                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', marginBottom: '0.5rem', color: colors.darkNavy }}>
+                  Snippet type:
+                </label>
+                <select
+                  value={blogSnippetType}
+                  onChange={(e) => setBlogSnippetType(e.target.value)}
+                  style={{
+                    width: '100%',
+                    padding: '0.6rem 0.75rem',
+                    fontSize: '0.9rem',
+                    borderRadius: '6px',
+                    border: `1px solid ${colors.borderGray}`,
+                    background: 'white',
+                    color: colors.darkNavy,
+                    fontWeight: '600',
+                    cursor: 'pointer',
+                    fontFamily: "'Poppins', sans-serif"
+                  }}
+                >
+                  <option value="">All snippets</option>
+                  <option value="levelup">PAUL's LevelUp</option>
+                  <option value="prompt">PAUL's Prompt</option>
+                  <option value="formula">PAUL's Formula</option>
+                </select>
+              </div>
+            )}
+
+            {/* Category filter */}
+            <div>
+              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', marginBottom: '0.5rem', color: colors.darkNavy }}>
+                Category:
+              </label>
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                style={{
+                  width: '100%',
+                  padding: '0.6rem 0.75rem',
+                  fontSize: '0.9rem',
+                  borderRadius: '6px',
+                  border: `1px solid ${colors.borderGray}`,
+                  background: 'white',
+                  color: colors.darkNavy,
+                  fontWeight: '600',
+                  cursor: 'pointer',
+                  fontFamily: "'Poppins', sans-serif"
+                }}
+              >
+                <option value="Everything Else">Everything Else</option>
+                <option value="Business Finance">Business Finance</option>
+                <option value="Personal Finance">Personal Finance</option>
+                <option value="Excel">Excel</option>
+                <option value="AI">AI</option>
+                <option value="Accounting & Finance Career">Accounting & Finance Career</option>
+              </select>
+            </div>
+          </div>
+
+          {/* Search bar */}
+          <div style={{
+            marginBottom: '2rem'
+          }}>
+            <input
+              type="text"
+              placeholder="Search by keyword..."
+              value={blogSearchTerm}
+              onChange={(e) => setBlogSearchTerm(e.target.value)}
               style={{
-                padding: '0.6rem 1rem',
+                width: '100%',
+                padding: '0.75rem',
                 fontSize: '0.95rem',
-                borderRadius: '8px',
-                border: `2px solid ${colors.limeGreen}`,
-                background: 'white',
-                color: colors.darkNavy,
-                fontWeight: '600',
-                cursor: 'pointer',
-                fontFamily: "'Poppins', sans-serif"
+                borderRadius: '6px',
+                border: `1px solid ${colors.borderGray}`,
+                fontFamily: "'Inter', sans-serif",
+                boxSizing: 'border-box'
               }}
-            >
-              <option value="Everything Else">Everything Else</option>
-              <option value="Business Finance">Business Finance</option>
-              <option value="Personal Finance">Personal Finance</option>
-              <option value="Excel">Excel</option>
-              <option value="AI">AI</option>
-              <option value="Accounting & Finance Career">Accounting & Finance Career</option>
-            </select>
+            />
           </div>
 
           {blogLoading ? (
@@ -1511,72 +1517,97 @@ export default function AppCoaching() {
               </p>
             </div>
           ) : (
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
-              gap: '2rem',
-              marginTop: '2rem'
-            }}>
-              {blogPosts
-                .filter((post) => selectedCategory === 'Everything Else' || (post.categories && post.categories.includes(selectedCategory)))
-                .map((post) => (
-                <button key={post.id} onClick={() => {
-                  const slug = generateSlug(post.title);
-                  window.location.hash = `blog/${slug}`;
-                  setSelectedBlogPost(post.id);
-                }} style={{
-                  background: 'white',
-                  border: `1px solid ${colors.borderGray}`,
-                  borderRadius: '12px',
-                  padding: '2rem',
-                  textDecoration: 'none',
-                  transition: 'all 0.3s ease',
-                  display: 'block',
-                  cursor: 'pointer',
-                  boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
-                  textAlign: 'left',
-                  width: '100%'
-                }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = colors.limeGreen; e.currentTarget.style.boxShadow = `0 8px 24px rgba(0, 255, 65, 0.15)`; e.currentTarget.style.transform = 'translateY(-4px)'; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = colors.borderGray; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)'; e.currentTarget.style.transform = 'translateY(0)'; }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.75rem', gap: '1rem' }}>
-                    <div style={{ fontSize: '1.2rem', color: 'white', fontWeight: '700', background: `linear-gradient(135deg, ${colors.navy} 0%, ${colors.limeGreen} 100%)`, width: '40px', height: '40px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                      {post.id}
-                    </div>
-                    {post.categories && post.categories.length > 0 && (
-                      <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
-                        {post.categories.slice(0, 2).map((cat, idx) => (
-                          <span key={idx} style={{
-                            background: `linear-gradient(135deg, rgba(42, 79, 168, 0.1) 0%, rgba(118, 215, 0, 0.1) 100%)`,
-                            border: `1px solid ${colors.navy}`,
-                            color: colors.navy,
-                            fontSize: '0.7rem',
-                            fontWeight: '600',
-                            padding: '0.35rem 0.6rem',
-                            borderRadius: '16px',
-                            whiteSpace: 'nowrap'
-                          }}>
-                            {cat}
-                          </span>
-                        ))}
+            <>
+              {/* POST VIEW */}
+              {blogViewMode === 'post' && (
+                <div style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
+                  gap: '2rem',
+                  marginTop: '2rem'
+                }}>
+                  {blogPosts
+                    .filter((post) => {
+                      const categoryMatch = selectedCategory === 'Everything Else' || (post.categories && post.categories.includes(selectedCategory));
+                      const searchMatch = blogSearchTerm === '' || post.title.toLowerCase().includes(blogSearchTerm.toLowerCase()) || post.excerpt.toLowerCase().includes(blogSearchTerm.toLowerCase());
+                      return categoryMatch && searchMatch;
+                    })
+                    .map((post) => (
+                    <button key={post.id} onClick={() => {
+                      const slug = generateSlug(post.title);
+                      window.location.hash = `blog/${slug}`;
+                      setSelectedBlogPost(post.id);
+                    }} style={{
+                      background: 'white',
+                      border: `1px solid ${colors.borderGray}`,
+                      borderRadius: '12px',
+                      padding: '2rem',
+                      textDecoration: 'none',
+                      transition: 'all 0.3s ease',
+                      display: 'block',
+                      cursor: 'pointer',
+                      boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
+                      textAlign: 'left',
+                      width: '100%'
+                    }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = colors.limeGreen; e.currentTarget.style.boxShadow = `0 8px 24px rgba(0, 255, 65, 0.15)`; e.currentTarget.style.transform = 'translateY(-4px)'; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = colors.borderGray; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)'; e.currentTarget.style.transform = 'translateY(0)'; }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.75rem', gap: '1rem' }}>
+                        <div style={{ fontSize: '1.2rem', color: 'white', fontWeight: '700', background: `linear-gradient(135deg, ${colors.navy} 0%, ${colors.limeGreen} 100%)`, width: '40px', height: '40px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                          {post.id}
+                        </div>
+                        {post.categories && post.categories.length > 0 && (
+                          <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
+                            {post.categories.slice(0, 2).map((cat, idx) => (
+                              <span key={idx} style={{
+                                background: `linear-gradient(135deg, rgba(42, 79, 168, 0.1) 0%, rgba(118, 215, 0, 0.1) 100%)`,
+                                border: `1px solid ${colors.navy}`,
+                                color: colors.navy,
+                                fontSize: '0.7rem',
+                                fontWeight: '600',
+                                padding: '0.35rem 0.6rem',
+                                borderRadius: '16px',
+                                whiteSpace: 'nowrap'
+                              }}>
+                                {cat}
+                              </span>
+                            ))}
+                          </div>
+                        )}
                       </div>
-                    )}
-                  </div>
-                  <h3 style={{ fontSize: '1.4rem', color: colors.darkNavy, marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700', lineHeight: '1.4' }}>
-                    {post.title}
-                  </h3>
-                  <p style={{ fontSize: '0.95rem', color: colors.textMuted, marginBottom: '1rem', lineHeight: '1.6' }}>
-                    {post.excerpt}
-                  </p>
-                  <p style={{ fontSize: '0.85rem', color: colors.darkNavy, fontStyle: 'italic', fontWeight: '500' }}>
-                    {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-                  </p>
-                </button>
-              ))}
-              {blogPosts.filter((post) => selectedCategory === 'Everything Else' || (post.categories && post.categories.includes(selectedCategory))).length === 0 && (
-                <div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '2rem' }}>
-                  <p style={{ color: colors.textMuted }}>No posts in this category yet. Check back soon!</p>
+                      <h3 style={{ fontSize: '1.4rem', color: colors.darkNavy, marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700', lineHeight: '1.4' }}>
+                        {post.title}
+                      </h3>
+                      <p style={{ fontSize: '0.95rem', color: colors.textMuted, marginBottom: '1rem', lineHeight: '1.6' }}>
+                        {post.excerpt}
+                      </p>
+                      <p style={{ fontSize: '0.85rem', color: colors.darkNavy, fontStyle: 'italic', fontWeight: '500' }}>
+                        {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                      </p>
+                    </button>
+                  ))}
+                  {blogPosts.filter((post) => {
+                    const categoryMatch = selectedCategory === 'Everything Else' || (post.categories && post.categories.includes(selectedCategory));
+                    const searchMatch = blogSearchTerm === '' || post.title.toLowerCase().includes(blogSearchTerm.toLowerCase()) || post.excerpt.toLowerCase().includes(blogSearchTerm.toLowerCase());
+                    return categoryMatch && searchMatch;
+                  }).length === 0 && (
+                    <div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '2rem' }}>
+                      <p style={{ color: colors.textMuted }}>No posts match your filters. Try adjusting your search.</p>
+                    </div>
+                  )}
                 </div>
               )}
-            </div>
+
+              {/* SNIPPET VIEW */}
+              {blogViewMode === 'snippet' && (
+                <div style={{ textAlign: 'center', padding: '3rem 2rem', color: colors.textMuted }}>
+                  <p style={{ fontSize: '1rem', lineHeight: '1.8' }}>
+                    Snippet view coming soon! Each blog post will include PAUL's LevelUp, Prompts, or Formulas that you can browse and jump to the full post.
+                  </p>
+                  <p style={{ fontSize: '0.9rem', marginTop: '1rem', fontStyle: 'italic' }}>
+                    For now, use the Post view to explore all articles.
+                  </p>
+                </div>
+              )}
+            </>
           )}
         </section>
       </div>

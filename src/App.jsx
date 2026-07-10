@@ -1119,23 +1119,7 @@ export default function AppCoaching() {
           </div>
 
           <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', textAlign: 'center', marginBottom: '2rem' }}>
-            I'm not your guru. <span style={{ color: colors.limeGreen, fontWeight: '700' }}>I'm your translator.</span> I make your numbers tell your story—so you can make confident decisions. And I do it without the corporate jargon, the ego, or the premium price tag.
-          </p>
-        </div>
-
-        {/* WHY IT'S CALLED APP COACHING */}
-        <div style={{ marginBottom: '4rem', paddingTop: '3rem', borderTop: `2px solid ${colors.borderGray}`, background: colors.offWhite, padding: '3rem 2rem', borderRadius: '12px' }}>
-          <h2 style={{ fontSize: '2rem', color: colors.darkNavy, marginBottom: '1.5rem', fontFamily: "'Poppins', sans-serif", fontWeight: '800', textAlign: 'center' }}>
-            Why It's Called "APP Coaching"
-          </h2>
-          <p style={{ fontSize: '1.05rem', color: colors.textMuted, lineHeight: '1.8', maxWidth: '900px', margin: '0 auto' }}>
-            "APP" stands for <strong>Aaron Paul Pacheco</strong>—that's me. But it's really about more than apps.
-            <br /><br />
-            <strong>It's about accepting new technology.</strong> Challenging whether it can really advantage your business or personal life. Apps are the new thing I'm learning and teaching right now, but the principle is bigger: staying curious. Understanding tools. Asking "how can this help me?"
-            <br /><br />
-            <strong>Ignorance is a disadvantage.</strong> The people crushing it? They're not afraid of new tools. They learn them. They ask questions. They experiment. Meanwhile, others sit on the sidelines, waiting for the "perfect moment" to upskill.
-            <br /><br />
-            <strong>APP Coaching represents my belief to continue learning new tech and understand how they help—not just be noise at the dinner table.</strong> I'm here to guide you through that. To show you that the tools you're intimidated by? They're actually tools you can master. And when you do, everything changes.
+            I'm not your guru. <span style={{ color: colors.limeGreen, fontWeight: '700' }}>I'm your translator.</span> I close the gap between confusion and clarity—in your numbers, your tools, your career. Without the corporate jargon, the ego, or the premium price tag.
           </p>
         </div>
 
@@ -1184,10 +1168,20 @@ export default function AppCoaching() {
         </div>
 
 
+        {/* WHY IT'S CALLED APP COACHING */}
+        <div style={{ marginBottom: '4rem', paddingTop: '3rem', borderTop: `2px solid ${colors.borderGray}`, background: colors.offWhite, padding: '3rem 2rem', borderRadius: '12px' }}>
+          <h2 style={{ fontSize: '2rem', color: colors.darkNavy, marginBottom: '1.5rem', fontFamily: "'Poppins', sans-serif", fontWeight: '800', textAlign: 'center' }}>
+            Why It's Called "APP Coaching"
+          </h2>
+          <p style={{ fontSize: '1.05rem', color: colors.textMuted, lineHeight: '1.8', maxWidth: '900px', margin: '0 auto' }}>
+            "APP" stands for <strong>Aaron Paul Pacheco</strong>—that's me. But it's really about more than apps. It's about accepting new technology, challenging whether it can truly advantage your life and business, and staying curious about tools that work. The people crushing it aren't afraid of new tools—they learn them, experiment, and adapt. Meanwhile, others wait for the "perfect moment" that never comes. APP Coaching represents my belief that continuous learning is the difference between staying stuck and breaking through.
+          </p>
+        </div>
+
         {/* CTA */}
         <div style={{ marginTop: '3rem', textAlign: 'center', paddingTop: '2rem', borderTop: `2px solid ${colors.borderGray}` }}>
-          <p style={{ fontSize: '1rem', color: colors.textMuted, marginBottom: '1.5rem' }}>
-            Let's translate your numbers into action.
+          <p style={{ fontSize: '1rem', color: colors.textMuted, marginBottom: '1.5rem', lineHeight: '1.8' }}>
+            Ready to eliminate confusion and close the gap? Book a free 15-minute discovery call. Let's talk about where confusion is costing you the most.
           </p>
           <button onClick={() => navigateTo('contact')} style={{
             background: colors.limeGreen,
@@ -1200,7 +1194,7 @@ export default function AppCoaching() {
             cursor: 'pointer',
             fontFamily: "'Poppins', sans-serif"
           }}>
-            LET'S WORK TOGETHER →
+            BOOK DISCOVERY CALL →
           </button>
         </div>
       </section>
@@ -1633,13 +1627,129 @@ export default function AppCoaching() {
 
               {/* SNIPPET VIEW */}
               {blogViewMode === 'snippet' && (
-                <div style={{ textAlign: 'center', padding: '3rem 2rem', color: colors.textMuted }}>
-                  <p style={{ fontSize: '1rem', lineHeight: '1.8' }}>
-                    Snippet view coming soon! Each blog post will include PAUL's LevelUp, Prompts, or Formulas that you can browse and jump to the full post.
-                  </p>
-                  <p style={{ fontSize: '0.9rem', marginTop: '1rem', fontStyle: 'italic' }}>
-                    For now, use the Post view to explore all articles.
-                  </p>
+                <div style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+                  gap: '2rem',
+                  marginTop: '2rem'
+                }}>
+                  {blogPosts
+                    .filter((post) => {
+                      const categoryMatch = selectedCategory === '' || (post.categories && post.categories.includes(selectedCategory));
+                      const searchMatch = blogSearchTerm === '' || post.title.toLowerCase().includes(blogSearchTerm.toLowerCase());
+                      return categoryMatch && searchMatch;
+                    })
+                    .flatMap((post) => {
+                      const snippets = [];
+
+                      // Extract PAUL's LevelUp
+                      const levelupMatch = post.content.match(/<strong>🎯 PAUL's LevelUp<\/strong>\s*<p>([\s\S]*?)<\/p>/);
+                      if (levelupMatch && (!blogSnippetType || blogSnippetType === 'levelup')) {
+                        snippets.push({
+                          id: `${post.id}-levelup`,
+                          type: 'levelup',
+                          title: post.title,
+                          content: levelupMatch[1],
+                          postId: post.id,
+                          categories: post.categories
+                        });
+                      }
+
+                      // Extract PAUL's Prompt
+                      const promptMatch = post.content.match(/<strong>🤖 PAUL's Prompt<\/strong>[\s\S]*?<pre>([\s\S]*?)<\/pre>/);
+                      if (promptMatch && (!blogSnippetType || blogSnippetType === 'prompt')) {
+                        snippets.push({
+                          id: `${post.id}-prompt`,
+                          type: 'prompt',
+                          title: post.title,
+                          content: promptMatch[1].trim(),
+                          postId: post.id,
+                          categories: post.categories
+                        });
+                      }
+
+                      // Extract PAUL's Formula
+                      const formulaMatch = post.content.match(/<strong>📊 PAUL's Formulas<\/strong>[\s\S]*?<div[^>]*>([\s\S]*?)<\/div>/);
+                      if (formulaMatch && (!blogSnippetType || blogSnippetType === 'formula')) {
+                        snippets.push({
+                          id: `${post.id}-formula`,
+                          type: 'formula',
+                          title: post.title,
+                          content: formulaMatch[1],
+                          postId: post.id,
+                          categories: post.categories
+                        });
+                      }
+
+                      return snippets;
+                    })
+                    .map((snippet) => (
+                      <button
+                        key={snippet.id}
+                        onClick={() => {
+                          const post = blogPosts.find(p => p.id === snippet.postId);
+                          if (post) {
+                            const slug = generateSlug(post.title);
+                            window.location.hash = `blog/${slug}`;
+                            setSelectedBlogPost(post.id);
+                          }
+                        }}
+                        style={{
+                          background: 'white',
+                          border: `1px solid ${colors.borderGray}`,
+                          borderRadius: '12px',
+                          padding: '2rem',
+                          textDecoration: 'none',
+                          transition: 'all 0.3s ease',
+                          display: 'block',
+                          cursor: 'pointer',
+                          boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
+                          textAlign: 'left',
+                          width: '100%'
+                        }}
+                        onMouseEnter={(e) => { e.currentTarget.style.borderColor = colors.limeGreen; e.currentTarget.style.boxShadow = `0 8px 24px rgba(0, 255, 65, 0.15)`; e.currentTarget.style.transform = 'translateY(-4px)'; }}
+                        onMouseLeave={(e) => { e.currentTarget.style.borderColor = colors.borderGray; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)'; e.currentTarget.style.transform = 'translateY(0)'; }}
+                      >
+                        <div style={{ fontSize: '0.8rem', fontWeight: '700', color: colors.limeGreen, marginBottom: '0.5rem', textTransform: 'uppercase' }}>
+                          {snippet.type === 'levelup' && '🎯 PAUL\'s LevelUp'}
+                          {snippet.type === 'prompt' && '🤖 PAUL\'s Prompt'}
+                          {snippet.type === 'formula' && '📊 PAUL\'s Formula'}
+                        </div>
+                        <h3 style={{ fontSize: '1.2rem', color: colors.darkNavy, marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
+                          {snippet.title}
+                        </h3>
+                        <p style={{ fontSize: '0.95rem', color: colors.textMuted, lineHeight: '1.6', marginBottom: '1rem' }}>
+                          {snippet.content.substring(0, 150)}...
+                        </p>
+                        {snippet.categories && snippet.categories.length > 0 && (
+                          <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: '1rem' }}>
+                            {snippet.categories.slice(0, 2).map((cat, idx) => (
+                              <span key={idx} style={{
+                                background: `linear-gradient(135deg, rgba(42, 79, 168, 0.1) 0%, rgba(118, 215, 0, 0.1) 100%)`,
+                                border: `1px solid ${colors.navy}`,
+                                color: colors.navy,
+                                fontSize: '0.65rem',
+                                fontWeight: '600',
+                                padding: '0.3rem 0.6rem',
+                                borderRadius: '12px',
+                                whiteSpace: 'nowrap'
+                              }}>
+                                {cat}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                      </button>
+                    ))}
+                  {blogPosts.filter((post) => {
+                    const categoryMatch = selectedCategory === '' || (post.categories && post.categories.includes(selectedCategory));
+                    const searchMatch = blogSearchTerm === '' || post.title.toLowerCase().includes(blogSearchTerm.toLowerCase());
+                    return categoryMatch && searchMatch;
+                  }).length === 0 && (
+                    <div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '2rem', color: colors.textMuted }}>
+                      <p>No snippets match your filters.</p>
+                    </div>
+                  )}
                 </div>
               )}
             </>

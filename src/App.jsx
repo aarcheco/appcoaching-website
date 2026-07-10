@@ -40,8 +40,8 @@ const personSchema = {
 const pageConfigs = {
   home: {
     id: 'home',
-    title: 'Your Most Expensive Problem: Confusion | APP Coaching',
-    description: 'Move from confusion to clarity. 1-on-1 AI, Excel & Finance coaching by Aaron Pacheco. Unlock self-sufficiency in your business and career.',
+    title: 'APP Coaching | Affordable Finance, Excel & AI Coaching',
+    description: 'Expert coaching in Excel, AI & Finance without premium prices. Build clarity, master efficient systems, and become self-sufficient through practical 1-on-1 coaching.',
     canonical: 'https://appcoaching.io/',
     ogType: 'website',
     schema: {
@@ -49,14 +49,14 @@ const pageConfigs = {
       '@type': ['WebPage', 'Organization'],
       name: 'APP Coaching',
       url: 'https://appcoaching.io/',
-      description: 'Move from confusion to clarity with 1-on-1 AI, Excel & Finance coaching by Aaron Pacheco.',
+      description: 'Expert coaching in Excel, AI & Finance without premium prices. Build clarity, master efficient systems, and become self-sufficient.',
       ...organizationSchema
     }
   },
   services: {
     id: 'services',
-    title: 'Coaching Services | AI, Excel & Finance | APP Coaching',
-    description: 'Expert coaching in AI, Excel, Finance, and Business Operations. Tailored solutions to move you from confusion to capability.',
+    title: 'APP Coaching | Services',
+    description: 'Expert coaching in Finance, Excel, AI, and Business Operations—without premium prices. Tailored solutions to move you from confusion to capability.',
     canonical: 'https://appcoaching.io/services',
     schema: {
       '@context': 'https://schema.org',
@@ -98,8 +98,8 @@ const pageConfigs = {
   },
   about: {
     id: 'about',
-    title: 'About Aaron Pacheco | Finance Expert & AI Coach | APP Coaching',
-    description: 'Meet Aaron Pacheco: Qualified finance professional, Excel expert, AI coach, and operations specialist. 10+ years across top Australian companies.',
+    title: 'APP Coaching | About Aaron Pacheco',
+    description: 'Meet Aaron Pacheco: Finance professional with 10+ years of experience. Expert in Excel, AI adoption, and Finance coaching—without premium prices.',
     canonical: 'https://appcoaching.io/about',
     schema: {
       '@context': 'https://schema.org',
@@ -121,8 +121,8 @@ const pageConfigs = {
   },
   blog: {
     id: 'blog',
-    title: 'Blog | Career Stories & Lessons | APP Coaching',
-    description: 'Read about Aaron\'s journey from confusion to clarity. Career stories, lessons, and actionable PAUL\'s Quick Reads for self-sufficiency.',
+    title: 'APP Coaching | Blog',
+    description: 'Career stories, Excel lessons, and AI insights from Aaron Pacheco. Actionable advice to build clarity and self-sufficiency in finance, Excel, and AI.',
     canonical: 'https://appcoaching.io/blog',
     schema: {
       '@context': 'https://schema.org',

@@ -40,9 +40,13 @@ export default function AppCoaching() {
     const cleanContent = content.replace(/<[^>]*>/g, '').trim();
 
     if (type === 'levelup') {
-      // Extract first 8-10 words as title
+      // Extract first sentence/phrase (before dash, full stop, or comma)
+      const sentenceMatch = cleanContent.match(/^([^.\-,!?]+)/);
+      if (sentenceMatch) {
+        return sentenceMatch[1].trim().substring(0, 70);
+      }
       const words = cleanContent.split(' ').slice(0, 10);
-      return words.join(' ').substring(0, 60);
+      return words.join(' ').substring(0, 70);
     } else if (type === 'prompt') {
       // For prompts, extract the key instruction
       const lines = cleanContent.split('\n');
@@ -1212,7 +1216,7 @@ export default function AppCoaching() {
 
             <div style={{ background: `linear-gradient(135deg, rgba(200, 220, 255, 0.7) 0%, rgba(220, 235, 255, 0.9) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
-                🚀 Building Your <span style={{ color: colors.limeGreen }}>Capability</span>
+                🚀 Building Your <span style={{ color: colors.darkNavy }}>Capability</span>
               </h3>
               <p style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
                 I succeed when you become confident and self-sufficient. My goal is to build your capability so you can move forward with clarity—without needing me.
@@ -1585,13 +1589,18 @@ export default function AppCoaching() {
               Search:
             </label>
             <input
-              key="blog-search"
               type="text"
               placeholder="Search by keyword..."
               value={blogSearchTerm}
-              onChange={(e) => setBlogSearchTerm(e.target.value)}
+              onChange={(e) => {
+                e.preventDefault();
+                setBlogSearchTerm(e.target.value);
+              }}
+              onBlur={() => {}}
+              onFocus={() => {}}
               autoComplete="off"
               spellCheck="false"
+              autoCorrect="off"
               style={{
                 width: '100%',
                 padding: '0.75rem',
@@ -1600,11 +1609,12 @@ export default function AppCoaching() {
                 border: `1px solid ${colors.borderGray}`,
                 fontFamily: "'Inter', sans-serif",
                 boxSizing: 'border-box',
-                pointerEvents: 'auto',
                 backgroundColor: 'white',
                 color: colors.darkNavy,
                 WebkitAppearance: 'none',
-                appearance: 'none'
+                appearance: 'none',
+                WebkitAutocorrect: 'off',
+                WebkitSpellcheck: 'false'
               }}
             />
           </div>
@@ -1651,30 +1661,31 @@ export default function AppCoaching() {
                       cursor: 'pointer',
                       boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
                       textAlign: 'left',
-                      width: '100%'
+                      width: '100%',
+                      position: 'relative'
                     }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = colors.limeGreen; e.currentTarget.style.boxShadow = `0 8px 24px rgba(0, 255, 65, 0.15)`; e.currentTarget.style.transform = 'translateY(-4px)'; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = colors.borderGray; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)'; e.currentTarget.style.transform = 'translateY(0)'; }}>
+                      {post.categories && post.categories.length > 0 && (
+                        <div style={{ position: 'absolute', top: '1rem', right: '1rem' }}>
+                          <span style={{
+                            background: colors.limeGreen,
+                            color: colors.darkNavy,
+                            fontSize: '0.65rem',
+                            fontWeight: '700',
+                            padding: '0.4rem 0.8rem',
+                            borderRadius: '20px',
+                            whiteSpace: 'nowrap',
+                            display: 'inline-block',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.5px'
+                          }}>
+                            {post.categories[0]}
+                          </span>
+                        </div>
+                      )}
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.75rem', gap: '1rem' }}>
                         <div style={{ fontSize: '1.2rem', color: 'white', fontWeight: '700', background: `linear-gradient(135deg, ${colors.navy} 0%, ${colors.limeGreen} 100%)`, width: '40px', height: '40px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                           {post.id}
                         </div>
-                        {post.categories && post.categories.length > 0 && (
-                          <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
-                            {post.categories.slice(0, 2).map((cat, idx) => (
-                              <span key={idx} style={{
-                                background: `linear-gradient(135deg, rgba(42, 79, 168, 0.1) 0%, rgba(118, 215, 0, 0.1) 100%)`,
-                                border: `1px solid ${colors.navy}`,
-                                color: colors.navy,
-                                fontSize: '0.7rem',
-                                fontWeight: '600',
-                                padding: '0.35rem 0.6rem',
-                                borderRadius: '16px',
-                                whiteSpace: 'nowrap'
-                              }}>
-                                {cat}
-                              </span>
-                            ))}
-                          </div>
-                        )}
                       </div>
                       <h3 style={{ fontSize: '1.4rem', color: colors.darkNavy, marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700', lineHeight: '1.4' }}>
                         {post.title}
@@ -1775,11 +1786,30 @@ export default function AppCoaching() {
                             display: 'block',
                             boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
                             textAlign: 'left',
-                            width: '100%'
+                            width: '100%',
+                            position: 'relative'
                           }}
                           onMouseEnter={(e) => { e.currentTarget.style.borderColor = colors.limeGreen; e.currentTarget.style.boxShadow = `0 8px 24px rgba(0, 255, 65, 0.15)`; e.currentTarget.style.transform = 'translateY(-4px)'; }}
                           onMouseLeave={(e) => { e.currentTarget.style.borderColor = colors.borderGray; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)'; e.currentTarget.style.transform = 'translateY(0)'; }}
                         >
+                          {snippet.categories && snippet.categories.length > 0 && (
+                            <div style={{ position: 'absolute', top: '1rem', right: '1rem' }}>
+                              <span style={{
+                                background: colors.limeGreen,
+                                color: colors.darkNavy,
+                                fontSize: '0.65rem',
+                                fontWeight: '700',
+                                padding: '0.4rem 0.8rem',
+                                borderRadius: '20px',
+                                whiteSpace: 'nowrap',
+                                display: 'inline-block',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.5px'
+                              }}>
+                                {snippet.categories[0]}
+                              </span>
+                            </div>
+                          )}
                           <div style={{ fontSize: '0.8rem', fontWeight: '700', color: colors.darkNavy, marginBottom: '0.5rem', textTransform: 'uppercase' }}>
                             {snippet.type === 'levelup' && '🎯 PAUL\'s LevelUp'}
                             {snippet.type === 'prompt' && '🤖 PAUL\'s Prompt'}

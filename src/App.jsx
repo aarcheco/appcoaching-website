@@ -688,7 +688,7 @@ export default function AppCoaching() {
             }
           `}</style>
           <div className="logo-carousel">
-            {[...employers, employers[0]].map((employer, idx) => (
+            {[...employers, ...employers].map((employer, idx) => (
               <div key={idx} className="logo-item">
                 <img
                   src={employer.logo}
@@ -1146,12 +1146,49 @@ export default function AppCoaching() {
           </p>
 
           <div style={{ marginTop: '4rem', paddingTop: '2rem', borderTop: `2px solid ${colors.borderGray}`, textAlign: 'center' }}>
+            <style>{`
+              @keyframes scrollLogos {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+              }
+              .logo-carousel {
+                display: flex;
+                animation: scrollLogos 16s linear infinite;
+                gap: 2rem;
+              }
+              .logo-carousel:hover {
+                animation-play-state: paused;
+              }
+              .logo-item {
+                flex: 0 0 140px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 1rem;
+                background: white;
+                border-radius: 8px;
+                font-weight: 600;
+                font-size: 0.75rem;
+                color: #1f3a7d;
+                min-height: 80px;
+              }
+              .logo-item img {
+                max-width: 100%;
+                max-height: 60px;
+                object-fit: contain;
+                filter: brightness(0.9);
+                transition: filter 0.3s ease;
+              }
+              .logo-item:hover img {
+                filter: brightness(1);
+              }
+            `}</style>
             <h3 style={{ fontSize: '1.3rem', color: colors.darkNavy, marginBottom: '2rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
               Where I've Made My Impact
             </h3>
             <div style={{ position: 'relative', overflow: 'hidden', marginTop: '2rem' }}>
               <div className="logo-carousel">
-                {[...employers, employers[0]].map((employer, idx) => (
+                {[...employers, ...employers].map((employer, idx) => (
                   <div key={idx} className="logo-item">
                     <img
                       src={employer.logo}

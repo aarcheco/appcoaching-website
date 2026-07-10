@@ -38,7 +38,7 @@ tags: ["Accounting", "Career Evolution", "Finance Skills", "Efficiency"]
 
 <blockquote style="background: linear-gradient(135deg, #00FF00 0%, rgba(255, 255, 255, 0.9) 100%); border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📖 PAUL's Quick Read</strong>
-<p>Aaron didn't stumble into accounting—his mum was an accountant, and watching her work with clarity and exactness in a subject where everything balanced planted the seed early. High school confirmed it: accounting was the only subject where you could prove you were right. PwC taught him speed. Flight Centre and Coronis taught him that true efficiency isn't about processing numbers faster—it's about transforming how organizations think about numbers. But a mentor showed him the real career breakthrough: the skill that can't be replaced isn't spreadsheet mastery or analysis. It's translation. Making complexity simple for the people who decide.</p>
+<p>Aaron is a Brisbane-based finance professional who specializes in using systems and tools to move you from problem (business or personal) to insight and outcome via the most efficient path. Across his career at Flight Centre, PwC, Aveo, and others, he's built financial models, dashboards, and systems that cut through noise and eliminate manual work. His real superpower: translating complex financial information and data into plain, simple English that clients and decision-makers can actually understand and act on. Through APP Coaching, he's now scaling this expertise—helping smart people close the gap between confusion and confidence.</p>
 </blockquote>
 
 <h2 id="my-mum-was-an-accountant">My Mum Was an Accountant</h2>
@@ -144,10 +144,11 @@ tags: ["Accounting", "Career Evolution", "Finance Skills", "Efficiency"]
   
   <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
     <a href="https://cal.com/app-coaching-xcgvda" style="background: #00FF41; color: #1f3a7d; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; display: inline-block;">Book a Free Discovery Call</a>
-    <a href="/#/services" style="border: 2px solid #00FF41; color: #00FF41; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; display: inline-block;">Explore Services</a>
+    <a href="#/services" style="border: 2px solid #00FF41; color: #00FF41; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; display: inline-block;">Explore Services</a>
   </div>
 </section>
 
+<!--
 ====== TECHNICAL SEO METADATA ======
 
 📌 SEO Title (Max 65 chars):
@@ -184,3 +185,4 @@ tags: ["Accounting", "Career Evolution", "Finance Skills", "Efficiency"]
 - CTAs Clicked: 1 (discovery call or services)
 
 ====== END METADATA ======
+-->

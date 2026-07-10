@@ -37,7 +37,7 @@ tags: ["Career Growth", "Business Systems", "Efficiency", "AI Adoption"]
 
 <blockquote style="background: linear-gradient(135deg, #00FF00 0%, rgba(255, 255, 255, 0.9) 100%); border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📖 PAUL's Quick Read</strong>
-<p>Aaron spent 10 years across six organizations—from PwC to Tradies Success Academy—as an accountant and finance professional who mastered Excel efficiency and is now learning AI the same way. He's launching APP Coaching because he watched smart people everywhere solve problems the hard way, never shown the efficient path. He's genuinely rewarded by that lightbulb moment when someone realizes how much time they'll save by working smarter, and he believes learning with a human beats a chatbot every time—whether coaching in his areas of expertise (Excel, finance, efficient processes) or co-learning in areas you're both growing (AI, apps, Claude's potential).</p>
+<p>Aaron is a Brisbane-based finance professional who specializes in using systems and tools to move you from problem (business or personal) to insight and outcome via the most efficient path. Across his career at Flight Centre, PwC, Aveo, and others, he's built financial models, dashboards, and systems that cut through noise and eliminate manual work. His real superpower: translating complex financial information and data into plain, simple English that clients and decision-makers can actually understand and act on. Through APP Coaching, he's now scaling this expertise—helping smart people close the gap between confusion and confidence.</p>
 </blockquote>
 
 <h2 id="how-i-got-here">How I Got Here</h2>
@@ -144,10 +144,11 @@ tags: ["Career Growth", "Business Systems", "Efficiency", "AI Adoption"]
   
   <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
     <a href="https://cal.com/app-coaching-xcgvda" style="background: #00FF41; color: #1f3a7d; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; display: inline-block;">Book a Free Discovery Call</a>
-    <a href="/#/services" style="border: 2px solid #00FF41; color: #00FF41; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; display: inline-block;">Explore Services</a>
+    <a href="#/services" style="border: 2px solid #00FF41; color: #00FF41; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; display: inline-block;">Explore Services</a>
   </div>
 </section>
 
+<!--
 ====== TECHNICAL SEO METADATA ======
 
 📌 SEO Title (Max 65 chars):
@@ -184,3 +185,4 @@ tags: ["Career Growth", "Business Systems", "Efficiency", "AI Adoption"]
 - CTAs Clicked: 1 (discovery call or services)
 
 ====== END METADATA ======
+-->

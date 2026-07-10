@@ -491,7 +491,7 @@ export default function AppCoaching() {
     <div>
       <style>{styles}</style>
       <section style={{
-        background: `linear-gradient(135deg, rgba(20, 35, 80, 0.75) 0%, rgba(25, 50, 120, 0.75) 50%), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=80')`,
+        background: `linear-gradient(135deg, rgba(20, 35, 80, 0.85) 0%, rgba(25, 50, 120, 0.85) 50%), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=80')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         color: 'white',
@@ -509,9 +509,17 @@ export default function AppCoaching() {
           Your Most Expensive Problem: Confusion. In Time. In Money.
         </h1>
 
-        <p style={{ fontSize: 'clamp(0.95rem, 3vw, 1.2rem)', maxWidth: '900px', margin: '0 auto clamp(1rem, 2vh, 2rem)', lineHeight: '1.8', opacity: '0.95', fontFamily: "'Inter', sans-serif" }}>
-          Confusion about your numbers. Confusion in your Excel workflows. Confusion about which AI tool to use. Confusion about your processes. It's the silent killer of productivity—bleeding time and money without you even realizing it. Whether you're a business owner flying blind on your P&L, a young professional drowning in manual spreadsheets, or a team wasting hours on inefficient processes—confusion is costing you more than you think. I help you transform confusion into clarity. On your numbers. On your tools. On your path forward.
-        </p>
+        <div style={{ fontSize: 'clamp(0.95rem, 3vw, 1.2rem)', maxWidth: '900px', margin: '0 auto clamp(1rem, 2vh, 2rem)', lineHeight: '1.9', opacity: '0.98', fontFamily: "'Inter', sans-serif" }}>
+          <p style={{ marginBottom: '1.2rem' }}>
+            <span style={{ color: colors.limeGreen, fontWeight: '700' }}>Confusion about your numbers.</span> Confusion in how to use <span style={{ color: colors.limeGreen, fontWeight: '700' }}>Excel efficiently.</span> Confusion about <span style={{ color: colors.limeGreen, fontWeight: '700' }}>which AI tools</span> actually work. Confusion about your <span style={{ color: colors.limeGreen, fontWeight: '700' }}>processes and workflows.</span>
+          </p>
+          <p style={{ marginBottom: '1.2rem' }}>
+            It's the silent killer of productivity—bleeding <span style={{ color: colors.limeGreen, fontWeight: '700' }}>time and money</span> without you realizing it. Whether you're a business owner flying blind on your P&L, or a professional drowning in manual spreadsheets—<span style={{ color: colors.limeGreen, fontWeight: '700' }}>confusion is costing you.</span>
+          </p>
+          <p>
+            I help you transform <span style={{ color: colors.limeGreen, fontWeight: '700' }}>confusion into confidence</span> through optimized Excel, AI mastery, and streamlined systems. Fast. Efficient. Self-sufficient. So you can move forward with <span style={{ color: colors.limeGreen, fontWeight: '700' }}>clarity and empowerment.</span>
+          </p>
+        </div>
 
         <button onClick={() => navigateTo('contact')} style={{ background: colors.limeGreen, color: '#4a5568', border: 'none', padding: 'clamp(0.6rem, 2vh, 1rem) clamp(1rem, 4vw, 2.5rem)', fontSize: 'clamp(0.8rem, 2vw, 1rem)', fontWeight: '700', borderRadius: '8px', cursor: 'pointer', fontFamily: "'Poppins', sans-serif", whiteSpace: 'nowrap' }}>
           BOOK A CALL →
@@ -534,7 +542,7 @@ export default function AppCoaching() {
           <img src="/aaron-headshot-professional.jpg" alt="Aaron" style={{ width: '100%', maxWidth: '300px', borderRadius: '12px', objectFit: 'cover', margin: '0 auto 1.5rem' }} />
         </div>
         <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', maxWidth: '750px', margin: '0 auto' }}>
-          I'm a qualified accountant with 10+ years of real-world experience in finance, operations, and strategic planning. I've built financial models, designed dashboards, and helped teams extract insight from data. But more than that, I'm passionate about something specific: closing the knowledge gap. When I work with you, my goal isn't to be your permanent crutch—it's to empower you with the skills, tools, and confidence to understand your own data and make decisions independently. The reward for me is seeing that moment when it clicks for you. When you realize you CAN read your P&L, you CAN build a dashboard, you CAN prompt AI to analyze your data. That's when I know I've succeeded. Not because you're dependent on me, but because you're self-sufficient.
+          I'm a <span style={{ color: colors.darkNavy, fontWeight: '700' }}>qualified finance professional and analyst</span> with 10+ years of real-world experience turning <span style={{ color: colors.darkNavy, fontWeight: '700' }}>confusion into clarity.</span> I've built financial models, designed dashboards, and helped teams extract insight from data using Excel, AI, and optimized systems. My mission: <span style={{ color: colors.darkNavy, fontWeight: '700' }}>close the knowledge gap</span> and <span style={{ color: colors.darkNavy, fontWeight: '700' }}>empower you</span> to become self-sufficient. When I work with you, my goal isn't lifelong coaching—it's moving you from <span style={{ color: colors.darkNavy, fontWeight: '700' }}>confusion to confidence</span> as fast as possible. The reward for me is that moment when it clicks: when you realize you CAN read your numbers, CAN build systems, CAN use AI strategically. That's success.
         </p>
       </section>
 
@@ -670,7 +678,7 @@ export default function AppCoaching() {
             Services
           </h1>
           <p style={{ fontSize: '1rem', opacity: '0.95', maxWidth: '700px', margin: '0 auto', lineHeight: '1.7' }}>
-            Confusion is costing you—in time, in money, in confidence. I help you transform that confusion into clarity across your numbers, your tools, and your processes. Whether it's Excel, AI, finance, or workflows, I meet you where you are and walk you through it until it clicks.
+            I turn <span style={{ fontWeight: '700' }}>confusion into confidence</span>—in as few sessions as possible. Not because I want lifetime clients. Because my goal is your <span style={{ fontWeight: '700' }}>self-sufficiency.</span> Excel mastery. AI competence. Optimized processes. Fast. Efficient. Done.
           </p>
         </section>
 
@@ -770,7 +778,7 @@ export default function AppCoaching() {
         }}>
           {principles.map((principle, idx) => (
             <div key={idx} style={{
-              background: `linear-gradient(135deg, #00FF00 0%, rgba(255, 255, 255, 0.9) 100%)`,
+              background: `linear-gradient(135deg, #4ade80 0%, rgba(255, 255, 255, 0.9) 100%)`,
               border: `1px solid ${colors.borderGray}`,
               borderRadius: '12px',
               padding: '2rem',
@@ -820,15 +828,15 @@ export default function AppCoaching() {
           Pricing
         </h2>
         <p style={{
-          fontSize: '1.1rem',
+          fontSize: '1.15rem',
           color: colors.textMuted,
-          marginBottom: '1.5rem',
+          marginBottom: '2rem',
           maxWidth: '800px',
-          margin: '0 auto 1.5rem',
+          margin: '0 auto 2rem',
           lineHeight: '1.8',
           textAlign: 'center'
         }}>
-          One-on-one coaching starting at under $100 per session, up to under $200 depending on the service.
+          One-on-one coaching starting at <span style={{ fontSize: '1.4rem', color: colors.darkNavy, fontWeight: '800', fontFamily: "'Poppins', sans-serif" }}>under $100</span> per session, up to <span style={{ fontSize: '1.4rem', color: colors.darkNavy, fontWeight: '800', fontFamily: "'Poppins', sans-serif" }}>under $200</span> depending on the service.
         </p>
         <p style={{
           fontSize: '1rem',
@@ -838,7 +846,7 @@ export default function AppCoaching() {
           lineHeight: '1.8',
           textAlign: 'center'
         }}>
-          Traditional business coaching runs $300–$500+ per session. I can charge less because I genuinely love closing knowledge gaps and seeing that lightbulb moment where someone realizes how much time they'll save. That fulfillment is worth more to me than the extra margin.
+          Traditional business coaching charges monthly or continuously, hoping to keep you as a client long-term. My goal is the opposite: turn you from <span style={{ color: colors.darkNavy, fontWeight: '700' }}>confusion to confidence</span> in as few sessions as possible—ideally just one. I want you <span style={{ color: colors.darkNavy, fontWeight: '700' }}>self-sufficient and saving money</span> from my coaching as quickly as possible. That's my win.
         </p>
       </section>
 
@@ -1409,7 +1417,7 @@ export default function AppCoaching() {
             Blog
           </h1>
           <p style={{ fontSize: 'clamp(0.95rem, 2.5vw, 1rem)', opacity: '0.95', maxWidth: '700px', lineHeight: '1.7' }}>
-            My digital garden of Excel hacks, AI experiments, and career lessons. Real learnings from 10+ years of closing the gap between confusion and clarity. Tips, tricks, formulas, prompts, and teachings.
+            Here's where you'll find everything I've learned over 10+ years closing the gap between confusion and confidence. Real lessons from building Excel systems, using AI strategically, and growing financially and professionally. Tips, tricks, formulas, prompts—and the thinking behind them. As I continue learning and pushing, I'm sharing it all here.
           </p>
         </section>
 

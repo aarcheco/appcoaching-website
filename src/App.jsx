@@ -40,17 +40,21 @@ export default function AppCoaching() {
     const cleanContent = content.replace(/<[^>]*>/g, '').trim();
 
     if (type === 'levelup') {
-      // Extract first sentence/phrase (before dash, full stop, or comma)
-      const sentenceMatch = cleanContent.match(/^([^.\-,!?]+)/);
-      if (sentenceMatch) {
-        return sentenceMatch[1].trim().substring(0, 70);
+      // Create a clickbait-style summary from the first 2-3 sentences
+      const sentences = cleanContent.split(/[.!?]+/).filter(s => s.trim().length > 0);
+      if (sentences.length > 0) {
+        let title = sentences[0].trim();
+        if (sentences.length > 1 && title.length < 40) {
+          title += " — " + sentences[1].trim();
+        }
+        // Clean up and limit to 85 chars
+        return title.substring(0, 85).trim() + (title.length > 85 ? '...' : '');
       }
-      const words = cleanContent.split(' ').slice(0, 10);
-      return words.join(' ').substring(0, 70);
+      return cleanContent.substring(0, 85);
     } else if (type === 'prompt') {
       // For prompts, extract the key instruction
-      const lines = cleanContent.split('\n');
-      const firstLine = lines[0].substring(0, 60);
+      const lines = cleanContent.split('\n').filter(l => l.trim());
+      const firstLine = lines[0].substring(0, 65);
       return `Prompt: ${firstLine}`;
     } else if (type === 'formula') {
       // For formulas, extract formula name or pattern
@@ -60,7 +64,7 @@ export default function AppCoaching() {
       }
       return `Excel Formula: ${cleanContent.substring(0, 50)}`;
     }
-    return cleanContent.substring(0, 60);
+    return cleanContent.substring(0, 85);
   };
 
   // Helper function to generate slug from title
@@ -1641,7 +1645,7 @@ export default function AppCoaching() {
                 }}>
                   {blogPosts
                     .filter((post) => {
-                      const categoryMatch = !selectedCategory || selectedCategory === '' || (Array.isArray(post.categories) && post.categories.includes(selectedCategory));
+                      const categoryMatch = !selectedCategory || selectedCategory === '' || (Array.isArray(post.categories) && post.categories.some(cat => cat.trim() === selectedCategory.trim()));
                       const searchMatch = blogSearchTerm === '' || post.title.toLowerCase().includes(blogSearchTerm.toLowerCase()) || post.excerpt.toLowerCase().includes(blogSearchTerm.toLowerCase());
                       return categoryMatch && searchMatch;
                     })
@@ -1657,15 +1661,17 @@ export default function AppCoaching() {
                       padding: '2rem',
                       textDecoration: 'none',
                       transition: 'all 0.3s ease',
-                      display: 'block',
+                      display: 'flex',
+                      flexDirection: 'column',
                       cursor: 'pointer',
                       boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
                       textAlign: 'left',
                       width: '100%',
-                      position: 'relative'
+                      position: 'relative',
+                      overflow: 'visible'
                     }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = colors.limeGreen; e.currentTarget.style.boxShadow = `0 8px 24px rgba(0, 255, 65, 0.15)`; e.currentTarget.style.transform = 'translateY(-4px)'; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = colors.borderGray; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)'; e.currentTarget.style.transform = 'translateY(0)'; }}>
                       {post.categories && post.categories.length > 0 && (
-                        <div style={{ position: 'absolute', top: '1rem', right: '1rem' }}>
+                        <div style={{ position: 'absolute', top: '-0.5rem', right: '-0.5rem', zIndex: 10 }}>
                           <span style={{
                             background: colors.limeGreen,
                             color: colors.darkNavy,
@@ -1720,7 +1726,7 @@ export default function AppCoaching() {
                 }}>
                   {blogPosts
                     .filter((post) => {
-                      const categoryMatch = !selectedCategory || selectedCategory === '' || (Array.isArray(post.categories) && post.categories.includes(selectedCategory));
+                      const categoryMatch = !selectedCategory || selectedCategory === '' || (Array.isArray(post.categories) && post.categories.some(cat => cat.trim() === selectedCategory.trim()));
                       const searchMatch = blogSearchTerm === '' || post.title.toLowerCase().includes(blogSearchTerm.toLowerCase());
                       return categoryMatch && searchMatch;
                     })
@@ -1783,17 +1789,19 @@ export default function AppCoaching() {
                             padding: '2rem',
                             textDecoration: 'none',
                             transition: 'all 0.3s ease',
-                            display: 'block',
+                            display: 'flex',
+                            flexDirection: 'column',
                             boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
                             textAlign: 'left',
                             width: '100%',
-                            position: 'relative'
+                            position: 'relative',
+                            overflow: 'visible'
                           }}
                           onMouseEnter={(e) => { e.currentTarget.style.borderColor = colors.limeGreen; e.currentTarget.style.boxShadow = `0 8px 24px rgba(0, 255, 65, 0.15)`; e.currentTarget.style.transform = 'translateY(-4px)'; }}
                           onMouseLeave={(e) => { e.currentTarget.style.borderColor = colors.borderGray; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)'; e.currentTarget.style.transform = 'translateY(0)'; }}
                         >
                           {snippet.categories && snippet.categories.length > 0 && (
-                            <div style={{ position: 'absolute', top: '1rem', right: '1rem' }}>
+                            <div style={{ position: 'absolute', top: '-0.5rem', right: '-0.5rem', zIndex: 10 }}>
                               <span style={{
                                 background: colors.limeGreen,
                                 color: colors.darkNavy,

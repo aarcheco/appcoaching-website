@@ -971,26 +971,30 @@ export default function AppCoaching() {
         }}>
           How I Can Help You
         </h2>
-        <p style={{
-          fontSize: '1rem',
-          color: colors.textMuted,
-          marginBottom: '3rem',
-          maxWidth: '800px',
-          margin: '0 auto 3rem',
-          lineHeight: '1.8',
-          textAlign: 'center'
-        }}>
-          Over my career, I've learned that confusion doesn't come from one area alone—it's built into the gap between what you know and what you need to know. I help you close that gap with expertise in four core areas.
-        </p>
-
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
           gap: '2rem',
           marginBottom: '3rem'
         }}>
-          {services.map((service) => (
-            <div key={service.id} style={{
+          {[
+            {
+              icon: '💰',
+              title: 'Finance Literacy',
+              description: 'Understand your numbers deeply. Build clarity around profit, cash flow, and financial decisions that drive your business forward.'
+            },
+            {
+              icon: '📊',
+              title: 'Excel & AI Skills',
+              description: 'Master the tools that move the needle. Build efficient systems, automate your workflows, and leverage AI to accelerate your results.'
+            },
+            {
+              icon: '🚀',
+              title: 'Career Mentoring',
+              description: 'Develop the clarity and confidence to advance. Work on your professional growth, systems thinking, and becoming indispensable in your role.'
+            }
+          ].map((pillar, idx) => (
+            <div key={idx} style={{
               background: `linear-gradient(135deg, rgba(0, 255, 65, 0.05) 0%, rgba(255, 217, 61, 0.05) 100%)`,
               border: `1px solid ${colors.borderGray}`,
               borderRadius: '12px',
@@ -1003,32 +1007,15 @@ export default function AppCoaching() {
               flexDirection: 'column',
               justifyContent: 'space-between'
             }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = colors.limeGreen; e.currentTarget.style.boxShadow = `0 8px 24px rgba(0, 255, 65, 0.15)`; e.currentTarget.style.background = `linear-gradient(135deg, rgba(0, 255, 65, 0.1) 0%, rgba(255, 217, 61, 0.1) 100%)`; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = colors.borderGray; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)'; e.currentTarget.style.background = `linear-gradient(135deg, rgba(0, 255, 65, 0.05) 0%, rgba(255, 217, 61, 0.05) 100%)`; }}>
-              <div style={{ width: '80px', height: '80px', background: `linear-gradient(135deg, ${colors.darkNavy} 0%, ${colors.navy} 100%)`, borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2rem', margin: '0 auto 1rem' }}>{service.icon}</div>
-              <h3 style={{ fontSize: '1.2rem', color: colors.darkNavy, marginBottom: '0.5rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
-                {service.title}
+              <div style={{ width: '80px', height: '80px', background: `linear-gradient(135deg, ${colors.darkNavy} 0%, ${colors.navy} 100%)`, borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2.5rem', margin: '0 auto 1rem' }}>
+                {pillar.icon}
+              </div>
+              <h3 style={{ fontSize: '1.3rem', color: colors.darkNavy, marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
+                {pillar.title}
               </h3>
-              <p style={{ fontSize: '0.9rem', color: colors.charcoal, fontWeight: '600', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif" }}>
-                {service.subtitle}
+              <p style={{ fontSize: '0.95rem', color: colors.textMuted, lineHeight: '1.8' }}>
+                {pillar.description}
               </p>
-              <p style={{ fontSize: '0.85rem', color: colors.textMuted, lineHeight: '1.7', marginBottom: '1.5rem', textAlign: 'left', whiteSpace: 'pre-line' }}>
-                {service.description}
-              </p>
-              <a href="https://cal.com/app-coaching-xcgvda" target="_blank" rel="noopener noreferrer" style={{
-                background: colors.limeGreen,
-                color: colors.darkNavy,
-                border: 'none',
-                padding: '0.75rem 1.5rem',
-                borderRadius: '6px',
-                fontWeight: '700',
-                fontSize: '0.85rem',
-                cursor: 'pointer',
-                fontFamily: "'Poppins', sans-serif",
-                textAlign: 'center',
-                textDecoration: 'none',
-                display: 'block'
-              }}>
-                {service.cta.toUpperCase()}
-              </a>
             </div>
           ))}
         </div>
@@ -1050,13 +1037,13 @@ export default function AppCoaching() {
           textAlign: 'center'
         }}>
           <p style={{ marginBottom: '1.5rem' }}>
-            Here's what I've learned: <span style={{ color: colors.limeGreen, fontWeight: '700' }}>The real power isn't in any single tool.</span> Excel alone won't move you forward. AI without structure is just noise. Finance without systems is firefighting.
+            Here's what I've learned: <span style={{ fontWeight: '700', textDecoration: 'underline' }}>The real power isn't in any single tool.</span> Excel alone won't move you forward. AI without structure is just noise. Finance without systems is firefighting.
           </p>
           <p style={{ marginBottom: '1.5rem' }}>
-            It's when you understand how <span style={{ color: colors.limeGreen, fontWeight: '700' }}>these systems work together</span>—how your Excel models feed your financial analysis, how AI accelerates your learning, how your processes and workflows connect to your actual business outcomes—that everything changes.
+            It's when you understand how <span style={{ fontWeight: '700', textDecoration: 'underline' }}>these systems work together</span>—how your Excel models feed your financial analysis, how AI accelerates your learning, how your processes and workflows connect to your actual business outcomes—that everything changes.
           </p>
           <p>
-            The more you recognize their interconnectedness, the more <span style={{ color: colors.limeGreen, fontWeight: '700' }}>confident and capable</span> you become working cross-functionally. You see patterns others miss. You move faster. You have real <span style={{ color: colors.limeGreen, fontWeight: '700' }}>insight</span> instead of just data.
+            The more you recognize their interconnectedness, the more <span style={{ fontWeight: '700', fontStyle: 'italic' }}>confident and capable</span> you become working cross-functionally. You see patterns others miss. You move faster. You have real <span style={{ fontWeight: '700', fontStyle: 'italic' }}>insight</span> instead of just data.
           </p>
         </div>
       </section>

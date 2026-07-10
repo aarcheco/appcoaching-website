@@ -143,7 +143,7 @@ export default function AppCoaching() {
   const vennSections = {
     finance: {
       title: 'Finance Coaching',
-      details: '• Personal & business finance strategy\n• Profit margins, pricing, P&L optimization\n• Cash flow clarity & debt paydown plans\n• Financial benchmarking & analysis\n• Decision-making from your numbers'
+      details: '• Career coaching for young professionals in finance\n• Finance analysts & accountants—from confusion to clarity\n• Personal & business finance strategy\n• Profit margins, pricing, P&L optimization\n• Cash flow clarity & debt paydown plans\n• Decision-making from your numbers'
     },
     excel: {
       title: 'Excel Coaching',
@@ -155,7 +155,7 @@ export default function AppCoaching() {
     },
     operations: {
       title: 'Operations & Workflow',
-      details: '• Process automation & optimization\n• CRM integration & data management\n• Workflow streamlining & task automation\n• Operational dashboards\n• Systems thinking & efficiency'
+      details: '• Process design & workflow optimization\n• Task automation & systems thinking\n• Operational clarity & efficiency\n• Building sustainable business rhythms\n• Scaling what works'
     },
     financeExcel: {
       title: 'Finance + Excel',
@@ -389,9 +389,7 @@ export default function AppCoaching() {
           margin: '2rem auto 0',
           lineHeight: '1.8'
         }}>
-          I thought I understood my numbers through Xero. Until I connected AI to extract and analyze what was really happening. I thought Excel dashboards told the whole story. Until I realized what AI could reveal. I thought my CRM data was surface-level until I pulled it into Excel and actually dug deep.
-          <br /><br />
-          That's when I saw it: Finance, Excel, AI, Operations—each powerful alone, but together? They unlock potential you didn't know existed.
+          Over my career, I've learned that confusion doesn't come from one area alone—it's built into the gaps between them. Finance, Excel, AI, Operations. Each is powerful on its own. But when you weave them together? That's when clarity emerges. That's when you move from confusion to confidence. The problems you solve and the questions you answer become more effective, more elegant, more yours. I'm here to help you see those connections and build capability across all of them.
         </p>
       )}
     </div>
@@ -841,14 +839,14 @@ export default function AppCoaching() {
           One-on-one coaching starting at <span style={{ fontSize: '1.4rem', color: colors.darkNavy, fontWeight: '800', fontFamily: "'Poppins', sans-serif" }}>under $100</span> per session, up to <span style={{ fontSize: '1.4rem', color: colors.darkNavy, fontWeight: '800', fontFamily: "'Poppins', sans-serif" }}>under $200</span> depending on the service.
         </p>
         <p style={{
-          fontSize: '1rem',
+          fontSize: '0.95rem',
           color: colors.textMuted,
           maxWidth: '800px',
           margin: '0 auto',
           lineHeight: '1.8',
           textAlign: 'center'
         }}>
-          Traditional business coaching charges monthly or continuously, hoping to keep you as a client long-term. My goal is the opposite: turn you from <span style={{ color: colors.darkNavy, fontWeight: '700' }}>confusion to confidence</span> in as few sessions as possible—ideally just one. I want you <span style={{ color: colors.darkNavy, fontWeight: '700' }}>self-sufficient and saving money</span> from my coaching as quickly as possible. That's my win.
+          Traditional business coaching charges monthly or continuously, hoping to keep you as a client long-term. My goal is the opposite: turn you from <span style={{ textDecoration: 'underline', textDecorationColor: colors.limeGreen, textDecorationThickness: '2px', textUnderlineOffset: '2px', color: colors.darkNavy, fontWeight: '600' }}>confusion to confidence</span> in as few sessions as possible—ideally just one. I want you <span style={{ fontStyle: 'italic', color: colors.darkNavy, fontWeight: '600' }}>self-sufficient and saving money</span> from my coaching as quickly as possible. That's my win.
         </p>
       </section>
 
@@ -912,7 +910,7 @@ export default function AppCoaching() {
           About Me
         </h1>
         <p style={{ fontSize: 'clamp(0.95rem, 2.5vw, 1rem)', opacity: '0.95', maxWidth: '700px', lineHeight: '1.7' }}>
-          10+ years building clarity from confusion. Accountant, Excel expert, AI coach. I help you close the gap between confusion and confidence—in your numbers, your tools, your career.
+          A career spanning more than ten years, <span style={{ fontWeight: '700' }}>gradually converting my own confusion to clarity</span> about my purpose and my capability. Finance professional. Excel strategist. AI learner. I help you move from <span style={{ color: colors.limeGreen }}>confusion to confidence</span>—in your numbers, your tools, your career.
         </p>
       </section>
 
@@ -1141,10 +1139,10 @@ export default function AppCoaching() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
             <div style={{ background: `linear-gradient(135deg, rgba(200, 220, 255, 0.7) 0%, rgba(220, 235, 255, 0.9) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
-                💼 Real Experience
+                💼 Built from <span style={{ color: colors.limeGreen }}>Confusion to Clarity</span>
               </h3>
               <p style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
-                10+ years in real organizations. Not theory. I've built systems at scale, debugged broken dashboards, and coached teams through complexity.
+                10+ years in real organizations. I've moved from confusion to confidence through systems, dashboards, and continuous learning. Now I help others do the same.
               </p>
             </div>
 
@@ -1159,10 +1157,10 @@ export default function AppCoaching() {
 
             <div style={{ background: `linear-gradient(135deg, rgba(200, 220, 255, 0.7) 0%, rgba(220, 235, 255, 0.9) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
-                🚀 Your Success, Not My Ego
+                🚀 Building Your <span style={{ color: colors.limeGreen }}>Capability</span>
               </h3>
               <p style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
-                I succeed when you become self-sufficient. Not when you depend on me. My goal is to work myself out of a job with you.
+                I succeed when you become confident and self-sufficient. My goal is to build your capability so you can move forward with clarity—without needing me.
               </p>
             </div>
 
@@ -1184,7 +1182,7 @@ export default function AppCoaching() {
             Why It's Called "APP Coaching"
           </h2>
           <p style={{ fontSize: '1.05rem', color: colors.textMuted, lineHeight: '1.8', maxWidth: '900px', margin: '0 auto' }}>
-            "APP" stands for <strong>Aaron Paul Pacheco</strong>—that's me. But it's really about more than apps. It's about accepting new technology, challenging whether it can truly advantage your life and business, and staying curious about tools that work. The people crushing it aren't afraid of new tools—they learn them, experiment, and adapt. Meanwhile, others wait for the "perfect moment" that never comes. APP Coaching represents my belief that continuous learning is the difference between staying stuck and breaking through.
+            "APP" stands for <strong>Aaron Paul Pacheco</strong>—that's me. But it's really about more than apps. It's about accepting new technology, experimenting with tools that actually work, and staying <span style={{ fontStyle: 'italic', color: colors.darkNavy, fontWeight: '600' }}>curious in a world that breeds confusion</span>. The people moving from <span style={{ color: colors.limeGreen, fontWeight: '700' }}>confusion to clarity to confidence</span> aren't afraid of new tools—they learn them, experiment, and build the <span style={{ fontWeight: '600' }}>capability</span> to use them. Meanwhile, others stay stuck waiting for the "perfect moment." APP Coaching represents my belief that continuous learning is the difference between confusion and capability.
           </p>
         </div>
 
@@ -1702,7 +1700,7 @@ export default function AppCoaching() {
                         <div
                           key={snippet.id}
                           style={{
-                            background: 'white',
+                            background: 'linear-gradient(135deg, rgba(118, 215, 0, 0.08) 0%, rgba(42, 79, 168, 0.04) 100%)',
                             border: `1px solid ${colors.borderGray}`,
                             borderRadius: '12px',
                             padding: '2rem',
@@ -1716,7 +1714,7 @@ export default function AppCoaching() {
                           onMouseEnter={(e) => { e.currentTarget.style.borderColor = colors.limeGreen; e.currentTarget.style.boxShadow = `0 8px 24px rgba(0, 255, 65, 0.15)`; e.currentTarget.style.transform = 'translateY(-4px)'; }}
                           onMouseLeave={(e) => { e.currentTarget.style.borderColor = colors.borderGray; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)'; e.currentTarget.style.transform = 'translateY(0)'; }}
                         >
-                          <div style={{ fontSize: '0.8rem', fontWeight: '700', color: colors.limeGreen, marginBottom: '0.5rem', textTransform: 'uppercase' }}>
+                          <div style={{ fontSize: '0.8rem', fontWeight: '700', color: colors.darkNavy, marginBottom: '0.5rem', textTransform: 'uppercase', background: `linear-gradient(120deg, ${colors.limeGreen}, #5ade5a)`, backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                             {snippet.type === 'levelup' && '🎯 PAUL\'s LevelUp'}
                             {snippet.type === 'prompt' && '🤖 PAUL\'s Prompt'}
                             {snippet.type === 'formula' && '📊 PAUL\'s Formula'}
@@ -1728,51 +1726,54 @@ export default function AppCoaching() {
                             {displayText}
                             {!isExpanded && needsExpand && '...'}
                           </p>
-                          {needsExpand && (
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                            {needsExpand && (
+                              <button
+                                onClick={() => setExpandedSnippets({...expandedSnippets, [snippet.id]: !isExpanded})}
+                                style={{
+                                  background: 'none',
+                                  border: 'none',
+                                  color: colors.darkNavy,
+                                  fontSize: '0.85rem',
+                                  fontWeight: '600',
+                                  cursor: 'pointer',
+                                  padding: '0.4rem 0',
+                                  transition: 'color 0.2s ease',
+                                  textAlign: 'left'
+                                }}
+                                onMouseEnter={(e) => { e.currentTarget.style.color = colors.limeGreen; }}
+                                onMouseLeave={(e) => { e.currentTarget.style.color = colors.darkNavy; }}
+                              >
+                                {isExpanded ? '↑ Show Less' : '↓ Show More'}
+                              </button>
+                            )}
                             <button
-                              onClick={() => setExpandedSnippets({...expandedSnippets, [snippet.id]: !isExpanded})}
+                              onClick={() => {
+                                const post = blogPosts.find(p => p.id === snippet.postId);
+                                if (post) {
+                                  const slug = generateSlug(post.title);
+                                  window.location.hash = `blog/${slug}`;
+                                  setSelectedBlogPost(post.id);
+                                }
+                              }}
                               style={{
-                                background: 'none',
+                                background: colors.limeGreen,
+                                color: colors.darkNavy,
                                 border: 'none',
-                                color: colors.limeGreen,
-                                fontSize: '0.9rem',
+                                borderRadius: '6px',
+                                padding: '0.6rem 1.2rem',
+                                fontSize: '0.85rem',
                                 fontWeight: '600',
                                 cursor: 'pointer',
-                                padding: '0.5rem 0',
-                                marginBottom: '1rem',
-                                transition: 'color 0.2s ease'
+                                transition: 'all 0.2s ease',
+                                textAlign: 'center'
                               }}
-                              onMouseEnter={(e) => { e.currentTarget.style.color = colors.darkNavy; }}
-                              onMouseLeave={(e) => { e.currentTarget.style.color = colors.limeGreen; }}
+                              onMouseEnter={(e) => { e.currentTarget.style.opacity = '0.8'; }}
+                              onMouseLeave={(e) => { e.currentTarget.style.opacity = '1'; }}
                             >
-                              {isExpanded ? '↑ Show Less' : '↓ Show More'}
+                              Read Full Post
                             </button>
-                          )}
-                          <button
-                            onClick={() => {
-                              const post = blogPosts.find(p => p.id === snippet.postId);
-                              if (post) {
-                                const slug = generateSlug(post.title);
-                                window.location.hash = `blog/${slug}`;
-                                setSelectedBlogPost(post.id);
-                              }
-                            }}
-                            style={{
-                              background: colors.limeGreen,
-                              color: colors.darkNavy,
-                              border: 'none',
-                              borderRadius: '6px',
-                              padding: '0.6rem 1.2rem',
-                              fontSize: '0.85rem',
-                              fontWeight: '600',
-                              cursor: 'pointer',
-                              transition: 'all 0.2s ease'
-                            }}
-                            onMouseEnter={(e) => { e.currentTarget.style.opacity = '0.8'; }}
-                            onMouseLeave={(e) => { e.currentTarget.style.opacity = '1'; }}
-                          >
-                            Read Full Post
-                          </button>
+                          </div>
                           {snippet.categories && snippet.categories.length > 0 && (
                             <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: '1rem' }}>
                               {snippet.categories.slice(0, 2).map((cat, idx) => (

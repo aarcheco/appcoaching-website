@@ -1,5 +1,85 @@
 import React, { useState, useEffect } from 'react';
 
+// ===== PAGE CONFIGURATIONS FOR SEO (Static, outside component) =====
+const pageConfigs = {
+  home: {
+    id: 'home',
+    title: 'Your Most Expensive Problem: Confusion | APP Coaching',
+    description: 'Move from confusion to clarity. 1-on-1 AI, Excel & Finance coaching by Aaron Pacheco. Unlock self-sufficiency in your business and career.',
+    canonical: 'https://appcoaching.io/#/home',
+    ogType: 'website',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: 'APP Coaching - Your Most Expensive Problem: Confusion',
+      description: 'Move from confusion to clarity with 1-on-1 AI, Excel & Finance coaching.',
+      url: 'https://appcoaching.io/#/home',
+      publisher: {
+        '@type': 'Organization',
+        name: 'APP Coaching'
+      }
+    }
+  },
+  services: {
+    id: 'services',
+    title: 'Coaching Services | AI, Excel & Finance | APP Coaching',
+    description: 'Expert coaching in AI, Excel, Finance, and Business Operations. Tailored solutions to move you from confusion to capability.',
+    canonical: 'https://appcoaching.io/#/services',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: 'Services',
+      description: 'APP Coaching services include AI coaching, Excel mastery, Finance strategies, and Business Operations.',
+      url: 'https://appcoaching.io/#/services'
+    }
+  },
+  about: {
+    id: 'about',
+    title: 'About Aaron Pacheco | Finance Expert & AI Coach | APP Coaching',
+    description: 'Meet Aaron Pacheco: Qualified finance professional, Excel expert, AI coach, and operations specialist. 10+ years across top Australian companies.',
+    canonical: 'https://appcoaching.io/#/about',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'ProfilePage',
+      name: 'About Aaron Pacheco',
+      description: 'Aaron Pacheco - Finance professional, Excel expert, AI coach, and operations specialist.',
+      url: 'https://appcoaching.io/#/about',
+      mainEntity: {
+        '@type': 'Person',
+        name: 'Aaron Pacheco',
+        jobTitle: 'Coach, Finance Expert, AI Specialist',
+        image: 'https://appcoaching.io/Aaron_Pacheco_300dpi_001_6x6.jpg'
+      }
+    }
+  },
+  blog: {
+    id: 'blog',
+    title: 'Blog | Career Stories & Lessons | APP Coaching',
+    description: 'Read about Aaron\'s journey from confusion to clarity. Career stories, lessons, and actionable PAUL\'s Quick Reads for self-sufficiency.',
+    canonical: 'https://appcoaching.io/#/blog',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: 'APP Coaching Blog',
+      description: 'Blog posts about career journeys, clarity, and self-sufficiency lessons.',
+      url: 'https://appcoaching.io/#/blog'
+    }
+  },
+  contact: {
+    id: 'contact',
+    title: 'Book a Discovery Call | Get in Touch | APP Coaching',
+    description: 'Ready to move from confusion to clarity? Book a free 15-minute discovery call with Aaron to discuss your coaching needs.',
+    canonical: 'https://appcoaching.io/#/contact',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'ContactPage',
+      name: 'Get in Touch',
+      description: 'Contact APP Coaching to book a discovery call.',
+      url: 'https://appcoaching.io/#/contact'
+    }
+  }
+};
+
 export default function AppCoaching() {
   // ===== GOOGLE ANALYTICS & GSC VERIFICATION =====
   useEffect(() => {
@@ -102,86 +182,6 @@ export default function AppCoaching() {
         document.head.appendChild(schemaScript);
       }
       schemaScript.textContent = JSON.stringify(pageConfig.schema);
-    }
-  };
-
-  // Page configurations for SEO
-  const pageConfigs = {
-    home: {
-      id: 'home',
-      title: 'Your Most Expensive Problem: Confusion | APP Coaching',
-      description: 'Move from confusion to clarity. 1-on-1 AI, Excel & Finance coaching by Aaron Pacheco. Unlock self-sufficiency in your business and career.',
-      canonical: 'https://appcoaching.io/#/home',
-      ogType: 'website',
-      schema: {
-        '@context': 'https://schema.org',
-        '@type': 'WebPage',
-        name: 'APP Coaching - Your Most Expensive Problem: Confusion',
-        description: 'Move from confusion to clarity with 1-on-1 AI, Excel & Finance coaching.',
-        url: 'https://appcoaching.io/#/home',
-        publisher: {
-          '@type': 'Organization',
-          name: 'APP Coaching'
-        }
-      }
-    },
-    services: {
-      id: 'services',
-      title: 'Coaching Services | AI, Excel & Finance | APP Coaching',
-      description: 'Expert coaching in AI, Excel, Finance, and Business Operations. Tailored solutions to move you from confusion to capability.',
-      canonical: 'https://appcoaching.io/#/services',
-      schema: {
-        '@context': 'https://schema.org',
-        '@type': 'WebPage',
-        name: 'Services',
-        description: 'APP Coaching services include AI coaching, Excel mastery, Finance strategies, and Business Operations.',
-        url: 'https://appcoaching.io/#/services'
-      }
-    },
-    about: {
-      id: 'about',
-      title: 'About Aaron Pacheco | Finance Expert & AI Coach | APP Coaching',
-      description: 'Meet Aaron Pacheco: Qualified finance professional, Excel expert, AI coach, and operations specialist. 10+ years across top Australian companies.',
-      canonical: 'https://appcoaching.io/#/about',
-      schema: {
-        '@context': 'https://schema.org',
-        '@type': 'ProfilePage',
-        name: 'About Aaron Pacheco',
-        description: 'Aaron Pacheco - Finance professional, Excel expert, AI coach, and operations specialist.',
-        url: 'https://appcoaching.io/#/about',
-        mainEntity: {
-          '@type': 'Person',
-          name: 'Aaron Pacheco',
-          jobTitle: 'Coach, Finance Expert, AI Specialist',
-          image: 'https://appcoaching.io/Aaron_Pacheco_300dpi_001_6x6.jpg'
-        }
-      }
-    },
-    blog: {
-      id: 'blog',
-      title: 'Blog | Career Stories & Lessons | APP Coaching',
-      description: 'Read about Aaron\'s journey from confusion to clarity. Career stories, lessons, and actionable PAUL\'s Quick Reads for self-sufficiency.',
-      canonical: 'https://appcoaching.io/#/blog',
-      schema: {
-        '@context': 'https://schema.org',
-        '@type': 'CollectionPage',
-        name: 'APP Coaching Blog',
-        description: 'Blog posts about career journeys, clarity, and self-sufficiency lessons.',
-        url: 'https://appcoaching.io/#/blog'
-      }
-    },
-    contact: {
-      id: 'contact',
-      title: 'Book a Discovery Call | Get in Touch | APP Coaching',
-      description: 'Ready to move from confusion to clarity? Book a free 15-minute discovery call with Aaron to discuss your coaching needs.',
-      canonical: 'https://appcoaching.io/#/contact',
-      schema: {
-        '@context': 'https://schema.org',
-        '@type': 'ContactPage',
-        name: 'Get in Touch',
-        description: 'Contact APP Coaching to book a discovery call.',
-        url: 'https://appcoaching.io/#/contact'
-      }
     }
   };
 

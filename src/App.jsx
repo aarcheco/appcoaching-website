@@ -387,6 +387,28 @@ export default function AppCoaching() {
 
       /* Wider line height for better mobile reading */
       button { padding: 0.6rem 1rem !important; font-size: 0.8rem !important; }
+
+      /* Mobile carousel for coaching cards */
+      .coaching-cards-mobile {
+        display: flex !important;
+        overflow-x: auto !important;
+        gap: 1rem !important;
+        padding: 0 1rem 1rem 1rem !important;
+        scroll-snap-type: x mandatory !important;
+        -webkit-overflow-scrolling: touch !important;
+      }
+
+      .coaching-cards-mobile > div {
+        flex: 0 0 calc(100vw - 4rem) !important;
+        scroll-snap-align: start !important;
+        min-width: calc(100vw - 4rem) !important;
+      }
+
+      /* Stack contact form on mobile */
+      .contact-grid-mobile {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+      }
     }
   `;
 
@@ -903,7 +925,7 @@ export default function AppCoaching() {
           Pricing
         </h2>
         <p style={{
-          fontSize: '1.15rem',
+          fontSize: '1rem',
           color: colors.textMuted,
           marginBottom: '2rem',
           maxWidth: '800px',
@@ -911,7 +933,7 @@ export default function AppCoaching() {
           lineHeight: '1.8',
           textAlign: 'center'
         }}>
-          One-on-one coaching starting at <span style={{ fontSize: '1.4rem', color: colors.darkNavy, fontWeight: '800', fontFamily: "'Poppins', sans-serif" }}>under $100</span> per session, up to <span style={{ fontSize: '1.4rem', color: colors.darkNavy, fontWeight: '800', fontFamily: "'Poppins', sans-serif" }}>under $200</span> depending on the service.
+          One-on-one coaching for <span style={{ fontWeight: '600', textDecoration: 'underline', textDecorationColor: colors.limeGreen, textDecorationThickness: '2px', textUnderlineOffset: '2px' }}>under $200</span> per session, depending on the service.
         </p>
         <p style={{
           fontSize: '0.95rem',
@@ -1160,7 +1182,7 @@ export default function AppCoaching() {
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem', marginBottom: '3rem' }}>
+          <div className="coaching-cards-mobile" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem', marginBottom: '3rem' }}>
             <div style={{ background: `linear-gradient(135deg, rgba(200, 220, 255, 0.7) 0%, rgba(220, 235, 255, 0.9) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
               <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>💰</div>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
@@ -1199,7 +1221,7 @@ export default function AppCoaching() {
           <h2 style={{ fontSize: '2.2rem', color: colors.darkNavy, marginBottom: '2rem', fontFamily: "'Poppins', sans-serif", fontWeight: '800', textAlign: 'center' }}>
             Why APP Coaching Stands Out
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
+          <div className="coaching-cards-mobile" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
             <div style={{ background: `linear-gradient(135deg, rgba(200, 220, 255, 0.7) 0%, rgba(220, 235, 255, 0.9) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
                 💼 Built from Confusion to Clarity
@@ -2001,7 +2023,7 @@ export default function AppCoaching() {
         maxWidth: '900px',
         margin: '0 auto'
       }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', marginTop: '2rem' }}>
+        <div className="contact-grid-mobile" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', marginTop: '2rem' }}>
           <div>
             <h2 style={{ fontSize: '1.8rem', color: colors.darkNavy, marginBottom: '1.5rem', fontFamily: "'Poppins', sans-serif", fontWeight: '800' }}>
               Discovery Call

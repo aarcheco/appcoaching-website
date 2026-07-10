@@ -506,17 +506,11 @@ export default function AppCoaching() {
         <img src="/aaron-archive-10.jpg" alt="Aaron Pacheco" style={{ marginBottom: 'clamp(1rem, 3vh, 2rem)', width: 'clamp(200px, 35vw, 320px)', height: 'auto', borderRadius: '12px', objectFit: 'contain' }} />
 
         <h1 style={{ fontSize: 'clamp(1.8rem, 6vw, 3.5rem)', marginBottom: 'clamp(1rem, 2vh, 1.5rem)', lineHeight: '1.2', fontWeight: '800', fontFamily: "'Poppins', sans-serif", maxWidth: '900px' }}>
-          Stop Pretending You Understand Your Numbers.
+          Your Most Expensive Problem: Confusion. In Time. In Money.
         </h1>
 
         <p style={{ fontSize: 'clamp(0.95rem, 3vw, 1.2rem)', maxWidth: '900px', margin: '0 auto clamp(1rem, 2vh, 2rem)', lineHeight: '1.8', opacity: '0.95', fontFamily: "'Inter', sans-serif" }}>
-          <span style={{ color: colors.limeGreen, fontWeight: '700' }}>Business owner?</span> Your P&L, balance sheet, Xero reports—you nod like you get it. You don't. You can't spot cash leaks or know if you're actually profitable. In plain English: flying blind.
-          <br />
-          <br />
-          <span style={{ color: colors.limeGreen, fontWeight: '700' }}>Young professional?</span> Excel models shouldn't take hours. Data analysis shouldn't be painful. With basic Excel + AI, you extract insights in seconds, build dashboards that impress, and feel confident with numbers.
-          <br />
-          <br />
-          <span style={{ color: colors.limeGreen, fontWeight: '700' }}>I empower you.</span> I give you Excel skills, AI knowledge, and the guidance to become self-sufficient. You go from confusion to confidence. You understand your data. You make better decisions.
+          Confusion about your numbers. Confusion in your Excel workflows. Confusion about which AI tool to use. Confusion about your processes. It's the silent killer of productivity—bleeding time and money without you even realizing it. Whether you're a business owner flying blind on your P&L, a young professional drowning in manual spreadsheets, or a team wasting hours on inefficient processes—confusion is costing you more than you think. I help you transform confusion into clarity. On your numbers. On your tools. On your path forward.
         </p>
 
         <button onClick={() => navigateTo('contact')} style={{ background: colors.limeGreen, color: '#4a5568', border: 'none', padding: 'clamp(0.6rem, 2vh, 1rem) clamp(1rem, 4vw, 2.5rem)', fontSize: 'clamp(0.8rem, 2vw, 1rem)', fontWeight: '700', borderRadius: '8px', cursor: 'pointer', fontFamily: "'Poppins', sans-serif", whiteSpace: 'nowrap' }}>
@@ -660,13 +654,13 @@ export default function AppCoaching() {
       <div>
         <style>{styles}</style>
         <section style={{
-          background: `linear-gradient(135deg, rgba(31, 58, 125, 0.7) 0%, rgba(42, 79, 168, 0.7) 100%), url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&q=80')`,
+          background: `linear-gradient(135deg, rgba(31, 58, 125, 0.85) 0%, rgba(42, 79, 168, 0.85) 100%), url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&q=80')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',
-          padding: 'clamp(2rem, 5vh, 5rem) clamp(1rem, 4vw, 2rem)',
+          padding: 'clamp(2rem, 4vh, 4rem) clamp(1rem, 4vw, 2rem)',
           textAlign: 'center',
-          minHeight: '60vh',
+          minHeight: '45vh',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -675,8 +669,8 @@ export default function AppCoaching() {
           <h1 style={{ fontSize: '2.8rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '800' }}>
             Services
           </h1>
-          <p style={{ fontSize: '1.1rem', opacity: '0.95', maxWidth: '700px', margin: '0 auto' }}>
-            I'm here to turn your confusion into confidence. Whether you're struggling with Excel, drowning in numbers, or overwhelmed by AI—I meet you where you are, explain it like we're mates over coffee, and walk you through it until it clicks. No jargon. No rushing. Just real coaching.
+          <p style={{ fontSize: '1rem', opacity: '0.95', maxWidth: '700px', margin: '0 auto', lineHeight: '1.7' }}>
+            Confusion is costing you—in time, in money, in confidence. I help you transform that confusion into clarity across your numbers, your tools, and your processes. Whether it's Excel, AI, finance, or workflows, I meet you where you are and walk you through it until it clicks.
           </p>
         </section>
 
@@ -847,6 +841,42 @@ export default function AppCoaching() {
           Traditional business coaching runs $300–$500+ per session. I can charge less because I genuinely love closing knowledge gaps and seeing that lightbulb moment where someone realizes how much time they'll save. That fulfillment is worth more to me than the extra margin.
         </p>
       </section>
+
+      <section style={{
+        padding: '4rem 2rem',
+        textAlign: 'center',
+        background: colors.offWhite,
+        maxWidth: '900px',
+        margin: '0 auto'
+      }}>
+        <h2 style={{
+          fontSize: '2rem',
+          color: colors.darkNavy,
+          marginBottom: '1.5rem',
+          fontFamily: "'Poppins', sans-serif",
+          fontWeight: '800'
+        }}>
+          Ready to Eliminate the Confusion?
+        </h2>
+        <p style={{ fontSize: '1rem', color: colors.textMuted, marginBottom: '2rem', maxWidth: '600px', margin: '0 auto 2rem', lineHeight: '1.8' }}>
+          Book a free 15-minute discovery call. Let's talk about where confusion is costing you the most, and how we can work together to close that gap.
+        </p>
+        <a href="https://cal.com/app-coaching-xcgvda" target="_blank" rel="noopener noreferrer" style={{
+          background: colors.limeGreen,
+          color: colors.darkNavy,
+          border: 'none',
+          padding: '1rem 2.5rem',
+          fontSize: '1rem',
+          fontWeight: '700',
+          borderRadius: '8px',
+          cursor: 'pointer',
+          fontFamily: "'Poppins', sans-serif",
+          textDecoration: 'none',
+          display: 'inline-block'
+        }}>
+          BOOK DISCOVERY CALL →
+        </a>
+      </section>
     </div>
     );
   };
@@ -856,13 +886,13 @@ export default function AppCoaching() {
     <div>
       <style>{styles}</style>
       <section style={{
-        background: `linear-gradient(135deg, rgba(31, 58, 125, 0.7) 0%, rgba(42, 79, 168, 0.7) 100%), url('/aaron-headshot-professional.jpg')`,
+        background: `linear-gradient(135deg, rgba(31, 58, 125, 0.85) 0%, rgba(42, 79, 168, 0.85) 100%), url('/aaron-archive-4.jpg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         color: 'white',
-        padding: 'clamp(2rem, 5vh, 5rem) clamp(1rem, 4vw, 2rem)',
+        padding: 'clamp(2rem, 4vh, 4rem) clamp(1rem, 4vw, 2rem)',
         textAlign: 'center',
-        minHeight: '60vh',
+        minHeight: '45vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -871,8 +901,8 @@ export default function AppCoaching() {
         <h1 style={{ fontSize: 'clamp(2rem, 5vw, 2.8rem)', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '800' }}>
           About Me
         </h1>
-        <p style={{ fontSize: 'clamp(0.95rem, 2.5vw, 1.1rem)', opacity: '0.95', maxWidth: '700px' }}>
-          Qualified accountant. Excel expert. AI adoption coach. Real problems. Real solutions.
+        <p style={{ fontSize: 'clamp(0.95rem, 2.5vw, 1rem)', opacity: '0.95', maxWidth: '700px', lineHeight: '1.7' }}>
+          10+ years building clarity from confusion. Accountant, Excel expert, AI coach. I help you close the gap between confusion and confidence—in your numbers, your tools, your career.
         </p>
       </section>
 
@@ -1369,13 +1399,13 @@ export default function AppCoaching() {
       <div>
         <style>{styles}</style>
         <section style={{
-          background: `linear-gradient(135deg, rgba(31, 58, 125, 0.7) 0%, rgba(42, 79, 168, 0.7) 100%), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=80')`,
+          background: `linear-gradient(135deg, rgba(31, 58, 125, 0.85) 0%, rgba(42, 79, 168, 0.85) 100%), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=80')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',
-          padding: 'clamp(2rem, 5vh, 5rem) clamp(1rem, 4vw, 2rem)',
+          padding: 'clamp(2rem, 4vh, 4rem) clamp(1rem, 4vw, 2rem)',
           textAlign: 'center',
-          minHeight: '60vh',
+          minHeight: '45vh',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -1384,8 +1414,8 @@ export default function AppCoaching() {
           <h1 style={{ fontSize: 'clamp(2rem, 5vw, 2.8rem)', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '800' }}>
             Blog
           </h1>
-          <p style={{ fontSize: 'clamp(0.95rem, 2.5vw, 1.1rem)', opacity: '0.95', maxWidth: '700px' }}>
-            My digital garden of Excel hacks, AI experiments, and career lessons learned the hard way. Free space to share learnings, tips & tricks, formulas that actually work, AI prompts & use cases, and real teachings.
+          <p style={{ fontSize: 'clamp(0.95rem, 2.5vw, 1rem)', opacity: '0.95', maxWidth: '700px', lineHeight: '1.7' }}>
+            My digital garden of Excel hacks, AI experiments, and career lessons. Real learnings from 10+ years of closing the gap between confusion and clarity. Tips, tricks, formulas, prompts, and teachings.
           </p>
         </section>
 

@@ -664,8 +664,13 @@ export default function AppCoaching() {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',
-          padding: '4rem 2rem',
-          textAlign: 'center'
+          padding: 'clamp(2rem, 5vh, 5rem) clamp(1rem, 4vw, 2rem)',
+          textAlign: 'center',
+          minHeight: '60vh',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center'
         }}>
           <h1 style={{ fontSize: '2.8rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '800' }}>
             Services
@@ -851,9 +856,9 @@ export default function AppCoaching() {
     <div>
       <style>{styles}</style>
       <section style={{
-        background: `linear-gradient(135deg, rgba(31, 58, 125, 0.7) 0%, rgba(42, 79, 168, 0.7) 100%), url('/aaron-story.jpg')`,
+        background: `linear-gradient(135deg, rgba(31, 58, 125, 0.7) 0%, rgba(42, 79, 168, 0.7) 100%), url('/aaron-headshot-professional.jpg')`,
         backgroundSize: 'cover',
-        backgroundPosition: 'center top',
+        backgroundPosition: 'center',
         color: 'white',
         padding: 'clamp(2rem, 5vh, 5rem) clamp(1rem, 4vw, 2rem)',
         textAlign: 'center',
@@ -1030,10 +1035,10 @@ export default function AppCoaching() {
           </div>
         </div>
 
-        {/* THE SOLUTIONS I FOUND */}
+        {/* THE COACHING I OFFER */}
         <div style={{ marginBottom: '4rem', paddingTop: '3rem', borderTop: `2px solid ${colors.borderGray}` }}>
           <h2 style={{ fontSize: '2.2rem', color: colors.darkNavy, marginBottom: '2rem', fontFamily: "'Poppins', sans-serif", fontWeight: '800', textAlign: 'center' }}>
-            The Solutions I Found
+            The Coaching I Offer
           </h2>
 
           <div style={{ marginBottom: '3rem', background: colors.offWhite, padding: '2rem', borderRadius: '12px' }}>
@@ -1055,17 +1060,17 @@ export default function AppCoaching() {
             <div style={{ background: `linear-gradient(135deg, rgba(200, 220, 255, 0.7) 0%, rgba(220, 235, 255, 0.9) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
               <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>💰</div>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
-                Financial Literacy
+                Finance Coaching
               </h3>
               <p style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
-                Understand your numbers. Your P&L. Your cash flow. Your profitability. Make decisions from clarity, not guessing.
+                Personal or business—understand your numbers. Your P&L, cash flow, profitability. Make decisions from clarity, not guessing.
               </p>
             </div>
 
             <div style={{ background: `linear-gradient(135deg, rgba(200, 220, 255, 0.7) 0%, rgba(220, 235, 255, 0.9) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
-              <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>📈</div>
+              <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>📊</div>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
-                Excel & AI Skills
+                Excel & AI Coaching
               </h3>
               <p style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
                 Build systems that work for you. Automate the boring stuff. Process data smarter. Save time. Every single day.
@@ -1073,7 +1078,7 @@ export default function AppCoaching() {
             </div>
 
             <div style={{ background: `linear-gradient(135deg, rgba(200, 220, 255, 0.7) 0%, rgba(220, 235, 255, 0.9) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
-              <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>🚀</div>
+              <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>🎯</div>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
                 Career Coaching
               </h3>

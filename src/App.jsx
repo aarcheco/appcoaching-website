@@ -954,8 +954,6 @@ export default function AppCoaching() {
         </button>
       </section>
 
-      <VennDiagram />
-
       {/* How I Can Help You - Services Section */}
       <section style={{
         padding: '4rem 2rem',
@@ -1033,6 +1031,33 @@ export default function AppCoaching() {
               </a>
             </div>
           ))}
+        </div>
+      </section>
+
+      <VennDiagram />
+
+      {/* Synthesized Systems Paragraph */}
+      <section style={{
+        padding: '4rem 2rem',
+        background: colors.offWhite,
+        maxWidth: '900px',
+        margin: '0 auto'
+      }}>
+        <div style={{
+          fontSize: '1.1rem',
+          color: colors.darkNavy,
+          lineHeight: '1.9',
+          textAlign: 'center'
+        }}>
+          <p style={{ marginBottom: '1.5rem' }}>
+            Here's what I've learned: <span style={{ color: colors.limeGreen, fontWeight: '700' }}>The real power isn't in any single tool.</span> Excel alone won't move you forward. AI without structure is just noise. Finance without systems is firefighting.
+          </p>
+          <p style={{ marginBottom: '1.5rem' }}>
+            It's when you understand how <span style={{ color: colors.limeGreen, fontWeight: '700' }}>these systems work together</span>—how your Excel models feed your financial analysis, how AI accelerates your learning, how your processes and workflows connect to your actual business outcomes—that everything changes.
+          </p>
+          <p>
+            The more you recognize their interconnectedness, the more <span style={{ color: colors.limeGreen, fontWeight: '700' }}>confident and capable</span> you become working cross-functionally. You see patterns others miss. You move faster. You have real <span style={{ color: colors.limeGreen, fontWeight: '700' }}>insight</span> instead of just data.
+          </p>
         </div>
       </section>
 

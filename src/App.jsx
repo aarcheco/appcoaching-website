@@ -2028,7 +2028,7 @@ export default function AppCoaching() {
           Let's Talk
         </h1>
         <p style={{ fontSize: '1.1rem', opacity: '0.95' }}>
-          Ready to unlock your potential? Book a discovery call or get in touch.
+          Ready to move from confusion to clarity? Let's talk about your goals and build your path to self-sufficiency.
         </p>
       </section>
 
@@ -2044,7 +2044,7 @@ export default function AppCoaching() {
               Discovery Call
             </h2>
             <p style={{ fontSize: '0.95rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '2rem' }}>
-              Let's talk about your goals, challenges, and how we can work together. No pressure, just an honest conversation about what's possible.
+              Let's talk about where <span style={{ fontWeight: '600' }}>confusion is costing you</span> most—in your numbers, your tools, or your career. I'll help you see the path forward with <span style={{ fontWeight: '600' }}>clarity and confidence.</span>
             </p>
             <div style={{
               background: 'white',
@@ -2054,7 +2054,7 @@ export default function AppCoaching() {
               textAlign: 'center'
             }}>
               <p style={{ fontSize: '0.9rem', color: colors.textMuted, marginBottom: '1rem' }}>
-                📅 <strong>15 minutes</strong> • FREE • All segments welcome
+                📅 <strong>15 minutes</strong> • FREE
               </p>
               <a href="https://cal.com/app-coaching-xcgvda" target="_blank" rel="noopener noreferrer" style={{
                 background: colors.limeGreen,
@@ -2080,7 +2080,7 @@ export default function AppCoaching() {
 
           <div>
             <h2 style={{ fontSize: '1.8rem', color: colors.darkNavy, marginBottom: '1.5rem', fontFamily: "'Poppins', sans-serif", fontWeight: '800' }}>
-              Get in Touch
+              Build Your Path to Self-Sufficiency
             </h2>
             <form style={{
               display: 'flex',
@@ -2142,7 +2142,7 @@ export default function AppCoaching() {
                 <label style={{ display: 'block', fontSize: '0.9rem', fontWeight: '600', marginBottom: '0.5rem', color: colors.darkNavy }}>
                   Message
                 </label>
-                <textarea placeholder="Tell me about your situation..." style={{
+                <textarea placeholder="Tell me about the confusion you're facing..." style={{
                   width: '100%',
                   padding: '0.75rem',
                   border: `1px solid ${colors.borderGray}`,

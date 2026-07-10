@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from 'react';
 
 export default function AppCoaching() {
-  // ===== GOOGLE ANALYTICS =====
+  // ===== GOOGLE ANALYTICS & GSC VERIFICATION =====
   useEffect(() => {
+    // Add GSC verification meta tag
+    const gscMeta = document.createElement('meta');
+    gscMeta.name = 'google-site-verification';
+    gscMeta.content = 'yi5jdpycQ4YPGxXSuWdH3vUpoVVGPuFO-RMCbwCybgc';
+    document.head.appendChild(gscMeta);
+
     // Load Google Analytics script
     const script = document.createElement('script');
     script.async = true;

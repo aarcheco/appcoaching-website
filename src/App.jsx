@@ -494,6 +494,16 @@ export default function AppCoaching() {
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
 
+    blockquote {
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    blockquote:hover {
+      box-shadow: 0 6px 20px rgba(0, 255, 65, 0.2);
+      transform: translateY(-2px);
+    }
+
     input, textarea, select {
       transition: border-color 0.3s ease, box-shadow 0.3s ease;
     }

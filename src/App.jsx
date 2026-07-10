@@ -1480,7 +1480,7 @@ export default function AppCoaching() {
                     lineHeight: '1.6',
                     color: colors.textDark
                   }}>
-                    <strong style={{ color: colors.darkNavy, fontSize: '1rem' }}>Aaron Pacheco</strong> is a finance analyst and AI coach who helps founders and professionals master Excel, finance strategy, and AI adoption. Over his career across leading Australian organizations (including Flight Centre, PwC, and Aveo), he's built financial models, dashboards, and systems that drive better business decisions. Now he's scaling that expertise through APP Coaching—helping smart people work smarter, not harder.
+                    <strong style={{ color: colors.darkNavy, fontSize: '1rem' }}>Aaron Pacheco</strong> is a finance professional who specializes in streamlining inefficient paths from input and data processing to clear output and actionable insight. Across his career at Flight Centre, PwC, Aveo, and others, he's built financial models, dashboards, and systems that cut through the noise and eliminate laborious manual work. His focus: turning confusion into clarity so you can make better decisions faster. Through APP Coaching, he's now scaling that expertise—helping smart people close the gap between confusion and confidence.
                   </p>
                   <p style={{
                     margin: '0',
@@ -1488,7 +1488,7 @@ export default function AppCoaching() {
                     color: colors.textMuted,
                     fontStyle: 'italic'
                   }}>
-                    🎯 Finance • Excel • AI • Career growth
+                    🎯 Finance • Systems • Efficiency • Career growth
                   </p>
                 </div>
               </div>

@@ -29,7 +29,7 @@ export default function AppCoaching() {
   const [blogPosts, setBlogPosts] = useState([]);
   const [selectedBlogPost, setSelectedBlogPost] = useState(null);
   const [blogLoading, setBlogLoading] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState('Everything Else');
+  const [selectedCategory, setSelectedCategory] = useState('');
   const [blogViewMode, setBlogViewMode] = useState('post');
   const [blogSnippetType, setBlogSnippetType] = useState('');
   const [blogSearchTerm, setBlogSearchTerm] = useState('');
@@ -853,7 +853,7 @@ export default function AppCoaching() {
       <section style={{
         background: `linear-gradient(135deg, rgba(31, 58, 125, 0.7) 0%, rgba(42, 79, 168, 0.7) 100%), url('/aaron-story.jpg')`,
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundPosition: 'center top',
         color: 'white',
         padding: 'clamp(2rem, 5vh, 5rem) clamp(1rem, 4vw, 2rem)',
         textAlign: 'center',
@@ -1475,12 +1475,12 @@ export default function AppCoaching() {
                   fontFamily: "'Poppins', sans-serif"
                 }}
               >
-                <option value="Everything Else">Everything Else</option>
+                <option value="">All Categories</option>
+                <option value="Accounting & Finance Career">Accounting & Finance Career</option>
                 <option value="Business Finance">Business Finance</option>
                 <option value="Personal Finance">Personal Finance</option>
                 <option value="Excel">Excel</option>
                 <option value="AI">AI</option>
-                <option value="Accounting & Finance Career">Accounting & Finance Career</option>
               </select>
             </div>
           </div>
@@ -1528,7 +1528,7 @@ export default function AppCoaching() {
                 }}>
                   {blogPosts
                     .filter((post) => {
-                      const categoryMatch = selectedCategory === 'Everything Else' || (post.categories && post.categories.includes(selectedCategory));
+                      const categoryMatch = selectedCategory === '' || (post.categories && post.categories.includes(selectedCategory));
                       const searchMatch = blogSearchTerm === '' || post.title.toLowerCase().includes(blogSearchTerm.toLowerCase()) || post.excerpt.toLowerCase().includes(blogSearchTerm.toLowerCase());
                       return categoryMatch && searchMatch;
                     })
@@ -1585,7 +1585,7 @@ export default function AppCoaching() {
                     </button>
                   ))}
                   {blogPosts.filter((post) => {
-                    const categoryMatch = selectedCategory === 'Everything Else' || (post.categories && post.categories.includes(selectedCategory));
+                    const categoryMatch = selectedCategory === '' || (post.categories && post.categories.includes(selectedCategory));
                     const searchMatch = blogSearchTerm === '' || post.title.toLowerCase().includes(blogSearchTerm.toLowerCase()) || post.excerpt.toLowerCase().includes(blogSearchTerm.toLowerCase());
                     return categoryMatch && searchMatch;
                   }).length === 0 && (

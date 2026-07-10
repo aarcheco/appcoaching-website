@@ -1,6 +1,20 @@
 [
   {
     "id": "001",
-    "filename": "001_why_i_started_appcoaching.md"
+    "filename": "001_why_i_started_appcoaching.md",
+    "title": "Why I Built APP Coaching: A Founder's Origin Story",
+    "date": "2026-07-08",
+    "excerpt": "From my mom's career to building forecasts that drive business decisions—how I discovered the power of efficient paths from problems to solutions",
+    "heroImage": "/aaron-archive-10.jpg",
+    "categories": ["Accounting & Finance Career"]
+  },
+  {
+    "id": "002",
+    "filename": "002_why_i_chose_accounting.md",
+    "title": "Why I Chose Accounting: The Journey from Rule-Follower to Translator",
+    "date": "2026-07-10",
+    "excerpt": "From my mum's exactness to PwC's pressure to Coronis's transformation—how accounting taught me that the real value isn't processing numbers, it's making them make sense to people",
+    "heroImage": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80",
+    "categories": ["Accounting & Finance Career", "Business Finance"]
   }
 ]

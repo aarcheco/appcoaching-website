@@ -109,7 +109,7 @@ export default function AppCoaching() {
   const [blogPosts, setBlogPosts] = useState([]);
   const [selectedBlogPost, setSelectedBlogPost] = useState(null);
   const [blogLoading, setBlogLoading] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState('');
+  const [selectedTag, setSelectedTag] = useState('');
   const [blogViewMode, setBlogViewMode] = useState('post');
   const [blogSnippetType, setBlogSnippetType] = useState('');
   const [blogSearchTerm, setBlogSearchTerm] = useState('');
@@ -1911,14 +1911,14 @@ export default function AppCoaching() {
               </div>
             )}
 
-            {/* Category filter */}
+            {/* Tag filter */}
             <div>
               <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', marginBottom: '0.5rem', color: colors.darkNavy }}>
-                Category:
+                Filter by Tag:
               </label>
               <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
+                value={selectedTag}
+                onChange={(e) => setSelectedTag(e.target.value)}
                 style={{
                   width: '100%',
                   padding: '0.6rem 0.75rem',
@@ -1932,12 +1932,14 @@ export default function AppCoaching() {
                   fontFamily: "'Poppins', sans-serif"
                 }}
               >
-                <option value="">All Categories</option>
-                <option value="Accounting & Finance Career">Accounting & Finance Career</option>
-                <option value="Business Finance">Business Finance</option>
-                <option value="Personal Finance">Personal Finance</option>
-                <option value="Excel">Excel</option>
-                <option value="AI">AI</option>
+                <option value="">All Tags</option>
+                <option value="Career Growth">Career Growth</option>
+                <option value="Business Systems">Business Systems</option>
+                <option value="Efficiency">Efficiency</option>
+                <option value="AI Adoption">AI Adoption</option>
+                <option value="Accounting">Accounting</option>
+                <option value="Career Evolution">Career Evolution</option>
+                <option value="Finance Skills">Finance Skills</option>
               </select>
             </div>
           </div>
@@ -1954,7 +1956,6 @@ export default function AppCoaching() {
               placeholder="Search by keyword..."
               value={blogSearchTerm}
               onChange={(e) => {
-                e.preventDefault();
                 setBlogSearchTerm(e.target.value);
               }}
               onBlur={() => {}}
@@ -1975,7 +1976,10 @@ export default function AppCoaching() {
                 WebkitAppearance: 'none',
                 appearance: 'none',
                 WebkitAutocorrect: 'off',
-                WebkitSpellcheck: 'false'
+                WebkitSpellcheck: 'false',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+                whiteSpace: 'nowrap'
               }}
             />
           </div>
@@ -2002,9 +2006,9 @@ export default function AppCoaching() {
                 }}>
                   {blogPosts
                     .filter((post) => {
-                      const categoryMatch = !selectedCategory || selectedCategory === '' || (Array.isArray(post.categories) && post.categories.some(cat => cat.trim() === selectedCategory.trim()));
+                      const tagMatch = !selectedTag || selectedTag === '' || (Array.isArray(post.tags) && post.tags.some(tag => tag.trim() === selectedTag.trim()));
                       const searchMatch = blogSearchTerm === '' || post.title.toLowerCase().includes(blogSearchTerm.toLowerCase()) || post.excerpt.toLowerCase().includes(blogSearchTerm.toLowerCase());
-                      return categoryMatch && searchMatch;
+                      return tagMatch && searchMatch;
                     })
                     .map((post) => (
                     <button key={post.id} onClick={() => {
@@ -2027,22 +2031,30 @@ export default function AppCoaching() {
                       position: 'relative',
                       overflow: 'visible'
                     }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = colors.limeGreen; e.currentTarget.style.boxShadow = `0 8px 24px rgba(0, 255, 65, 0.15)`; e.currentTarget.style.transform = 'translateY(-4px)'; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = colors.borderGray; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)'; e.currentTarget.style.transform = 'translateY(0)'; }}>
-                      {post.categories && post.categories.length > 0 && (
-                        <span style={{
-                          background: colors.limeGreen,
-                          color: colors.darkNavy,
-                          fontSize: '0.65rem',
-                          fontWeight: '700',
-                          padding: '0.4rem 0.8rem',
-                          borderRadius: '20px',
-                          whiteSpace: 'nowrap',
-                          display: 'inline-block',
-                          textTransform: 'uppercase',
-                          letterSpacing: '0.5px',
+                      {post.tags && post.tags.length > 0 && (
+                        <div style={{
+                          display: 'flex',
+                          flexWrap: 'wrap',
+                          gap: '0.5rem',
                           marginBottom: '1rem'
                         }}>
-                          {post.categories[0]}
-                        </span>
+                          {post.tags.slice(0, 3).map((tag, idx) => (
+                            <span key={idx} style={{
+                              background: colors.limeGreen,
+                              color: colors.darkNavy,
+                              fontSize: '0.65rem',
+                              fontWeight: '700',
+                              padding: '0.4rem 0.8rem',
+                              borderRadius: '20px',
+                              whiteSpace: 'nowrap',
+                              display: 'inline-block',
+                              textTransform: 'capitalize',
+                              letterSpacing: '0.5px'
+                            }}>
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
                       )}
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.75rem', gap: '1rem' }}>
                         <div style={{ fontSize: '1.2rem', color: 'white', fontWeight: '700', background: `linear-gradient(135deg, ${colors.navy} 0%, ${colors.limeGreen} 100%)`, width: '40px', height: '40px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
@@ -2061,9 +2073,9 @@ export default function AppCoaching() {
                     </button>
                   ))}
                   {blogPosts.filter((post) => {
-                    const categoryMatch = selectedCategory === '' || (post.categories && post.categories.includes(selectedCategory));
+                    const tagMatch = selectedTag === '' || (post.tags && post.tags.includes(selectedTag));
                     const searchMatch = blogSearchTerm === '' || post.title.toLowerCase().includes(blogSearchTerm.toLowerCase()) || post.excerpt.toLowerCase().includes(blogSearchTerm.toLowerCase());
-                    return categoryMatch && searchMatch;
+                    return tagMatch && searchMatch;
                   }).length === 0 && (
                     <div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '2rem' }}>
                       <p style={{ color: colors.textMuted }}>No posts match your filters. Try adjusting your search.</p>
@@ -2082,9 +2094,9 @@ export default function AppCoaching() {
                 }}>
                   {blogPosts
                     .filter((post) => {
-                      const categoryMatch = !selectedCategory || selectedCategory === '' || (Array.isArray(post.categories) && post.categories.some(cat => cat.trim() === selectedCategory.trim()));
+                      const tagMatch = !selectedTag || selectedTag === '' || (Array.isArray(post.tags) && post.tags.some(tag => tag.trim() === selectedTag.trim()));
                       const searchMatch = blogSearchTerm === '' || post.title.toLowerCase().includes(blogSearchTerm.toLowerCase());
-                      return categoryMatch && searchMatch;
+                      return tagMatch && searchMatch;
                     })
                     .flatMap((post) => {
                       const snippets = [];

@@ -3,7 +3,8 @@ title: "Why I Built APP Coaching: A Founder's Origin Story"
 date: 2026-07-08
 id: 001
 excerpt: From my mom's career to building forecasts that drive business decisions—how I discovered the power of efficient paths from problems to solutions
-heroImage: /aaron-hero.jpg
+heroImage: /aaron-archive-10.jpg
+category: career
 ---
 
 <img src="/aaron-hero.jpg" alt="Aaron" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0;">

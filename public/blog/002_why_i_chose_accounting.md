@@ -3,7 +3,8 @@ title: "Why I Chose Accounting: The Journey from Rule-Follower to Translator"
 date: 2026-07-10
 id: 002
 excerpt: From my mum's exactness to PwC's pressure to Coronis's transformation—how accounting taught me that the real value isn't processing numbers, it's making them make sense to people
-heroImage: /aaron-hero.jpg
+heroImage: https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80
+category: Accounting & Finance Career
 ---
 
 <img src="/aaron-hero.jpg" alt="Aaron" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0;">
@@ -114,6 +115,3 @@ heroImage: /aaron-hero.jpg
 <p>Your skill isn't processing or analyzing—it's translating complexity into clarity. The accountants who survive are the ones who can explain the numbers in a way that makes leaders actually understand what to do.</p>
 </blockquote>
 
-<hr style="border: none; border-top: 2px solid #e5e7eb; margin: 2rem 0;">
-
-<p><strong>About Aaron:</strong> Aaron chose accounting for the black-and-white certainty, but his career became valuable when he realized that certainty doesn't matter if nobody understands what it means. Now he teaches other accountants and finance professionals that the path from processing numbers to translating them is where your real career begins.</p>

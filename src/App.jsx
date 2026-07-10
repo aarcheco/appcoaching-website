@@ -426,25 +426,7 @@ export default function AppCoaching() {
     return () => window.removeEventListener('popstate', handlePopstate);
   }, [blogPosts]);
 
-  // ===== BLOG SYSTEM =====
-  useEffect(() => {
-    loadBlogPosts();
-  }, [loadBlogPosts]);
-
-  // Helper function to navigate to a page and update URL (using History API)
-  const navigateTo = (page, postSlug = null) => {
-    setCurrentPage(page);
-
-    let url = `/${page}`;
-    if (page === 'blog' && postSlug) {
-      url += `/${postSlug}`;
-    } else if (page === 'home') {
-      url = '/';
-    }
-
-    window.history.pushState({ page, postSlug }, '', url);
-  };
-
+  // Helper function to load blog posts (memoized with useCallback)
   const loadBlogPosts = useCallback(async () => {
     setBlogLoading(true);
     try {
@@ -489,6 +471,25 @@ export default function AppCoaching() {
     }
     setBlogLoading(false);
   }, []);
+
+  // ===== BLOG SYSTEM =====
+  useEffect(() => {
+    loadBlogPosts();
+  }, [loadBlogPosts]);
+
+  // Helper function to navigate to a page and update URL (using History API)
+  const navigateTo = (page, postSlug = null) => {
+    setCurrentPage(page);
+
+    let url = `/${page}`;
+    if (page === 'blog' && postSlug) {
+      url += `/${postSlug}`;
+    } else if (page === 'home') {
+      url = '/';
+    }
+
+    window.history.pushState({ page, postSlug }, '', url);
+  };
 
   const vennSections = {
     finance: {

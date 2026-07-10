@@ -35,6 +35,30 @@ export default function AppCoaching() {
   const [blogSearchTerm, setBlogSearchTerm] = useState('');
   const [expandedSnippets, setExpandedSnippets] = useState({});
 
+  // Helper function to generate intelligent snippet titles based on content
+  const generateSnippetTitle = (type, content) => {
+    const cleanContent = content.replace(/<[^>]*>/g, '').trim();
+
+    if (type === 'levelup') {
+      // Extract first 8-10 words as title
+      const words = cleanContent.split(' ').slice(0, 10);
+      return words.join(' ').substring(0, 60);
+    } else if (type === 'prompt') {
+      // For prompts, extract the key instruction
+      const lines = cleanContent.split('\n');
+      const firstLine = lines[0].substring(0, 60);
+      return `Prompt: ${firstLine}`;
+    } else if (type === 'formula') {
+      // For formulas, extract formula name or pattern
+      const formulaPattern = cleanContent.match(/([A-Z]+\(|[A-Z]+\s+formula)/i);
+      if (formulaPattern) {
+        return `Formula: ${formulaPattern[0].replace('(', '').trim()}`;
+      }
+      return `Excel Formula: ${cleanContent.substring(0, 50)}`;
+    }
+    return cleanContent.substring(0, 60);
+  };
+
   // Helper function to generate slug from title
   const generateSlug = (title) => {
     return title
@@ -1699,7 +1723,7 @@ export default function AppCoaching() {
                         snippets.push({
                           id: `${post.id}-levelup`,
                           type: 'levelup',
-                          title: post.title,
+                          title: generateSnippetTitle('levelup', levelupMatch[1]),
                           content: levelupMatch[1],
                           postId: post.id,
                           categories: post.categories
@@ -1712,7 +1736,7 @@ export default function AppCoaching() {
                         snippets.push({
                           id: `${post.id}-prompt`,
                           type: 'prompt',
-                          title: post.title,
+                          title: generateSnippetTitle('prompt', promptMatch[1].trim()),
                           content: promptMatch[1].trim(),
                           postId: post.id,
                           categories: post.categories
@@ -1725,7 +1749,7 @@ export default function AppCoaching() {
                         snippets.push({
                           id: `${post.id}-formula`,
                           type: 'formula',
-                          title: post.title,
+                          title: generateSnippetTitle('formula', formulaMatch[1]),
                           content: formulaMatch[1],
                           postId: post.id,
                           categories: post.categories

@@ -1,54 +1,121 @@
 import React, { useState, useEffect } from 'react';
 
 // ===== PAGE CONFIGURATIONS FOR SEO (Static, outside component) =====
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'APP Coaching',
+  url: 'https://appcoaching.io',
+  logo: 'https://appcoaching.io/logo.png',
+  description: 'AI, Excel & Finance coaching to move you from confusion to clarity and self-sufficiency.',
+  sameAs: ['https://linkedin.com/company/appcoaching', 'https://twitter.com/appcoaching'],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'Customer Service',
+    url: 'https://cal.com/app-coaching-xcgvda'
+  },
+  founder: {
+    '@type': 'Person',
+    name: 'Aaron Pacheco',
+    url: 'https://appcoaching.io/about'
+  }
+};
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Aaron Pacheco',
+  url: 'https://appcoaching.io/about',
+  image: 'https://appcoaching.io/Aaron_Pacheco_300dpi_001_6x6.jpg',
+  jobTitle: 'Founder & Coach - AI, Excel & Finance',
+  description: 'Brisbane-based finance professional specializing in Excel mastery, AI coaching, and financial clarity for businesses and individuals.',
+  worksFor: {
+    '@type': 'Organization',
+    name: 'APP Coaching'
+  },
+  knowsAbout: ['Excel', 'Finance', 'AI', 'Business Operations', 'Coaching'],
+  sameAs: ['https://linkedin.com/in/aaronpacheco']
+};
+
 const pageConfigs = {
   home: {
     id: 'home',
     title: 'Your Most Expensive Problem: Confusion | APP Coaching',
     description: 'Move from confusion to clarity. 1-on-1 AI, Excel & Finance coaching by Aaron Pacheco. Unlock self-sufficiency in your business and career.',
-    canonical: 'https://appcoaching.io/#/home',
+    canonical: 'https://appcoaching.io/',
     ogType: 'website',
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'WebPage',
-      name: 'APP Coaching - Your Most Expensive Problem: Confusion',
-      description: 'Move from confusion to clarity with 1-on-1 AI, Excel & Finance coaching.',
-      url: 'https://appcoaching.io/#/home',
-      publisher: {
-        '@type': 'Organization',
-        name: 'APP Coaching'
-      }
+      '@type': ['WebPage', 'Organization'],
+      name: 'APP Coaching',
+      url: 'https://appcoaching.io/',
+      description: 'Move from confusion to clarity with 1-on-1 AI, Excel & Finance coaching by Aaron Pacheco.',
+      ...organizationSchema
     }
   },
   services: {
     id: 'services',
     title: 'Coaching Services | AI, Excel & Finance | APP Coaching',
     description: 'Expert coaching in AI, Excel, Finance, and Business Operations. Tailored solutions to move you from confusion to capability.',
-    canonical: 'https://appcoaching.io/#/services',
+    canonical: 'https://appcoaching.io/services',
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'WebPage',
-      name: 'Services',
-      description: 'APP Coaching services include AI coaching, Excel mastery, Finance strategies, and Business Operations.',
-      url: 'https://appcoaching.io/#/services'
+      '@type': ['WebPage', 'LocalBusiness'],
+      name: 'APP Coaching Services',
+      description: 'Expert coaching services in AI, Excel, Finance, and Business Operations.',
+      url: 'https://appcoaching.io/services',
+      hasOfferingDetails: [
+        {
+          '@type': 'Service',
+          name: 'Finance Coaching',
+          description: 'Career coaching for young professionals in finance. Personal & business finance strategy, profit margins, cash flow clarity.',
+          provider: { '@type': 'Organization', name: 'APP Coaching' },
+          areaServed: 'AU'
+        },
+        {
+          '@type': 'Service',
+          name: 'Excel Coaching',
+          description: 'Data analysis, visualization, custom modeling, dashboards, pivot tables, and automation of repetitive tasks.',
+          provider: { '@type': 'Organization', name: 'APP Coaching' },
+          areaServed: 'AU'
+        },
+        {
+          '@type': 'Service',
+          name: 'AI Coaching',
+          description: 'Master prompting, AI workflows, agentic AI, custom AI tools, and AI adoption strategy.',
+          provider: { '@type': 'Organization', name: 'APP Coaching' },
+          areaServed: 'AU'
+        },
+        {
+          '@type': 'Service',
+          name: 'Operations & Workflow Coaching',
+          description: 'Process design, workflow optimization, task automation, systems thinking, and operational efficiency.',
+          provider: { '@type': 'Organization', name: 'APP Coaching' },
+          areaServed: 'AU'
+        }
+      ]
     }
   },
   about: {
     id: 'about',
     title: 'About Aaron Pacheco | Finance Expert & AI Coach | APP Coaching',
     description: 'Meet Aaron Pacheco: Qualified finance professional, Excel expert, AI coach, and operations specialist. 10+ years across top Australian companies.',
-    canonical: 'https://appcoaching.io/#/about',
+    canonical: 'https://appcoaching.io/about',
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'ProfilePage',
+      '@type': ['ProfilePage', 'AboutPage'],
       name: 'About Aaron Pacheco',
-      description: 'Aaron Pacheco - Finance professional, Excel expert, AI coach, and operations specialist.',
-      url: 'https://appcoaching.io/#/about',
+      description: 'Aaron Pacheco - Founder of APP Coaching, finance professional, Excel expert, AI coach, and operations specialist.',
+      url: 'https://appcoaching.io/about',
       mainEntity: {
-        '@type': 'Person',
-        name: 'Aaron Pacheco',
-        jobTitle: 'Coach, Finance Expert, AI Specialist',
-        image: 'https://appcoaching.io/Aaron_Pacheco_300dpi_001_6x6.jpg'
+        ...personSchema,
+        alumniOf: { '@type': 'EducationalOrganization', name: 'Queensland University of Technology (QUT)' },
+        affiliation: [
+          { '@type': 'Organization', name: 'Flight Centre' },
+          { '@type': 'Organization', name: 'PwC' },
+          { '@type': 'Organization', name: 'Coronis Group' },
+          { '@type': 'Organization', name: 'Aveo Group' }
+        ]
       }
     }
   },
@@ -56,26 +123,28 @@ const pageConfigs = {
     id: 'blog',
     title: 'Blog | Career Stories & Lessons | APP Coaching',
     description: 'Read about Aaron\'s journey from confusion to clarity. Career stories, lessons, and actionable PAUL\'s Quick Reads for self-sufficiency.',
-    canonical: 'https://appcoaching.io/#/blog',
+    canonical: 'https://appcoaching.io/blog',
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'CollectionPage',
+      '@type': ['CollectionPage', 'Blog'],
       name: 'APP Coaching Blog',
-      description: 'Blog posts about career journeys, clarity, and self-sufficiency lessons.',
-      url: 'https://appcoaching.io/#/blog'
+      description: 'Blog posts about career journeys, clarity, finance, Excel mastery, AI adoption, and self-sufficiency lessons.',
+      url: 'https://appcoaching.io/blog',
+      author: { ...personSchema },
+      publisher: { ...organizationSchema }
     }
   },
   contact: {
     id: 'contact',
     title: 'Book a Discovery Call | Get in Touch | APP Coaching',
     description: 'Ready to move from confusion to clarity? Book a free 15-minute discovery call with Aaron to discuss your coaching needs.',
-    canonical: 'https://appcoaching.io/#/contact',
+    canonical: 'https://appcoaching.io/contact',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'ContactPage',
       name: 'Get in Touch',
       description: 'Contact APP Coaching to book a discovery call.',
-      url: 'https://appcoaching.io/#/contact'
+      url: 'https://appcoaching.io/contact'
     }
   }
 };
@@ -185,11 +254,87 @@ export default function AppCoaching() {
     }
   };
 
+  // Helper function to update blog post meta tags and schema
+  const updateBlogPostMetaTags = (post) => {
+    const canonicalUrl = `https://appcoaching.io/blog/${post.slug}`;
+
+    // Update title and meta description
+    document.title = `${post.title} | APP Coaching`;
+
+    let descMeta = document.querySelector('meta[name="description"]');
+    if (!descMeta) {
+      descMeta = document.createElement('meta');
+      descMeta.name = 'description';
+      document.head.appendChild(descMeta);
+    }
+    descMeta.content = post.excerpt;
+
+    // Update canonical URL
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = canonicalUrl;
+
+    // Update OG tags for blog post
+    const ogTags = {
+      'og:title': post.title,
+      'og:description': post.excerpt,
+      'og:url': canonicalUrl,
+      'og:type': 'article',
+      'og:image': post.heroImage
+    };
+
+    Object.entries(ogTags).forEach(([property, content]) => {
+      let tag = document.querySelector(`meta[property="${property}"]`);
+      if (!tag) {
+        tag = document.createElement('meta');
+        tag.setAttribute('property', property);
+        document.head.appendChild(tag);
+      }
+      tag.content = content;
+    });
+
+    // Add BlogPosting schema
+    const blogSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: post.title,
+      image: post.heroImage,
+      author: personSchema,
+      datePublished: post.date,
+      description: post.excerpt,
+      url: canonicalUrl,
+      publisher: organizationSchema
+    };
+
+    let schemaScript = document.getElementById('schema-blog-post');
+    if (!schemaScript) {
+      schemaScript = document.createElement('script');
+      schemaScript.id = 'schema-blog-post';
+      schemaScript.type = 'application/ld+json';
+      document.head.appendChild(schemaScript);
+    }
+    schemaScript.textContent = JSON.stringify(blogSchema);
+  };
+
   // Update meta tags when page changes
   useEffect(() => {
     const config = pageConfigs[currentPage] || pageConfigs.home;
     updateMetaTags(config);
   }, [currentPage]);
+
+  // Update blog post meta tags when post is selected
+  useEffect(() => {
+    if (currentPage === 'blog' && selectedBlogPost && blogPosts.length > 0) {
+      const post = blogPosts.find(p => p.id === selectedBlogPost);
+      if (post) {
+        updateBlogPostMetaTags(post);
+      }
+    }
+  }, [selectedBlogPost, currentPage, blogPosts]);
 
   // Helper function to generate intelligent snippet titles based on content
   const generateSnippetTitle = (type, content) => {
@@ -233,13 +378,20 @@ export default function AppCoaching() {
       .replace(/-+/g, '-');
   };
 
-  // ===== URL ROUTING (hash-based) =====
+  // ===== URL ROUTING (clean URLs using History API) =====
   useEffect(() => {
-    // Handle initial page load from URL hash
-    const path = window.location.hash.slice(1) || 'home';
-    const pathParts = path.split('/');
-    const pageName = pathParts[0];
-    const postSlug = pathParts[1];
+    // Handle initial page load from URL pathname
+    const getPageFromPath = (pathname) => {
+      // Remove leading/trailing slashes
+      const path = pathname.replace(/^\/|\/$/g, '') || 'home';
+      const pathParts = path.split('/');
+      const pageName = pathParts[0];
+      const postSlug = pathParts[1];
+
+      return { pageName, postSlug };
+    };
+
+    const { pageName, postSlug } = getPageFromPath(window.location.pathname);
 
     if (['home', 'services', 'about', 'blog', 'contact'].includes(pageName)) {
       setCurrentPage(pageName);
@@ -249,14 +401,14 @@ export default function AppCoaching() {
         const post = blogPosts.find(p => generateSlug(p.title) === postSlug);
         if (post) setSelectedBlogPost(post.id);
       }
+    } else {
+      // Default to home if invalid path
+      setCurrentPage('home');
     }
 
-    // Listen for hash changes (back/forward buttons)
-    const handleHashChange = () => {
-      const newPath = window.location.hash.slice(1) || 'home';
-      const newPathParts = newPath.split('/');
-      const newPageName = newPathParts[0];
-      const newPostSlug = newPathParts[1];
+    // Listen for popstate (back/forward buttons)
+    const handlePopstate = () => {
+      const { pageName: newPageName, postSlug: newPostSlug } = getPageFromPath(window.location.pathname);
 
       if (['home', 'services', 'about', 'blog', 'contact'].includes(newPageName)) {
         setCurrentPage(newPageName);
@@ -270,8 +422,8 @@ export default function AppCoaching() {
       }
     };
 
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    window.addEventListener('popstate', handlePopstate);
+    return () => window.removeEventListener('popstate', handlePopstate);
   }, [blogPosts]);
 
   // ===== BLOG SYSTEM =====
@@ -279,10 +431,18 @@ export default function AppCoaching() {
     loadBlogPosts();
   }, []);
 
-  // Helper function to navigate to a page and update URL
-  const navigateTo = (page) => {
+  // Helper function to navigate to a page and update URL (using History API)
+  const navigateTo = (page, postSlug = null) => {
     setCurrentPage(page);
-    window.location.hash = page;
+
+    let url = `/${page}`;
+    if (page === 'blog' && postSlug) {
+      url += `/${postSlug}`;
+    } else if (page === 'home') {
+      url = '/';
+    }
+
+    window.history.pushState({ page, postSlug }, '', url);
   };
 
   const loadBlogPosts = async () => {
@@ -306,10 +466,12 @@ export default function AppCoaching() {
           return {
             id: item.id,
             title: item.title,
+            slug: generateSlug(item.title),
             date: item.date,
             excerpt: item.excerpt,
             heroImage: item.heroImage,
             categories: item.categories || [],
+            tags: item.tags || [],
             content: bodyContent,
             filename: item.filename
           };
@@ -2012,9 +2174,8 @@ export default function AppCoaching() {
                     })
                     .map((post) => (
                     <button key={post.id} onClick={() => {
-                      const slug = generateSlug(post.title);
-                      window.location.hash = `blog/${slug}`;
                       setSelectedBlogPost(post.id);
+                      navigateTo('blog', post.slug);
                     }} style={{
                       background: 'white',
                       border: `1px solid ${colors.borderGray}`,
@@ -2226,9 +2387,8 @@ export default function AppCoaching() {
                               onClick={() => {
                                 const post = blogPosts.find(p => p.id === snippet.postId);
                                 if (post) {
-                                  const slug = generateSlug(post.title);
-                                  window.location.hash = `blog/${slug}`;
                                   setSelectedBlogPost(post.id);
+                                  navigateTo('blog', post.slug);
                                 }
                               }}
                               style={{

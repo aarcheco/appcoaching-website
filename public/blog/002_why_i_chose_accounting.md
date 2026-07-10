@@ -34,7 +34,7 @@ tags: ["Accounting", "Career Evolution", "Finance Skills", "Efficiency"]
   </ul>
 </details>
 
-<img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80" alt="Aaron Pacheco discussing the evolution of accounting skills and career strategy" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0; display: block;">
+<img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80" alt="Professional accountant demonstrating Excel efficiency techniques and financial analysis methods - career evolution in accounting and finance coaching for professionals" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0; display: block;">
 
 <blockquote style="background: linear-gradient(135deg, #00FF00 0%, rgba(255, 255, 255, 0.9) 100%); border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📖 PAUL's Quick Read</strong>
@@ -69,7 +69,7 @@ tags: ["Accounting", "Career Evolution", "Finance Skills", "Efficiency"]
 
 <p>That's where I learned what actually mattered: <strong>not just being able to do accounting, but being able to do it fast.</strong></p>
 
-<p>Excel became my language. Not fancy Excel. Efficient Excel. Formulas that worked. Processes that scaled. Shortcuts that saved hours without sacrificing accuracy. My colleagues were grinding through manual processes. I was automating. Thinking ahead about what would break when data changed. Building models that could handle what came next.</p>
+<p>Excel became my language. Not fancy Excel. <a href="/services" style="color: #00FF00; text-decoration: underline; font-weight: 600;">Efficient Excel.</a> Formulas that worked. Processes that scaled. Shortcuts that saved hours without sacrificing accuracy. My colleagues were grinding through manual processes. I was automating. Thinking ahead about what would break when data changed. Building models that could handle what came next.</p>
 
 <p>Efficiency stopped being a nice-to-have. It became a competitive advantage.</p>
 
@@ -79,7 +79,7 @@ tags: ["Accounting", "Career Evolution", "Finance Skills", "Efficiency"]
 
 <p>Then I looked around.</p>
 
-<p>Smart people everywhere. Graduates who understood financial concepts. People who should have been able to optimize their work. But they were building Excel models that took twice as long as they should. Models with manual steps that broke when data changed. Reconciliations done by hand. Processes that were just—inefficient.</p>
+<p>Smart people everywhere. Graduates who understood financial concepts. People who should have been able to optimize their work. But they were building <a href="/services" style="color: #00FF00; text-decoration: underline; font-weight: 600;">Excel models that took twice as long as they should</a>. Models with manual steps that broke when data changed. Reconciliations done by hand. Processes that were just—inefficient.</p>
 
 <p>Not because they were incapable. Because they'd never been shown the efficient path.</p>
 
@@ -107,7 +107,7 @@ tags: ["Accounting", "Career Evolution", "Finance Skills", "Efficiency"]
 
 <p>A boss pulled me aside one day and said something that shifted everything.</p>
 
-<p>He pointed out that while my efficiency work was valuable, my actual skill—the thing that truly moved the needle for leaders and decision-makers—wasn't the spreadsheets or the speed. It was my ability to take complex financial information and translate it into language people could actually understand and act on.</p>
+<p>He pointed out that while my efficiency work was valuable, my actual skill—the thing that truly moved the needle for leaders and decision-makers—wasn't the spreadsheets or the speed. It was my ability to <a href="/services" style="color: #00FF00; text-decoration: underline; font-weight: 600;">take complex financial information and translate it into language people could actually understand and act on.</a></p>
 
 <p>Processing numbers? Replaceable. Analyzing numbers? Valuable, but still replaceable.</p>
 

@@ -33,7 +33,7 @@ tags: ["Career Growth", "Business Systems", "Efficiency", "AI Adoption"]
   </ul>
 </details>
 
-<img src="/aaron-archive-10.jpg" alt="Aaron Pacheco discussing his journey to building APP Coaching" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0; display: block;">
+<img src="/aaron-archive-10.jpg" alt="Aaron Pacheco, AI and Excel coach, discussing his journey to building APP Coaching - a platform offering Excel mastery, AI adoption strategy, and finance coaching for professionals seeking clarity and self-sufficiency" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0; display: block;">
 
 <blockquote style="background: linear-gradient(135deg, #00FF00 0%, rgba(255, 255, 255, 0.9) 100%); border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📖 PAUL's Quick Read</strong>
@@ -86,7 +86,7 @@ tags: ["Career Growth", "Business Systems", "Efficiency", "AI Adoption"]
 
 <p>Building tools that actually <em>work alongside</em> human thinking instead of replacing it.</p>
 
-<p>And I realized something that scared me a little: <strong>Most people have absolutely no idea this is possible. Or how little it costs in time and money to roll this out.</strong> The accountants I know are still drowning in manual processes. Business owners are still guessing at their numbers. Finance teams are still wasting 16+ hours per week on things that could be automated with tools that cost a fraction of what they're losing in productivity.</p>
+<p>And I realized something that scared me a little: <strong>Most people have absolutely no idea this is possible. Or how little it costs in time and money to roll this out.</strong> The accountants I know are still drowning in manual processes. Business owners are still guessing at their numbers. Finance teams are still wasting 16+ hours per week on things that could be automated with <a href="/services" style="color: #00FF00; text-decoration: underline; font-weight: 600;">AI tools that cost a fraction of what they're losing</a> in productivity.</p>
 
 <p>And I'm watching AI solve all of this.</p>
 
@@ -94,11 +94,11 @@ tags: ["Career Growth", "Business Systems", "Efficiency", "AI Adoption"]
 
 <p>It's not me teaching you Excel. It's not me telling you to use AI. It's not me being the expert while you sit and listen.</p>
 
-<p>It's <strong>working together</strong> to uplift your knowledge. Excel. AI. Apps. All of it.</p>
+<p>It's <strong>working together</strong> to uplift your knowledge. <a href="/services" style="color: #00FF00; text-decoration: underline; font-weight: 600;">Excel. AI. Apps.</a> All of it.</p>
 
 <p>The goal isn't to make you dependent on me. It's to work <em>with</em> you to build insights and outputs in the most efficient way possible. Then step back and let you become <em>self-sufficient</em> with it.</p>
 
-<p><strong>And this works for both your business and your personal life.</strong> I use AI for my personal finance tracking, real estate investment analysis, and building apps for my own use. So whether you're analyzing your business margins or building a personal investment dashboard—I've walked this path, I've built these tools, and I can help you do the same.</p>
+<p><strong>And this works for both your business and your personal life.</strong> I use AI for my personal finance tracking, real estate investment analysis, and building apps for my own use. So whether you're <a href="/services" style="color: #00FF00; text-decoration: underline; font-weight: 600;">analyzing your business margins or building a personal investment dashboard</a>—I've walked this path, I've built these tools, and I can help you do the same.</p>
 
 <p>It's about finding the shortest, smartest path from your problem to your solution.</p>
 

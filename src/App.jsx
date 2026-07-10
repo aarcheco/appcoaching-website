@@ -1484,8 +1484,51 @@ export default function AppCoaching() {
   };
 
   // ===== ABOUT PAGE =====
-  const AboutPage = () => (
-    <div>
+  const AboutPage = () => {
+    const [testimonialIndex, setTestimonialIndex] = useState(0);
+    const testimonials = [
+      {
+        name: 'Client Name',
+        role: 'Finance Manager',
+        text: 'Working with Aaron transformed how I understand my numbers. From confusion to confidence in just a few sessions.'
+      },
+      {
+        name: 'Client Name',
+        role: 'Small Business Owner',
+        text: 'The Excel systems I built with Aaron save me hours every week. Best investment I made for my business.'
+      },
+      {
+        name: 'Client Name',
+        role: 'Accountant',
+        text: "Aaron's approach to translating complexity into plain English is exactly what I needed. Highly recommend."
+      },
+      {
+        name: 'Client Name',
+        role: 'Finance Analyst',
+        text: "I went from feeling overwhelmed to actually understanding my workflow. Aaron teaches in a way that sticks."
+      },
+      {
+        name: 'Client Name',
+        role: 'Operations Manager',
+        text: 'The systems we built together have become part of our daily workflow. Efficiency gains were immediate.'
+      },
+      {
+        name: 'Client Name',
+        role: 'Career-Changer',
+        text: 'Aaron helped me build confidence in skills I thought I was bad at. Now Excel feels like a superpower.'
+      }
+    ];
+
+    const handlePrevTestimonial = () => {
+      setTestimonialIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
+    };
+
+    const handleNextTestimonial = () => {
+      setTestimonialIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+    };
+
+    return (
+      <div>
       <style>{styles}</style>
       <section style={{
         background: `linear-gradient(135deg, rgba(31, 58, 125, 0.85) 0%, rgba(42, 79, 168, 0.85) 100%), url('/aaron-archive-4.jpg')`,
@@ -1756,143 +1799,81 @@ export default function AppCoaching() {
             Real feedback from people who've worked through the journey from confusion to confidence.
           </p>
 
-          <style>{`
-            @keyframes scrollTestimonials {
-              0% { transform: translateX(0); }
-              100% { transform: translateX(calc(-100% - 2rem)); }
-            }
-            .testimonials-carousel {
-              display: flex;
-              animation: scrollTestimonials 20s linear infinite;
-              gap: 2rem;
-              padding: 1rem 0;
-            }
-            .testimonials-carousel:hover {
-              animation-play-state: paused;
-            }
-            .testimonial-card {
-              flex: 0 0 320px;
-              background: white;
-              border: 1px solid ${colors.borderGray};
-              border-radius: 12px;
-              padding: 2rem;
-              display: flex;
-              flex-direction: column;
-              gap: 1.5rem;
-              box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-              transition: all 0.3s ease;
-            }
-            .testimonials-carousel .testimonial-card:hover {
-              box-shadow: 0 8px 24px rgba(0,255,65,0.1);
-              border-color: ${colors.limeGreen};
-            }
-          `}</style>
+          <div style={{ position: 'relative', maxWidth: '800px', margin: '0 auto' }}>
+            {/* Testimonial Card */}
+            <div style={{
+              background: 'white',
+              border: `1px solid ${colors.borderGray}`,
+              borderRadius: '12px',
+              padding: '2rem',
+              textAlign: 'center',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
+              minHeight: '300px',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between'
+            }}>
+              <div>
+                <div style={{ display: 'flex', gap: '0.25rem', justifyContent: 'center', marginBottom: '1.5rem' }}>
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} style={{ fontSize: '1.2rem', color: colors.limeGreen }}>★</span>
+                  ))}
+                </div>
+                <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.7', margin: '0 0 1.5rem 0' }}>
+                  "{testimonials[testimonialIndex].text}"
+                </p>
+              </div>
+              <div>
+                <p style={{ fontSize: '0.95rem', color: colors.darkNavy, fontWeight: '700', margin: '0 0 0.25rem' }}>
+                  {testimonials[testimonialIndex].name}
+                </p>
+                <p style={{ fontSize: '0.85rem', color: colors.textMuted, margin: 0 }}>
+                  {testimonials[testimonialIndex].role}
+                </p>
+              </div>
+            </div>
 
-          <div style={{ position: 'relative', overflow: 'hidden' }}>
-            <div className="testimonials-carousel">
-              {[
-                {
-                  name: 'Client Name',
-                  role: 'Finance Manager',
-                  text: 'Working with Aaron transformed how I understand my numbers. From confusion to confidence in just a few sessions.'
-                },
-                {
-                  name: 'Client Name',
-                  role: 'Small Business Owner',
-                  text: 'The Excel systems I built with Aaron save me hours every week. Best investment I made for my business.'
-                },
-                {
-                  name: 'Client Name',
-                  role: 'Accountant',
-                  text: "Aaron's approach to translating complexity into plain English is exactly what I needed. Highly recommend."
-                },
-                {
-                  name: 'Client Name',
-                  role: 'Finance Analyst',
-                  text: "I went from feeling overwhelmed to actually understanding my workflow. Aaron teaches in a way that sticks."
-                },
-                {
-                  name: 'Client Name',
-                  role: 'Operations Manager',
-                  text: 'The systems we built together have become part of our daily workflow. Efficiency gains were immediate.'
-                },
-                {
-                  name: 'Client Name',
-                  role: 'Career-Changer',
-                  text: 'Aaron helped me build confidence in skills I thought I was bad at. Now Excel feels like a superpower.'
-                }
-              ].map((testimonial, idx) => (
-                <div key={idx} className="testimonial-card">
-                  <div style={{ display: 'flex', gap: '0.25rem' }}>
-                    {[...Array(5)].map((_, i) => (
-                      <span key={i} style={{ fontSize: '1.2rem', color: colors.limeGreen }}>★</span>
-                    ))}
-                  </div>
-                  <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.7', flexGrow: 1 }}>
-                    "{testimonial.text}"
-                  </p>
-                  <div>
-                    <p style={{ fontSize: '0.95rem', color: colors.darkNavy, fontWeight: '700', margin: '0 0 0.25rem' }}>
-                      {testimonial.name}
-                    </p>
-                    <p style={{ fontSize: '0.85rem', color: colors.textMuted, margin: 0 }}>
-                      {testimonial.role}
-                    </p>
-                  </div>
-                </div>
-              ))}
-              {/* Duplicate for infinite scroll */}
-              {[
-                {
-                  name: 'Client Name',
-                  role: 'Finance Manager',
-                  text: 'Working with Aaron transformed how I understand my numbers. From confusion to confidence in just a few sessions.'
-                },
-                {
-                  name: 'Client Name',
-                  role: 'Small Business Owner',
-                  text: 'The Excel systems I built with Aaron save me hours every week. Best investment I made for my business.'
-                },
-                {
-                  name: 'Client Name',
-                  role: 'Accountant',
-                  text: "Aaron's approach to translating complexity into plain English is exactly what I needed. Highly recommend."
-                },
-                {
-                  name: 'Client Name',
-                  role: 'Finance Analyst',
-                  text: "I went from feeling overwhelmed to actually understanding my workflow. Aaron teaches in a way that sticks."
-                },
-                {
-                  name: 'Client Name',
-                  role: 'Operations Manager',
-                  text: 'The systems we built together have become part of our daily workflow. Efficiency gains were immediate.'
-                },
-                {
-                  name: 'Client Name',
-                  role: 'Career-Changer',
-                  text: 'Aaron helped me build confidence in skills I thought I was bad at. Now Excel feels like a superpower.'
-                }
-              ].map((testimonial, idx) => (
-                <div key={`dup-${idx}`} className="testimonial-card">
-                  <div style={{ display: 'flex', gap: '0.25rem' }}>
-                    {[...Array(5)].map((_, i) => (
-                      <span key={i} style={{ fontSize: '1.2rem', color: colors.limeGreen }}>★</span>
-                    ))}
-                  </div>
-                  <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.7', flexGrow: 1 }}>
-                    "{testimonial.text}"
-                  </p>
-                  <div>
-                    <p style={{ fontSize: '0.95rem', color: colors.darkNavy, fontWeight: '700', margin: '0 0 0.25rem' }}>
-                      {testimonial.name}
-                    </p>
-                    <p style={{ fontSize: '0.85rem', color: colors.textMuted, margin: 0 }}>
-                      {testimonial.role}
-                    </p>
-                  </div>
-                </div>
-              ))}
+            {/* Navigation Arrows */}
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginTop: '2rem', alignItems: 'center' }}>
+              <button onClick={handlePrevTestimonial} style={{
+                background: colors.darkNavy,
+                color: colors.limeGreen,
+                border: 'none',
+                width: '48px',
+                height: '48px',
+                borderRadius: '50%',
+                cursor: 'pointer',
+                fontSize: '1.5rem',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontWeight: '700',
+                transition: 'all 0.3s ease'
+              }} onMouseEnter={(e) => { e.currentTarget.style.background = colors.limeGreen; e.currentTarget.style.color = colors.darkNavy; }} onMouseLeave={(e) => { e.currentTarget.style.background = colors.darkNavy; e.currentTarget.style.color = colors.limeGreen; }}>
+                ←
+              </button>
+
+              <span style={{ fontSize: '0.9rem', color: colors.textMuted, fontWeight: '600', minWidth: '60px', textAlign: 'center' }}>
+                {testimonialIndex + 1} / {testimonials.length}
+              </span>
+
+              <button onClick={handleNextTestimonial} style={{
+                background: colors.darkNavy,
+                color: colors.limeGreen,
+                border: 'none',
+                width: '48px',
+                height: '48px',
+                borderRadius: '50%',
+                cursor: 'pointer',
+                fontSize: '1.5rem',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontWeight: '700',
+                transition: 'all 0.3s ease'
+              }} onMouseEnter={(e) => { e.currentTarget.style.background = colors.limeGreen; e.currentTarget.style.color = colors.darkNavy; }} onMouseLeave={(e) => { e.currentTarget.style.background = colors.darkNavy; e.currentTarget.style.color = colors.limeGreen; }}>
+                →
+              </button>
             </div>
           </div>
         </div>
@@ -1922,6 +1903,7 @@ export default function AppCoaching() {
       </section>
     </div>
   );
+  };
 
   // ===== BLOG PAGE =====
   const BlogPage = () => {

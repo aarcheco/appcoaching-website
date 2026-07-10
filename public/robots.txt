@@ -1,0 +1,30 @@
+# robots.txt for appcoaching.io
+# Tell search engines what to crawl and what to avoid
+
+User-agent: *
+Allow: /
+Allow: /#/
+Allow: /#/home
+Allow: /#/services
+Allow: /#/about
+Allow: /#/blog
+Allow: /#/contact
+Allow: /blog-posts.json
+Disallow: /node_modules/
+Disallow: /.git/
+
+# Sitemap location
+Sitemap: https://appcoaching.io/sitemap.xml
+
+# Crawl delay for all bots (in seconds)
+Crawl-delay: 1
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1

@@ -35,6 +35,162 @@ export default function AppCoaching() {
   const [blogSearchTerm, setBlogSearchTerm] = useState('');
   const [expandedSnippets, setExpandedSnippets] = useState({});
 
+  // ===== META TAG MANAGEMENT FOR SEO =====
+  const updateMetaTags = (pageConfig) => {
+    // Update title
+    document.title = pageConfig.title;
+
+    // Update or create meta description
+    let descMeta = document.querySelector('meta[name="description"]');
+    if (!descMeta) {
+      descMeta = document.createElement('meta');
+      descMeta.name = 'description';
+      document.head.appendChild(descMeta);
+    }
+    descMeta.content = pageConfig.description;
+
+    // Update or create canonical URL
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = pageConfig.canonical;
+
+    // Update Open Graph tags
+    const ogTags = {
+      'og:title': pageConfig.ogTitle || pageConfig.title,
+      'og:description': pageConfig.ogDescription || pageConfig.description,
+      'og:url': pageConfig.canonical,
+      'og:type': pageConfig.ogType || 'website'
+    };
+
+    Object.entries(ogTags).forEach(([property, content]) => {
+      let tag = document.querySelector(`meta[property="${property}"]`);
+      if (!tag) {
+        tag = document.createElement('meta');
+        tag.setAttribute('property', property);
+        document.head.appendChild(tag);
+      }
+      tag.content = content;
+    });
+
+    // Update Twitter Card tags
+    const twitterTags = {
+      'twitter:title': pageConfig.title,
+      'twitter:description': pageConfig.description
+    };
+
+    Object.entries(twitterTags).forEach(([name, content]) => {
+      let tag = document.querySelector(`meta[name="${name}"]`);
+      if (!tag) {
+        tag = document.createElement('meta');
+        tag.setAttribute('name', name);
+        document.head.appendChild(tag);
+      }
+      tag.content = content;
+    });
+
+    // Add schema.org markup if provided
+    if (pageConfig.schema) {
+      let schemaScript = document.getElementById(`schema-${pageConfig.id}`);
+      if (!schemaScript) {
+        schemaScript = document.createElement('script');
+        schemaScript.id = `schema-${pageConfig.id}`;
+        schemaScript.type = 'application/ld+json';
+        document.head.appendChild(schemaScript);
+      }
+      schemaScript.textContent = JSON.stringify(pageConfig.schema);
+    }
+  };
+
+  // Page configurations for SEO
+  const pageConfigs = {
+    home: {
+      id: 'home',
+      title: 'Your Most Expensive Problem: Confusion | APP Coaching',
+      description: 'Move from confusion to clarity. 1-on-1 AI, Excel & Finance coaching by Aaron Pacheco. Unlock self-sufficiency in your business and career.',
+      canonical: 'https://appcoaching.io/#/home',
+      ogType: 'website',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'APP Coaching - Your Most Expensive Problem: Confusion',
+        description: 'Move from confusion to clarity with 1-on-1 AI, Excel & Finance coaching.',
+        url: 'https://appcoaching.io/#/home',
+        publisher: {
+          '@type': 'Organization',
+          name: 'APP Coaching'
+        }
+      }
+    },
+    services: {
+      id: 'services',
+      title: 'Coaching Services | AI, Excel & Finance | APP Coaching',
+      description: 'Expert coaching in AI, Excel, Finance, and Business Operations. Tailored solutions to move you from confusion to capability.',
+      canonical: 'https://appcoaching.io/#/services',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'Services',
+        description: 'APP Coaching services include AI coaching, Excel mastery, Finance strategies, and Business Operations.',
+        url: 'https://appcoaching.io/#/services'
+      }
+    },
+    about: {
+      id: 'about',
+      title: 'About Aaron Pacheco | Finance Expert & AI Coach | APP Coaching',
+      description: 'Meet Aaron Pacheco: Qualified finance professional, Excel expert, AI coach, and operations specialist. 10+ years across top Australian companies.',
+      canonical: 'https://appcoaching.io/#/about',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'ProfilePage',
+        name: 'About Aaron Pacheco',
+        description: 'Aaron Pacheco - Finance professional, Excel expert, AI coach, and operations specialist.',
+        url: 'https://appcoaching.io/#/about',
+        mainEntity: {
+          '@type': 'Person',
+          name: 'Aaron Pacheco',
+          jobTitle: 'Coach, Finance Expert, AI Specialist',
+          image: 'https://appcoaching.io/Aaron_Pacheco_300dpi_001_6x6.jpg'
+        }
+      }
+    },
+    blog: {
+      id: 'blog',
+      title: 'Blog | Career Stories & Lessons | APP Coaching',
+      description: 'Read about Aaron\'s journey from confusion to clarity. Career stories, lessons, and actionable PAUL\'s Quick Reads for self-sufficiency.',
+      canonical: 'https://appcoaching.io/#/blog',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        name: 'APP Coaching Blog',
+        description: 'Blog posts about career journeys, clarity, and self-sufficiency lessons.',
+        url: 'https://appcoaching.io/#/blog'
+      }
+    },
+    contact: {
+      id: 'contact',
+      title: 'Book a Discovery Call | Get in Touch | APP Coaching',
+      description: 'Ready to move from confusion to clarity? Book a free 15-minute discovery call with Aaron to discuss your coaching needs.',
+      canonical: 'https://appcoaching.io/#/contact',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'ContactPage',
+        name: 'Get in Touch',
+        description: 'Contact APP Coaching to book a discovery call.',
+        url: 'https://appcoaching.io/#/contact'
+      }
+    }
+  };
+
+  // Update meta tags when page changes
+  useEffect(() => {
+    const config = pageConfigs[currentPage] || pageConfigs.home;
+    updateMetaTags(config);
+  }, [currentPage]);
+
   // Helper function to generate intelligent snippet titles based on content
   const generateSnippetTitle = (type, content) => {
     const cleanContent = content.replace(/<[^>]*>/g, '').trim();
@@ -1557,6 +1713,102 @@ export default function AppCoaching() {
                 </div>
               </div>
             </div>
+
+            {/* Related Posts / Internal Linking */}
+            {blogPosts.length > 1 && (
+              <div style={{
+                marginTop: '3rem',
+                paddingTop: '3rem',
+                borderTop: `2px solid ${colors.borderGray}`
+              }}>
+                <h3 style={{
+                  fontSize: '1.4rem',
+                  color: colors.darkNavy,
+                  fontFamily: "'Poppins', sans-serif",
+                  fontWeight: '700',
+                  marginBottom: '2rem'
+                }}>
+                  More Posts
+                </h3>
+                <div style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                  gap: '2rem'
+                }}>
+                  {blogPosts
+                    .filter(p => p.id !== selectedBlogPost)
+                    .slice(0, 3)
+                    .map((relatedPost) => (
+                      <div
+                        key={relatedPost.id}
+                        onClick={() => {
+                          setSelectedBlogPost(relatedPost.id);
+                          window.location.hash = `blog/${generateSlug(relatedPost.title)}`;
+                          window.scrollTo(0, 0);
+                        }}
+                        style={{
+                          border: `1px solid ${colors.borderGray}`,
+                          borderRadius: '8px',
+                          overflow: 'hidden',
+                          cursor: 'pointer',
+                          transition: 'all 0.3s ease',
+                          background: 'white'
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.boxShadow = '0 8px 16px rgba(0, 0, 0, 0.1)';
+                          e.currentTarget.style.transform = 'translateY(-4px)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.boxShadow = 'none';
+                          e.currentTarget.style.transform = 'translateY(0)';
+                        }}
+                      >
+                        <div style={{
+                          background: colors.limeGreen,
+                          height: '4px'
+                        }} />
+                        <div style={{ padding: '1.5rem' }}>
+                          <p style={{
+                            fontSize: '0.8rem',
+                            color: colors.limeGreen,
+                            fontWeight: '700',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.5px',
+                            margin: '0 0 0.5rem 0'
+                          }}>
+                            {relatedPost.categories?.[0] || 'General'}
+                          </p>
+                          <h4 style={{
+                            fontSize: '1.1rem',
+                            color: colors.darkNavy,
+                            fontFamily: "'Poppins', sans-serif",
+                            fontWeight: '700',
+                            marginBottom: '0.8rem',
+                            lineHeight: '1.4'
+                          }}>
+                            {relatedPost.title}
+                          </h4>
+                          <p style={{
+                            fontSize: '0.9rem',
+                            color: colors.textMuted,
+                            margin: '0 0 1rem 0',
+                            lineHeight: '1.6'
+                          }}>
+                            {relatedPost.excerpt}
+                          </p>
+                          <p style={{
+                            fontSize: '0.85rem',
+                            color: colors.textMuted,
+                            margin: '0'
+                          }}>
+                            {formatDate(relatedPost.date)}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                </div>
+              </div>
+            )}
           </article>
         </div>
       );

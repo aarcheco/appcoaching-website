@@ -1631,7 +1631,7 @@ export default function AppCoaching() {
                 }}>
                   {blogPosts
                     .filter((post) => {
-                      const categoryMatch = selectedCategory === '' || (post.categories && post.categories.includes(selectedCategory));
+                      const categoryMatch = !selectedCategory || selectedCategory === '' || (Array.isArray(post.categories) && post.categories.includes(selectedCategory));
                       const searchMatch = blogSearchTerm === '' || post.title.toLowerCase().includes(blogSearchTerm.toLowerCase()) || post.excerpt.toLowerCase().includes(blogSearchTerm.toLowerCase());
                       return categoryMatch && searchMatch;
                     })
@@ -1709,7 +1709,7 @@ export default function AppCoaching() {
                 }}>
                   {blogPosts
                     .filter((post) => {
-                      const categoryMatch = selectedCategory === '' || (post.categories && post.categories.includes(selectedCategory));
+                      const categoryMatch = !selectedCategory || selectedCategory === '' || (Array.isArray(post.categories) && post.categories.includes(selectedCategory));
                       const searchMatch = blogSearchTerm === '' || post.title.toLowerCase().includes(blogSearchTerm.toLowerCase());
                       return categoryMatch && searchMatch;
                     })

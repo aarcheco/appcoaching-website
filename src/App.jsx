@@ -29,6 +29,7 @@ export default function AppCoaching() {
   const [blogPosts, setBlogPosts] = useState([]);
   const [selectedBlogPost, setSelectedBlogPost] = useState(null);
   const [blogLoading, setBlogLoading] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('Everything Else');
 
   // Helper function to generate slug from title
   const generateSlug = (title) => {
@@ -1388,6 +1389,42 @@ export default function AppCoaching() {
           margin: '0 auto'
         }}>
 
+          {/* Category Filter */}
+          <div style={{
+            display: 'flex',
+            gap: '1rem',
+            marginBottom: '2rem',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            alignItems: 'center'
+          }}>
+            <label style={{ fontSize: '0.95rem', fontWeight: '600', color: colors.darkNavy }}>
+              Filter by:
+            </label>
+            <select
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              style={{
+                padding: '0.6rem 1rem',
+                fontSize: '0.95rem',
+                borderRadius: '8px',
+                border: `2px solid ${colors.limeGreen}`,
+                background: 'white',
+                color: colors.darkNavy,
+                fontWeight: '600',
+                cursor: 'pointer',
+                fontFamily: "'Poppins', sans-serif"
+              }}
+            >
+              <option value="Everything Else">Everything Else</option>
+              <option value="Business Finance">Business Finance</option>
+              <option value="Personal Finance">Personal Finance</option>
+              <option value="Excel">Excel</option>
+              <option value="AI">AI</option>
+              <option value="Accounting & Finance Career">Accounting & Finance Career</option>
+            </select>
+          </div>
+
           {blogLoading ? (
             <div style={{ textAlign: 'center', padding: '2rem' }}>
               <p style={{ color: colors.textMuted }}>Loading posts...</p>
@@ -1405,7 +1442,9 @@ export default function AppCoaching() {
               gap: '2rem',
               marginTop: '2rem'
             }}>
-              {blogPosts.map((post) => (
+              {blogPosts
+                .filter((post) => selectedCategory === 'Everything Else' || post.category === selectedCategory)
+                .map((post) => (
                 <button key={post.id} onClick={() => {
                   const slug = generateSlug(post.title);
                   window.location.hash = `blog/${slug}`;
@@ -1437,6 +1476,11 @@ export default function AppCoaching() {
                   </p>
                 </button>
               ))}
+              {blogPosts.filter((post) => selectedCategory === 'Everything Else' || post.category === selectedCategory).length === 0 && (
+                <div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '2rem' }}>
+                  <p style={{ color: colors.textMuted }}>No posts in this category yet. Check back soon!</p>
+                </div>
+              )}
             </div>
           )}
         </section>

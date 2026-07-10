@@ -1729,92 +1729,170 @@ export default function AppCoaching() {
           </div>
         </div>
 
-        {/* THE COACHING I OFFER */}
+        {/* MY JOURNEY - How I Got Here */}
         <div style={{ marginBottom: '4rem', paddingTop: '3rem', borderTop: `2px solid ${colors.borderGray}` }}>
           <h2 style={{ fontSize: '2.2rem', color: colors.darkNavy, marginBottom: '2rem', fontFamily: "'Poppins', sans-serif", fontWeight: '800', textAlign: 'center' }}>
-            The Coaching I Offer
+            How I Got Here – Why I'm Confident Now
           </h2>
-
-          <div style={{ marginBottom: '3rem', background: colors.offWhite, padding: '2rem', borderRadius: '12px' }}>
-            <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '1.5rem' }}>
-              I offer three core areas of coaching to help you build capability and move from <strong>confusion to self-sufficiency.</strong> Whether it's understanding your numbers, building systems that scale, or advancing your career—the goal is the same: give you the knowledge and confidence to move forward without depending on someone else.
+          <div style={{ background: colors.offWhite, padding: '2.5rem', borderRadius: '12px', lineHeight: '1.9' }}>
+            <p style={{ fontSize: '1rem', color: colors.textMuted, marginBottom: '1.5rem' }}>
+              My journey wasn't linear. For over a decade, I worked inside organizations—learning, building, solving problems. I moved from confusion to clarity. I learned that the real value isn't in knowing everything; it's in knowing how to find answers, build systems, and translate complexity into action. I've made mistakes. I've rebuilt things. I've watched smart people stay stuck because they didn't have guidance—not because they weren't capable.
+            </p>
+            <p style={{ fontSize: '1rem', color: colors.textMuted, marginBottom: '1.5rem' }}>
+              <strong style={{ color: colors.darkNavy }}>Now I have something to share.</strong> I've lived through the confusion-to-clarity journey myself. I've got real-world expertise from roles at Flight Centre, PwC, Coronis, Telstra, and Aveo. I understand what it takes to move from guessing to knowing—from inefficient processes to systems that work. I've built financial models. Automated workflows. Turned data into decisions. And I've watched how powerful it is when someone finally understands their numbers, their systems, their potential.
+            </p>
+            <p style={{ fontSize: '1rem', color: colors.textMuted }}>
+              That confidence? It comes from knowing that the path I took works. And I'm now in a position where I genuinely want to help others walk it too—with the expertise and real-world knowledge I've earned, so they can grow, become more capable, and build the self-sufficiency that actually matters.
             </p>
           </div>
-
-          <div className="coaching-cards-mobile" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem', marginBottom: '3rem' }}>
-            <div style={{ background: `linear-gradient(135deg, rgba(200, 220, 255, 0.7) 0%, rgba(220, 235, 255, 0.9) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
-              <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>💰</div>
-              <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
-                Finance Coaching
-              </h3>
-              <p style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
-                Personal or business—understand your numbers. Your P&L, cash flow, profitability. Make decisions from clarity, not guessing.
-              </p>
-            </div>
-
-            <div style={{ background: `linear-gradient(135deg, rgba(200, 220, 255, 0.7) 0%, rgba(220, 235, 255, 0.9) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
-              <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>📊</div>
-              <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
-                Excel & AI Coaching
-              </h3>
-              <p style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
-                Build systems that work for you. Automate the boring stuff. Process data smarter. Save time. Every single day.
-              </p>
-            </div>
-
-            <div style={{ background: `linear-gradient(135deg, rgba(200, 220, 255, 0.7) 0%, rgba(220, 235, 255, 0.9) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
-              <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>🎯</div>
-              <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
-                Career Coaching
-              </h3>
-              <p style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
-                Stand out. Build skills that matter. Advance your career. Be real about where you're at and where you want to go.
-              </p>
-            </div>
-          </div>
-
         </div>
 
-        {/* WHY APP COACHING STANDS OUT */}
+        {/* TESTIMONIALS CAROUSEL */}
         <div style={{ marginBottom: '4rem', paddingTop: '3rem', borderTop: `2px solid ${colors.borderGray}` }}>
-          <h2 style={{ fontSize: '2.2rem', color: colors.darkNavy, marginBottom: '2rem', fontFamily: "'Poppins', sans-serif", fontWeight: '800', textAlign: 'center' }}>
-            Why APP Coaching Stands Out
+          <h2 style={{ fontSize: '2.2rem', color: colors.darkNavy, marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '800', textAlign: 'center' }}>
+            What Others Are Saying
           </h2>
-          <div className="coaching-cards-mobile" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
-            <div style={{ background: `linear-gradient(135deg, rgba(200, 220, 255, 0.7) 0%, rgba(220, 235, 255, 0.9) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
-              <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
-                💼 Built from Confusion to Clarity
-              </h3>
-              <p style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
-                10+ years in real organizations. I've moved from confusion to confidence through systems, dashboards, and continuous learning. Now I help others do the same.
-              </p>
-            </div>
+          <p style={{ fontSize: '1rem', color: colors.textMuted, marginBottom: '3rem', textAlign: 'center', maxWidth: '700px', margin: '0 auto 3rem' }}>
+            Real feedback from people who've worked through the journey from confusion to confidence.
+          </p>
 
-            <div style={{ background: `linear-gradient(135deg, rgba(200, 220, 255, 0.7) 0%, rgba(220, 235, 255, 0.9) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
-              <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
-                🎯 Practical Focus
-              </h3>
-              <p style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
-                Every recommendation is tested. No buzzwords. No fluff. Just what actually works in the real world.
-              </p>
-            </div>
+          <style>{`
+            @keyframes scrollTestimonials {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(calc(-100% - 2rem)); }
+            }
+            .testimonials-carousel {
+              display: flex;
+              animation: scrollTestimonials 20s linear infinite;
+              gap: 2rem;
+              padding: 1rem 0;
+            }
+            .testimonials-carousel:hover {
+              animation-play-state: paused;
+            }
+            .testimonial-card {
+              flex: 0 0 320px;
+              background: white;
+              border: 1px solid ${colors.borderGray};
+              border-radius: 12px;
+              padding: 2rem;
+              display: flex;
+              flex-direction: column;
+              gap: 1.5rem;
+              box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+              transition: all 0.3s ease;
+            }
+            .testimonials-carousel .testimonial-card:hover {
+              box-shadow: 0 8px 24px rgba(0,255,65,0.1);
+              border-color: ${colors.limeGreen};
+            }
+          `}</style>
 
-            <div style={{ background: `linear-gradient(135deg, rgba(200, 220, 255, 0.7) 0%, rgba(220, 235, 255, 0.9) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
-              <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
-                🚀 Building Your <span style={{ color: colors.darkNavy }}>Capability</span>
-              </h3>
-              <p style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
-                I succeed when you become confident and self-sufficient. My goal is to build your capability so you can move forward with clarity—without needing me.
-              </p>
-            </div>
-
-            <div style={{ background: `linear-gradient(135deg, rgba(200, 220, 255, 0.7) 0%, rgba(220, 235, 255, 0.9) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
-              <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
-                💰 Accessible Pricing
-              </h3>
-              <p style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
-                Expert guidance at a fraction of what premium coaches charge. Same quality. Better accessibility.
-              </p>
+          <div style={{ position: 'relative', overflow: 'hidden' }}>
+            <div className="testimonials-carousel">
+              {[
+                {
+                  name: 'Client Name',
+                  role: 'Finance Manager',
+                  text: 'Working with Aaron transformed how I understand my numbers. From confusion to confidence in just a few sessions.'
+                },
+                {
+                  name: 'Client Name',
+                  role: 'Small Business Owner',
+                  text: 'The Excel systems I built with Aaron save me hours every week. Best investment I made for my business.'
+                },
+                {
+                  name: 'Client Name',
+                  role: 'Accountant',
+                  text: 'Aaron's approach to translating complexity into plain English is exactly what I needed. Highly recommend.'
+                },
+                {
+                  name: 'Client Name',
+                  role: 'Finance Analyst',
+                  text: 'I went from feeling overwhelmed to actually understanding my workflow. Aaron teaches in a way that sticks.'
+                },
+                {
+                  name: 'Client Name',
+                  role: 'Operations Manager',
+                  text: 'The systems we built together have become part of our daily workflow. Efficiency gains were immediate.'
+                },
+                {
+                  name: 'Client Name',
+                  role: 'Career-Changer',
+                  text: 'Aaron helped me build confidence in skills I thought I was bad at. Now Excel feels like a superpower.'
+                }
+              ].map((testimonial, idx) => (
+                <div key={idx} className="testimonial-card">
+                  <div style={{ display: 'flex', gap: '0.25rem' }}>
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} style={{ fontSize: '1.2rem', color: colors.limeGreen }}>★</span>
+                    ))}
+                  </div>
+                  <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.7', flexGrow: 1 }}>
+                    "{testimonial.text}"
+                  </p>
+                  <div>
+                    <p style={{ fontSize: '0.95rem', color: colors.darkNavy, fontWeight: '700', margin: '0 0 0.25rem' }}>
+                      {testimonial.name}
+                    </p>
+                    <p style={{ fontSize: '0.85rem', color: colors.textMuted, margin: 0 }}>
+                      {testimonial.role}
+                    </p>
+                  </div>
+                </div>
+              ))}
+              {/* Duplicate for infinite scroll */}
+              {[
+                {
+                  name: 'Client Name',
+                  role: 'Finance Manager',
+                  text: 'Working with Aaron transformed how I understand my numbers. From confusion to confidence in just a few sessions.'
+                },
+                {
+                  name: 'Client Name',
+                  role: 'Small Business Owner',
+                  text: 'The Excel systems I built with Aaron save me hours every week. Best investment I made for my business.'
+                },
+                {
+                  name: 'Client Name',
+                  role: 'Accountant',
+                  text: 'Aaron's approach to translating complexity into plain English is exactly what I needed. Highly recommend.'
+                },
+                {
+                  name: 'Client Name',
+                  role: 'Finance Analyst',
+                  text: 'I went from feeling overwhelmed to actually understanding my workflow. Aaron teaches in a way that sticks.'
+                },
+                {
+                  name: 'Client Name',
+                  role: 'Operations Manager',
+                  text: 'The systems we built together have become part of our daily workflow. Efficiency gains were immediate.'
+                },
+                {
+                  name: 'Client Name',
+                  role: 'Career-Changer',
+                  text: 'Aaron helped me build confidence in skills I thought I was bad at. Now Excel feels like a superpower.'
+                }
+              ].map((testimonial, idx) => (
+                <div key={`dup-${idx}`} className="testimonial-card">
+                  <div style={{ display: 'flex', gap: '0.25rem' }}>
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} style={{ fontSize: '1.2rem', color: colors.limeGreen }}>★</span>
+                    ))}
+                  </div>
+                  <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.7', flexGrow: 1 }}>
+                    "{testimonial.text}"
+                  </p>
+                  <div>
+                    <p style={{ fontSize: '0.95rem', color: colors.darkNavy, fontWeight: '700', margin: '0 0 0.25rem' }}>
+                      {testimonial.name}
+                    </p>
+                    <p style={{ fontSize: '0.85rem', color: colors.textMuted, margin: 0 }}>
+                      {testimonial.role}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -1830,25 +1908,17 @@ export default function AppCoaching() {
           </p>
         </div>
 
-        {/* CTA */}
-        <div style={{ marginTop: '3rem', textAlign: 'center', paddingTop: '2rem', borderTop: `2px solid ${colors.borderGray}` }}>
-          <p style={{ fontSize: '1rem', color: colors.textMuted, marginBottom: '1.5rem', lineHeight: '1.8' }}>
-            Ready to eliminate confusion and close the gap? Book a free 15-minute discovery call. Let's talk about where confusion is costing you the most.
-          </p>
-          <button onClick={() => navigateTo('contact')} style={{
-            background: colors.limeGreen,
-            color: colors.darkNavy,
-            border: 'none',
-            padding: '1rem 2.5rem',
-            fontSize: '1rem',
-            fontWeight: '700',
-            borderRadius: '8px',
-            cursor: 'pointer',
-            fontFamily: "'Poppins', sans-serif"
-          }}>
-            BOOK DISCOVERY CALL →
-          </button>
-        </div>
+        {/* DISCOVERY CTA - Matching Blog Post Style */}
+        <section style={{ background: `linear-gradient(135deg, #1f3a7d 0%, #2a4fa8 100%)`, color: 'white', borderRadius: '12px', padding: '2.5rem', margin: '4rem 0 0 0', textAlign: 'center' }}>
+          <h3 style={{ color: 'white', margin: '0 0 1rem 0', fontSize: '1.3rem', fontWeight: '700', fontFamily: "'Poppins', sans-serif" }}>Ready to Close the Gap?</h3>
+
+          <p style={{ fontSize: '1.05rem', lineHeight: '1.6', marginBottom: '1.5rem' }}>Book a free 15-minute discovery call. Let's talk about where confusion is costing you the most and how we can build your path to clarity and self-sufficiency.</p>
+
+          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <a href="https://cal.com/app-coaching-xcgvda" target="_blank" rel="noopener noreferrer" style={{ background: colors.limeGreen, color: '#1f3a7d', padding: '0.75rem 1.5rem', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', display: 'inline-block' }}>Book a Free Discovery Call</a>
+            <a href="/services" style={{ border: `2px solid ${colors.limeGreen}`, color: colors.limeGreen, padding: '0.75rem 1.5rem', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', display: 'inline-block' }}>Explore Services</a>
+          </div>
+        </section>
       </section>
     </div>
   );

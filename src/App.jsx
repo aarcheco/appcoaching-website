@@ -1593,11 +1593,17 @@ export default function AppCoaching() {
           <div style={{
             marginBottom: '2rem'
           }}>
+            <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', marginBottom: '0.5rem', color: colors.darkNavy }}>
+              Search:
+            </label>
             <input
               type="text"
               placeholder="Search by keyword..."
               value={blogSearchTerm}
               onChange={(e) => setBlogSearchTerm(e.target.value)}
+              onKeyDown={(e) => e.stopPropagation()}
+              onKeyUp={(e) => e.stopPropagation()}
+              onKeyPress={(e) => e.stopPropagation()}
               style={{
                 width: '100%',
                 padding: '0.75rem',
@@ -1605,7 +1611,10 @@ export default function AppCoaching() {
                 borderRadius: '6px',
                 border: `1px solid ${colors.borderGray}`,
                 fontFamily: "'Inter', sans-serif",
-                boxSizing: 'border-box'
+                boxSizing: 'border-box',
+                pointerEvents: 'auto',
+                backgroundColor: 'white',
+                color: colors.darkNavy
               }}
             />
           </div>

@@ -1062,7 +1062,7 @@ export default function AppCoaching() {
                 Accountant & Team Leader
               </p>
               <p style={{ fontSize: '0.95rem', color: colors.textMuted, lineHeight: '1.6' }}>
-                Found <span style={{ fontWeight: '600', color: colors.darkNavy }}>confusion hidden in outdated Excel models.</span> Broken VBA code. Manual data entry everywhere. I rebuilt countless workbooks from the ground up—moving teams from <span style={{ color: colors.limeGreen, fontWeight: '600' }}>confusion to clarity.</span> Lean, streamlined, formula-driven. Saved employees hours every single day. Those models? Still being used today. That's compound time savings. That's impact.
+                Outdated Excel models everywhere. Broken VBA code. Manual data entry eating up hours. I rebuilt countless workbooks from the ground up—lean, streamlined, formula-driven. Saved employees hours every single day. Those models? Still being used today. That's compound time savings.
               </p>
             </div>
 
@@ -1074,7 +1074,7 @@ export default function AppCoaching() {
                 Accountant
               </p>
               <p style={{ fontSize: '0.95rem', color: colors.textMuted, lineHeight: '1.6' }}>
-                Finance was drowning in <span style={{ fontWeight: '600', color: colors.darkNavy }}>paper—and confusion.</span> No automation. No insight for leadership. I transformed it. Paperless processes. Insightful reporting that meant something to the CFO and CEO. Built <span style={{ color: colors.limeGreen, fontWeight: '600' }}>clarity from chaos.</span> 40% efficiency gain. That freed up capacity for value-add work. That's the math that matters.
+                Finance drowning in paper. No automation. No insight for leadership. I transformed it—paperless processes, insightful reporting that meant something to the CFO and CEO. 40% efficiency gain in finance operations. That freed up capacity for value-add work.
               </p>
             </div>
 
@@ -1086,7 +1086,7 @@ export default function AppCoaching() {
                 Finance Analyst
               </p>
               <p style={{ fontSize: '0.95rem', color: colors.textMuted, lineHeight: '1.6' }}>
-                Presented to 70+ junior accountants on a critical skill: <span style={{ fontWeight: '600', color: colors.darkNavy }}>translating confusion into confidence.</span> Finance pros drown in jargon and complexity. I learned that turning insight into plain English is a superpower—it's the difference between a number and a decision. It's the difference between <span style={{ color: colors.limeGreen, fontWeight: '600' }}>confusion and capability.</span> This is the art I'm still mastering.
+                Presented to 70+ junior accountants on turning insight into plain English. Finance pros drown in jargon and complexity—I learned that translating numbers into decisions is a superpower. It's the difference between data and understanding. This is the art I'm still mastering.
               </p>
             </div>
 
@@ -1098,7 +1098,7 @@ export default function AppCoaching() {
                 Commercial Analyst
               </p>
               <p style={{ fontSize: '0.95rem', color: colors.textMuted, lineHeight: '1.6' }}>
-                Processes buried in manual data entry. <span style={{ fontWeight: '600', color: colors.darkNavy }}>Confusion in every workflow.</span> I automated with PowerQuery and Excel. Saved a colleague 16 hours per week. Also built a dashboard that exposed staff utilization—suddenly leadership could see where capacity was bleeding. Built <span style={{ color: colors.limeGreen, fontWeight: '600' }}>clarity from data.</span> Better decisions. Better profitability. That's what I'm here to do for you.
+                Processes buried in manual data entry taking up hours every week. I automated with PowerQuery and Excel—saved a colleague 16 hours weekly. Built a dashboard that exposed staff utilization so leadership could see where capacity was bleeding. Better visibility. Better decisions. Better profitability.
               </p>
             </div>
           </div>
@@ -1119,22 +1119,22 @@ export default function AppCoaching() {
             </div>
             <div style={{ order: 1 }}>
               <h3 style={{ fontSize: '1.2rem', color: colors.darkNavy, marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
-                Inefficiency Everywhere
+                Confusion is Expensive
               </h3>
               <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '1.5rem' }}>
-                Across every organization I worked in, the same pattern emerged: <strong>inefficiency from data/process to insight/output.</strong> People had data. Systems worked. But turning that into clear, actionable insight? That took forever. Manual spreadsheets. Repetitive data entry. Dashboards nobody understood. Reports that took days to build.
+                Across every organization I worked in, <strong>confusion about processes, systems, and data cost real money and time.</strong> Not because people were incompetent—because they lacked knowledge or confidence to use available tools effectively. Manual spreadsheets instead of dashboards. Repetitive data entry instead of automation. Reports taking days instead of minutes. That confusion? It compounds. Every single day.
               </p>
               <h3 style={{ fontSize: '1.2rem', color: colors.darkNavy, marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700', marginTop: '1.5rem' }}>
-                The Finance Industry's Dirty Secret
+                The Real Cost: Lack of Self-Sufficiency
               </h3>
               <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '1.5rem' }}>
-                The finance space is stubborn—set in its ways. "That's just how it's done." But here's the thing: with Excel and AI, we can streamline this. We can expose insights more efficiently. We can set up foundational processes and knowledge NOW to close the knowledge gap and reduce manual handling NOW. The time saved compounds over time.
+                The businesses that stayed stuck weren't lacking resources. They were lacking <strong>knowledge and capability.</strong> People didn't understand their numbers. They couldn't build their own systems. They couldn't leverage new tools like AI because they hadn't built the foundation. So they stayed dependent. Stuck. Unable to move forward with confidence.
               </p>
               <h3 style={{ fontSize: '1.2rem', color: colors.darkNavy, marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700', marginTop: '1.5rem' }}>
-                But There's a Bigger Enemy: Fear
+                The Solution: Investment in Capability
               </h3>
               <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8' }}>
-                Fear of change. Fear of the unknown. Fear that new tools won't work. This fear <strong>holds us back.</strong> People don't realize the HUGE benefit of spending time thinking about a process BEFORE rolling it out—so it's streamlined from day one. Instead, we patch broken systems forever. And that's a massive waste.
+                The businesses that thrived invested time upfront—understanding their processes, building proper systems, developing skills. That investment paid off immediately. Less time wasted on confusion. More time spent on what matters. More money in the pocket. That's leverage. That's what I'm here to help you build.
               </p>
             </div>
           </div>
@@ -1148,16 +1148,7 @@ export default function AppCoaching() {
 
           <div style={{ marginBottom: '3rem', background: colors.offWhite, padding: '2rem', borderRadius: '12px' }}>
             <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '1.5rem' }}>
-              Here's the truth I discovered: <strong>time invested upfront in understanding a process, tool, or system saves you HOURS and MONTHS later.</strong>
-            </p>
-            <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '1.5rem' }}>
-              You spend time NOW rebuilding that Excel model properly. You spend time NOW automating that manual process. You spend time NOW thinking about how to present data simply. And then? That investment compounds forever. Every single day after, you save time. That's leverage.
-            </p>
-            <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '1.5rem' }}>
-              Now add AI to the equation. AI takes this to another level entirely. You can process MORE data, faster. You can extract insights you didn't know existed. You can automate things you thought were impossible. But only if you understand the fundamentals—the processes, the tools, the systems. AI is the accelerant. Understanding is the fuel.
-            </p>
-            <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8' }}>
-              That's what I teach. That's what I help you build. Time invested now. Benefits compounding forever.
+              I offer three core areas of coaching to help you build capability and move from <strong>confusion to self-sufficiency.</strong> Whether it's understanding your numbers, building systems that scale, or advancing your career—the goal is the same: give you the knowledge and confidence to move forward without depending on someone else.
             </p>
           </div>
 
@@ -1193,9 +1184,6 @@ export default function AppCoaching() {
             </div>
           </div>
 
-          <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', textAlign: 'center', marginBottom: '2rem' }}>
-            I'm not your guru. <span style={{ color: colors.limeGreen, fontWeight: '700' }}>I'm your translator.</span> I close the gap between confusion and clarity—in your numbers, your tools, your career. Without the corporate jargon, the ego, or the premium price tag.
-          </p>
         </div>
 
         {/* WHY APP COACHING STANDS OUT */}
@@ -1206,7 +1194,7 @@ export default function AppCoaching() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
             <div style={{ background: `linear-gradient(135deg, rgba(200, 220, 255, 0.7) 0%, rgba(220, 235, 255, 0.9) 100%)`, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center', color: colors.darkNavy, boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
               <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
-                💼 Built from <span style={{ color: colors.limeGreen }}>Confusion to Clarity</span>
+                💼 Built from Confusion to Clarity
               </h3>
               <p style={{ fontSize: '0.95rem', lineHeight: '1.6' }}>
                 10+ years in real organizations. I've moved from confusion to confidence through systems, dashboards, and continuous learning. Now I help others do the same.
@@ -1249,7 +1237,7 @@ export default function AppCoaching() {
             Why It's Called "APP Coaching"
           </h2>
           <p style={{ fontSize: '1.05rem', color: colors.textMuted, lineHeight: '1.8', maxWidth: '900px', margin: '0 auto' }}>
-            "APP" stands for <strong>Aaron Paul Pacheco</strong>—that's me. But it's really about more than apps. It's about accepting new technology, experimenting with tools that actually work, and staying <span style={{ fontStyle: 'italic', color: colors.darkNavy, fontWeight: '600' }}>curious in a world that breeds confusion</span>. The people moving from <span style={{ color: colors.limeGreen, fontWeight: '700' }}>confusion to clarity to confidence</span> aren't afraid of new tools—they learn them, experiment, and build the <span style={{ fontWeight: '600' }}>capability</span> to use them. Meanwhile, others stay stuck waiting for the "perfect moment." APP Coaching represents my belief that continuous learning is the difference between confusion and capability.
+            "APP" stands for <strong>Aaron Paul Pacheco</strong>—that's me. But it's really about more than apps. It's about accepting new technology, experimenting with tools that actually work, and staying <span style={{ fontStyle: 'italic', color: colors.darkNavy, fontWeight: '600' }}>curious in a world that breeds confusion</span>. The people moving from <span style={{ color: colors.darkNavy, fontWeight: '700' }}>confusion to clarity to confidence</span> aren't afraid of new tools—they learn them, experiment, and build the <span style={{ fontWeight: '600' }}>capability</span> to use them. Meanwhile, others stay stuck waiting for the "perfect moment." APP Coaching represents my belief that continuous learning is the difference between confusion and capability.
           </p>
         </div>
 
@@ -1597,13 +1585,13 @@ export default function AppCoaching() {
               Search:
             </label>
             <input
+              key="blog-search"
               type="text"
               placeholder="Search by keyword..."
               value={blogSearchTerm}
               onChange={(e) => setBlogSearchTerm(e.target.value)}
-              onKeyDown={(e) => e.stopPropagation()}
-              onKeyUp={(e) => e.stopPropagation()}
-              onKeyPress={(e) => e.stopPropagation()}
+              autoComplete="off"
+              spellCheck="false"
               style={{
                 width: '100%',
                 padding: '0.75rem',
@@ -1614,7 +1602,9 @@ export default function AppCoaching() {
                 boxSizing: 'border-box',
                 pointerEvents: 'auto',
                 backgroundColor: 'white',
-                color: colors.darkNavy
+                color: colors.darkNavy,
+                WebkitAppearance: 'none',
+                appearance: 'none'
               }}
             />
           </div>
@@ -1790,7 +1780,7 @@ export default function AppCoaching() {
                           onMouseEnter={(e) => { e.currentTarget.style.borderColor = colors.limeGreen; e.currentTarget.style.boxShadow = `0 8px 24px rgba(0, 255, 65, 0.15)`; e.currentTarget.style.transform = 'translateY(-4px)'; }}
                           onMouseLeave={(e) => { e.currentTarget.style.borderColor = colors.borderGray; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)'; e.currentTarget.style.transform = 'translateY(0)'; }}
                         >
-                          <div style={{ fontSize: '0.8rem', fontWeight: '700', color: colors.darkNavy, marginBottom: '0.5rem', textTransform: 'uppercase', background: `linear-gradient(120deg, ${colors.limeGreen}, #5ade5a)`, backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                          <div style={{ fontSize: '0.8rem', fontWeight: '700', color: colors.darkNavy, marginBottom: '0.5rem', textTransform: 'uppercase' }}>
                             {snippet.type === 'levelup' && '🎯 PAUL\'s LevelUp'}
                             {snippet.type === 'prompt' && '🤖 PAUL\'s Prompt'}
                             {snippet.type === 'formula' && '📊 PAUL\'s Formula'}
@@ -1805,7 +1795,11 @@ export default function AppCoaching() {
                           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                             {needsExpand && (
                               <button
-                                onClick={() => setExpandedSnippets({...expandedSnippets, [snippet.id]: !isExpanded})}
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  e.stopPropagation();
+                                  setExpandedSnippets({...expandedSnippets, [snippet.id]: !isExpanded});
+                                }}
                                 style={{
                                   background: 'none',
                                   border: 'none',

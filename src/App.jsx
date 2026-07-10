@@ -1702,14 +1702,6 @@ export default function AppCoaching() {
                   }}>
                     <strong style={{ color: colors.darkNavy, fontSize: '1rem' }}>Aaron Pacheco</strong> is a finance professional who specializes in streamlining inefficient paths from input and data processing to clear output and actionable insight. Across his career at Flight Centre, PwC, Aveo, and others, he's built financial models, dashboards, and systems that cut through the noise and eliminate laborious manual work. His focus: turning confusion into clarity so you can make better decisions faster. Through APP Coaching, he's now scaling that expertise—helping smart people close the gap between confusion and confidence.
                   </p>
-                  <p style={{
-                    margin: '0',
-                    fontSize: '0.9rem',
-                    color: colors.textMuted,
-                    fontStyle: 'italic'
-                  }}>
-                    🎯 Finance • Systems • Efficiency • Career growth
-                  </p>
                 </div>
               </div>
             </div>

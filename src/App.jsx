@@ -639,7 +639,7 @@ export default function AppCoaching() {
           <img src="/aaron-headshot-professional.jpg" alt="Aaron" style={{ width: '100%', maxWidth: '300px', borderRadius: '12px', objectFit: 'cover', margin: '0 auto 1.5rem' }} />
         </div>
         <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', maxWidth: '750px', margin: '0 auto' }}>
-          I'm a <span style={{ color: colors.darkNavy, fontWeight: '700' }}>qualified finance professional and analyst</span> with 10+ years of real-world experience turning <span style={{ color: colors.darkNavy, fontWeight: '700' }}>confusion into clarity.</span> I've built financial models, designed dashboards, and helped teams extract insight from data using Excel, AI, and optimized systems. My mission: <span style={{ color: colors.darkNavy, fontWeight: '700' }}>close the knowledge gap</span> and <span style={{ color: colors.darkNavy, fontWeight: '700' }}>empower you</span> to become self-sufficient. When I work with you, my goal isn't lifelong coaching—it's moving you from <span style={{ color: colors.darkNavy, fontWeight: '700' }}>confusion to confidence</span> as fast as possible. The reward for me is that moment when it clicks: when you realize you CAN read your numbers, CAN build systems, CAN use AI strategically. That's success.
+          I'm a <span style={{ color: colors.darkNavy, fontWeight: '700' }}>qualified finance professional and analyst</span> based in Australia with 10+ years of real-world experience turning <span style={{ color: colors.darkNavy, fontWeight: '700' }}>confusion into clarity.</span> I've built financial models, designed dashboards, and helped Australian and international teams extract insight from data using Excel, AI, and optimized systems. My mission: <span style={{ color: colors.darkNavy, fontWeight: '700' }}>close the knowledge gap</span> and <span style={{ color: colors.darkNavy, fontWeight: '700' }}>empower you</span> to become self-sufficient. When I work with you, my goal isn't lifelong coaching—it's moving you from <span style={{ color: colors.darkNavy, fontWeight: '700' }}>confusion to confidence</span> as fast as possible. The reward for me is that moment when it clicks: when you realize you CAN read your numbers, CAN build systems, CAN use AI strategically. That's success.
         </p>
       </section>
 
@@ -775,7 +775,7 @@ export default function AppCoaching() {
             Services
           </h1>
           <p style={{ fontSize: '1rem', opacity: '0.95', maxWidth: '700px', margin: '0 auto', lineHeight: '1.7' }}>
-            I turn <span style={{ fontWeight: '700' }}>confusion into confidence</span>—in as few sessions as possible. Not because I want lifetime clients. Because my goal is your <span style={{ fontWeight: '700' }}>self-sufficiency.</span> Excel mastery. AI competence. Optimized processes. Fast. Efficient. Done.
+            I turn <span style={{ fontWeight: '700' }}>confusion into confidence</span>—in as few sessions as possible. As an Australian-based finance professional, I work with professionals locally and globally to build your <span style={{ fontWeight: '700' }}>self-sufficiency.</span> Excel mastery. AI competence. Optimized processes. Fast. Efficient. Done.
           </p>
         </section>
 
@@ -1024,7 +1024,7 @@ export default function AppCoaching() {
           </h2>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'start', marginBottom: '3rem' }}>
-            <div>
+            <div style={{ order: 2 }}>
               <h3 style={{ fontSize: '1.3rem', color: colors.darkNavy, marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
                 Who I Am Beyond Work
               </h3>
@@ -1032,7 +1032,7 @@ export default function AppCoaching() {
                 I'm a Brisbane lad through and through. Born and raised here, and I breathe this city. But more than anything, I breathe soccer. I've been playing since I was 6—loyal to my local club (we won the league title once in division 7, and honestly? One of my greatest achievements). I also manage a social futsal team where I get together with mates every week. It's how I stay fit, stay sane, and stay connected. My football heroes are Cristiano Ronaldo, Everton, Real Madrid, Portugal. And of course, Brisbane Roar.
               </p>
               <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '1.5rem' }}>
-                Off the pitch, I'm a maker. I love making music. I love traveling the world with my wife, discovering new restaurants, experiencing new things, catching great films. We're planning for parenthood, which honestly puts everything into perspective. Life's short. We've got one shot at this. So we should take ourselves and our potential as far as we can go.
+                I'm deeply connected to the people in my life—friends I've known since school, mates I've made along the way in different workplaces, and of course, my family and extended family. Spending quality time with my cousins and loved ones is something I genuinely cherish. Off the pitch, I'm a maker. I love making music. I love traveling the world with my wife, discovering new restaurants, experiencing new things, catching great films. We're planning for parenthood, which honestly puts everything into perspective. Life's short. We've got one shot at this. So we should take ourselves and our potential as far as we can go.
               </p>
               <h3 style={{ fontSize: '1.3rem', color: colors.darkNavy, marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700', marginTop: '2rem' }}>
                 My Professional Journey
@@ -1047,7 +1047,7 @@ export default function AppCoaching() {
                 Then AI happened. And everything changed again. And I leaned in.
               </p>
             </div>
-            <div style={{ textAlign: 'center' }}>
+            <div style={{ textAlign: 'center', order: 1 }}>
               <img src="/aaron-archive-2.jpg" alt="Aaron's story" style={{ width: '100%', height: '350px', borderRadius: '12px', objectFit: 'cover' }} />
             </div>
           </div>

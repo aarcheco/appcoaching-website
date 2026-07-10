@@ -221,14 +221,13 @@ export default function AppCoaching() {
 
   // ===== EMPLOYER LOGOS =====
   const employers = [
-    { name: 'PwC', logo: 'https://www.pwc.com/content/dam/pwc/pwccom/en/assets/images/pwc-logo.svg' },
-    { name: 'Flight Centre', logo: 'https://flightcentre.com.au/content/dam/fcg/au/images/logo-flight-centre.svg' },
-    { name: 'Coronis Group', logo: 'https://www.coronis.com.au/images/logo.svg' },
-    { name: 'RACQ', logo: 'https://www.racq.com.au/-/media/project/racq/shared/logo/racq-logo-primary-blue.svg' },
-    { name: 'Telstra', logo: 'https://www.telstra.com.au/content/dam/tcom/logo-telstra.svg' },
-    { name: 'Aveo Group', logo: 'https://www.aveogroup.com.au/assets/images/aveo-group-logo.svg' },
-    { name: 'YourTown', logo: 'https://www.yourtown.com.au/images/logo.svg' },
-    { name: 'Tradies Success', logo: 'https://tradiessuccessacademy.com/images/logo.svg' }
+    { name: 'PwC', logo: '/PwC-logo-380x290-1.gif' },
+    { name: 'Flight Centre', logo: '/Flight-Centre-Logo-320x320-1.png' },
+    { name: 'Coronis Group', logo: '/Coronis_nbsnnc.webp' },
+    { name: 'RACQ', logo: '/racq-insurance-logo.webp' },
+    { name: 'Telstra', logo: '/Telstra-logo.jpg' },
+    { name: 'Aveo Group', logo: '/Aveo-Logo.png' },
+    { name: 'Tradies Success', logo: '/tradies_success_academy_logo.jpeg' }
   ];
 
   // ===== SERVICE SEGMENTS =====
@@ -1024,15 +1023,18 @@ export default function AppCoaching() {
           </h2>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'start', marginBottom: '3rem' }}>
-            <div style={{ order: 2 }}>
+            <div style={{ textAlign: 'center' }}>
+              <img src="/aaron-archive-2.jpg" alt="Aaron's story" style={{ width: '100%', height: '350px', borderRadius: '12px', objectFit: 'cover' }} />
+            </div>
+            <div>
               <h3 style={{ fontSize: '1.3rem', color: colors.darkNavy, marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
                 Who I Am Beyond Work
               </h3>
               <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '1.5rem' }}>
-                I'm a Brisbane lad through and through. Born and raised here, and I breathe this city. But more than anything, I breathe soccer. I've been playing since I was 6—loyal to my local club (we won the league title once in division 7, and honestly? One of my greatest achievements). I also manage a social futsal team where I get together with mates every week. It's how I stay fit, stay sane, and stay connected. My football heroes are Cristiano Ronaldo, Everton, Real Madrid, Portugal. And of course, Brisbane Roar.
+                What matters most to me outside work is the people around me—friends I've known since school, mates I've made along the way in different workplaces, and of course, my family and extended family. Spending quality time with my cousins and loved ones is something I genuinely cherish. I'm also deeply passionate about making and playing music, and I love traveling the world with my wife—discovering new restaurants, experiencing new places, catching great films. We're planning for parenthood, which honestly puts everything into perspective. Life's short, and we should take ourselves and our potential as far as we can go.
               </p>
               <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '1.5rem' }}>
-                I'm deeply connected to the people in my life—friends I've known since school, mates I've made along the way in different workplaces, and of course, my family and extended family. Spending quality time with my cousins and loved ones is something I genuinely cherish. Off the pitch, I'm a maker. I love making music. I love traveling the world with my wife, discovering new restaurants, experiencing new things, catching great films. We're planning for parenthood, which honestly puts everything into perspective. Life's short. We've got one shot at this. So we should take ourselves and our potential as far as we can go.
+                Football is my constant. I've been playing since I was 6—loyal to my local club, managing a social futsal team where I get together with mates every week. It's how I stay fit, stay sane, and stay connected. My football heroes are Cristiano Ronaldo, Real Madrid, Portugal. And of course, Brisbane Roar. But here's the thing: I'm in my thirties, well past my physical prime. Yet I'm obsessed with continuously improving—not just my game, but my team's game too. It's about tactics, strategy, understanding the nuances of play, and managing muscle and fatigue smarter. That same drive to improve, to find leverage, to build systems that work—that's exactly what I bring to coaching.
               </p>
               <h3 style={{ fontSize: '1.3rem', color: colors.darkNavy, marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700', marginTop: '2rem' }}>
                 My Professional Journey
@@ -1046,9 +1048,6 @@ export default function AppCoaching() {
               <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8' }}>
                 Then AI happened. And everything changed again. And I leaned in.
               </p>
-            </div>
-            <div style={{ textAlign: 'center', order: 1 }}>
-              <img src="/aaron-archive-2.jpg" alt="Aaron's story" style={{ width: '100%', height: '350px', borderRadius: '12px', objectFit: 'cover' }} />
             </div>
           </div>
 
@@ -1084,7 +1083,8 @@ export default function AppCoaching() {
           </p>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
-            <div style={{ background: colors.offWhite, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}` }}>
+            <div style={{ background: colors.offWhite, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+              <img src="/Flight-Centre-Logo-320x320-1.png" alt="Flight Centre" style={{ height: '60px', objectFit: 'contain', marginBottom: '1rem' }} />
               <h3 style={{ fontSize: '1.1rem', color: colors.darkNavy, marginBottom: '0.5rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
                 Flight Centre Travel Group
               </h3>
@@ -1096,7 +1096,8 @@ export default function AppCoaching() {
               </p>
             </div>
 
-            <div style={{ background: colors.offWhite, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}` }}>
+            <div style={{ background: colors.offWhite, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+              <img src="/Coronis_nbsnnc.webp" alt="Coronis" style={{ height: '60px', objectFit: 'contain', marginBottom: '1rem' }} />
               <h3 style={{ fontSize: '1.1rem', color: colors.darkNavy, marginBottom: '0.5rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
                 Coronis Group
               </h3>
@@ -1108,7 +1109,8 @@ export default function AppCoaching() {
               </p>
             </div>
 
-            <div style={{ background: colors.offWhite, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}` }}>
+            <div style={{ background: colors.offWhite, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+              <img src="/Telstra-logo.jpg" alt="Telstra" style={{ height: '60px', objectFit: 'contain', marginBottom: '1rem' }} />
               <h3 style={{ fontSize: '1.1rem', color: colors.darkNavy, marginBottom: '0.5rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
                 Telstra
               </h3>
@@ -1120,7 +1122,8 @@ export default function AppCoaching() {
               </p>
             </div>
 
-            <div style={{ background: colors.offWhite, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}` }}>
+            <div style={{ background: colors.offWhite, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+              <img src="/Aveo-Logo.png" alt="Aveo Group" style={{ height: '60px', objectFit: 'contain', marginBottom: '1rem' }} />
               <h3 style={{ fontSize: '1.1rem', color: colors.darkNavy, marginBottom: '0.5rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
                 Aveo Group
               </h3>
@@ -1136,6 +1139,30 @@ export default function AppCoaching() {
           <p style={{ fontSize: '1rem', color: colors.textMuted, textAlign: 'center', marginTop: '2rem', lineHeight: '1.8' }}>
             <strong>The pattern?</strong> Someone invests time to understand a broken system. They fix it. They document it. Then they walk away and the time savings compound forever. That's leverage. That's what I'm here to help you build.
           </p>
+
+          <div style={{ marginTop: '4rem', paddingTop: '2rem', borderTop: `2px solid ${colors.borderGray}`, textAlign: 'center' }}>
+            <h3 style={{ fontSize: '1.3rem', color: colors.darkNavy, marginBottom: '2rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
+              Where I've Made My Impact
+            </h3>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '2rem', flexWrap: 'wrap', marginTop: '2rem' }}>
+              <div style={{ textAlign: 'center' }}>
+                <img src="/Flight-Centre-Logo-320x320-1.png" alt="Flight Centre" style={{ height: '80px', objectFit: 'contain', marginBottom: '0.5rem' }} />
+                <p style={{ fontSize: '0.9rem', color: colors.textMuted }}>Flight Centre</p>
+              </div>
+              <div style={{ textAlign: 'center' }}>
+                <img src="/Coronis_nbsnnc.webp" alt="Coronis" style={{ height: '80px', objectFit: 'contain', marginBottom: '0.5rem' }} />
+                <p style={{ fontSize: '0.9rem', color: colors.textMuted }}>Coronis Group</p>
+              </div>
+              <div style={{ textAlign: 'center' }}>
+                <img src="/Telstra-logo.jpg" alt="Telstra" style={{ height: '80px', objectFit: 'contain', marginBottom: '0.5rem' }} />
+                <p style={{ fontSize: '0.9rem', color: colors.textMuted }}>Telstra</p>
+              </div>
+              <div style={{ textAlign: 'center' }}>
+                <img src="/Aveo-Logo.png" alt="Aveo Group" style={{ height: '80px', objectFit: 'contain', marginBottom: '0.5rem' }} />
+                <p style={{ fontSize: '0.9rem', color: colors.textMuted }}>Aveo Group</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* THE PROBLEM I REALIZED */}

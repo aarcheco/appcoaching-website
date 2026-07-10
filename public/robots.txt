@@ -3,12 +3,10 @@
 
 User-agent: *
 Allow: /
-Allow: /#/
-Allow: /#/home
-Allow: /#/services
-Allow: /#/about
-Allow: /#/blog
-Allow: /#/contact
+Allow: /services
+Allow: /about
+Allow: /blog
+Allow: /contact
 Allow: /blog-posts.json
 Disallow: /node_modules/
 Disallow: /.git/

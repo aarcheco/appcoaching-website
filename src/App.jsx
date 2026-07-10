@@ -956,6 +956,172 @@ export default function AppCoaching() {
 
       <VennDiagram />
 
+      {/* How I Can Help You - Services Section */}
+      <section style={{
+        padding: '4rem 2rem',
+        background: colors.offWhite,
+        maxWidth: '1400px',
+        margin: '0 auto'
+      }}>
+        <h2 style={{
+          fontSize: '2rem',
+          color: colors.darkNavy,
+          marginBottom: '1rem',
+          fontFamily: "'Poppins', sans-serif",
+          fontWeight: '800',
+          textAlign: 'center'
+        }}>
+          How I Can Help You
+        </h2>
+        <p style={{
+          fontSize: '1rem',
+          color: colors.textMuted,
+          marginBottom: '3rem',
+          maxWidth: '800px',
+          margin: '0 auto 3rem',
+          lineHeight: '1.8',
+          textAlign: 'center'
+        }}>
+          Over my career, I've learned that confusion doesn't come from one area alone—it's built into the gap between what you know and what you need to know. I help you close that gap with expertise in four core areas.
+        </p>
+
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gap: '2rem',
+          marginBottom: '3rem'
+        }}>
+          {services.map((service) => (
+            <div key={service.id} style={{
+              background: `linear-gradient(135deg, rgba(0, 255, 65, 0.05) 0%, rgba(255, 217, 61, 0.05) 100%)`,
+              border: `1px solid ${colors.borderGray}`,
+              borderRadius: '12px',
+              padding: '2rem',
+              textAlign: 'center',
+              transition: 'all 0.3s ease',
+              cursor: 'pointer',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between'
+            }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = colors.limeGreen; e.currentTarget.style.boxShadow = `0 8px 24px rgba(0, 255, 65, 0.15)`; e.currentTarget.style.background = `linear-gradient(135deg, rgba(0, 255, 65, 0.1) 0%, rgba(255, 217, 61, 0.1) 100%)`; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = colors.borderGray; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)'; e.currentTarget.style.background = `linear-gradient(135deg, rgba(0, 255, 65, 0.05) 0%, rgba(255, 217, 61, 0.05) 100%)`; }}>
+              <div style={{ width: '80px', height: '80px', background: `linear-gradient(135deg, ${colors.darkNavy} 0%, ${colors.navy} 100%)`, borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2rem', margin: '0 auto 1rem' }}>{service.icon}</div>
+              <h3 style={{ fontSize: '1.2rem', color: colors.darkNavy, marginBottom: '0.5rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
+                {service.title}
+              </h3>
+              <p style={{ fontSize: '0.9rem', color: colors.charcoal, fontWeight: '600', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif" }}>
+                {service.subtitle}
+              </p>
+              <p style={{ fontSize: '0.85rem', color: colors.textMuted, lineHeight: '1.7', marginBottom: '1.5rem', textAlign: 'left', whiteSpace: 'pre-line' }}>
+                {service.description}
+              </p>
+              <a href="https://cal.com/app-coaching-xcgvda" target="_blank" rel="noopener noreferrer" style={{
+                background: colors.limeGreen,
+                color: colors.darkNavy,
+                border: 'none',
+                padding: '0.75rem 1.5rem',
+                borderRadius: '6px',
+                fontWeight: '700',
+                fontSize: '0.85rem',
+                cursor: 'pointer',
+                fontFamily: "'Poppins', sans-serif",
+                textAlign: 'center',
+                textDecoration: 'none',
+                display: 'block'
+              }}>
+                {service.cta.toUpperCase()}
+              </a>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* My Coaching Style - Principles Section */}
+      <section style={{
+        padding: '4rem 2rem',
+        background: 'white',
+        maxWidth: '1200px',
+        margin: '0 auto'
+      }}>
+        <h2 style={{
+          fontSize: '2rem',
+          color: colors.darkNavy,
+          marginBottom: '1rem',
+          fontFamily: "'Poppins', sans-serif",
+          fontWeight: '800',
+          textAlign: 'center'
+        }}>
+          My Coaching Style
+        </h2>
+        <p style={{
+          fontSize: '1rem',
+          color: colors.textMuted,
+          marginBottom: '3rem',
+          maxWidth: '800px',
+          margin: '0 auto 3rem',
+          lineHeight: '1.8',
+          textAlign: 'center'
+        }}>
+          This is how I work. This is what you can expect.
+        </p>
+
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gap: '2rem',
+          marginBottom: '4rem'
+        }}>
+          {[
+            {
+              icon: '💡',
+              title: 'Confusion → Confidence',
+              description: 'Transform what feels overwhelming into actionable clarity you can trust and act on.'
+            },
+            {
+              icon: '📝',
+              title: 'Speaking Plain English',
+              description: 'No jargon. No corporate speak. Clear language that moves people from confusion to understanding.'
+            },
+            {
+              icon: '🤝',
+              title: 'Co-Learning Together',
+              description: 'We grow as partners. You become independent with these tools, not dependent on me.'
+            }
+          ].map((principle, idx) => (
+            <div key={idx} style={{
+              background: `linear-gradient(135deg, #4ade80 0%, rgba(255, 255, 255, 0.9) 100%)`,
+              border: `1px solid ${colors.borderGray}`,
+              borderRadius: '12px',
+              padding: '2rem',
+              textAlign: 'center'
+            }}>
+              <div style={{
+                fontSize: '2.5rem',
+                marginBottom: '1rem'
+              }}>
+                {principle.icon}
+              </div>
+              <h3 style={{
+                fontSize: '1.2rem',
+                color: colors.darkNavy,
+                marginBottom: '0.75rem',
+                fontFamily: "'Poppins', sans-serif",
+                fontWeight: '700'
+              }}>
+                {principle.title}
+              </h3>
+              <p style={{
+                fontSize: '0.95rem',
+                color: colors.darkNavy,
+                lineHeight: '1.6'
+              }}>
+                {principle.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section style={{ padding: '4rem 2rem', textAlign: 'center', background: 'white', maxWidth: '900px', margin: '0 auto' }}>
         <h2 style={{
           fontSize: '2rem',

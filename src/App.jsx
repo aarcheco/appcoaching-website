@@ -603,7 +603,7 @@ export default function AppCoaching() {
         <img src="/aaron-archive-10.jpg" alt="Aaron Pacheco" style={{ marginBottom: 'clamp(1rem, 3vh, 2rem)', width: 'clamp(200px, 35vw, 320px)', height: 'auto', borderRadius: '12px', objectFit: 'contain' }} />
 
         <h1 style={{ fontSize: 'clamp(1.8rem, 6vw, 3.5rem)', marginBottom: 'clamp(1rem, 2vh, 1.5rem)', lineHeight: '1.2', fontWeight: '800', fontFamily: "'Poppins', sans-serif", maxWidth: '900px' }}>
-          Your Most Expensive Problem: Confusion. In Time. In Money.
+          Your Most Expensive Problem: Confusion
         </h1>
 
         <div style={{ fontSize: 'clamp(0.95rem, 3vw, 1.2rem)', maxWidth: '900px', margin: '0 auto clamp(1rem, 2vh, 2rem)', lineHeight: '1.9', opacity: '0.98', fontFamily: "'Inter', sans-serif" }}>
@@ -1353,13 +1353,30 @@ export default function AppCoaching() {
               }}>
                 {post.title}
               </h1>
-              <p style={{
-                fontSize: '1rem',
-                color: colors.textMuted,
-                margin: 0
-              }}>
-                {formatDate(post.date)}
-              </p>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
+                {post.categories && post.categories.length > 0 && (
+                  <span style={{
+                    background: colors.limeGreen,
+                    color: colors.darkNavy,
+                    fontSize: '0.75rem',
+                    fontWeight: '700',
+                    padding: '0.35rem 0.7rem',
+                    borderRadius: '16px',
+                    whiteSpace: 'nowrap',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.5px'
+                  }}>
+                    {post.categories[0]}
+                  </span>
+                )}
+                <p style={{
+                  fontSize: '1rem',
+                  color: colors.textMuted,
+                  margin: 0
+                }}>
+                  {formatDate(post.date)}
+                </p>
+              </div>
             </header>
 
             {/* HTML content with custom styling */}
@@ -1693,22 +1710,21 @@ export default function AppCoaching() {
                       overflow: 'visible'
                     }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = colors.limeGreen; e.currentTarget.style.boxShadow = `0 8px 24px rgba(0, 255, 65, 0.15)`; e.currentTarget.style.transform = 'translateY(-4px)'; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = colors.borderGray; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)'; e.currentTarget.style.transform = 'translateY(0)'; }}>
                       {post.categories && post.categories.length > 0 && (
-                        <div style={{ position: 'absolute', top: '-0.5rem', right: '-0.5rem', zIndex: 10 }}>
-                          <span style={{
-                            background: colors.limeGreen,
-                            color: colors.darkNavy,
-                            fontSize: '0.65rem',
-                            fontWeight: '700',
-                            padding: '0.4rem 0.8rem',
-                            borderRadius: '20px',
-                            whiteSpace: 'nowrap',
-                            display: 'inline-block',
-                            textTransform: 'uppercase',
-                            letterSpacing: '0.5px'
-                          }}>
-                            {post.categories[0]}
-                          </span>
-                        </div>
+                        <span style={{
+                          background: colors.limeGreen,
+                          color: colors.darkNavy,
+                          fontSize: '0.65rem',
+                          fontWeight: '700',
+                          padding: '0.4rem 0.8rem',
+                          borderRadius: '20px',
+                          whiteSpace: 'nowrap',
+                          display: 'inline-block',
+                          textTransform: 'uppercase',
+                          letterSpacing: '0.5px',
+                          marginBottom: '1rem'
+                        }}>
+                          {post.categories[0]}
+                        </span>
                       )}
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.75rem', gap: '1rem' }}>
                         <div style={{ fontSize: '1.2rem', color: 'white', fontWeight: '700', background: `linear-gradient(135deg, ${colors.navy} 0%, ${colors.limeGreen} 100%)`, width: '40px', height: '40px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
@@ -1823,22 +1839,21 @@ export default function AppCoaching() {
                           onMouseLeave={(e) => { e.currentTarget.style.borderColor = colors.borderGray; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)'; e.currentTarget.style.transform = 'translateY(0)'; }}
                         >
                           {snippet.categories && snippet.categories.length > 0 && (
-                            <div style={{ position: 'absolute', top: '-0.5rem', right: '-0.5rem', zIndex: 10 }}>
-                              <span style={{
-                                background: colors.limeGreen,
-                                color: colors.darkNavy,
-                                fontSize: '0.65rem',
-                                fontWeight: '700',
-                                padding: '0.4rem 0.8rem',
-                                borderRadius: '20px',
-                                whiteSpace: 'nowrap',
-                                display: 'inline-block',
-                                textTransform: 'uppercase',
-                                letterSpacing: '0.5px'
-                              }}>
-                                {snippet.categories[0]}
-                              </span>
-                            </div>
+                            <span style={{
+                              background: colors.limeGreen,
+                              color: colors.darkNavy,
+                              fontSize: '0.65rem',
+                              fontWeight: '700',
+                              padding: '0.4rem 0.8rem',
+                              borderRadius: '20px',
+                              whiteSpace: 'nowrap',
+                              display: 'inline-block',
+                              textTransform: 'uppercase',
+                              letterSpacing: '0.5px',
+                              marginBottom: '1rem'
+                            }}>
+                              {snippet.categories[0]}
+                            </span>
                           )}
                           <div style={{ fontSize: '0.8rem', fontWeight: '700', color: colors.darkNavy, marginBottom: '0.5rem', textTransform: 'uppercase' }}>
                             {snippet.type === 'levelup' && '🎯 PAUL\'s LevelUp'}

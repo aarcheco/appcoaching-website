@@ -808,18 +808,6 @@ export default function AppCoaching() {
           </p>
         </div>
       )}
-
-      {!hoveredSection && (
-        <p style={{
-          fontSize: '1.1rem',
-          color: colors.textMuted,
-          maxWidth: '750px',
-          margin: '2rem auto 0',
-          lineHeight: '1.8'
-        }}>
-          Over my career, I've learned that confusion doesn't come from one area alone—it's built into the gaps between them. Finance, Excel, AI, Operations. Each is powerful on its own. But when you weave them together? That's when clarity emerges. That's when you move from confusion to confidence. The problems you solve and the questions you answer become more effective, more elegant, more yours. I'm here to help you see those connections and build capability across all of them.
-        </p>
-      )}
     </div>
   );
 
@@ -1037,13 +1025,13 @@ export default function AppCoaching() {
           textAlign: 'center'
         }}>
           <p style={{ marginBottom: '1.5rem' }}>
-            Here's what I've learned: <span style={{ fontWeight: '700', textDecoration: 'underline' }}>The real power isn't in any single tool.</span> Excel alone won't move you forward. AI without structure is just noise. Finance without systems is firefighting.
+            Here's what I've learned: <span style={{ fontWeight: '700', backgroundColor: colors.limeGreen, color: colors.darkNavy, padding: '0.2rem 0.4rem', borderRadius: '3px' }}>The real power isn't in any single tool.</span> Excel alone won't move you forward. AI without structure is just noise. Finance without systems is firefighting.
           </p>
           <p style={{ marginBottom: '1.5rem' }}>
-            It's when you understand how <span style={{ fontWeight: '700', textDecoration: 'underline' }}>these systems work together</span>—how your Excel models feed your financial analysis, how AI accelerates your learning, how your processes and workflows connect to your actual business outcomes—that everything changes.
+            It's when you understand how <span style={{ fontWeight: '700', backgroundColor: colors.limeGreen, color: colors.darkNavy, padding: '0.2rem 0.4rem', borderRadius: '3px' }}>these systems work together</span>—how your Excel models feed your financial analysis, how AI accelerates your learning, how your processes and workflows connect to your actual business outcomes—that everything changes.
           </p>
           <p>
-            The more you recognize their interconnectedness, the more <span style={{ fontWeight: '700', fontStyle: 'italic' }}>confident and capable</span> you become working cross-functionally. You see patterns others miss. You move faster. You have real <span style={{ fontWeight: '700', fontStyle: 'italic' }}>insight</span> instead of just data.
+            The more you recognize their interconnectedness, the more <span style={{ fontWeight: '700', backgroundColor: colors.limeGreen, color: colors.darkNavy, padding: '0.2rem 0.4rem', borderRadius: '3px' }}>confident and capable</span> you become working cross-functionally. You see patterns others miss. You move faster. You have real <span style={{ fontWeight: '700', backgroundColor: colors.limeGreen, color: colors.darkNavy, padding: '0.2rem 0.4rem', borderRadius: '3px' }}>insight</span> instead of just data.
           </p>
         </div>
       </section>
@@ -1148,7 +1136,7 @@ export default function AppCoaching() {
           <img src="/aaron-headshot-professional.jpg" alt="Aaron" style={{ width: '100%', maxWidth: '300px', borderRadius: '12px', objectFit: 'cover', margin: '0 auto 1.5rem' }} />
         </div>
         <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', maxWidth: '750px', margin: '0 auto' }}>
-          I'm a <span style={{ color: colors.darkNavy, fontWeight: '700' }}>qualified finance professional and analyst</span> based in Australia with 10+ years of real-world experience turning <span style={{ color: colors.darkNavy, fontWeight: '700' }}>confusion into clarity.</span> I've built financial models, designed dashboards, and helped Australian and international teams extract insight from data using Excel, AI, and optimized systems. My mission: <span style={{ color: colors.darkNavy, fontWeight: '700' }}>close the knowledge gap</span> and <span style={{ color: colors.darkNavy, fontWeight: '700' }}>empower you</span> to become self-sufficient. When I work with you, my goal isn't lifelong coaching—it's moving you from <span style={{ color: colors.darkNavy, fontWeight: '700' }}>confusion to confidence</span> as fast as possible. The reward for me is that moment when it clicks: when you realize you CAN read your numbers, CAN build systems, CAN use AI strategically. That's success.
+          I'm a <span style={{ color: colors.darkNavy, fontWeight: '700' }}>qualified finance professional and analyst</span> born and raised in the beautiful, ever-growing city of Brisbane, Australia, with 10+ years of real-world experience turning <span style={{ color: colors.darkNavy, fontWeight: '700' }}>confusion into clarity.</span> I've built financial models, designed dashboards, and helped Australian and international teams extract insight from data using Excel, AI, and optimized systems. My mission: <span style={{ color: colors.darkNavy, fontWeight: '700' }}>close the knowledge gap</span> and <span style={{ color: colors.darkNavy, fontWeight: '700' }}>empower you</span> to become self-sufficient. When I work with you, my goal isn't lifelong coaching—it's moving you from <span style={{ color: colors.darkNavy, fontWeight: '700' }}>confusion to confidence</span> as fast as possible. The reward for me is that moment when it clicks: when you realize you CAN read your numbers, CAN build systems, CAN use AI strategically. That's success.
         </p>
       </section>
 

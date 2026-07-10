@@ -634,24 +634,53 @@ export default function AppCoaching() {
   );
 
   // ===== SERVICES PAGE =====
-  const ServicesPage = () => (
-    <div>
-      <style>{styles}</style>
-      <section style={{
-        background: `linear-gradient(135deg, rgba(31, 58, 125, 0.05) 0%, rgba(42, 79, 168, 0.05) 100%), url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&q=80')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        color: 'white',
-        padding: '4rem 2rem',
-        textAlign: 'center'
-      }}>
-        <h1 style={{ fontSize: '2.8rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '800' }}>
-          Services
-        </h1>
-        <p style={{ fontSize: '1.1rem', opacity: '0.95', maxWidth: '700px', margin: '0 auto' }}>
-          I'm here to turn your confusion into confidence. Whether you're struggling with Excel, drowning in numbers, or overwhelmed by AI—I meet you where you are, explain it like we're mates over coffee, and walk you through it until it clicks. No jargon. No rushing. Just real coaching.
-        </p>
-      </section>
+  const ServicesPage = () => {
+    const [carouselIndex, setCarouselIndex] = useState(0);
+
+    const principles = [
+      {
+        icon: '💡',
+        title: 'Confusion → Confidence',
+        description: 'You come to me stuck. Excel formulas? No idea. Your P&L? Confusing. AI? Too much hype. I slow down, ask the right questions, and walk you through it step by step until the fog lifts and you actually get it.'
+      },
+      {
+        icon: '📝',
+        title: 'Plain English Always',
+        description: 'I translate jargon into real language. No corporate speak. No showing off. I explain things like I\'m talking to a mate—using everyday analogies so it actually sticks. Finance, Excel, AI—all of it makes sense when you hear it right.'
+      },
+      {
+        icon: '🤝',
+        title: 'Co-Learning Together',
+        description: 'This isn\'t one-way teaching. You bring real problems, I bring perspective and expertise. We figure it out together. Sometimes I\'m ahead on Excel, you\'re ahead on your business—that\'s how we both level up.'
+      }
+    ];
+
+    const goToPrevious = () => {
+      setCarouselIndex((prev) => (prev === 0 ? principles.length - 1 : prev - 1));
+    };
+
+    const goToNext = () => {
+      setCarouselIndex((prev) => (prev === principles.length - 1 ? 0 : prev + 1));
+    };
+
+    return (
+      <div>
+        <style>{styles}</style>
+        <section style={{
+          background: `linear-gradient(135deg, rgba(31, 58, 125, 0.7) 0%, rgba(42, 79, 168, 0.7) 100%), url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&q=80')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          color: 'white',
+          padding: '4rem 2rem',
+          textAlign: 'center'
+        }}>
+          <h1 style={{ fontSize: '2.8rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '800' }}>
+            Services
+          </h1>
+          <p style={{ fontSize: '1.1rem', opacity: '0.95', maxWidth: '700px', margin: '0 auto' }}>
+            I'm here to turn your confusion into confidence. Whether you're struggling with Excel, drowning in numbers, or overwhelmed by AI—I meet you where you are, explain it like we're mates over coffee, and walk you through it until it clicks. No jargon. No rushing. Just real coaching.
+          </p>
+        </section>
 
       <section style={{
         padding: '4rem 2rem',
@@ -662,124 +691,130 @@ export default function AppCoaching() {
         <h2 style={{
           fontSize: '2rem',
           color: colors.darkNavy,
-          marginBottom: '1rem',
+          marginBottom: '2rem',
           fontFamily: "'Poppins', sans-serif",
           fontWeight: '800',
           textAlign: 'center'
         }}>
-          My Approach & Pricing
+          How I Work
         </h2>
-        <p style={{
-          fontSize: '1.1rem',
-          color: colors.textMuted,
-          marginBottom: '3rem',
-          maxWidth: '800px',
-          margin: '0 auto 3rem',
-          lineHeight: '1.8',
-          textAlign: 'center'
-        }}>
-          All of my 1:1 coaching services are priced <strong style={{ color: colors.darkNavy, fontSize: '1.2rem' }}>under $200/hour</strong>—well below typical business coaching retainers (which run $250-500+). I charge this because I genuinely love seeing people transform from stuck to confident. That's the real win for me. You get expert guidance without the premium agency markup.
-        </p>
 
         <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          position: 'relative',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
           gap: '2rem',
-          marginTop: '3rem'
+          marginBottom: '2rem'
         }}>
+          {/* Left Arrow */}
+          <button
+            onClick={goToPrevious}
+            style={{
+              background: colors.navy,
+              color: 'white',
+              border: 'none',
+              width: '48px',
+              height: '48px',
+              borderRadius: '50%',
+              fontSize: '1.5rem',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              transition: 'all 0.3s ease',
+              flexShrink: 0
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = colors.darkNavy;
+              e.currentTarget.style.transform = 'scale(1.1)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = colors.navy;
+              e.currentTarget.style.transform = 'scale(1)';
+            }}
+          >
+            ←
+          </button>
+
+          {/* Carousel Card */}
           <div style={{
+            width: '100%',
+            maxWidth: '500px',
             background: `linear-gradient(135deg, rgba(118, 215, 0, 0.05) 0%, rgba(59, 130, 246, 0.05) 100%)`,
             border: `1px solid ${colors.borderGray}`,
             borderRadius: '12px',
             padding: '2rem',
-            textAlign: 'center'
+            textAlign: 'center',
+            minHeight: '320px',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center'
           }}>
             <div style={{
               fontSize: '3rem',
               marginBottom: '1rem'
             }}>
-              💡
+              {principles[carouselIndex].icon}
             </div>
             <h3 style={{
               fontSize: '1.3rem',
               color: colors.darkNavy,
-              marginBottom: '0.5rem',
+              marginBottom: '1rem',
               fontFamily: "'Poppins', sans-serif",
               fontWeight: '700'
             }}>
-              Confusion → Confidence
+              {principles[carouselIndex].title}
             </h3>
             <p style={{
               fontSize: '0.95rem',
               color: colors.textMuted,
               lineHeight: '1.7'
             }}>
-              You come to me stuck. Excel formulas? No idea. Your P&L? Confusing. AI? Too much hype. I slow down, ask the right questions, and walk you through it step by step until the fog lifts and you actually get it.
+              {principles[carouselIndex].description}
             </p>
           </div>
 
-          <div style={{
-            background: `linear-gradient(135deg, rgba(118, 215, 0, 0.05) 0%, rgba(59, 130, 246, 0.05) 100%)`,
-            border: `1px solid ${colors.borderGray}`,
-            borderRadius: '12px',
-            padding: '2rem',
-            textAlign: 'center'
-          }}>
-            <div style={{
-              fontSize: '3rem',
-              marginBottom: '1rem'
-            }}>
-              📝
-            </div>
-            <h3 style={{
-              fontSize: '1.3rem',
-              color: colors.darkNavy,
-              marginBottom: '0.5rem',
-              fontFamily: "'Poppins', sans-serif",
-              fontWeight: '700'
-            }}>
-              Plain English Always
-            </h3>
-            <p style={{
-              fontSize: '0.95rem',
-              color: colors.textMuted,
-              lineHeight: '1.7'
-            }}>
-              I translate jargon into real language. No corporate speak. No showing off. I explain things like I'm talking to a mate—using everyday analogies so it actually sticks. Finance, Excel, AI—all of it makes sense when you hear it right.
-            </p>
-          </div>
-
-          <div style={{
-            background: `linear-gradient(135deg, rgba(118, 215, 0, 0.05) 0%, rgba(59, 130, 246, 0.05) 100%)`,
-            border: `1px solid ${colors.borderGray}`,
-            borderRadius: '12px',
-            padding: '2rem',
-            textAlign: 'center'
-          }}>
-            <div style={{
-              fontSize: '3rem',
-              marginBottom: '1rem'
-            }}>
-              🤝
-            </div>
-            <h3 style={{
-              fontSize: '1.3rem',
-              color: colors.darkNavy,
-              marginBottom: '0.5rem',
-              fontFamily: "'Poppins', sans-serif",
-              fontWeight: '700'
-            }}>
-              Co-Learning Together
-            </h3>
-            <p style={{
-              fontSize: '0.95rem',
-              color: colors.textMuted,
-              lineHeight: '1.7'
-            }}>
-              This isn't one-way teaching. You bring real problems, I bring perspective and expertise. We figure it out together. Sometimes I'm ahead on Excel, you're ahead on your business—that's how we both level up.
-            </p>
-          </div>
+          {/* Right Arrow */}
+          <button
+            onClick={goToNext}
+            style={{
+              background: colors.navy,
+              color: 'white',
+              border: 'none',
+              width: '48px',
+              height: '48px',
+              borderRadius: '50%',
+              fontSize: '1.5rem',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              transition: 'all 0.3s ease',
+              flexShrink: 0
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = colors.darkNavy;
+              e.currentTarget.style.transform = 'scale(1.1)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = colors.navy;
+              e.currentTarget.style.transform = 'scale(1)';
+            }}
+          >
+            →
+          </button>
         </div>
+
+        {/* Slide counter */}
+        <p style={{
+          textAlign: 'center',
+          color: colors.textMuted,
+          fontSize: '0.9rem',
+          fontWeight: '600'
+        }}>
+          Slide {carouselIndex + 1} of {principles.length}
+        </p>
       </section>
 
       <section style={{
@@ -788,6 +823,16 @@ export default function AppCoaching() {
         maxWidth: '1400px',
         margin: '0 auto'
       }}>
+        <h2 style={{
+          fontSize: '2rem',
+          color: colors.darkNavy,
+          marginBottom: '2rem',
+          fontFamily: "'Poppins', sans-serif",
+          fontWeight: '800',
+          textAlign: 'center'
+        }}>
+          My Services
+        </h2>
 
         <div style={{
           display: 'grid',
@@ -841,15 +886,45 @@ export default function AppCoaching() {
           ))}
         </div>
       </section>
+
+      <section style={{
+        padding: '4rem 2rem',
+        background: 'white',
+        maxWidth: '1200px',
+        margin: '0 auto'
+      }}>
+        <h2 style={{
+          fontSize: '2rem',
+          color: colors.darkNavy,
+          marginBottom: '1rem',
+          fontFamily: "'Poppins', sans-serif",
+          fontWeight: '800',
+          textAlign: 'center'
+        }}>
+          My Approach & Pricing
+        </h2>
+        <p style={{
+          fontSize: '1.1rem',
+          color: colors.textMuted,
+          marginBottom: '3rem',
+          maxWidth: '800px',
+          margin: '0 auto 3rem',
+          lineHeight: '1.8',
+          textAlign: 'center'
+        }}>
+          All of my 1:1 coaching services are priced <strong style={{ color: colors.darkNavy, fontSize: '1.2rem' }}>under $200/hour</strong>—well below typical business coaching retainers (which run $250-500+). I charge this because I genuinely love seeing people transform from stuck to confident. That's the real win for me. You get expert guidance without the premium agency markup.
+        </p>
+      </section>
     </div>
-  );
+    );
+  };
 
   // ===== ABOUT PAGE =====
   const AboutPage = () => (
     <div>
       <style>{styles}</style>
       <section style={{
-        background: `linear-gradient(135deg, rgba(31, 58, 125, 0.02) 0%, rgba(42, 79, 168, 0.02) 100%), url('/aaron-headshot-casual.jpg')`,
+        background: `linear-gradient(135deg, rgba(31, 58, 125, 0.7) 0%, rgba(42, 79, 168, 0.7) 100%), url('/aaron-story.jpg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         color: 'white',
@@ -1375,10 +1450,10 @@ export default function AppCoaching() {
           alignItems: 'center'
         }}>
           <h1 style={{ fontSize: 'clamp(2rem, 5vw, 2.8rem)', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '800' }}>
-            Blog & Resources
+            Blog
           </h1>
           <p style={{ fontSize: 'clamp(0.95rem, 2.5vw, 1.1rem)', opacity: '0.95', maxWidth: '700px' }}>
-            I share what I'm learning about Excel, finance, AI, and the efficient path to becoming self-sufficient. Here's my thinking.
+            My digital garden of Excel hacks, AI experiments, and career lessons learned the hard way. Free space to share learnings, tips & tricks, formulas that actually work, AI prompts & use cases, and real teachings.
           </p>
         </section>
 
@@ -1462,8 +1537,28 @@ export default function AppCoaching() {
                   textAlign: 'left',
                   width: '100%'
                 }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = colors.limeGreen; e.currentTarget.style.boxShadow = `0 8px 24px rgba(0, 255, 65, 0.15)`; e.currentTarget.style.transform = 'translateY(-4px)'; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = colors.borderGray; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)'; e.currentTarget.style.transform = 'translateY(0)'; }}>
-                  <div style={{ fontSize: '1.2rem', color: 'white', fontWeight: '700', marginBottom: '0.75rem', background: `linear-gradient(135deg, ${colors.navy} 0%, ${colors.limeGreen} 100%)`, width: '40px', height: '40px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    {post.id}
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.75rem', gap: '1rem' }}>
+                    <div style={{ fontSize: '1.2rem', color: 'white', fontWeight: '700', background: `linear-gradient(135deg, ${colors.navy} 0%, ${colors.limeGreen} 100%)`, width: '40px', height: '40px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                      {post.id}
+                    </div>
+                    {post.categories && post.categories.length > 0 && (
+                      <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
+                        {post.categories.slice(0, 2).map((cat, idx) => (
+                          <span key={idx} style={{
+                            background: `linear-gradient(135deg, rgba(42, 79, 168, 0.1) 0%, rgba(118, 215, 0, 0.1) 100%)`,
+                            border: `1px solid ${colors.navy}`,
+                            color: colors.navy,
+                            fontSize: '0.7rem',
+                            fontWeight: '600',
+                            padding: '0.35rem 0.6rem',
+                            borderRadius: '16px',
+                            whiteSpace: 'nowrap'
+                          }}>
+                            {cat}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                   </div>
                   <h3 style={{ fontSize: '1.4rem', color: colors.darkNavy, marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700', lineHeight: '1.4' }}>
                     {post.title}

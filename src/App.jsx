@@ -33,6 +33,7 @@ export default function AppCoaching() {
   const [blogViewMode, setBlogViewMode] = useState('post');
   const [blogSnippetType, setBlogSnippetType] = useState('');
   const [blogSearchTerm, setBlogSearchTerm] = useState('');
+  const [expandedSnippets, setExpandedSnippets] = useState({});
 
   // Helper function to generate slug from title
   const generateSlug = (title) => {
@@ -120,6 +121,7 @@ export default function AppCoaching() {
             date: item.date,
             excerpt: item.excerpt,
             heroImage: item.heroImage,
+            categories: item.categories || [],
             content: bodyContent,
             filename: item.filename
           };
@@ -1691,64 +1693,107 @@ export default function AppCoaching() {
 
                       return snippets;
                     })
-                    .map((snippet) => (
-                      <button
-                        key={snippet.id}
-                        onClick={() => {
-                          const post = blogPosts.find(p => p.id === snippet.postId);
-                          if (post) {
-                            const slug = generateSlug(post.title);
-                            window.location.hash = `blog/${slug}`;
-                            setSelectedBlogPost(post.id);
-                          }
-                        }}
-                        style={{
-                          background: 'white',
-                          border: `1px solid ${colors.borderGray}`,
-                          borderRadius: '12px',
-                          padding: '2rem',
-                          textDecoration: 'none',
-                          transition: 'all 0.3s ease',
-                          display: 'block',
-                          cursor: 'pointer',
-                          boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
-                          textAlign: 'left',
-                          width: '100%'
-                        }}
-                        onMouseEnter={(e) => { e.currentTarget.style.borderColor = colors.limeGreen; e.currentTarget.style.boxShadow = `0 8px 24px rgba(0, 255, 65, 0.15)`; e.currentTarget.style.transform = 'translateY(-4px)'; }}
-                        onMouseLeave={(e) => { e.currentTarget.style.borderColor = colors.borderGray; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)'; e.currentTarget.style.transform = 'translateY(0)'; }}
-                      >
-                        <div style={{ fontSize: '0.8rem', fontWeight: '700', color: colors.limeGreen, marginBottom: '0.5rem', textTransform: 'uppercase' }}>
-                          {snippet.type === 'levelup' && '🎯 PAUL\'s LevelUp'}
-                          {snippet.type === 'prompt' && '🤖 PAUL\'s Prompt'}
-                          {snippet.type === 'formula' && '📊 PAUL\'s Formula'}
-                        </div>
-                        <h3 style={{ fontSize: '1.2rem', color: colors.darkNavy, marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
-                          {snippet.title}
-                        </h3>
-                        <p style={{ fontSize: '0.95rem', color: colors.textMuted, lineHeight: '1.6', marginBottom: '1rem' }}>
-                          {snippet.content.substring(0, 150)}...
-                        </p>
-                        {snippet.categories && snippet.categories.length > 0 && (
-                          <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: '1rem' }}>
-                            {snippet.categories.slice(0, 2).map((cat, idx) => (
-                              <span key={idx} style={{
-                                background: `linear-gradient(135deg, rgba(42, 79, 168, 0.1) 0%, rgba(118, 215, 0, 0.1) 100%)`,
-                                border: `1px solid ${colors.navy}`,
-                                color: colors.navy,
-                                fontSize: '0.65rem',
-                                fontWeight: '600',
-                                padding: '0.3rem 0.6rem',
-                                borderRadius: '12px',
-                                whiteSpace: 'nowrap'
-                              }}>
-                                {cat}
-                              </span>
-                            ))}
+                    .map((snippet) => {
+                      const isExpanded = expandedSnippets[snippet.id];
+                      const displayText = isExpanded ? snippet.content : snippet.content.substring(0, 150);
+                      const needsExpand = snippet.content.length > 150;
+
+                      return (
+                        <div
+                          key={snippet.id}
+                          style={{
+                            background: 'white',
+                            border: `1px solid ${colors.borderGray}`,
+                            borderRadius: '12px',
+                            padding: '2rem',
+                            textDecoration: 'none',
+                            transition: 'all 0.3s ease',
+                            display: 'block',
+                            boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
+                            textAlign: 'left',
+                            width: '100%'
+                          }}
+                          onMouseEnter={(e) => { e.currentTarget.style.borderColor = colors.limeGreen; e.currentTarget.style.boxShadow = `0 8px 24px rgba(0, 255, 65, 0.15)`; e.currentTarget.style.transform = 'translateY(-4px)'; }}
+                          onMouseLeave={(e) => { e.currentTarget.style.borderColor = colors.borderGray; e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)'; e.currentTarget.style.transform = 'translateY(0)'; }}
+                        >
+                          <div style={{ fontSize: '0.8rem', fontWeight: '700', color: colors.limeGreen, marginBottom: '0.5rem', textTransform: 'uppercase' }}>
+                            {snippet.type === 'levelup' && '🎯 PAUL\'s LevelUp'}
+                            {snippet.type === 'prompt' && '🤖 PAUL\'s Prompt'}
+                            {snippet.type === 'formula' && '📊 PAUL\'s Formula'}
                           </div>
-                        )}
-                      </button>
-                    ))}
+                          <h3 style={{ fontSize: '1.2rem', color: colors.darkNavy, marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
+                            {snippet.title}
+                          </h3>
+                          <p style={{ fontSize: '0.95rem', color: colors.textMuted, lineHeight: '1.6', marginBottom: '1rem', whiteSpace: 'pre-wrap', wordWrap: 'break-word' }}>
+                            {displayText}
+                            {!isExpanded && needsExpand && '...'}
+                          </p>
+                          {needsExpand && (
+                            <button
+                              onClick={() => setExpandedSnippets({...expandedSnippets, [snippet.id]: !isExpanded})}
+                              style={{
+                                background: 'none',
+                                border: 'none',
+                                color: colors.limeGreen,
+                                fontSize: '0.9rem',
+                                fontWeight: '600',
+                                cursor: 'pointer',
+                                padding: '0.5rem 0',
+                                marginBottom: '1rem',
+                                transition: 'color 0.2s ease'
+                              }}
+                              onMouseEnter={(e) => { e.currentTarget.style.color = colors.darkNavy; }}
+                              onMouseLeave={(e) => { e.currentTarget.style.color = colors.limeGreen; }}
+                            >
+                              {isExpanded ? '↑ Show Less' : '↓ Show More'}
+                            </button>
+                          )}
+                          <button
+                            onClick={() => {
+                              const post = blogPosts.find(p => p.id === snippet.postId);
+                              if (post) {
+                                const slug = generateSlug(post.title);
+                                window.location.hash = `blog/${slug}`;
+                                setSelectedBlogPost(post.id);
+                              }
+                            }}
+                            style={{
+                              background: colors.limeGreen,
+                              color: colors.darkNavy,
+                              border: 'none',
+                              borderRadius: '6px',
+                              padding: '0.6rem 1.2rem',
+                              fontSize: '0.85rem',
+                              fontWeight: '600',
+                              cursor: 'pointer',
+                              transition: 'all 0.2s ease'
+                            }}
+                            onMouseEnter={(e) => { e.currentTarget.style.opacity = '0.8'; }}
+                            onMouseLeave={(e) => { e.currentTarget.style.opacity = '1'; }}
+                          >
+                            Read Full Post
+                          </button>
+                          {snippet.categories && snippet.categories.length > 0 && (
+                            <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: '1rem' }}>
+                              {snippet.categories.slice(0, 2).map((cat, idx) => (
+                                <span key={idx} style={{
+                                  background: `linear-gradient(135deg, rgba(42, 79, 168, 0.1) 0%, rgba(118, 215, 0, 0.1) 100%)`,
+                                  border: `1px solid ${colors.navy}`,
+                                  color: colors.navy,
+                                  fontSize: '0.65rem',
+                                  fontWeight: '600',
+                                  padding: '0.3rem 0.6rem',
+                                  borderRadius: '12px',
+                                  whiteSpace: 'nowrap'
+                                }}>
+                                  {cat}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
                   {blogPosts.filter((post) => {
                     const categoryMatch = selectedCategory === '' || (post.categories && post.categories.includes(selectedCategory));
                     const searchMatch = blogSearchTerm === '' || post.title.toLowerCase().includes(blogSearchTerm.toLowerCase());

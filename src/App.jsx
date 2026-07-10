@@ -229,6 +229,7 @@ export default function AppCoaching() {
     { name: 'RACQ', logo: '/racq-insurance-logo.webp' },
     { name: 'Telstra', logo: '/Telstra-logo.jpg' },
     { name: 'Aveo Group', logo: '/Aveo-Logo.png' },
+    { name: 'Kids Helpline', logo: '/LOGO133203970002567033.jpg' },
     { name: 'Tradies Success', logo: '/tradies_success_academy_logo.jpeg' }
   ];
 
@@ -654,17 +655,10 @@ export default function AppCoaching() {
               0% { transform: translateX(0); }
               100% { transform: translateX(-50%); }
             }
-            @keyframes scrollLogosReverse {
-              0% { transform: translateX(-50%); }
-              100% { transform: translateX(0); }
-            }
             .logo-carousel {
               display: flex;
               animation: scrollLogos 16s linear infinite;
               gap: 2rem;
-            }
-            .logo-carousel.reverse {
-              animation: scrollLogosReverse 16s linear infinite;
             }
             .logo-carousel:hover {
               animation-play-state: paused;
@@ -691,15 +685,6 @@ export default function AppCoaching() {
             }
             .logo-item:hover img {
               filter: brightness(1);
-            }
-            .impact-carousel-container {
-              display: flex;
-              flex-direction: column;
-              gap: 2rem;
-              margin-top: 2rem;
-            }
-            .impact-carousel-row {
-              overflow: hidden;
             }
           `}</style>
           <div className="logo-carousel">
@@ -1164,34 +1149,17 @@ export default function AppCoaching() {
             <h3 style={{ fontSize: '1.3rem', color: colors.darkNavy, marginBottom: '2rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
               Where I've Made My Impact
             </h3>
-            <div className="impact-carousel-container">
-              {/* First row - 5 logos, scrolling left to right */}
-              <div className="impact-carousel-row">
-                <div className="logo-carousel">
-                  {[...employers.slice(0, 5), ...employers.slice(0, 5)].map((employer, idx) => (
-                    <div key={idx} className="logo-item">
-                      <img
-                        src={employer.logo}
-                        alt={employer.name}
-                        onError={(e) => { e.target.style.display = 'none'; }}
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
-              {/* Second row - 4 logos, scrolling right to left */}
-              <div className="impact-carousel-row">
-                <div className="logo-carousel reverse">
-                  {[...employers.slice(5, 9), ...employers.slice(5, 9)].map((employer, idx) => (
-                    <div key={idx} className="logo-item">
-                      <img
-                        src={employer.logo}
-                        alt={employer.name}
-                        onError={(e) => { e.target.style.display = 'none'; }}
-                      />
-                    </div>
-                  ))}
-                </div>
+            <div style={{ position: 'relative', overflow: 'hidden', marginTop: '2rem' }}>
+              <div className="logo-carousel">
+                {[...employers, employers[0]].map((employer, idx) => (
+                  <div key={idx} className="logo-item">
+                    <img
+                      src={employer.logo}
+                      alt={employer.name}
+                      onError={(e) => { e.target.style.display = 'none'; }}
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </div>

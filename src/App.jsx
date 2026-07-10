@@ -427,6 +427,7 @@ export default function AppCoaching() {
   }, [blogPosts]);
 
   // ===== BLOG SYSTEM =====
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     loadBlogPosts();
   }, []);

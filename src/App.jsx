@@ -229,7 +229,6 @@ export default function AppCoaching() {
     { name: 'RACQ', logo: '/racq-insurance-logo.webp' },
     { name: 'Telstra', logo: '/Telstra-logo.jpg' },
     { name: 'Aveo Group', logo: '/Aveo-Logo.png' },
-    { name: 'Kids Helpline', logo: '/LOGO133203970002567033.jpg' },
     { name: 'Tradies Success', logo: '/tradies_success_academy_logo.jpeg' }
   ];
 
@@ -655,10 +654,17 @@ export default function AppCoaching() {
               0% { transform: translateX(0); }
               100% { transform: translateX(-50%); }
             }
+            @keyframes scrollLogosReverse {
+              0% { transform: translateX(-50%); }
+              100% { transform: translateX(0); }
+            }
             .logo-carousel {
               display: flex;
-              animation: scrollLogos 20s linear infinite;
+              animation: scrollLogos 16s linear infinite;
               gap: 2rem;
+            }
+            .logo-carousel.reverse {
+              animation: scrollLogosReverse 16s linear infinite;
             }
             .logo-carousel:hover {
               animation-play-state: paused;
@@ -685,6 +691,15 @@ export default function AppCoaching() {
             }
             .logo-item:hover img {
               filter: brightness(1);
+            }
+            .impact-carousel-container {
+              display: flex;
+              flex-direction: column;
+              gap: 2rem;
+              margin-top: 2rem;
+            }
+            .impact-carousel-row {
+              overflow: hidden;
             }
           `}</style>
           <div className="logo-carousel">
@@ -1069,9 +1084,12 @@ export default function AppCoaching() {
             gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
             gap: '1rem'
           }}>
-            <img src="/PSX_20241105_115531.jpg" alt="Aaron moment" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
-            <img src="/PSX_20171114_215601.jpg" alt="Aaron candid" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
-            <img src="/WP_20161020_19_07_16_Rich.jpg" alt="Aaron memory" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img src="/aaron-headshot-casual-1.jpg" alt="Aaron moment" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img src="/PSX_20241105_115531.jpg" alt="Aaron candid" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img src="/aaron-headshot-casual-3.jpg" alt="Aaron memory" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img src="/PSX_20171114_215601.jpg" alt="Aaron moment" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img src="/WP_20161020_19_07_16_Rich.jpg" alt="Aaron candid" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img src="/20250329_194859.jpg" alt="Aaron memory" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
           </div>
         </div>
 
@@ -1146,19 +1164,34 @@ export default function AppCoaching() {
             <h3 style={{ fontSize: '1.3rem', color: colors.darkNavy, marginBottom: '2rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
               Where I've Made My Impact
             </h3>
-            <div style={{ overflow: 'hidden', marginTop: '2rem' }}>
-              <div className="logo-carousel">
-                {[...employers, employers[0]].map((employer, idx) => (
-                  <div key={idx} style={{ textAlign: 'center', flexShrink: 0, minWidth: '120px' }}>
-                    <img
-                      src={employer.logo}
-                      alt={employer.name}
-                      style={{ height: '80px', objectFit: 'contain', marginBottom: '0.5rem' }}
-                      onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }}
-                    />
-                    <p style={{ fontSize: '0.9rem', color: colors.textMuted, display: 'block' }}>{employer.name}</p>
-                  </div>
-                ))}
+            <div className="impact-carousel-container">
+              {/* First row - 5 logos, scrolling left to right */}
+              <div className="impact-carousel-row">
+                <div className="logo-carousel">
+                  {[...employers.slice(0, 5), ...employers.slice(0, 5)].map((employer, idx) => (
+                    <div key={idx} className="logo-item">
+                      <img
+                        src={employer.logo}
+                        alt={employer.name}
+                        onError={(e) => { e.target.style.display = 'none'; }}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+              {/* Second row - 4 logos, scrolling right to left */}
+              <div className="impact-carousel-row">
+                <div className="logo-carousel reverse">
+                  {[...employers.slice(5, 9), ...employers.slice(5, 9)].map((employer, idx) => (
+                    <div key={idx} className="logo-item">
+                      <img
+                        src={employer.logo}
+                        alt={employer.name}
+                        onError={(e) => { e.target.style.display = 'none'; }}
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

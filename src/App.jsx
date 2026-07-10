@@ -605,7 +605,7 @@ export default function AppCoaching() {
         <img src="/aaron-archive-10.jpg" alt="Aaron Pacheco" style={{ marginBottom: 'clamp(1rem, 3vh, 2rem)', width: 'clamp(200px, 35vw, 320px)', height: 'auto', borderRadius: '12px', objectFit: 'contain' }} />
 
         <h1 style={{ fontSize: 'clamp(1.8rem, 6vw, 3.5rem)', marginBottom: 'clamp(1rem, 2vh, 1.5rem)', lineHeight: '1.2', fontWeight: '800', fontFamily: "'Poppins', sans-serif", maxWidth: '900px' }}>
-          Your Most Expensive Problem: Confusion
+          Your Most Expensive Problem: Confusion.
         </h1>
 
         <div style={{ fontSize: 'clamp(0.95rem, 3vw, 1.2rem)', maxWidth: '900px', margin: '0 auto clamp(1rem, 2vh, 2rem)', lineHeight: '1.9', opacity: '0.98', fontFamily: "'Inter', sans-serif" }}>
@@ -657,7 +657,7 @@ export default function AppCoaching() {
             }
             .logo-carousel {
               display: flex;
-              animation: scrollLogos 30s linear infinite;
+              animation: scrollLogos 20s linear infinite;
               gap: 2rem;
             }
             .logo-carousel:hover {
@@ -1066,12 +1066,12 @@ export default function AppCoaching() {
           </h3>
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
             gap: '1rem'
           }}>
-            <img src="/PSX_20241105_115531.jpg" alt="Aaron moment" style={{ width: '100%', height: '250px', borderRadius: '8px', objectFit: 'cover' }} />
-            <img src="/PSX_20171114_215601.jpg" alt="Aaron candid" style={{ width: '100%', height: '250px', borderRadius: '8px', objectFit: 'cover' }} />
-            <img src="/WP_20161020_19_07_16_Rich.jpg" alt="Aaron memory" style={{ width: '100%', height: '250px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img src="/PSX_20241105_115531.jpg" alt="Aaron moment" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img src="/PSX_20171114_215601.jpg" alt="Aaron candid" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img src="/WP_20161020_19_07_16_Rich.jpg" alt="Aaron memory" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
           </div>
         </div>
 
@@ -1146,13 +1146,20 @@ export default function AppCoaching() {
             <h3 style={{ fontSize: '1.3rem', color: colors.darkNavy, marginBottom: '2rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
               Where I've Made My Impact
             </h3>
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '2rem', flexWrap: 'wrap', marginTop: '2rem' }}>
-              {employers.map((employer) => (
-                <div key={employer.name} style={{ textAlign: 'center' }}>
-                  <img src={employer.logo} alt={employer.name} style={{ height: '80px', objectFit: 'contain', marginBottom: '0.5rem' }} />
-                  <p style={{ fontSize: '0.9rem', color: colors.textMuted }}>{employer.name}</p>
-                </div>
-              ))}
+            <div style={{ overflow: 'hidden', marginTop: '2rem' }}>
+              <div className="logo-carousel">
+                {[...employers, employers[0]].map((employer, idx) => (
+                  <div key={idx} style={{ textAlign: 'center', flexShrink: 0, minWidth: '120px' }}>
+                    <img
+                      src={employer.logo}
+                      alt={employer.name}
+                      style={{ height: '80px', objectFit: 'contain', marginBottom: '0.5rem' }}
+                      onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }}
+                    />
+                    <p style={{ fontSize: '0.9rem', color: colors.textMuted, display: 'block' }}>{employer.name}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

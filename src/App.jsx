@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 // ===== PAGE CONFIGURATIONS FOR SEO (Static, outside component) =====
 const organizationSchema = {
@@ -427,10 +427,9 @@ export default function AppCoaching() {
   }, [blogPosts]);
 
   // ===== BLOG SYSTEM =====
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     loadBlogPosts();
-  }, []);
+  }, [loadBlogPosts]);
 
   // Helper function to navigate to a page and update URL (using History API)
   const navigateTo = (page, postSlug = null) => {
@@ -446,7 +445,7 @@ export default function AppCoaching() {
     window.history.pushState({ page, postSlug }, '', url);
   };
 
-  const loadBlogPosts = async () => {
+  const loadBlogPosts = useCallback(async () => {
     setBlogLoading(true);
     try {
       // Fetch manifest listing all blog posts (includes pre-parsed metadata)
@@ -489,7 +488,7 @@ export default function AppCoaching() {
       console.error('Error loading blog posts:', err);
     }
     setBlogLoading(false);
-  };
+  }, []);
 
   const vennSections = {
     finance: {

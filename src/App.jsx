@@ -313,6 +313,49 @@ export default function AppCoaching() {
       border-color: ${colors.limeGreen};
       box-shadow: 0 0 0 3px rgba(0, 255, 65, 0.1);
     }
+
+    /* Mobile Optimization */
+    @media (max-width: 768px) {
+      h1 { font-size: clamp(1.5rem, 5vw, 2.2rem) !important; }
+      h2 { font-size: clamp(1.4rem, 4.5vw, 2rem) !important; }
+      h3 { font-size: clamp(1rem, 3vw, 1.3rem) !important; }
+
+      p { font-size: clamp(0.85rem, 2.5vw, 1rem) !important; line-height: 1.7 !important; }
+
+      section { padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1rem, 3vw, 1.5rem) !important; }
+
+      img { max-width: 100% !important; height: auto !important; }
+
+      /* Prevent text from wrapping too tightly */
+      div[style*="maxWidth"] { max-width: 100% !important; padding: 0 clamp(1rem, 2vw, 1.5rem) !important; }
+
+      /* Grid adjustments for mobile */
+      [style*="gridTemplateColumns"] { grid-template-columns: 1fr !important; }
+
+      /* Image sizing in About page */
+      img[style*="height: 350px"] { height: 250px !important; }
+      img[style*="height: 250px"] { height: 200px !important; }
+
+      /* Responsive image placement */
+      [style*="order: 2"] { order: 1 !important; margin-bottom: 1.5rem !important; }
+      [style*="order: 1"] { order: 2 !important; }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: clamp(1.3rem, 5vw, 1.8rem) !important; }
+      h2 { font-size: clamp(1.2rem, 4vw, 1.6rem) !important; }
+      h3 { font-size: clamp(0.95rem, 2.5vw, 1.1rem) !important; }
+
+      p { font-size: 0.9rem !important; line-height: 1.65 !important; letter-spacing: 0.3px !important; }
+
+      section { padding: 1.5rem 1rem !important; }
+
+      /* Extra spacing for readability on small screens */
+      div { word-break: break-word !important; }
+
+      /* Wider line height for better mobile reading */
+      button { padding: 0.6rem 1rem !important; font-size: 0.8rem !important; }
+    }
   `;
 
   // ===== VENN DIAGRAM COMPONENT =====
@@ -995,7 +1038,7 @@ export default function AppCoaching() {
                 Accountant & Team Leader
               </p>
               <p style={{ fontSize: '0.95rem', color: colors.textMuted, lineHeight: '1.6' }}>
-                Found outdated Excel models everywhere. Broken VBA code. Manual data entry everywhere. I rebuilt countless workbooks from the ground up—making them lean, streamlined, formula-driven. Saved employees hours every single day. Those models? Still being used today. That's compound time savings. That's impact.
+                Found <span style={{ fontWeight: '600', color: colors.darkNavy }}>confusion hidden in outdated Excel models.</span> Broken VBA code. Manual data entry everywhere. I rebuilt countless workbooks from the ground up—moving teams from <span style={{ color: colors.limeGreen, fontWeight: '600' }}>confusion to clarity.</span> Lean, streamlined, formula-driven. Saved employees hours every single day. Those models? Still being used today. That's compound time savings. That's impact.
               </p>
             </div>
 
@@ -1007,7 +1050,7 @@ export default function AppCoaching() {
                 Accountant
               </p>
               <p style={{ fontSize: '0.95rem', color: colors.textMuted, lineHeight: '1.6' }}>
-                Their finance was drowning in paper. No automation. No insight for leadership. I ripped it out. Implemented paperless processes. Built insightful reporting that actually meant something to the CFO and CEO. 40% efficiency gain in finance operations. That freed up capacity for people to do value-add work. That's the math that matters.
+                Finance was drowning in <span style={{ fontWeight: '600', color: colors.darkNavy }}>paper—and confusion.</span> No automation. No insight for leadership. I transformed it. Paperless processes. Insightful reporting that meant something to the CFO and CEO. Built <span style={{ color: colors.limeGreen, fontWeight: '600' }}>clarity from chaos.</span> 40% efficiency gain. That freed up capacity for value-add work. That's the math that matters.
               </p>
             </div>
 
@@ -1019,7 +1062,7 @@ export default function AppCoaching() {
                 Finance Analyst
               </p>
               <p style={{ fontSize: '0.95rem', color: colors.textMuted, lineHeight: '1.6' }}>
-                Presented to 70+ junior accountants. Topic? How to actually communicate with senior leaders. Finance pros speak their own language—jargon, complexity, numbers nobody gets. I learned that translating insight into plain English is a superpower. It's the difference between a number and a decision. This is the art I'm still mastering.
+                Presented to 70+ junior accountants on a critical skill: <span style={{ fontWeight: '600', color: colors.darkNavy }}>translating confusion into confidence.</span> Finance pros drown in jargon and complexity. I learned that turning insight into plain English is a superpower—it's the difference between a number and a decision. It's the difference between <span style={{ color: colors.limeGreen, fontWeight: '600' }}>confusion and capability.</span> This is the art I'm still mastering.
               </p>
             </div>
 
@@ -1031,7 +1074,7 @@ export default function AppCoaching() {
                 Commercial Analyst
               </p>
               <p style={{ fontSize: '0.95rem', color: colors.textMuted, lineHeight: '1.6' }}>
-                Processes loaded with manual data entry. Took hours. Every week. I automated it with PowerQuery and Excel. Saved a colleague 16 hours per week. Also built a dashboard that exposed staff utilization across sites—nurses, domestic attendants. Suddenly leadership could see where capacity was bleeding. Better decisions. Better profitability. Time is money.
+                Processes buried in manual data entry. <span style={{ fontWeight: '600', color: colors.darkNavy }}>Confusion in every workflow.</span> I automated with PowerQuery and Excel. Saved a colleague 16 hours per week. Also built a dashboard that exposed staff utilization—suddenly leadership could see where capacity was bleeding. Built <span style={{ color: colors.limeGreen, fontWeight: '600' }}>clarity from data.</span> Better decisions. Better profitability. That's what I'm here to do for you.
               </p>
             </div>
           </div>

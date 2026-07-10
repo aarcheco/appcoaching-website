@@ -10,8 +10,7 @@ heroImage: /aaron-hero.jpg
 
 <blockquote style="background: linear-gradient(135deg, #00FF00 0%, rgba(255, 255, 255, 0.9) 100%); border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📖 PAUL's Quick Read</strong>
-<p>Aaron spent years across small, medium, and large Australian organizations—working as an accountant and finance professional—learning from mentors that there are always multiple paths to the same answer. <strong>As an Excel wizard, he mastered efficiency.</strong> Now passionately growing his AI knowledge the same way he did Excel in his grad years. He's launching APP Coaching because he watched smart people everywhere solve problems the hard way, never shown the efficient path.</p>
-<p>He's genuinely rewarded by that lightbulb moment when someone realizes how much time they'll save by working smarter. And because learning <em>with</em> an actual human beats talking to a chatbot every time—whether coaching in areas where he has expertise <em>(Excel, finance, efficient processes)</em> or co-learning in areas where you're both growing <em>(AI capabilities, building apps, Claude's evolving potential)</em>. You bring problems. He brings perspective. Together you both get smarter.</p>
+<p>Aaron spent 10 years across six organizations—from PwC to Tradies Success Academy—as an accountant and finance professional who mastered Excel efficiency and is now learning AI the same way. He's launching APP Coaching because he watched smart people everywhere solve problems the hard way, never shown the efficient path. He's genuinely rewarded by that lightbulb moment when someone realizes how much time they'll save by working smarter, and he believes learning with a human beats a chatbot every time—whether coaching in his areas of expertise (Excel, finance, efficient processes) or co-learning in areas you're both growing (AI, apps, Claude's potential).</p>
 </blockquote>
 
 <hr style="border: none; border-top: 2px solid #e5e7eb; margin: 2rem 0;">
@@ -111,3 +110,10 @@ heroImage: /aaron-hero.jpg
 <hr style="border: none; border-top: 2px solid #e5e7eb; margin: 2rem 0;">
 
 <p><em>That's why I'm building APP Coaching. Not because I'm a guru. But because I've watched too many smart people waste too much time taking the long way between problem and solution. And I know better paths exist.</em></p>
+
+<hr style="border: none; border-top: 2px solid #e5e7eb; margin: 2rem 0;">
+
+<blockquote style="background: linear-gradient(135deg, #00FF00 0%, rgba(255, 255, 255, 0.9) 100%); border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
+<strong>🎯 PAUL's LevelUp</strong>
+<p>Smart people don't solve problems inefficiently because they're incapable—they haven't been shown the efficient path. Your move: stop accepting "the way it's always been done," find your efficient path, and watch your time and impact compound.</p>
+</blockquote>

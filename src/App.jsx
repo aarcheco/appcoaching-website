@@ -221,12 +221,15 @@ export default function AppCoaching() {
 
   // ===== EMPLOYER LOGOS =====
   const employers = [
+    { name: 'QUT', logo: '/QUT-Logo.jpg' },
+    { name: 'CAANZ', logo: '/images.png' },
     { name: 'PwC', logo: '/PwC-logo-380x290-1.gif' },
     { name: 'Flight Centre', logo: '/Flight-Centre-Logo-320x320-1.png' },
     { name: 'Coronis Group', logo: '/Coronis_nbsnnc.webp' },
     { name: 'RACQ', logo: '/racq-insurance-logo.webp' },
     { name: 'Telstra', logo: '/Telstra-logo.jpg' },
     { name: 'Aveo Group', logo: '/Aveo-Logo.png' },
+    { name: 'Kids Helpline', logo: '/LOGO133203970002567033.jpg' },
     { name: 'Tradies Success', logo: '/tradies_success_academy_logo.jpeg' }
   ];
 
@@ -1066,10 +1069,9 @@ export default function AppCoaching() {
             gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
             gap: '1rem'
           }}>
-            <img src="/aaron-headshot-casual-1.jpg" alt="Aaron casual" style={{ width: '100%', height: '250px', borderRadius: '8px', objectFit: 'cover' }} />
-            <img src="/aaron-headshot-casual-2.jpg" alt="Aaron candid" style={{ width: '100%', height: '250px', borderRadius: '8px', objectFit: 'cover' }} />
-            <img src="/aaron-action-outdoor.jpg" alt="Aaron outdoors" style={{ width: '100%', height: '250px', borderRadius: '8px', objectFit: 'cover' }} />
-            <img src="/aaron-headshot-casual-3.jpg" alt="Aaron moment" style={{ width: '100%', height: '250px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img src="/PSX_20241105_115531.jpg" alt="Aaron moment" style={{ width: '100%', height: '250px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img src="/PSX_20171114_215601.jpg" alt="Aaron candid" style={{ width: '100%', height: '250px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img src="/WP_20161020_19_07_16_Rich.jpg" alt="Aaron memory" style={{ width: '100%', height: '250px', borderRadius: '8px', objectFit: 'cover' }} />
           </div>
         </div>
 
@@ -1145,22 +1147,12 @@ export default function AppCoaching() {
               Where I've Made My Impact
             </h3>
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '2rem', flexWrap: 'wrap', marginTop: '2rem' }}>
-              <div style={{ textAlign: 'center' }}>
-                <img src="/Flight-Centre-Logo-320x320-1.png" alt="Flight Centre" style={{ height: '80px', objectFit: 'contain', marginBottom: '0.5rem' }} />
-                <p style={{ fontSize: '0.9rem', color: colors.textMuted }}>Flight Centre</p>
-              </div>
-              <div style={{ textAlign: 'center' }}>
-                <img src="/Coronis_nbsnnc.webp" alt="Coronis" style={{ height: '80px', objectFit: 'contain', marginBottom: '0.5rem' }} />
-                <p style={{ fontSize: '0.9rem', color: colors.textMuted }}>Coronis Group</p>
-              </div>
-              <div style={{ textAlign: 'center' }}>
-                <img src="/Telstra-logo.jpg" alt="Telstra" style={{ height: '80px', objectFit: 'contain', marginBottom: '0.5rem' }} />
-                <p style={{ fontSize: '0.9rem', color: colors.textMuted }}>Telstra</p>
-              </div>
-              <div style={{ textAlign: 'center' }}>
-                <img src="/Aveo-Logo.png" alt="Aveo Group" style={{ height: '80px', objectFit: 'contain', marginBottom: '0.5rem' }} />
-                <p style={{ fontSize: '0.9rem', color: colors.textMuted }}>Aveo Group</p>
-              </div>
+              {employers.map((employer) => (
+                <div key={employer.name} style={{ textAlign: 'center' }}>
+                  <img src={employer.logo} alt={employer.name} style={{ height: '80px', objectFit: 'contain', marginBottom: '0.5rem' }} />
+                  <p style={{ fontSize: '0.9rem', color: colors.textMuted }}>{employer.name}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

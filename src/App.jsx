@@ -1829,12 +1829,12 @@ export default function AppCoaching() {
                 {
                   name: 'Client Name',
                   role: 'Accountant',
-                  text: 'Aaron's approach to translating complexity into plain English is exactly what I needed. Highly recommend.'
+                  text: "Aaron's approach to translating complexity into plain English is exactly what I needed. Highly recommend."
                 },
                 {
                   name: 'Client Name',
                   role: 'Finance Analyst',
-                  text: 'I went from feeling overwhelmed to actually understanding my workflow. Aaron teaches in a way that sticks.'
+                  text: "I went from feeling overwhelmed to actually understanding my workflow. Aaron teaches in a way that sticks."
                 },
                 {
                   name: 'Client Name',
@@ -1881,12 +1881,12 @@ export default function AppCoaching() {
                 {
                   name: 'Client Name',
                   role: 'Accountant',
-                  text: 'Aaron's approach to translating complexity into plain English is exactly what I needed. Highly recommend.'
+                  text: "Aaron's approach to translating complexity into plain English is exactly what I needed. Highly recommend."
                 },
                 {
                   name: 'Client Name',
                   role: 'Finance Analyst',
-                  text: 'I went from feeling overwhelmed to actually understanding my workflow. Aaron teaches in a way that sticks.'
+                  text: "I went from feeling overwhelmed to actually understanding my workflow. Aaron teaches in a way that sticks."
                 },
                 {
                   name: 'Client Name',

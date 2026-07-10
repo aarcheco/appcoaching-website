@@ -1443,7 +1443,7 @@ export default function AppCoaching() {
               marginTop: '2rem'
             }}>
               {blogPosts
-                .filter((post) => selectedCategory === 'Everything Else' || post.category === selectedCategory)
+                .filter((post) => selectedCategory === 'Everything Else' || (post.categories && post.categories.includes(selectedCategory)))
                 .map((post) => (
                 <button key={post.id} onClick={() => {
                   const slug = generateSlug(post.title);
@@ -1476,7 +1476,7 @@ export default function AppCoaching() {
                   </p>
                 </button>
               ))}
-              {blogPosts.filter((post) => selectedCategory === 'Everything Else' || post.category === selectedCategory).length === 0 && (
+              {blogPosts.filter((post) => selectedCategory === 'Everything Else' || (post.categories && post.categories.includes(selectedCategory))).length === 0 && (
                 <div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '2rem' }}>
                   <p style={{ color: colors.textMuted }}>No posts in this category yet. Check back soon!</p>
                 </div>

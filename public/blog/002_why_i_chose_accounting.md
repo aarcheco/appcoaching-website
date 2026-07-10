@@ -3,11 +3,11 @@ title: "Why I Chose Accounting: The Journey from Rule-Follower to Translator"
 date: 2026-07-10
 id: 002
 excerpt: From my mum's exactness to PwC's pressure to Coronis's transformation—how accounting taught me that the real value isn't processing numbers, it's making them make sense to people
-heroImage: https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80
-category: Accounting & Finance Career
+heroImage: https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80
+categories: ["Accounting & Finance Career", "Business Finance"]
 ---
 
-<img src="/aaron-hero.jpg" alt="Aaron" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0;">
+<img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80" alt="Professional Development" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0;">
 
 <blockquote style="background: linear-gradient(135deg, #00FF00 0%, rgba(255, 255, 255, 0.9) 100%); border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📖 PAUL's Quick Read</strong>

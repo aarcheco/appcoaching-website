@@ -4,10 +4,10 @@ date: 2026-07-08
 id: 001
 excerpt: From my mom's career to building forecasts that drive business decisions—how I discovered the power of efficient paths from problems to solutions
 heroImage: /aaron-archive-10.jpg
-category: career
+categories: ["Accounting & Finance Career"]
 ---
 
-<img src="/aaron-hero.jpg" alt="Aaron" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0;">
+<img src="/aaron-archive-10.jpg" alt="Aaron" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0;">
 
 <blockquote style="background: linear-gradient(135deg, #00FF00 0%, rgba(255, 255, 255, 0.9) 100%); border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📖 PAUL's Quick Read</strong>

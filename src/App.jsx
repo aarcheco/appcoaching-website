@@ -2271,9 +2271,9 @@ export default function AppCoaching() {
                       );
                     })}
                   {blogPosts.filter((post) => {
-                    const categoryMatch = selectedCategory === '' || (post.categories && post.categories.includes(selectedCategory));
+                    const tagMatch = selectedTag === '' || (post.tags && post.tags.includes(selectedTag));
                     const searchMatch = blogSearchTerm === '' || post.title.toLowerCase().includes(blogSearchTerm.toLowerCase());
-                    return categoryMatch && searchMatch;
+                    return tagMatch && searchMatch;
                   }).length === 0 && (
                     <div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '2rem', color: colors.textMuted }}>
                       <p>No snippets match your filters.</p>

@@ -21,6 +21,13 @@ tags: ["Financial Literacy"]
 }
 </script>
 
+<blockquote style="background: linear-gradient(135deg, #00FF00 0%, rgba(255, 255, 255, 0.9) 100%); border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
+<strong>📖 PAUL's Quick Read</strong>
+<p>Finance coaching isn't exclusive—it's clarity about your money in one conversation. Book under $100 and see what you've been missing.</p>
+</blockquote>
+
+<img src="https://images.unsplash.com/photo-1634728565822-b5b4b7169c6a?w=1200&q=80" alt="Person thinking about financial decisions and money management" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0; display: block;">
+
 <details style="background: #f7f9fc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; margin: 2rem 0;">
   <summary style="cursor: pointer; font-weight: 700; font-size: 1.1rem; color: #1f3a7d;">📑 Table of Contents</summary>
   <ul style="margin-top: 1rem; line-height: 1.8; padding-left: 1.5rem;">
@@ -31,13 +38,6 @@ tags: ["Financial Literacy"]
     <li><a href="#what-comes-next">What Comes Next</a></li>
   </ul>
 </details>
-
-<img src="https://images.unsplash.com/photo-1634728565822-b5b4b7169c6a?w=1200&q=80" alt="Person thinking about financial decisions and money management" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0; display: block;">
-
-<blockquote style="background: linear-gradient(135deg, #00FF00 0%, rgba(255, 255, 255, 0.9) 100%); border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
-<strong>📖 PAUL's Quick Read</strong>
-<p>Finance coaching isn't exclusive—it's clarity about your money in one conversation. Book under $100 and see what you've been missing.</p>
-</blockquote>
 
 <h2 id="what-finance-coaching-is">What Finance Coaching Actually Is</h2>
 
@@ -111,6 +111,11 @@ tags: ["Financial Literacy"]
 
 <p>Let's do it.</p>
 
+<blockquote style="background: linear-gradient(135deg, #1f3a7d 0%, rgba(42, 79, 168, 0.1) 100%); border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #1f3a7d;">
+<strong>⬆️ PAUL's LevelUp</strong>
+<p>Finance coaching isn't exclusive or expensive—it's clarity about your money. Ask yourself three things: Do you know your cash balance trending? Your loan obligations? How your money grows in the ASX vs. a savings account? If "no" or "unsure" to any of these, book a session under $100. One hour. That's all it takes to see what you've been missing.</p>
+</blockquote>
+
 <section style="background: linear-gradient(135deg, #1f3a7d 0%, #2a4fa8 100%); color: white; border-radius: 12px; padding: 2.5rem; margin: 3rem 0; text-align: center;">
   <h3 style="color: white; margin-top: 0;">Ready for Your Lightbulb Moment?</h3>
   
@@ -121,8 +126,3 @@ tags: ["Financial Literacy"]
     <a href="/services" style="border: 2px solid #00FF41; color: #00FF41; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; display: inline-block;">Learn More About Coaching</a>
   </div>
 </section>
-
-<blockquote style="background: linear-gradient(135deg, #1f3a7d 0%, rgba(42, 79, 168, 0.1) 100%); border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #1f3a7d;">
-<strong>⬆️ PAUL's LevelUp</strong>
-<p>Finance coaching isn't exclusive or expensive—it's clarity about your money. Ask yourself three things: Do you know your cash balance trending? Your loan obligations? How your money grows in the ASX vs. a savings account? If "no" or "unsure" to any of these, book a session under $100. One hour. That's all it takes to see what you've been missing.</p>
-</blockquote>

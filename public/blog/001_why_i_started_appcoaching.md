@@ -23,7 +23,7 @@ tags: ["Career Coaching", "Business AI"]
 
 <blockquote style="background: linear-gradient(135deg, #00FF00 0%, rgba(255, 255, 255, 0.9) 100%); border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📖 PAUL's Quick Read</strong>
-<p>Aaron is a Brisbane-based finance professional who specializes in using systems and tools to move you from problem (business or personal) to insight and outcome via the most efficient path. Across his career at Flight Centre, PwC, Aveo, and others, he's built financial models, dashboards, and systems that cut through noise and eliminate manual work. His real superpower: translating complex financial information and data into plain, simple English that clients and decision-makers can actually understand and act on. Through APP Coaching, he's now scaling this expertise—helping smart people close the gap between confusion and confidence.</p>
+<p>Smart people solve problems inefficiently not because they're incapable, but because nobody showed them the efficient path. AI and modern tools have collapsed the distance from problem to solution—but most people don't know this is possible. That realization led to APP Coaching: helping smart people find the shortest, smartest paths from confusion to clarity.</p>
 </blockquote>
 
 <img src="/aaron-archive-10.jpg" alt="Aaron Pacheco, AI and Excel coach, discussing his journey to building APP Coaching - a platform offering Excel mastery, AI adoption strategy, and finance coaching for professionals seeking clarity and self-sufficiency" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0; display: block;">

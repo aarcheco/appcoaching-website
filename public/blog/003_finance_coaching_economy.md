@@ -119,7 +119,7 @@ tags: ["Financial Literacy"]
 <section style="background: linear-gradient(135deg, #1f3a7d 0%, #2a4fa8 100%); color: white; border-radius: 12px; padding: 2.5rem; margin: 3rem 0; text-align: center;">
   <h3 style="color: white; margin-top: 0;">Ready for Your Lightbulb Moment?</h3>
   
-  <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 1.5rem;">Book a personal finance session for under $100. One conversation. See how clarity feels.</p>
+  <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 1.5rem; color: white;">Book a personal finance session for under $100. One conversation. See how clarity feels.</p>
   
   <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
     <a href="https://cal.com/app-coaching-xcgvda" style="background: #00FF41; color: #1f3a7d; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; display: inline-block;">Book Your Session</a>

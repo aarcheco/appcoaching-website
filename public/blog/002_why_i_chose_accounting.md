@@ -23,7 +23,7 @@ tags: ["Career Coaching", "Business Finance"]
 
 <blockquote style="background: linear-gradient(135deg, #00FF00 0%, rgba(255, 255, 255, 0.9) 100%); border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📖 PAUL's Quick Read</strong>
-<p>Aaron is a Brisbane-based finance professional who specializes in using systems and tools to move you from problem (business or personal) to insight and outcome via the most efficient path. Across his career at Flight Centre, PwC, Aveo, and others, he's built financial models, dashboards, and systems that cut through noise and eliminate manual work. His real superpower: translating complex financial information and data into plain, simple English that clients and decision-makers can actually understand and act on. Through APP Coaching, he's now scaling this expertise—helping smart people close the gap between confusion and confidence.</p>
+<p>Accounting taught Aaron that processing numbers is only half the job—the real value is translating what those numbers mean into clarity that drives decisions. From rule-follower to translator across Flight Centre, PwC, and beyond, he discovered that most smart people never learn this skill. Now he's teaching it.</p>
 </blockquote>
 
 <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80" alt="Professional accountant demonstrating Excel efficiency techniques and financial analysis methods - career evolution in accounting and finance coaching for professionals" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0; display: block;">

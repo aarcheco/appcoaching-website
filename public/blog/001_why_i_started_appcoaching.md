@@ -5,7 +5,7 @@ id: 001
 excerpt: From my mom's career to building forecasts that drive business decisions—how I discovered the power of efficient paths from problems to solutions
 heroImage: /aaron-archive-10.jpg
 categories: ["Accounting & Finance Career"]
-tags: ["Career Growth", "Business Systems", "Efficiency", "AI Adoption"]
+tags: ["Career Coaching", "Business AI"]
 ---
 
 <!-- Schema Markup for Google Rich Snippets -->
@@ -185,20 +185,3 @@ tags: ["Career Growth", "Business Systems", "Efficiency", "AI Adoption"]
 - CTAs Clicked: 1 (discovery call or services)
 
 ====== END METADATA ======
--->
-
----
-
-## About the Author
-
-I'm Aaron Pacheco, a Brisbane-based finance professional who specializes in systems, efficiency, and translating complex information into actionable clarity. Over 10+ years across accounting, finance, and operations at PwC, Flight Centre, Coronis, and others, I've built financial models, dashboards, and workflows that cut through noise and eliminate manual work. My real superpower: taking complex financial and operational information and making it understandable so people can actually act on it. Through APP Coaching, I'm now helping smart professionals close the gap between confusion and confidence.
-
-**[Explore my coaching →](/services)**
-
----
-
-## More From This Series
-
-Explore other posts on career growth and efficiency:
-
-<!-- Website will auto-populate related posts based on tags and recency -->

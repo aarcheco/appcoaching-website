@@ -5,7 +5,7 @@ id: 003
 excerpt: "Most people think finance coaching is for wealthy business owners. It's not. Here's why everyone deserves at least one conversation about their money."
 heroImage: https://images.unsplash.com/photo-1634728565822-b5b4b7169c6a?w=1200&q=80
 categories: ["Personal Finance", "Finance Coaching"]
-tags: ["Finance Coaching", "Financial Clarity", "Money Management", "Personal Wealth"]
+tags: ["Financial Literacy"]
 ---
 
 <!-- Schema Markup for Google Rich Snippets -->
@@ -139,33 +139,6 @@ Let's do it.
 
 Finance coaching isn't exclusive or expensive—it's clarity about your money. Ask yourself three things: Do you know your cash balance trending? Your loan obligations? How your money grows in the ASX vs. a savings account? If "no" or "unsure" to any of these, book a session under $100. One hour. That's all it takes to see what you've been missing.
 
----
-
-<section style="background: linear-gradient(135deg, #1f3a7d 0%, #2a4fa8 100%); color: white; border-radius: 12px; padding: 2.5rem; margin: 3rem 0; text-align: center;">
-  <h3 style="color: white; margin-top: 0;">Ready for Your Lightbulb Moment?</h3>
-  
-  <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 1.5rem;">Book a personal finance session for under $100. One conversation. See how clarity feels.</p>
-  
-  <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-    <a href="https://cal.com/app-coaching-xcgvda" style="background: #00FF41; color: #1f3a7d; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; display: inline-block;">Book Your Session</a>
-    <a href="/services" style="border: 2px solid #00FF41; color: #00FF41; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; display: inline-block;">Learn More About Coaching</a>
-  </div>
-</section>
-
----
-
-## About the Author
-
-I'm Aaron Pacheco, a finance analyst and business coach based in Brisbane. Over 10+ years across accounting, finance, and operations at companies like PwC, Flight Centre, and Telstra, I've learned one thing: confusion is expensive. Now I help young professionals and business owners move from confused → clear → confident about their money. I offer personal finance coaching sessions starting under $100 because everyone deserves clarity.
-
-**[Explore my coaching →](/services)**
-
----
-
-## More From This Series
-
-Explore other posts on personal finance and financial clarity:
-
 <!--
 ====== TECHNICAL SEO METADATA ======
 
@@ -203,4 +176,3 @@ Explore other posts on personal finance and financial clarity:
 - CTAs Clicked: 1 (booking or services)
 
 ====== END METADATA ======
--->

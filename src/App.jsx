@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import ReactMarkdown from 'react-markdown';
 
 // ===== PAGE CONFIGURATIONS FOR SEO (Static, outside component) =====
 const organizationSchema = {
@@ -178,7 +179,7 @@ export default function AppCoaching() {
   const [blogPosts, setBlogPosts] = useState([]);
   const [selectedBlogPost, setSelectedBlogPost] = useState(null);
   const [blogLoading, setBlogLoading] = useState(false);
-  const [selectedTag, setSelectedTag] = useState('');
+  const [selectedTags, setSelectedTags] = useState([]);
   const [blogViewMode, setBlogViewMode] = useState('post');
   const [blogSnippetType, setBlogSnippetType] = useState('');
   const [blogSearchTerm, setBlogSearchTerm] = useState('');
@@ -2040,7 +2041,22 @@ export default function AppCoaching() {
               lineHeight: '1.8',
               color: colors.textDark,
               fontFamily: "'Inter', sans-serif"
-            }} dangerouslySetInnerHTML={{ __html: post.content }} />
+            }}>
+              <ReactMarkdown
+                allowHtml={true}
+                components={{
+                  h2: ({ node, ...props }) => <h2 style={{ color: colors.navy, fontSize: '1.6rem', fontWeight: 700, marginTop: '2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif" }} {...props} />,
+                  h3: ({ node, ...props }) => <h3 style={{ color: colors.navy, fontSize: '1.4rem', fontWeight: 700, marginTop: '2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif" }} {...props} />,
+                  p: ({ node, ...props }) => <p style={{ marginBottom: '1.5rem' }} {...props} />,
+                  strong: ({ node, ...props }) => <strong style={{ fontWeight: 700, color: colors.darkNavy, background: 'rgba(118, 215, 0, 0.2)', padding: '0.2rem 0.4rem', borderRadius: '3px' }} {...props} />,
+                  em: ({ node, ...props }) => <em style={{ fontStyle: 'italic', color: colors.navy, textDecoration: 'underline', textDecorationColor: colors.limeGreen, textDecorationThickness: '2px', textUnderlineOffset: '2px' }} {...props} />,
+                  hr: ({ node, ...props }) => <hr style={{ border: 'none', borderTop: `2px solid ${colors.borderGray}`, margin: '2.5rem 0' }} {...props} />,
+                  blockquote: ({ node, ...props }) => <blockquote style={{ margin: '2rem 0' }} {...props} />
+                }}
+              >
+                {post.content}
+              </ReactMarkdown>
+            </div>
 
             {/* About the Author section */}
             <div style={{
@@ -2292,36 +2308,71 @@ export default function AppCoaching() {
               </div>
             )}
 
-            {/* Tag filter */}
+            {/* Tag filter - Checkboxes */}
             <div>
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', marginBottom: '0.5rem', color: colors.darkNavy }}>
+              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', marginBottom: '0.8rem', color: colors.darkNavy }}>
                 Filter by Tag:
               </label>
-              <select
-                value={selectedTag}
-                onChange={(e) => setSelectedTag(e.target.value)}
-                style={{
-                  width: '100%',
-                  padding: '0.6rem 0.75rem',
-                  fontSize: '0.9rem',
-                  borderRadius: '6px',
-                  border: `1px solid ${colors.borderGray}`,
-                  background: 'white',
-                  color: colors.darkNavy,
-                  fontWeight: '600',
-                  cursor: 'pointer',
-                  fontFamily: "'Poppins', sans-serif"
-                }}
-              >
-                <option value="">All Tags</option>
-                <option value="Career Growth">Career Growth</option>
-                <option value="Business Systems">Business Systems</option>
-                <option value="Efficiency">Efficiency</option>
-                <option value="AI Adoption">AI Adoption</option>
-                <option value="Accounting">Accounting</option>
-                <option value="Career Evolution">Career Evolution</option>
-                <option value="Finance Skills">Finance Skills</option>
-              </select>
+              <div style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                gap: '1rem'
+              }}>
+                {blogPosts && blogPosts.length > 0 && (
+                  <>
+                    {/* Get all unique tags from posts */}
+                    {Array.from(new Set(blogPosts.flatMap(post => post.tags || []))).sort().map((tag) => (
+                      <label key={tag} style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '0.5rem',
+                        fontSize: '0.9rem',
+                        cursor: 'pointer',
+                        userSelect: 'none'
+                      }}>
+                        <input
+                          type="checkbox"
+                          checked={selectedTags.includes(tag)}
+                          onChange={(e) => {
+                            if (e.target.checked) {
+                              setSelectedTags([...selectedTags, tag]);
+                            } else {
+                              setSelectedTags(selectedTags.filter(t => t !== tag));
+                            }
+                          }}
+                          style={{
+                            width: '16px',
+                            height: '16px',
+                            cursor: 'pointer',
+                            accentColor: colors.limeGreen
+                          }}
+                        />
+                        <span style={{ color: colors.darkNavy, fontWeight: '500' }}>
+                          {tag}
+                        </span>
+                      </label>
+                    ))}
+                  </>
+                )}
+              </div>
+              {selectedTags.length > 0 && (
+                <button
+                  onClick={() => setSelectedTags([])}
+                  style={{
+                    marginTop: '0.8rem',
+                    fontSize: '0.85rem',
+                    color: colors.limeGreen,
+                    background: 'none',
+                    border: 'none',
+                    cursor: 'pointer',
+                    fontWeight: '600',
+                    padding: '0',
+                    textDecoration: 'underline'
+                  }}
+                >
+                  Clear Filters
+                </button>
+              )}
             </div>
           </div>
 
@@ -2387,7 +2438,7 @@ export default function AppCoaching() {
                 }}>
                   {blogPosts
                     .filter((post) => {
-                      const tagMatch = !selectedTag || selectedTag === '' || (Array.isArray(post.tags) && post.tags.some(tag => tag.trim() === selectedTag.trim()));
+                      const tagMatch = selectedTags.length === 0 || (Array.isArray(post.tags) && post.tags.some(tag => selectedTags.includes(tag.trim())));
                       const searchMatch = blogSearchTerm === '' || post.title.toLowerCase().includes(blogSearchTerm.toLowerCase()) || post.excerpt.toLowerCase().includes(blogSearchTerm.toLowerCase());
                       return tagMatch && searchMatch;
                     })
@@ -2453,7 +2504,7 @@ export default function AppCoaching() {
                     </button>
                   ))}
                   {blogPosts.filter((post) => {
-                    const tagMatch = selectedTag === '' || (post.tags && post.tags.includes(selectedTag));
+                    const tagMatch = selectedTags.length === 0 || (post.tags && post.tags.some(tag => selectedTags.includes(tag)));
                     const searchMatch = blogSearchTerm === '' || post.title.toLowerCase().includes(blogSearchTerm.toLowerCase()) || post.excerpt.toLowerCase().includes(blogSearchTerm.toLowerCase());
                     return tagMatch && searchMatch;
                   }).length === 0 && (
@@ -2474,7 +2525,7 @@ export default function AppCoaching() {
                 }}>
                   {blogPosts
                     .filter((post) => {
-                      const tagMatch = !selectedTag || selectedTag === '' || (Array.isArray(post.tags) && post.tags.some(tag => tag.trim() === selectedTag.trim()));
+                      const tagMatch = selectedTags.length === 0 || (Array.isArray(post.tags) && post.tags.some(tag => selectedTags.includes(tag.trim())));
                       const searchMatch = blogSearchTerm === '' || post.title.toLowerCase().includes(blogSearchTerm.toLowerCase());
                       return tagMatch && searchMatch;
                     })
@@ -2650,7 +2701,7 @@ export default function AppCoaching() {
                       );
                     })}
                   {blogPosts.filter((post) => {
-                    const tagMatch = selectedTag === '' || (post.tags && post.tags.includes(selectedTag));
+                    const tagMatch = selectedTags.length === 0 || (post.tags && post.tags.some(tag => selectedTags.includes(tag)));
                     const searchMatch = blogSearchTerm === '' || post.title.toLowerCase().includes(blogSearchTerm.toLowerCase());
                     return tagMatch && searchMatch;
                   }).length === 0 && (

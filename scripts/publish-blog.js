@@ -12,8 +12,12 @@ const MANIFEST_ONLY = process.argv.includes('--manifest-only');
 console.log('📝 Generating blog manifest...');
 
 try {
-  // Read all markdown files from blog directory
-  const files = fs.readdirSync(BLOG_DIR).filter(file => file.endsWith('.md'));
+  // Read all markdown files from blog directory (exclude template files)
+  const files = fs.readdirSync(BLOG_DIR).filter(file =>
+    file.endsWith('.md') &&
+    !file.includes('TEMPLATE') &&
+    !file.includes('template')
+  );
 
   if (files.length === 0) {
     console.log('⚠️  No markdown files found in public/blog/');

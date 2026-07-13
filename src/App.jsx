@@ -1930,16 +1930,17 @@ export default function AppCoaching() {
           }}>
             <button onClick={() => {
               setSelectedBlogPost(null);
-              window.location.hash = 'blog';
+              navigateTo('blog');
               window.scrollTo(0, 0);
             }} style={{
-              background: 'transparent',
+              background: `linear-gradient(120deg, ${colors.limeGreen} 0%, rgba(118, 215, 0, 0.2) 100%)`,
               border: 'none',
-              color: colors.limeGreen,
+              color: colors.darkNavy,
               fontSize: '1rem',
               fontWeight: '600',
               cursor: 'pointer',
-              padding: 0,
+              padding: '0.5rem 1rem',
+              borderRadius: '6px',
               fontFamily: "'Poppins', sans-serif"
             }}>
               ← Back to Blog

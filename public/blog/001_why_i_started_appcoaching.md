@@ -21,24 +21,24 @@ tags: ["Career Coaching", "Business AI"]
 }
 </script>
 
-<details style="background: #f7f9fc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; margin: 2rem 0;">
-  <summary style="cursor: pointer; font-weight: 700; font-size: 1.1rem; color: #1f3a7d;">📑 Table of Contents</summary>
-  <ul style="margin-top: 1rem; line-height: 1.8; padding-left: 1.5rem;">
-    <li><a href="#how-i-got-here">How I Got Here</a></li>
-    <li><a href="#the-path-between-point-a-and-point-b">The Path Between Point A and Point B</a></li>
-    <li><a href="#the-problem-i-couldnt-ignore">The Problem I Couldn't Ignore</a></li>
-    <li><a href="#then-ai-happened">Then AI Happened, and Everything Changed</a></li>
-    <li><a href="#heres-what-app-coaching-actually-is">So Here's What APP Coaching Actually Is</a></li>
-    <li><a href="#why-im-doing-this-now">Why I'm Doing This Now</a></li>
-  </ul>
-</details>
-
-<img src="/aaron-archive-10.jpg" alt="Aaron Pacheco, AI and Excel coach, discussing his journey to building APP Coaching - a platform offering Excel mastery, AI adoption strategy, and finance coaching for professionals seeking clarity and self-sufficiency" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0; display: block;">
-
 <blockquote style="background: linear-gradient(135deg, #00FF00 0%, rgba(255, 255, 255, 0.9) 100%); border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📖 PAUL's Quick Read</strong>
 <p>Aaron is a Brisbane-based finance professional who specializes in using systems and tools to move you from problem (business or personal) to insight and outcome via the most efficient path. Across his career at Flight Centre, PwC, Aveo, and others, he's built financial models, dashboards, and systems that cut through noise and eliminate manual work. His real superpower: translating complex financial information and data into plain, simple English that clients and decision-makers can actually understand and act on. Through APP Coaching, he's now scaling this expertise—helping smart people close the gap between confusion and confidence.</p>
 </blockquote>
+
+<img src="/aaron-archive-10.jpg" alt="Aaron Pacheco, AI and Excel coach, discussing his journey to building APP Coaching - a platform offering Excel mastery, AI adoption strategy, and finance coaching for professionals seeking clarity and self-sufficiency" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0; display: block;">
+
+<details style="background: #f7f9fc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; margin: 2rem 0;">
+  <summary style="cursor: pointer; font-weight: 700; font-size: 1.1rem; color: #1f3a7d;">📑 Table of Contents</summary>
+  <ul style="margin-top: 1rem; line-height: 1.8; padding-left: 1.5rem;">
+    <li><a href="#how-i-got-here" style="color: #1f3a7d; font-weight: 600;">How I Got Here</a></li>
+    <li><a href="#the-path-between-point-a-and-point-b" style="color: #1f3a7d; font-weight: 600;">The Path Between Point A and Point B</a></li>
+    <li><a href="#the-problem-i-couldnt-ignore" style="color: #1f3a7d; font-weight: 600;">The Problem I Couldn't Ignore</a></li>
+    <li><a href="#then-ai-happened" style="color: #1f3a7d; font-weight: 600;">Then AI Happened, and Everything Changed</a></li>
+    <li><a href="#heres-what-app-coaching-actually-is" style="color: #1f3a7d; font-weight: 600;">So Here's What APP Coaching Actually Is</a></li>
+    <li><a href="#why-im-doing-this-now" style="color: #1f3a7d; font-weight: 600;">Why I'm Doing This Now</a></li>
+  </ul>
+</details>
 
 <h2 id="how-i-got-here">How I Got Here</h2>
 
@@ -86,7 +86,7 @@ tags: ["Career Coaching", "Business AI"]
 
 <p>Building tools that actually <em>work alongside</em> human thinking instead of replacing it.</p>
 
-<p>And I realized something that scared me a little: <strong>Most people have absolutely no idea this is possible. Or how little it costs in time and money to roll this out.</strong> The accountants I know are still drowning in manual processes. Business owners are still guessing at their numbers. Finance teams are still wasting 16+ hours per week on things that could be automated with <a href="/services" style="color: #00FF00; text-decoration: underline; font-weight: 600;">AI tools that cost a fraction of what they're losing</a> in productivity.</p>
+<p>And I realized something that scared me a little: <strong>Most people have absolutely no idea this is possible. Or how little it costs in time and money to roll this out.</strong> The accountants I know are still drowning in manual processes. Business owners are still guessing at their numbers. Finance teams are still wasting 16+ hours per week on things that could be automated with <a href="/services" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">AI tools that cost a fraction of what they're losing</a> in productivity.</p>
 
 <p>And I'm watching AI solve all of this.</p>
 
@@ -94,11 +94,11 @@ tags: ["Career Coaching", "Business AI"]
 
 <p>It's not me teaching you Excel. It's not me telling you to use AI. It's not me being the expert while you sit and listen.</p>
 
-<p>It's <strong>working together</strong> to uplift your knowledge. <a href="/services" style="color: #00FF00; text-decoration: underline; font-weight: 600;">Excel. AI. Apps.</a> All of it.</p>
+<p>It's <strong>working together</strong> to uplift your knowledge. <a href="/services" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Excel. AI. Apps.</a> All of it.</p>
 
 <p>The goal isn't to make you dependent on me. It's to work <em>with</em> you to build insights and outputs in the most efficient way possible. Then step back and let you become <em>self-sufficient</em> with it.</p>
 
-<p><strong>And this works for both your business and your personal life.</strong> I use AI for my personal finance tracking, real estate investment analysis, and building apps for my own use. So whether you're <a href="/services" style="color: #00FF00; text-decoration: underline; font-weight: 600;">analyzing your business margins or building a personal investment dashboard</a>—I've walked this path, I've built these tools, and I can help you do the same.</p>
+<p><strong>And this works for both your business and your personal life.</strong> I use AI for my personal finance tracking, real estate investment analysis, and building apps for my own use. So whether you're <a href="/services" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">analyzing your business margins or building a personal investment dashboard</a>—I've walked this path, I've built these tools, and I can help you do the same.</p>
 
 <p>It's about finding the shortest, smartest path from your problem to your solution.</p>
 

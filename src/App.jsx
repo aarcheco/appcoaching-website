@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import ReactMarkdown from 'react-markdown';
 
 // ===== PAGE CONFIGURATIONS FOR SEO (Static, outside component) =====
 const organizationSchema = {
@@ -2041,22 +2040,21 @@ export default function AppCoaching() {
               lineHeight: '1.8',
               color: colors.textDark,
               fontFamily: "'Inter', sans-serif"
-            }}>
-              <ReactMarkdown
-                allowHtml={true}
-                components={{
-                  h2: ({ node, children, ...props }) => <h2 style={{ color: colors.navy, fontSize: '1.6rem', fontWeight: 700, marginTop: '2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif" }} {...props}>{children}</h2>,
-                  h3: ({ node, children, ...props }) => <h3 style={{ color: colors.navy, fontSize: '1.4rem', fontWeight: 700, marginTop: '2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif" }} {...props}>{children}</h3>,
-                  p: ({ node, children, ...props }) => <p style={{ marginBottom: '1.5rem' }} {...props}>{children}</p>,
-                  strong: ({ node, children, ...props }) => <strong style={{ fontWeight: 700, color: colors.darkNavy, background: 'rgba(118, 215, 0, 0.2)', padding: '0.2rem 0.4rem', borderRadius: '3px' }} {...props}>{children}</strong>,
-                  em: ({ node, children, ...props }) => <em style={{ fontStyle: 'italic', color: colors.navy, textDecoration: 'underline', textDecorationColor: colors.limeGreen, textDecorationThickness: '2px', textUnderlineOffset: '2px' }} {...props}>{children}</em>,
-                  hr: () => <hr style={{ border: 'none', borderTop: `2px solid ${colors.borderGray}`, margin: '2.5rem 0' }} />,
-                  blockquote: ({ node, children, ...props }) => <blockquote style={{ margin: '2rem 0' }} {...props}>{children}</blockquote>
-                }}
-              >
-                {post.content}
-              </ReactMarkdown>
-            </div>
+            }} dangerouslySetInnerHTML={{ __html: (() => {
+              // Convert markdown headings to HTML while preserving inline HTML
+              let html = post.content;
+              // Convert ### headings to <h3>
+              html = html.replace(/^### (.+)$/gm, (match, text) => {
+                return `<h3 style="color: ${colors.navy}; font-size: 1.4rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; font-family: 'Poppins', sans-serif;">${text}</h3>`;
+              });
+              // Convert ## headings to <h2>
+              html = html.replace(/^## (.+)$/gm, (match, text) => {
+                return `<h2 style="color: ${colors.navy}; font-size: 1.6rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; font-family: 'Poppins', sans-serif;">${text}</h2>`;
+              });
+              // Convert --- to <hr>
+              html = html.replace(/^---$/gm, `<hr style="border: none; border-top: 2px solid ${colors.borderGray}; margin: 2.5rem 0;" />`);
+              return html;
+            })() }} />
 
             {/* About the Author section */}
             <div style={{

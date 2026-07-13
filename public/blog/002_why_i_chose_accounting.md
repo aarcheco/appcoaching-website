@@ -21,25 +21,25 @@ tags: ["Career Coaching", "Business Finance"]
 }
 </script>
 
-<details style="background: #f7f9fc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; margin: 2rem 0;">
-  <summary style="cursor: pointer; font-weight: 700; font-size: 1.1rem; color: #1f3a7d;">📑 Table of Contents</summary>
-  <ul style="margin-top: 1rem; line-height: 1.8; padding-left: 1.5rem;">
-    <li><a href="#my-mum-was-an-accountant">My Mum Was an Accountant</a></li>
-    <li><a href="#high-school-the-click-moment">High School: The Click Moment</a></li>
-    <li><a href="#university-taught-theory-pwc-taught-speed">University Taught Theory. PwC Taught Speed.</a></li>
-    <li><a href="#flight-centre-eyes-opened">Flight Centre: Eyes Opened</a></li>
-    <li><a href="#coronis-changed-everything">Coronis Changed Everything</a></li>
-    <li><a href="#the-mentor-who-changed-my-perspective">The Mentor Who Changed My Perspective</a></li>
-    <li><a href="#the-career-arc-i-didnt-see-coming">The Career Arc I Didn't See Coming</a></li>
-  </ul>
-</details>
-
-<img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80" alt="Professional accountant demonstrating Excel efficiency techniques and financial analysis methods - career evolution in accounting and finance coaching for professionals" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0; display: block;">
-
 <blockquote style="background: linear-gradient(135deg, #00FF00 0%, rgba(255, 255, 255, 0.9) 100%); border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📖 PAUL's Quick Read</strong>
 <p>Aaron is a Brisbane-based finance professional who specializes in using systems and tools to move you from problem (business or personal) to insight and outcome via the most efficient path. Across his career at Flight Centre, PwC, Aveo, and others, he's built financial models, dashboards, and systems that cut through noise and eliminate manual work. His real superpower: translating complex financial information and data into plain, simple English that clients and decision-makers can actually understand and act on. Through APP Coaching, he's now scaling this expertise—helping smart people close the gap between confusion and confidence.</p>
 </blockquote>
+
+<img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80" alt="Professional accountant demonstrating Excel efficiency techniques and financial analysis methods - career evolution in accounting and finance coaching for professionals" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0; display: block;">
+
+<details style="background: #f7f9fc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; margin: 2rem 0;">
+  <summary style="cursor: pointer; font-weight: 700; font-size: 1.1rem; color: #1f3a7d;">📑 Table of Contents</summary>
+  <ul style="margin-top: 1rem; line-height: 1.8; padding-left: 1.5rem;">
+    <li><a href="#my-mum-was-an-accountant" style="color: #1f3a7d; font-weight: 600;">My Mum Was an Accountant</a></li>
+    <li><a href="#high-school-the-click-moment" style="color: #1f3a7d; font-weight: 600;">High School: The Click Moment</a></li>
+    <li><a href="#university-taught-theory-pwc-taught-speed" style="color: #1f3a7d; font-weight: 600;">University Taught Theory. PwC Taught Speed.</a></li>
+    <li><a href="#flight-centre-eyes-opened" style="color: #1f3a7d; font-weight: 600;">Flight Centre: Eyes Opened</a></li>
+    <li><a href="#coronis-changed-everything" style="color: #1f3a7d; font-weight: 600;">Coronis Changed Everything</a></li>
+    <li><a href="#the-mentor-who-changed-my-perspective" style="color: #1f3a7d; font-weight: 600;">The Mentor Who Changed My Perspective</a></li>
+    <li><a href="#the-career-arc-i-didnt-see-coming" style="color: #1f3a7d; font-weight: 600;">The Career Arc I Didn't See Coming</a></li>
+  </ul>
+</details>
 
 <h2 id="my-mum-was-an-accountant">My Mum Was an Accountant</h2>
 
@@ -69,7 +69,7 @@ tags: ["Career Coaching", "Business Finance"]
 
 <p>That's where I learned what actually mattered: <strong>not just being able to do accounting, but being able to do it fast.</strong></p>
 
-<p>Excel became my language. Not fancy Excel. <a href="/services" style="color: #00FF00; text-decoration: underline; font-weight: 600;">Efficient Excel.</a> Formulas that worked. Processes that scaled. Shortcuts that saved hours without sacrificing accuracy. My colleagues were grinding through manual processes. I was automating. Thinking ahead about what would break when data changed. Building models that could handle what came next.</p>
+<p>Excel became my language. Not fancy Excel. <a href="/services" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Efficient Excel.</a> Formulas that worked. Processes that scaled. Shortcuts that saved hours without sacrificing accuracy. My colleagues were grinding through manual processes. I was automating. Thinking ahead about what would break when data changed. Building models that could handle what came next.</p>
 
 <p>Efficiency stopped being a nice-to-have. It became a competitive advantage.</p>
 
@@ -79,7 +79,7 @@ tags: ["Career Coaching", "Business Finance"]
 
 <p>Then I looked around.</p>
 
-<p>Smart people everywhere. Graduates who understood financial concepts. People who should have been able to optimize their work. But they were building <a href="/services" style="color: #00FF00; text-decoration: underline; font-weight: 600;">Excel models that took twice as long as they should</a>. Models with manual steps that broke when data changed. Reconciliations done by hand. Processes that were just—inefficient.</p>
+<p>Smart people everywhere. Graduates who understood financial concepts. People who should have been able to optimize their work. But they were building <a href="/services" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Excel models that took twice as long as they should</a>. Models with manual steps that broke when data changed. Reconciliations done by hand. Processes that were just—inefficient.</p>
 
 <p>Not because they were incapable. Because they'd never been shown the efficient path.</p>
 
@@ -107,7 +107,7 @@ tags: ["Career Coaching", "Business Finance"]
 
 <p>A boss pulled me aside one day and said something that shifted everything.</p>
 
-<p>He pointed out that while my efficiency work was valuable, my actual skill—the thing that truly moved the needle for leaders and decision-makers—wasn't the spreadsheets or the speed. It was my ability to <a href="/services" style="color: #00FF00; text-decoration: underline; font-weight: 600;">take complex financial information and translate it into language people could actually understand and act on.</a></p>
+<p>He pointed out that while my efficiency work was valuable, my actual skill—the thing that truly moved the needle for leaders and decision-makers—wasn't the spreadsheets or the speed. It was my ability to <a href="/services" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">take complex financial information and translate it into language people could actually understand and act on.</a></p>
 
 <p>Processing numbers? Replaceable. Analyzing numbers? Valuable, but still replaceable.</p>
 

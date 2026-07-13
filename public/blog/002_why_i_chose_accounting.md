@@ -186,3 +186,19 @@ tags: ["Accounting", "Career Evolution", "Finance Skills", "Efficiency"]
 
 ====== END METADATA ======
 -->
+
+---
+
+## About the Author
+
+I'm Aaron Pacheco, a Brisbane-based finance professional who specializes in systems, efficiency, and translating complex information into actionable clarity. Over 10+ years across accounting, finance, and operations at PwC, Flight Centre, Coronis, and others, I've built financial models, dashboards, and workflows that cut through noise and eliminate manual work. My real superpower: taking complex financial and operational information and making it understandable so people can actually act on it. Through APP Coaching, I'm now helping smart professionals close the gap between confusion and confidence.
+
+**[Explore my coaching →](/services)**
+
+---
+
+## More From This Series
+
+Explore other posts on career growth and accounting:
+
+<!-- Website will auto-populate related posts based on tags and recency -->

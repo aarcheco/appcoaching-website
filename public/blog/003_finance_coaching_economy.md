@@ -111,7 +111,7 @@ tags: ["Financial Literacy"]
 
 <p>Let's do it.</p>
 
-<blockquote style="background: linear-gradient(135deg, #1f3a7d 0%, rgba(42, 79, 168, 0.1) 100%); border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #1f3a7d;">
+<blockquote style="background: linear-gradient(135deg, #00FF00 0%, rgba(255, 255, 255, 0.9) 100%); border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>⬆️ PAUL's LevelUp</strong>
 <p>Finance coaching isn't exclusive or expensive—it's clarity about your money. Ask yourself three things: Do you know your cash balance trending? Your loan obligations? How your money grows in the ASX vs. a savings account? If "no" or "unsure" to any of these, book a session under $100. One hour. That's all it takes to see what you've been missing.</p>
 </blockquote>
@@ -123,6 +123,6 @@ tags: ["Financial Literacy"]
   
   <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
     <a href="https://cal.com/app-coaching-xcgvda" style="background: #00FF41; color: #1f3a7d; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; display: inline-block;">Book Your Session</a>
-    <a href="/services" style="border: 2px solid #00FF41; color: #00FF41; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; display: inline-block;">Learn More About Coaching</a>
+    <a href="/services" style="border: 2px solid #00FF41; color: #1f3a7d; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; display: inline-block;">Learn More About Coaching</a>
   </div>
 </section>

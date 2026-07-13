@@ -2045,13 +2045,13 @@ export default function AppCoaching() {
               <ReactMarkdown
                 allowHtml={true}
                 components={{
-                  h2: ({ node, ...props }) => <h2 style={{ color: colors.navy, fontSize: '1.6rem', fontWeight: 700, marginTop: '2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif" }} {...props} />,
-                  h3: ({ node, ...props }) => <h3 style={{ color: colors.navy, fontSize: '1.4rem', fontWeight: 700, marginTop: '2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif" }} {...props} />,
-                  p: ({ node, ...props }) => <p style={{ marginBottom: '1.5rem' }} {...props} />,
-                  strong: ({ node, ...props }) => <strong style={{ fontWeight: 700, color: colors.darkNavy, background: 'rgba(118, 215, 0, 0.2)', padding: '0.2rem 0.4rem', borderRadius: '3px' }} {...props} />,
-                  em: ({ node, ...props }) => <em style={{ fontStyle: 'italic', color: colors.navy, textDecoration: 'underline', textDecorationColor: colors.limeGreen, textDecorationThickness: '2px', textUnderlineOffset: '2px' }} {...props} />,
-                  hr: ({ node, ...props }) => <hr style={{ border: 'none', borderTop: `2px solid ${colors.borderGray}`, margin: '2.5rem 0' }} {...props} />,
-                  blockquote: ({ node, ...props }) => <blockquote style={{ margin: '2rem 0' }} {...props} />
+                  h2: ({ node, children, ...props }) => <h2 style={{ color: colors.navy, fontSize: '1.6rem', fontWeight: 700, marginTop: '2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif" }} {...props}>{children}</h2>,
+                  h3: ({ node, children, ...props }) => <h3 style={{ color: colors.navy, fontSize: '1.4rem', fontWeight: 700, marginTop: '2rem', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif" }} {...props}>{children}</h3>,
+                  p: ({ node, children, ...props }) => <p style={{ marginBottom: '1.5rem' }} {...props}>{children}</p>,
+                  strong: ({ node, children, ...props }) => <strong style={{ fontWeight: 700, color: colors.darkNavy, background: 'rgba(118, 215, 0, 0.2)', padding: '0.2rem 0.4rem', borderRadius: '3px' }} {...props}>{children}</strong>,
+                  em: ({ node, children, ...props }) => <em style={{ fontStyle: 'italic', color: colors.navy, textDecoration: 'underline', textDecorationColor: colors.limeGreen, textDecorationThickness: '2px', textUnderlineOffset: '2px' }} {...props}>{children}</em>,
+                  hr: () => <hr style={{ border: 'none', borderTop: `2px solid ${colors.borderGray}`, margin: '2.5rem 0' }} />,
+                  blockquote: ({ node, children, ...props }) => <blockquote style={{ margin: '2rem 0' }} {...props}>{children}</blockquote>
                 }}
               >
                 {post.content}

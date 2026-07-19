@@ -124,6 +124,11 @@ tags: ["No-Code", "AI Website", "Web Development"]
 
 <h2 id="easy-path">Easy: Squarespace & Durable (Under $30/month)</h2>
 
+<div style="display: flex; gap: 0.75rem; margin: 1rem 0 1.5rem 0; flex-wrap: wrap;">
+  <span style="background: #1f3a7d; color: white; padding: 0.4rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.85rem;">🤖 Durable</span>
+  <span style="background: #000000; color: white; padding: 0.4rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.85rem;">⬛ Squarespace</span>
+</div>
+
 <p><strong>How to use AI to build:</strong> <a href="https://durable.com/ai-website-builder" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Durable's AI literally reads English and builds your site.</a> You describe your business in natural sentences: "I'm a finance coach. I charge $100/session. I want a booking form." Durable generates the site. That's it.</p>
 
 <p><strong>Cost reality:</strong> Durable is $20/month. <a href="https://www.squarespace.com/pricing" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Squarespace</a> is $12–$33/month. Year 1 total: $240–$400. Compare to Airtasker: $500–$2,000. You save $1,600+ and get it done 10x faster.</p>
@@ -163,7 +168,7 @@ Once you have my answers, create a professional, custom website with these secti
 (9) Mobile-optimized throughout with fast load times
 
 Design style: Clean, modern, professional. Use the color palette I provided. Make typography easy to read. Include plenty of white space. Ensure the site feels trustworthy and approachable.</p>
-    <button onclick="copyPromptEasy()" style="background: #00FF00; color: #1f3a7d; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 0.95rem; margin-top: 1rem;">📋 Copy Prompt</button>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('prompt-easy-full').textContent).then(()=>{const b=this;const orig=b.textContent;b.textContent='✅ Copied!';b.style.background='#1f3a7d';b.style.color='white';setTimeout(()=>{b.textContent=orig;b.style.background='#00FF00';b.style.color='#1f3a7d';},2000);})" style="background: #00FF00; color: #1f3a7d; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 0.95rem; margin-top: 1rem;">📋 Copy Prompt</button>
   </div>
 </details>
 
@@ -193,6 +198,11 @@ Design style: Clean, modern, professional. Use the color palette I provided. Mak
 ---
 
 <h2 id="medium-path">Medium: Lovable & Wix ($50–$99/month)</h2>
+
+<div style="display: flex; gap: 0.75rem; margin: 1rem 0 1.5rem 0; flex-wrap: wrap;">
+  <span style="background: #ff6b6b; color: white; padding: 0.4rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.85rem;">💜 Lovable</span>
+  <span style="background: #0c6efc; color: white; padding: 0.4rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.85rem;">🔷 Wix</span>
+</div>
 
 <p><strong>How to use AI to build:</strong> <a href="https://lovable.dev" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Lovable is an AI that reads your English descriptions and generates actual code.</a> You describe your website. It builds interactive components. You don't write a single line. You customize with plain language prompts. Rinse. Repeat.</p>
 
@@ -267,7 +277,7 @@ INTERACTIVITY:
 - Mobile-optimized layouts that are easy to navigate
 
 Make the site feel trustworthy, professional, and aligned with the brand voice I described.</p>
-    <button onclick="copyPromptMedium()" style="background: #00FF00; color: #1f3a7d; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 0.95rem; margin-top: 1rem;">📋 Copy Prompt</button>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('prompt-medium-full').textContent).then(()=>{const b=this;const orig=b.textContent;b.textContent='✅ Copied!';b.style.background='#1f3a7d';b.style.color='white';setTimeout(()=>{b.textContent=orig;b.style.background='#00FF00';b.style.color='#1f3a7d';},2000);})" style="background: #00FF00; color: #1f3a7d; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 0.95rem; margin-top: 1rem;">📋 Copy Prompt</button>
   </div>
 </details>
 
@@ -331,6 +341,12 @@ Make the site feel trustworthy, professional, and aligned with the brand voice I
 ---
 
 <h2 id="advanced-path">Advanced: Claude + GitHub + Netlify ($32/month)</h2>
+
+<div style="display: flex; gap: 0.75rem; margin: 1rem 0 1.5rem 0; flex-wrap: wrap;">
+  <span style="background: #d97757; color: white; padding: 0.4rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.85rem;">✦ Claude</span>
+  <span style="background: #24292e; color: white; padding: 0.4rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.85rem;">🐙 GitHub</span>
+  <span style="background: #00c7b7; color: white; padding: 0.4rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.85rem;">◆ Netlify</span>
+</div>
 
 <p><strong>How to use AI to build:</strong> <a href="https://claude.ai" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Claude is an AI that reads English and writes React code.</a> You describe your website in natural language. Claude builds it. You push to GitHub. Netlify auto-deploys. Want to change something? Ask Claude in English. Claude updates the code. You push. It's live in 30 seconds.</p>
 
@@ -421,7 +437,7 @@ DELIVERABLES:
 - Customization guide for your team (how to update colors, content, etc.)
 
 Build this as a complete, production-ready application. Include all files necessary to clone, install dependencies, run locally with `npm run dev`, build for production, and deploy to Netlify with automatic updates on each git push. Make it extensible so you can easily add more pages, blog posts, and features in the future.</p>
-    <button onclick="copyPromptAdvanced()" style="background: #00FF00; color: #1f3a7d; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 0.95rem; margin-top: 1rem;">📋 Copy Prompt</button>
+    <button onclick="navigator.clipboard.writeText(document.getElementById('prompt-advanced-full').textContent).then(()=>{const b=this;const orig=b.textContent;b.textContent='✅ Copied!';b.style.background='#1f3a7d';b.style.color='white';setTimeout(()=>{b.textContent=orig;b.style.background='#00FF00';b.style.color='#1f3a7d';},2000);})" style="background: #00FF00; color: #1f3a7d; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 0.95rem; margin-top: 1rem;">📋 Copy Prompt</button>
   </div>
 </details>
 
@@ -523,32 +539,3 @@ Build this as a complete, production-ready application. Include all files necess
     <a href="/services" style="border: 2px solid #00FF41; color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; display: inline-block;">Learn More</a>
   </div>
 </section>
-
-<script>
-function copyPromptEasy() {
-  const text = document.getElementById('prompt-easy-full').textContent;
-  navigator.clipboard.writeText(text).then(() => {
-    alert('✅ Prompt copied to clipboard! Paste into Durable AI website builder.');
-  }).catch(err => {
-    console.error('Copy failed:', err);
-  });
-}
-
-function copyPromptMedium() {
-  const text = document.getElementById('prompt-medium-full').textContent;
-  navigator.clipboard.writeText(text).then(() => {
-    alert('✅ Prompt copied to clipboard! Paste into Lovable AI builder.');
-  }).catch(err => {
-    console.error('Copy failed:', err);
-  });
-}
-
-function copyPromptAdvanced() {
-  const text = document.getElementById('prompt-advanced-full').textContent;
-  navigator.clipboard.writeText(text).then(() => {
-    alert('✅ Prompt copied to clipboard! Paste into Claude.ai.');
-  }).catch(err => {
-    console.error('Copy failed:', err);
-  });
-}
-</script>

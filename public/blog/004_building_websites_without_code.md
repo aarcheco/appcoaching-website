@@ -124,13 +124,13 @@ tags: ["No-Code", "AI Website", "Web Development"]
 
 <h2 id="easy-path">Easy: Squarespace & Durable (Under $30/month)</h2>
 
-<p><strong>How to use AI to build:</strong> <a href="https://www.durable.co/ai-website-builder" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Durable's AI literally reads English and builds your site.</a> You describe your business in natural sentences: "I'm a finance coach. I charge $100/session. I want a booking form." Durable generates the site. That's it.</p>
+<p><strong>How to use AI to build:</strong> <a href="https://durable.com/ai-website-builder" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Durable's AI literally reads English and builds your site.</a> You describe your business in natural sentences: "I'm a finance coach. I charge $100/session. I want a booking form." Durable generates the site. That's it.</p>
 
 <p><strong>Cost reality:</strong> Durable is $20/month. <a href="https://www.squarespace.com/pricing" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Squarespace</a> is $12–$33/month. Year 1 total: $240–$400. Compare to Airtasker: $500–$2,000. You save $1,600+ and get it done 10x faster.</p>
 
 <p><strong>What you can build:</strong> Service booking sites (coaching, design, consulting). Freelancer portfolios. Small business landing pages. Lead generation. Anything that's "simple and professional."</p>
 
-<p><strong>How fast?</strong> <a href="https://www.youtube.com/watch?v=OY2lNuUFPj4" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Durable AI-generated site in 2 minutes</a>. Not exaggerating. Watch it happen.</p>
+<p><strong>How fast?</strong> Durable generates a working site from your description in about 2 minutes. Not exaggerating—it happens right in front of you.</p>
 
 <p><strong>Pros:</strong> Hosting included. Templates look professional. AI does the design. Drag-and-drop to tweak. Automatic backups and SSL. Customer support.</p>
 
@@ -138,7 +138,7 @@ tags: ["No-Code", "AI Website", "Web Development"]
 
 <h3 style="margin-top: 2rem;">PAUL's Prompt (Easy Tier)</h3>
 
-<p><strong>Paste this into <a href="https://www.durable.co/ai-website-builder" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Durable's AI website builder</a>:</strong></p>
+<p><strong>Paste this into <a href="https://durable.com/ai-website-builder" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Durable's AI website builder</a>:</strong></p>
 
 <details style="background: #f7f9fc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; margin: 1rem 0;">
   <summary style="cursor: pointer; font-weight: 700; color: #1f3a7d; user-select: none;">📋 See Full Prompt (Click to Expand)</summary>
@@ -200,7 +200,7 @@ Design style: Clean, modern, professional. Use the color palette I provided. Mak
 
 <p><strong>What you can build:</strong> E-commerce stores (sell products). Custom-branded business sites. Community platforms. Complex integrations. Anything beyond "simple landing page."</p>
 
-<p><strong>How fast?</strong> <a href="https://www.youtube.com/watch?v=mVlnH34hcQI" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Lovable AI site builder walkthrough.</a> 1–2 hours to launch.</p>
+<p><strong>How fast?</strong> Lovable takes you from description to working prototype in minutes, with 1–2 hours total to fully launch once you've refined the design.</p>
 
 <p><strong>Pros:</strong> More customization than Easy. AI speeds up design (Lovable). Better for e-commerce (Wix). Still zero code. Visual builder + natural language.</p>
 
@@ -338,7 +338,7 @@ Make the site feel trustworthy, professional, and aligned with the brand voice I
 
 <p><strong>What you can build:</strong> Complex web apps. Databases and backend logic. Custom integrations (APIs, webhooks). Scalable infrastructure. Learning projects where you understand how everything works.</p>
 
-<p><strong>How fast?</strong> If you can write English, you can do this. <a href="https://github.com/aarcheco/appcoaching-website" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">My site (appcoaching.io) was built this way with Claude AI.</a> I didn't write code. I described what I wanted. Claude built it.</p>
+<p><strong>How fast?</strong> If you can write English, you can do this. My site (appcoaching.io) was built this way with Claude AI. I didn't write code. I described what I wanted. Claude built it.</p>
 
 <p><strong>Pros:</strong> You own the code. You own infrastructure. Unlimited customization. Scalable forever. Most cost-effective long-term. No vendor lock-in. You learn.</p>
 

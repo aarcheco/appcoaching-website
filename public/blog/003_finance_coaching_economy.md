@@ -3,7 +3,7 @@ title: "Finance Coaching: Why Smart People Struggle With Money"
 date: 2026-07-13
 id: 003
 excerpt: "Accountants can't track their own finances. Business owners don't know if they're making money. If confusion this widespread is normal at the top, what does that say about personal finance literacy for everyone else?"
-heroImage: https://images.unsplash.com/photo-1434025866051-209c2f4ce5c9?w=1200&q=80
+heroImage: /blog/finance-coaching-hero.jpg
 categories: ["Personal Finance"]
 tags: ["Financial Literacy"]
 ---
@@ -14,7 +14,7 @@ tags: ["Financial Literacy"]
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Finance Coaching: Why Smart People Struggle With Money",
-  "image": "https://images.unsplash.com/photo-1434025866051-209c2f4ce5c9?w=1200&q=80",
+  "image": "/blog/finance-coaching-hero.jpg",
   "author": { "@type": "Person", "name": "Aaron Pacheco" },
   "datePublished": "2026-07-13",
   "description": "Discover why even accountants and business owners struggle with personal finance. Learn the financial blindspots that hold smart people back and how finance coaching closes the gap."
@@ -26,7 +26,7 @@ tags: ["Financial Literacy"]
 <p>Smart people struggle with personal finance not because they're incapable, but because nobody showed them how. Accountants don't track their own cash flow. Business owners can't read their P&L clearly. If financial confusion is this widespread at the top, it's completely normal for most people. Finance coaching closes that gap—it's simply having someone help you understand your own numbers.</p>
 </blockquote>
 
-<img src="https://images.unsplash.com/photo-1434025866051-209c2f4ce5c9?w=1200&q=80" alt="Finance management, budgeting, and personal money planning" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0; display: block;">
+<img src="/blog/finance-coaching-hero.jpg" alt="Finance coaching and understanding your personal financial numbers" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0; display: block;">
 
 <details style="background: #f7f9fc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; margin: 2rem 0;">
   <summary style="cursor: pointer; font-weight: 700; font-size: 1.1rem; color: #1f3a7d;">📑 Table of Contents</summary>

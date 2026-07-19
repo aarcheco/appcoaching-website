@@ -21,7 +21,7 @@ tags: ["No-Code", "AI Website", "Web Development"]
 }
 </script>
 
-<blockquote style="background: linear-gradient(135deg, #00FF00 0%, rgba(255, 255, 255, 0.9) 100%); border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
+<blockquote style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📖 PAUL's Quick Read</strong>
 <p>You can build a website with AI without writing code. Seriously. In 20 minutes. For less than lunch. People are paying $200 to $2,000 on Airtasker to hire someone to build a simple website—landing page, booking form, portfolio. Meanwhile, you can describe what you want to Claude or Durable in plain English and have it built, live, and deployed for under $100. Forever. No code. No developers. No markup language. This is the moment you realize websites aren't expensive anymore—they're trivial.</p>
 </blockquote>
@@ -508,7 +508,7 @@ Build this as a complete, production-ready application. Include all files necess
 
 <p><strong>Choose ADVANCED if:</strong> You want full ownership. You're building complex features. You want to understand how it works. You think long-term (scales forever). You're willing to learn Git.</p>
 
-<blockquote style="background: linear-gradient(135deg, #00FF00 0%, rgba(255, 255, 255, 0.9) 100%); border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
+<blockquote style="background: #f0fdf4; border: 1px solid #dcfce7; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>⬆️ PAUL's LevelUp</strong>
 <p>Professional websites don't require $5k anymore. All three paths use AI. All three use natural language (no code). Squarespace (Easy) costs $20/month. Lovable (Medium) costs $50/month. Claude + GitHub + Netlify (Advanced) costs $32/month. The cost barrier is gone. The technology exists. The only question is: simplicity, customization, or ownership? Pick your path. Use the prompt. Launch today. Stop overpaying for work that's now trivial.</p>
 </blockquote>
@@ -520,7 +520,7 @@ Build this as a complete, production-ready application. Include all files necess
   
   <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
     <a href="https://cal.com/app-coaching-xcgvda" style="background: #00FF41; color: #1f3a7d; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; display: inline-block;">Book a Session</a>
-    <a href="/services" style="border: 2px solid #00FF41; color: #1f3a7d; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; display: inline-block;">Learn More</a>
+    <a href="/services" style="border: 2px solid #00FF41; color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; display: inline-block;">Learn More</a>
   </div>
 </section>
 

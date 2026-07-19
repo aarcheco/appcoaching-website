@@ -1,15 +1,20 @@
 # Netlify SPA (Single Page Application) routing configuration
 # This allows clean URLs to work with React Router / History API
 
-# Rewrite all requests to index.html while preserving the URL
-# This tells Netlify to serve index.html for all requests that don't match static files
-/*  /index.html  200
+# IMPORTANT: Netlify _redirects rules are matched top-to-bottom, first match wins.
+# Specific static-file rules MUST come before the catch-all "/*" rule below,
+# otherwise every asset request (images, JSON, etc.) gets swallowed by the
+# catch-all and served index.html instead of the real file.
 
-# Specific rules for static files/assets (these take precedence over the catch-all rule above)
+# Specific rules for static files/assets (must precede the catch-all)
 /robots.txt /robots.txt 200
 /sitemap.xml /sitemap.xml 200
 /blog-posts.json /blog-posts.json 200
 /blog/* /blog/:splat 200
+
+# Rewrite all remaining requests to index.html while preserving the URL
+# This tells Netlify to serve index.html for all requests that don't match static files
+/*  /index.html  200
 
 # Cache control headers for different file types
 # Static assets with long cache duration

@@ -1,11 +1,19 @@
 [
   {
+    "id": 4,
+    "filename": "004_building_websites_without_code.md",
+    "title": "How to Build a Website With AI (No Code, Under $100)",
+    "date": "2026-07-15T00:00:00.000Z",
+    "excerpt": "Google Trends shows 'AI build website' is the fastest-growing search. Here's exactly how to use Claude, Squarespace, or Lovable to build your site without code, in natural language, for less than $100 total.",
+    "heroImage": "/blog/airtasker-jobs-hero.jpg"
+  },
+  {
     "id": 3,
     "filename": "003_finance_coaching_economy.md",
     "title": "Finance Coaching: Why Smart People Struggle With Money",
     "date": "2026-07-13T00:00:00.000Z",
     "excerpt": "Accountants can't track their own finances. Business owners don't know if they're making money. If confusion this widespread is normal at the top, what does that say about personal finance literacy for everyone else?",
-    "heroImage": "https://images.unsplash.com/photo-1634728565822-b5b4b7169c6a?w=1200&q=80"
+    "heroImage": "/blog/finance-coaching-hero.jpg"
   },
   {
     "id": 2,

@@ -3,7 +3,7 @@ title: "How to Build a Website With AI (No Code, Under $100)"
 date: 2026-07-15
 id: 004
 excerpt: "Google Trends shows 'AI build website' is the fastest-growing search. Here's exactly how to use Claude, Squarespace, or Lovable to build your site without code, in natural language, for less than $100 total."
-heroImage: /airtasker-jobs-hero.jpg
+heroImage: /blog/airtasker-jobs-hero.jpg
 categories: ["Website Building", "Business AI"]
 tags: ["No-Code", "AI Website", "Web Development"]
 ---
@@ -14,7 +14,7 @@ tags: ["No-Code", "AI Website", "Web Development"]
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "How to Build a Website With AI (No Code, Under $100)",
-  "image": "/airtasker-jobs-hero.jpg",
+  "image": "/blog/airtasker-jobs-hero.jpg",
   "author": { "@type": "Person", "name": "Aaron Pacheco" },
   "datePublished": "2026-07-15",
   "description": "How to build a website with AI without writing code. Three proven paths: easy (Squarespace), medium (Lovable), advanced (Claude). All use natural language. All cost under $100."
@@ -26,7 +26,7 @@ tags: ["No-Code", "AI Website", "Web Development"]
 <p>You can build a website with AI without writing code. Seriously. In 20 minutes. For less than lunch. People are paying $200 to $2,000 on Airtasker to hire someone to build a simple website—landing page, booking form, portfolio. Meanwhile, you can describe what you want to Claude or Durable in plain English and have it built, live, and deployed for under $100. Forever. No code. No developers. No markup language. This is the moment you realize websites aren't expensive anymore—they're trivial.</p>
 </blockquote>
 
-<img src="/airtasker-jobs-hero.jpg" alt="Screenshot of Airtasker job listings showing website builds priced $200-2000 while AI can build it for less than $100" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0; display: block;">
+<img src="/blog/airtasker-jobs-hero.jpg" alt="Screenshot of Airtasker job listings showing website builds priced $200-2000 while AI can build it for less than $100" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0; display: block;">
 
 <details style="background: #f7f9fc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; margin: 2rem 0;">
   <summary style="cursor: pointer; font-weight: 700; font-size: 1.1rem; color: #1f3a7d;">📑 Table of Contents</summary>
@@ -143,7 +143,7 @@ tags: ["No-Code", "AI Website", "Web Development"]
 <details style="background: #f7f9fc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; margin: 1rem 0;">
   <summary style="cursor: pointer; font-weight: 700; color: #1f3a7d; user-select: none;">📋 See Full Prompt (Click to Expand)</summary>
   <div style="margin-top: 1rem;">
-    <p style="background: #ffffff; border-left: 4px solid #00FF00; padding: 1.5rem; color: #1f3a7d; font-family: monospace; font-size: 0.9rem; line-height: 1.8; margin: 1rem 0;">Before you start building my website, please interview me about the following and wait for my responses:
+    <p style="background: #ffffff; border-left: 4px solid #00FF00; padding: 1.5rem; color: #1f3a7d; font-family: monospace; font-size: 0.9rem; line-height: 1.8; margin: 1rem 0; white-space: pre-wrap;">Before you start building my website, please interview me about the following and wait for my responses:
 
 (1) What is your business or service? (e.g., coaching, consulting, freelancing, etc.)
 (2) Who is your target audience? (e.g., young professionals, business owners, etc.)

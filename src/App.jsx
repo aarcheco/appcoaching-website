@@ -146,6 +146,19 @@ const pageConfigs = {
       description: 'Contact APP Coaching to book a discovery call.',
       url: 'https://appcoaching.io/contact'
     }
+  },
+  privacy: {
+    id: 'privacy',
+    title: 'Privacy Policy & Terms of Service | APP Coaching',
+    description: 'Read APP Coaching\'s Privacy Policy and Terms of Service, covering data collection, cookies, and the terms for using this site and our coaching services.',
+    canonical: 'https://appcoaching.io/privacy',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: 'Privacy Policy & Terms of Service',
+      description: 'Privacy Policy and Terms of Service for APP Coaching.',
+      url: 'https://appcoaching.io/privacy'
+    }
   }
 };
 
@@ -393,7 +406,7 @@ export default function AppCoaching() {
 
     const { pageName, postSlug } = getPageFromPath(window.location.pathname);
 
-    if (['home', 'services', 'about', 'blog', 'contact'].includes(pageName)) {
+    if (['home', 'services', 'about', 'blog', 'contact', 'privacy'].includes(pageName)) {
       setCurrentPage(pageName);
 
       // If viewing a specific blog post by slug
@@ -410,7 +423,7 @@ export default function AppCoaching() {
     const handlePopstate = () => {
       const { pageName: newPageName, postSlug: newPostSlug } = getPageFromPath(window.location.pathname);
 
-      if (['home', 'services', 'about', 'blog', 'contact'].includes(newPageName)) {
+      if (['home', 'services', 'about', 'blog', 'contact', 'privacy'].includes(newPageName)) {
         setCurrentPage(newPageName);
 
         if (newPageName === 'blog' && newPostSlug && blogPosts.length > 0) {
@@ -1900,9 +1913,217 @@ export default function AppCoaching() {
             <a href="/services" style={{ border: `2px solid ${colors.limeGreen}`, color: colors.limeGreen, padding: '0.75rem 1.5rem', borderRadius: '6px', textDecoration: 'none', fontWeight: '700', display: 'inline-block' }}>Explore Services</a>
           </div>
         </section>
+
+        {/* Privacy Policy / Terms link */}
+        <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+          <span
+            onClick={() => navigateTo('privacy')}
+            style={{ color: colors.textMuted, fontSize: '0.9rem', cursor: 'pointer', textDecoration: 'underline', textDecorationColor: colors.limeGreen, textDecorationThickness: '2px' }}
+          >
+            Privacy Policy & Terms of Service
+          </span>
+        </div>
       </section>
     </div>
   );
+  };
+
+  // ===== PRIVACY POLICY & TERMS PAGE =====
+  const PrivacyPage = () => {
+    const sectionStyle = { marginBottom: '2.5rem' };
+    const h2Style = { fontSize: '1.4rem', color: colors.darkNavy, fontFamily: "'Poppins', sans-serif", fontWeight: '700', marginBottom: '1rem', marginTop: '0.5rem' };
+    const h3Style = { fontSize: '1.1rem', color: colors.darkNavy, fontFamily: "'Poppins', sans-serif", fontWeight: '700', marginBottom: '0.75rem', marginTop: '1.5rem' };
+    const pStyle = { fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '1rem' };
+    const ulStyle = { fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '1rem', paddingLeft: '1.5rem' };
+
+    return (
+      <div>
+        <style>{styles}</style>
+        <section style={{
+          background: `linear-gradient(135deg, ${colors.darkNavy} 0%, ${colors.navy} 100%)`,
+          color: 'white',
+          padding: 'clamp(2rem, 4vh, 3.5rem) clamp(1rem, 4vw, 2rem)',
+          textAlign: 'center'
+        }}>
+          <h1 style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', marginBottom: '0.75rem', fontFamily: "'Poppins', sans-serif", fontWeight: '800' }}>
+            Privacy Policy & Terms of Service
+          </h1>
+          <p style={{ fontSize: '1rem', opacity: '0.9' }}>Last updated: 24 July 2026</p>
+        </section>
+
+        <section style={{ padding: '3rem 2rem', background: 'white', maxWidth: '850px', margin: '0 auto' }}>
+
+          <div style={{ background: colors.offWhite, border: `1px solid ${colors.borderGray}`, borderRadius: '8px', padding: '1.5rem', marginBottom: '2.5rem' }}>
+            <p style={{ ...pStyle, marginBottom: 0 }}>
+              This page covers both our <strong>Privacy Policy</strong> (how we collect and handle your data) and our <strong>Terms of Service</strong> (the rules for using this site and working with APP Coaching). If you have any questions, contact us at <a href="mailto:aaron.appcoaching@gmail.com" style={{ color: colors.darkNavy, textDecoration: 'underline', textDecorationColor: colors.limeGreen }}>aaron.appcoaching@gmail.com</a>.
+            </p>
+          </div>
+
+          <h1 style={{ fontSize: '1.8rem', color: colors.darkNavy, fontFamily: "'Poppins', sans-serif", fontWeight: '800', marginBottom: '1.5rem' }}>Privacy Policy</h1>
+
+          <div style={sectionStyle}>
+            <h2 style={h2Style}>1. Who We Are</h2>
+            <p style={pStyle}>
+              APP Coaching ("we", "us", "our") is a sole-operator coaching business run by Aaron Pacheco, providing 1-on-1 coaching in Excel, AI, finance, and business operations. This policy explains what personal information we collect through appcoaching.io (the "Site"), why we collect it, and what rights you have over it. We are based in Australia and handle personal information in accordance with the Australian Privacy Principles under the Privacy Act 1988 (Cth), and we've also aligned this policy with common international expectations (including GDPR and CCPA concepts) for visitors outside Australia.
+            </p>
+          </div>
+
+          <div style={sectionStyle}>
+            <h2 style={h2Style}>2. What We Collect</h2>
+            <p style={pStyle}>We only collect information that is necessary to run this Site and respond to you. This includes:</p>
+            <ul style={ulStyle}>
+              <li><strong>Contact form submissions:</strong> your name, email address, service interest, and any message you send us.</li>
+              <li><strong>Newsletter sign-ups:</strong> your email address, collected via our email provider (Brevo) when you subscribe.</li>
+              <li><strong>Booking details:</strong> if you book a discovery call via Cal.com, that information is collected and processed directly by Cal.com under their own privacy policy.</li>
+              <li><strong>Analytics data:</strong> via Google Analytics (GA4), we automatically collect general information such as pages viewed, approximate location (city/country level), device and browser type, and how you arrived at the Site. This data is aggregated and does not directly identify you by name.</li>
+              <li><strong>Cookies:</strong> Google Analytics uses cookies to distinguish visitors and understand site usage. You can disable cookies in your browser settings at any time; the Site will still function without them.</li>
+            </ul>
+          </div>
+
+          <div style={sectionStyle}>
+            <h2 style={h2Style}>3. How We Use Your Information</h2>
+            <ul style={ulStyle}>
+              <li>To respond to enquiries submitted through the contact form.</li>
+              <li>To send newsletter content you've explicitly opted into (you can unsubscribe at any time via the link in every email).</li>
+              <li>To understand how visitors use the Site, so we can improve content and navigation.</li>
+              <li>To meet legal or regulatory obligations, where applicable.</li>
+            </ul>
+            <p style={pStyle}>We do not sell, rent, or trade your personal information to third parties. We do not use your data for advertising retargeting.</p>
+          </div>
+
+          <div style={sectionStyle}>
+            <h2 style={h2Style}>4. Third-Party Services</h2>
+            <p style={pStyle}>We rely on a small number of trusted third-party services to run this Site, each of which processes data under their own privacy policy:</p>
+            <ul style={ulStyle}>
+              <li><strong>Netlify</strong> — website hosting and contact form handling.</li>
+              <li><strong>Google Analytics (GA4)</strong> — site usage analytics.</li>
+              <li><strong>Brevo (Sendinblue)</strong> — newsletter email delivery and subscriber management.</li>
+              <li><strong>Cal.com</strong> — discovery call scheduling and booking.</li>
+            </ul>
+          </div>
+
+          <div style={sectionStyle}>
+            <h2 style={h2Style}>5. Data Retention</h2>
+            <p style={pStyle}>
+              We retain contact form submissions and newsletter subscriber data only for as long as reasonably necessary to respond to you, provide our services, or as required by law. You can request deletion of your data at any time (see Section 7).
+            </p>
+          </div>
+
+          <div style={sectionStyle}>
+            <h2 style={h2Style}>6. Data Security</h2>
+            <p style={pStyle}>
+              We take reasonable technical and organisational steps to protect your information, including relying on reputable providers (Netlify, Google, Brevo, Cal.com) that maintain their own industry-standard security practices. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.
+            </p>
+          </div>
+
+          <div style={sectionStyle}>
+            <h2 style={h2Style}>7. Your Rights</h2>
+            <p style={pStyle}>Depending on your location, you may have the right to:</p>
+            <ul style={ulStyle}>
+              <li>Request access to the personal information we hold about you.</li>
+              <li>Request correction of inaccurate information.</li>
+              <li>Request deletion of your information.</li>
+              <li>Unsubscribe from our newsletter at any time via the link in every email.</li>
+              <li>Object to or restrict certain processing of your information.</li>
+            </ul>
+            <p style={pStyle}>To exercise any of these rights, email <a href="mailto:aaron.appcoaching@gmail.com" style={{ color: colors.darkNavy, textDecoration: 'underline', textDecorationColor: colors.limeGreen }}>aaron.appcoaching@gmail.com</a>. We'll respond within a reasonable timeframe.</p>
+          </div>
+
+          <div style={sectionStyle}>
+            <h2 style={h2Style}>8. Children's Privacy</h2>
+            <p style={pStyle}>This Site is not directed at children under 18, and we do not knowingly collect personal information from children.</p>
+          </div>
+
+          <div style={sectionStyle}>
+            <h2 style={h2Style}>9. Changes to This Policy</h2>
+            <p style={pStyle}>We may update this Privacy Policy from time to time. Material changes will be reflected by updating the "Last updated" date at the top of this page.</p>
+          </div>
+
+          <hr style={{ border: 'none', borderTop: `2px solid ${colors.borderGray}`, margin: '3rem 0' }} />
+
+          <h1 style={{ fontSize: '1.8rem', color: colors.darkNavy, fontFamily: "'Poppins', sans-serif", fontWeight: '800', marginBottom: '1.5rem' }}>Terms of Service</h1>
+
+          <div style={sectionStyle}>
+            <h2 style={h2Style}>1. Acceptance of Terms</h2>
+            <p style={pStyle}>
+              By accessing or using appcoaching.io, or by booking or purchasing coaching services from APP Coaching, you agree to these Terms of Service. If you do not agree, please do not use the Site or our services.
+            </p>
+          </div>
+
+          <div style={sectionStyle}>
+            <h2 style={h2Style}>2. Not Financial, Legal, or Tax Advice</h2>
+            <p style={pStyle}>
+              APP Coaching provides educational coaching in Excel, AI tools, finance literacy, and business operations. <strong>Nothing on this Site or provided through coaching sessions constitutes formal financial, investment, legal, accounting, or tax advice.</strong> Aaron Pacheco is not a licensed financial advisor. Coaching is general in nature and intended to help you build your own understanding and skills — it is not a substitute for advice from a licensed professional who understands your specific circumstances. Any decisions you make based on information provided are made at your own discretion and risk.
+            </p>
+          </div>
+
+          <div style={sectionStyle}>
+            <h2 style={h2Style}>3. No Guaranteed Results</h2>
+            <p style={pStyle}>
+              While we're committed to helping you build genuine skills and clarity, we do not guarantee specific financial, business, or career outcomes from coaching. Results depend on individual effort, circumstances, and factors outside our control.
+            </p>
+          </div>
+
+          <div style={sectionStyle}>
+            <h2 style={h2Style}>4. Use of the Site</h2>
+            <p style={pStyle}>You agree to use this Site only for lawful purposes and in a way that does not infringe the rights of, or restrict or inhibit the use and enjoyment of, this Site by any third party. You must not attempt to gain unauthorised access to any part of the Site or its underlying systems.</p>
+          </div>
+
+          <div style={sectionStyle}>
+            <h2 style={h2Style}>5. Intellectual Property</h2>
+            <p style={pStyle}>
+              All content on this Site — including text, graphics, blog posts, logos, and branding — is owned by APP Coaching / Aaron Pacheco unless otherwise stated, and is protected by copyright. You may not reproduce, distribute, or create derivative works from this content without our prior written permission, other than sharing links or brief excerpts with proper attribution.
+            </p>
+          </div>
+
+          <div style={sectionStyle}>
+            <h2 style={h2Style}>6. Coaching Bookings & Payments</h2>
+            <p style={pStyle}>
+              Discovery calls and coaching sessions are booked via Cal.com. Specific pricing, cancellation, and rescheduling terms will be confirmed directly with you at the time of booking or engagement. Fees paid for coaching services are generally non-refundable once a session has been delivered, except where required by Australian Consumer Law.
+            </p>
+          </div>
+
+          <div style={sectionStyle}>
+            <h2 style={h2Style}>7. Limitation of Liability</h2>
+            <p style={pStyle}>
+              To the maximum extent permitted by law, APP Coaching and Aaron Pacheco shall not be liable for any indirect, incidental, or consequential damages arising from your use of this Site or our coaching services. Nothing in these Terms excludes any consumer guarantees or rights that cannot be excluded under the Australian Consumer Law.
+            </p>
+          </div>
+
+          <div style={sectionStyle}>
+            <h2 style={h2Style}>8. Third-Party Links</h2>
+            <p style={pStyle}>This Site may link to third-party websites and services (such as Cal.com or company sites referenced in blog posts). We are not responsible for the content, accuracy, or practices of any third-party sites.</p>
+          </div>
+
+          <div style={sectionStyle}>
+            <h2 style={h2Style}>9. Governing Law</h2>
+            <p style={pStyle}>These Terms are governed by the laws of Queensland, Australia, without regard to conflict of law principles. Any disputes will be subject to the exclusive jurisdiction of the courts of Queensland, Australia.</p>
+          </div>
+
+          <div style={sectionStyle}>
+            <h2 style={h2Style}>10. Changes to These Terms</h2>
+            <p style={pStyle}>We may update these Terms from time to time. Continued use of the Site after changes are posted constitutes acceptance of the updated Terms.</p>
+          </div>
+
+          <div style={sectionStyle}>
+            <h2 style={h2Style}>11. Contact</h2>
+            <p style={pStyle}>
+              Questions about this Privacy Policy or these Terms of Service can be sent to <a href="mailto:aaron.appcoaching@gmail.com" style={{ color: colors.darkNavy, textDecoration: 'underline', textDecorationColor: colors.limeGreen }}>aaron.appcoaching@gmail.com</a>.
+            </p>
+          </div>
+
+          <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+            <span
+              onClick={() => navigateTo('about')}
+              style={{ color: colors.darkNavy, fontSize: '0.95rem', cursor: 'pointer', fontWeight: '600', textDecoration: 'underline', textDecorationColor: colors.limeGreen }}
+            >
+              ← Back to About
+            </span>
+          </div>
+
+        </section>
+      </div>
+    );
   };
 
   // ===== BLOG PAGE =====
@@ -2774,7 +2995,38 @@ export default function AppCoaching() {
   );
 
   // ===== CONTACT/BOOKING PAGE =====
-  const ContactPage = () => (
+  const ContactPage = () => {
+    const [contactForm, setContactForm] = useState({ name: '', email: '', interest: '', message: '' });
+    const [formStatus, setFormStatus] = useState('idle'); // idle | submitting | success | error
+
+    const handleContactChange = (e) => {
+      const { name, value } = e.target;
+      setContactForm((prev) => ({ ...prev, [name]: value }));
+    };
+
+    const encodeFormData = (data) => {
+      return Object.keys(data)
+        .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+        .join('&');
+    };
+
+    const handleContactSubmit = (e) => {
+      e.preventDefault();
+      setFormStatus('submitting');
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encodeFormData({ 'form-name': 'contact', ...contactForm })
+      })
+        .then(() => {
+          setFormStatus('success');
+          setContactForm({ name: '', email: '', interest: '', message: '' });
+        })
+        .catch(() => setFormStatus('error'));
+    };
+
+    return (
     <div>
       <style>{styles}</style>
       <section style={{
@@ -2841,97 +3093,172 @@ export default function AppCoaching() {
             <h2 style={{ fontSize: '1.8rem', color: colors.darkNavy, marginBottom: '1.5rem', fontFamily: "'Poppins', sans-serif", fontWeight: '800' }}>
               Build Your Path to Self-Sufficiency
             </h2>
-            <form style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1.5rem'
-            }}>
-              <div>
-                <label style={{ display: 'block', fontSize: '0.9rem', fontWeight: '600', marginBottom: '0.5rem', color: colors.darkNavy }}>
-                  Your Name
-                </label>
-                <input type="text" placeholder="Aaron" style={{
-                  width: '100%',
-                  padding: '0.75rem',
-                  border: `1px solid ${colors.borderGray}`,
-                  borderRadius: '6px',
-                  fontSize: '0.95rem',
-                  fontFamily: "'Inter', sans-serif"
-                }} />
-              </div>
 
-              <div>
-                <label style={{ display: 'block', fontSize: '0.9rem', fontWeight: '600', marginBottom: '0.5rem', color: colors.darkNavy }}>
-                  Email
-                </label>
-                <input type="email" placeholder="your@email.com" style={{
-                  width: '100%',
-                  padding: '0.75rem',
-                  border: `1px solid ${colors.borderGray}`,
-                  borderRadius: '6px',
-                  fontSize: '0.95rem',
-                  fontFamily: "'Inter', sans-serif"
-                }} />
-              </div>
-
-              <div>
-                <label style={{ display: 'block', fontSize: '0.9rem', fontWeight: '600', marginBottom: '0.5rem', color: colors.darkNavy }}>
-                  Interested In
-                </label>
-                <select style={{
-                  width: '100%',
-                  padding: '0.75rem',
-                  border: `1px solid ${colors.borderGray}`,
-                  borderRadius: '6px',
-                  fontSize: '0.95rem',
-                  fontFamily: "'Inter', sans-serif",
-                  backgroundColor: 'white'
-                }}>
-                  <option>Select a service...</option>
-                  <option>Excel Coaching</option>
-                  <option>Personal Finance</option>
-                  <option>Business Finance</option>
-                  <option>AI for Personal Use</option>
-                  <option>AI for Business</option>
-                  <option>Career Coaching</option>
-                </select>
-              </div>
-
-              <div>
-                <label style={{ display: 'block', fontSize: '0.9rem', fontWeight: '600', marginBottom: '0.5rem', color: colors.darkNavy }}>
-                  Message
-                </label>
-                <textarea placeholder="Tell me about the confusion you're facing..." style={{
-                  width: '100%',
-                  padding: '0.75rem',
-                  border: `1px solid ${colors.borderGray}`,
-                  borderRadius: '6px',
-                  fontSize: '0.95rem',
-                  fontFamily: "'Inter', sans-serif",
-                  minHeight: '120px',
-                  resize: 'vertical'
-                }} />
-              </div>
-
-              <button type="submit" style={{
-                background: colors.limeGreen,
-                color: colors.darkNavy,
-                border: 'none',
-                padding: '0.85rem 2rem',
-                borderRadius: '6px',
-                fontWeight: '700',
-                fontSize: '0.95rem',
-                cursor: 'pointer',
-                fontFamily: "'Poppins', sans-serif"
+            {formStatus === 'success' ? (
+              <div style={{
+                background: 'white',
+                border: `2px solid ${colors.limeGreen}`,
+                borderRadius: '12px',
+                padding: '2rem',
+                textAlign: 'center'
               }}>
-                SEND MESSAGE
-              </button>
-            </form>
+                <p style={{ fontSize: '1.1rem', fontWeight: '700', color: colors.darkNavy, marginBottom: '0.5rem' }}>
+                  ✅ Message sent!
+                </p>
+                <p style={{ fontSize: '0.95rem', color: colors.textMuted }}>
+                  Thanks for reaching out — I'll get back to you soon.
+                </p>
+              </div>
+            ) : (
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                onSubmit={handleContactSubmit}
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '1.5rem'
+                }}
+              >
+                {/* Hidden fields required for Netlify Forms */}
+                <input type="hidden" name="form-name" value="contact" />
+                <p style={{ display: 'none' }}>
+                  <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                </p>
+
+                <div>
+                  <label style={{ display: 'block', fontSize: '0.9rem', fontWeight: '600', marginBottom: '0.5rem', color: colors.darkNavy }}>
+                    Your Name
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Aaron"
+                    required
+                    value={contactForm.name}
+                    onChange={handleContactChange}
+                    style={{
+                      width: '100%',
+                      padding: '0.75rem',
+                      border: `1px solid ${colors.borderGray}`,
+                      borderRadius: '6px',
+                      fontSize: '0.95rem',
+                      fontFamily: "'Inter', sans-serif",
+                      boxSizing: 'border-box'
+                    }}
+                  />
+                </div>
+
+                <div>
+                  <label style={{ display: 'block', fontSize: '0.9rem', fontWeight: '600', marginBottom: '0.5rem', color: colors.darkNavy }}>
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="your@email.com"
+                    required
+                    value={contactForm.email}
+                    onChange={handleContactChange}
+                    style={{
+                      width: '100%',
+                      padding: '0.75rem',
+                      border: `1px solid ${colors.borderGray}`,
+                      borderRadius: '6px',
+                      fontSize: '0.95rem',
+                      fontFamily: "'Inter', sans-serif",
+                      boxSizing: 'border-box'
+                    }}
+                  />
+                </div>
+
+                <div>
+                  <label style={{ display: 'block', fontSize: '0.9rem', fontWeight: '600', marginBottom: '0.5rem', color: colors.darkNavy }}>
+                    Interested In
+                  </label>
+                  <select
+                    name="interest"
+                    value={contactForm.interest}
+                    onChange={handleContactChange}
+                    style={{
+                      width: '100%',
+                      padding: '0.75rem',
+                      border: `1px solid ${colors.borderGray}`,
+                      borderRadius: '6px',
+                      fontSize: '0.95rem',
+                      fontFamily: "'Inter', sans-serif",
+                      backgroundColor: 'white',
+                      boxSizing: 'border-box'
+                    }}
+                  >
+                    <option value="">Select a service...</option>
+                    <option>Excel Coaching</option>
+                    <option>Personal Finance</option>
+                    <option>Business Finance</option>
+                    <option>AI for Personal Use</option>
+                    <option>AI for Business</option>
+                    <option>Career Coaching</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label style={{ display: 'block', fontSize: '0.9rem', fontWeight: '600', marginBottom: '0.5rem', color: colors.darkNavy }}>
+                    Message
+                  </label>
+                  <textarea
+                    name="message"
+                    placeholder="Tell me about the confusion you're facing..."
+                    required
+                    value={contactForm.message}
+                    onChange={handleContactChange}
+                    style={{
+                      width: '100%',
+                      padding: '0.75rem',
+                      border: `1px solid ${colors.borderGray}`,
+                      borderRadius: '6px',
+                      fontSize: '0.95rem',
+                      fontFamily: "'Inter', sans-serif",
+                      minHeight: '120px',
+                      resize: 'vertical',
+                      boxSizing: 'border-box'
+                    }}
+                  />
+                </div>
+
+                {formStatus === 'error' && (
+                  <p style={{ color: '#dc2626', fontSize: '0.9rem', margin: 0 }}>
+                    Something went wrong sending your message. Please try again, or email aaron.appcoaching@gmail.com directly.
+                  </p>
+                )}
+
+                <button
+                  type="submit"
+                  disabled={formStatus === 'submitting'}
+                  style={{
+                    background: colors.limeGreen,
+                    color: colors.darkNavy,
+                    border: 'none',
+                    padding: '0.85rem 2rem',
+                    borderRadius: '6px',
+                    fontWeight: '700',
+                    fontSize: '0.95rem',
+                    cursor: formStatus === 'submitting' ? 'default' : 'pointer',
+                    fontFamily: "'Poppins', sans-serif",
+                    opacity: formStatus === 'submitting' ? 0.7 : 1
+                  }}
+                >
+                  {formStatus === 'submitting' ? 'SENDING...' : 'SEND MESSAGE'}
+                </button>
+              </form>
+            )}
           </div>
         </div>
       </section>
     </div>
-  );
+    );
+  };
 
   // ===== FOOTER =====
   const Footer = () => (
@@ -2948,6 +3275,9 @@ export default function AppCoaching() {
       <p style={{ fontSize: '0.8rem', opacity: '0.7', marginTop: '0.5rem' }}>
         Coaching • Excel • Finance • AI • Operations
       </p>
+      <p style={{ fontSize: '0.8rem', opacity: '0.7', marginTop: '0.75rem' }}>
+        <span onClick={() => navigateTo('privacy')} style={{ cursor: 'pointer', textDecoration: 'underline' }}>Privacy Policy & Terms of Service</span>
+      </p>
     </footer>
   );
 
@@ -2960,6 +3290,7 @@ export default function AppCoaching() {
       {currentPage === 'about' && <AboutPage />}
       {currentPage === 'blog' && <BlogPage />}
       {currentPage === 'contact' && <ContactPage />}
+      {currentPage === 'privacy' && <PrivacyPage />}
 
       <EmailSignupSection />
       <Footer />

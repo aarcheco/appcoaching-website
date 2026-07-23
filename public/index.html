@@ -79,5 +79,22 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+    <!--
+      Hidden static form for Netlify Forms detection.
+      Netlify's build-time bot scans the built HTML for <form> tags to register them —
+      it cannot see forms rendered client-side by React. This hidden replica has the
+      same name and field names as the real React contact form, so Netlify registers
+      "contact" as a valid form and routes AJAX submissions from the real form to it.
+      Do not remove: without this, contact form submissions silently fail.
+    -->
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <input name="bot-field" />
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <select name="interest"><option>placeholder</option></select>
+      <textarea name="message"></textarea>
+    </form>
   </body>
 </html>

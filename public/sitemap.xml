@@ -50,12 +50,36 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Blog Post #3 -->
+  <url>
+    <loc>https://appcoaching.io/blog/finance-coaching-why-smart-people-struggle-with-money</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Post #4 -->
+  <url>
+    <loc>https://appcoaching.io/blog/how-to-build-a-website-with-ai-no-code-under-100</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Contact/Let's Talk Page -->
   <url>
     <loc>https://appcoaching.io/contact</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- Privacy Policy & Terms of Service -->
+  <url>
+    <loc>https://appcoaching.io/privacy</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 
 </urlset>

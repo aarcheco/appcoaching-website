@@ -3,6 +3,7 @@
     "id": 4,
     "filename": "004_building_websites_without_code.md",
     "title": "How to Build a Website With AI (No Code, Under $100)",
+    "slug": "how-to-build-a-website-with-ai-no-code-under-100",
     "date": "2026-07-15T00:00:00.000Z",
     "excerpt": "Google Trends shows 'AI build website' is the fastest-growing search. Here's exactly how to use Claude, Squarespace, or Lovable to build your site without code, in natural language, for less than $100 total.",
     "heroImage": "/blog/airtasker-jobs-hero.jpg"
@@ -11,6 +12,7 @@
     "id": 3,
     "filename": "003_finance_coaching_economy.md",
     "title": "Finance Coaching: Why Smart People Struggle With Money",
+    "slug": "finance-coaching-why-smart-people-struggle-with-money",
     "date": "2026-07-13T00:00:00.000Z",
     "excerpt": "Accountants can't track their own finances. Business owners don't know if they're making money. If confusion this widespread is normal at the top, what does that say about personal finance literacy for everyone else?",
     "heroImage": "/blog/finance-coaching-hero.jpg"
@@ -19,6 +21,7 @@
     "id": 2,
     "filename": "002_why_i_chose_accounting.md",
     "title": "Why I Chose Accounting: The Journey from Rule-Follower to Translator",
+    "slug": "why-i-chose-accounting-the-journey-from-rule-follower-to-translator",
     "date": "2026-07-10T00:00:00.000Z",
     "excerpt": "From my mum's exactness to PwC's pressure to Coronis's transformation—how accounting taught me that the real value isn't processing numbers, it's making them make sense",
     "heroImage": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80"
@@ -27,6 +30,7 @@
     "id": 1,
     "filename": "001_why_i_started_appcoaching.md",
     "title": "Why I Built APP Coaching: A Founder's Origin Story",
+    "slug": "why-i-built-app-coaching-a-founders-origin-story",
     "date": "2026-07-08T00:00:00.000Z",
     "excerpt": "From my mom's career to building forecasts that drive business decisions—how I discovered the power of efficient paths from problems to solutions",
     "heroImage": "/aaron-archive-10.jpg"

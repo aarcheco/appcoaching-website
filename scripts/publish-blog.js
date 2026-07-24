@@ -9,6 +9,19 @@ const BLOG_DIR = path.join(__dirname, '../public/blog');
 const MANIFEST_PATH = path.join(__dirname, '../public/blog-posts.json');
 const MANIFEST_ONLY = process.argv.includes('--manifest-only');
 
+// IMPORTANT: This must stay byte-for-byte identical to generateSlug() in src/App.jsx.
+// The manifest's `slug` field is the single source of truth for blog post URLs —
+// App.jsx consumes it directly instead of recalculating, and sitemap.xml should be
+// generated from these same values, so the three never drift out of sync again.
+const generateSlug = (title) => {
+  return title
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-');
+};
+
 console.log('📝 Generating blog manifest...');
 
 try {
@@ -34,6 +47,7 @@ try {
       id: data.id,
       filename: file,
       title: data.title,
+      slug: generateSlug(data.title),
       date: data.date,
       excerpt: data.excerpt,
       heroImage: data.heroImage

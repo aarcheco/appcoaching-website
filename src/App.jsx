@@ -1625,12 +1625,12 @@ export default function AppCoaching() {
             gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
             gap: '1rem'
           }}>
-            <img src="/aaron-headshot-casual-1.jpg" alt="Aaron Pacheco, founder of APP Coaching, casual portrait" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img src="/aaron-headshot-casual-1.jpg" alt="Aaron Pacheco, founder of APP Coaching" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
             <img src="/PSX_20241105_115531.jpg" alt="Aaron Pacheco at a work event" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
             <img src="/aaron-headshot-casual-3.jpg" alt="Aaron Pacheco, finance and AI coach" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
-            <img src="/PSX_20171114_215601.jpg" alt="Aaron Pacheco early career photo" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img src="/PSX_20171114_215601.jpg" alt="Aaron Pacheco earlier in his career" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
             <img src="/WP_20161020_19_07_16_Rich.jpg" alt="Aaron Pacheco during his finance career" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
-            <img src="/20250329_194859.jpg" alt="Aaron Pacheco, APP Coaching founder, recent photo" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img src="/20250329_194859.jpg" alt="Aaron Pacheco, APP Coaching founder" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
           </div>
         </div>
 
@@ -1938,7 +1938,6 @@ export default function AppCoaching() {
   const PrivacyPage = () => {
     const sectionStyle = { marginBottom: '2.5rem' };
     const h2Style = { fontSize: '1.4rem', color: colors.darkNavy, fontFamily: "'Poppins', sans-serif", fontWeight: '700', marginBottom: '1rem', marginTop: '0.5rem' };
-    const h3Style = { fontSize: '1.1rem', color: colors.darkNavy, fontFamily: "'Poppins', sans-serif", fontWeight: '700', marginBottom: '0.75rem', marginTop: '1.5rem' };
     const pStyle = { fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '1rem' };
     const ulStyle = { fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '1rem', paddingLeft: '1.5rem' };
 

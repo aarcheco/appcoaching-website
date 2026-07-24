@@ -6,11 +6,14 @@
 # otherwise every asset request (images, JSON, etc.) gets swallowed by the
 # catch-all and served index.html instead of the real file.
 
-# Specific rules for static files/assets (must precede the catch-all)
-/robots.txt /robots.txt 200
-/sitemap.xml /sitemap.xml 200
-/blog-posts.json /blog-posts.json 200
-/blog/* /blog/:splat 200
+# Note: no explicit rules are needed for real static files (robots.txt, sitemap.xml,
+# blog-posts.json, or the .md files in public/blog/) — Netlify always serves an existing
+# file directly, before ever evaluating _redirects rules below. A rule such as
+# "/blog/* /blog/:splat 200" was previously added here thinking it was needed for this,
+# but it actually broke the site: it intercepted requests to CLIENT-SIDE blog post routes
+# like /blog/my-post-slug (which are not real files, they're React routes) and rewrote them
+# to themselves, which don't exist as files, producing a real HTTP 404 instead of falling
+# through to index.html. This took down every blog post URL. Do not re-add a /blog/* rule.
 
 # Rewrite all remaining requests to index.html while preserving the URL
 # This tells Netlify to serve index.html for all requests that don't match static files

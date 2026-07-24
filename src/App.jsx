@@ -6,12 +6,13 @@ const organizationSchema = {
   '@type': 'Organization',
   name: 'APP Coaching',
   url: 'https://appcoaching.io',
-  logo: 'https://appcoaching.io/logo.png',
+  logo: 'https://appcoaching.io/Aaron_Pacheco_300dpi_001_6x6.jpg',
   description: 'AI, Excel & Finance coaching to move you from confusion to clarity and self-sufficiency.',
-  sameAs: ['https://linkedin.com/company/appcoaching', 'https://twitter.com/appcoaching'],
+  sameAs: ['https://www.linkedin.com/in/aaronpacheco'],
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'Customer Service',
+    email: 'aarcheco@gmail.com',
     url: 'https://cal.com/app-coaching-xcgvda'
   },
   founder: {
@@ -411,7 +412,7 @@ export default function AppCoaching() {
 
       // If viewing a specific blog post by slug
       if (pageName === 'blog' && postSlug && blogPosts.length > 0) {
-        const post = blogPosts.find(p => generateSlug(p.title) === postSlug);
+        const post = blogPosts.find(p => p.slug === postSlug);
         if (post) setSelectedBlogPost(post.id);
       }
     } else {
@@ -427,7 +428,7 @@ export default function AppCoaching() {
         setCurrentPage(newPageName);
 
         if (newPageName === 'blog' && newPostSlug && blogPosts.length > 0) {
-          const post = blogPosts.find(p => generateSlug(p.title) === newPostSlug);
+          const post = blogPosts.find(p => p.slug === newPostSlug);
           if (post) setSelectedBlogPost(post.id);
         } else if (newPageName === 'blog') {
           setSelectedBlogPost(null);
@@ -461,7 +462,10 @@ export default function AppCoaching() {
           return {
             id: item.id,
             title: item.title,
-            slug: generateSlug(item.title),
+            // Use the manifest's precomputed slug (single source of truth, also used to
+            // generate sitemap.xml) rather than recalculating — keeps URLs, sitemap, and
+            // routing permanently in sync.
+            slug: item.slug || generateSlug(item.title),
             date: item.date,
             excerpt: item.excerpt,
             heroImage: item.heroImage,
@@ -634,7 +638,8 @@ export default function AppCoaching() {
   };
 
   const styles = `
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap');
+    /* Fonts are loaded via <link> in public/index.html <head>, not @import here —
+       keeps font requests starting immediately instead of waiting on the JS bundle. */
 
     * {
       margin: 0;
@@ -842,16 +847,16 @@ export default function AppCoaching() {
         gap: '2rem',
         width: '100%'
       }}>
-        <div onClick={() => navigateTo('home')} style={{ fontSize: '1.2rem', fontWeight: '800', letterSpacing: '0.5px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.25rem', whiteSpace: 'nowrap', flex: '0 0 auto' }}>
+        <a href="/" onClick={(e) => { e.preventDefault(); navigateTo('home'); }} style={{ fontSize: '1.2rem', fontWeight: '800', letterSpacing: '0.5px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.25rem', whiteSpace: 'nowrap', flex: '0 0 auto', color: 'white', textDecoration: 'none' }}>
           APP<span style={{ color: colors.limeGreen, fontSize: '1rem' }}>•</span>Coaching
-        </div>
+        </a>
 
         {/* Desktop menu */}
         <div style={{ display: 'none', gap: '2rem', alignItems: 'center', justifyContent: 'flex-end', flex: 1 }} className="desktop-menu">
-          <span onClick={() => navigateTo('home')} style={{ color: 'white', fontSize: '0.85rem', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>Home</span>
-          <span onClick={() => navigateTo('services')} style={{ color: 'white', fontSize: '0.85rem', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>Services</span>
-          <span onClick={() => navigateTo('about')} style={{ color: 'white', fontSize: '0.85rem', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>About</span>
-          <span onClick={() => navigateTo('blog')} style={{ color: 'white', fontSize: '0.85rem', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>Blog</span>
+          <a href="/" onClick={(e) => { e.preventDefault(); navigateTo('home'); }} style={{ color: 'white', fontSize: '0.85rem', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap', textDecoration: 'none' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>Home</a>
+          <a href="/services" onClick={(e) => { e.preventDefault(); navigateTo('services'); }} style={{ color: 'white', fontSize: '0.85rem', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap', textDecoration: 'none' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>Services</a>
+          <a href="/about" onClick={(e) => { e.preventDefault(); navigateTo('about'); }} style={{ color: 'white', fontSize: '0.85rem', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap', textDecoration: 'none' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>About</a>
+          <a href="/blog" onClick={(e) => { e.preventDefault(); navigateTo('blog'); }} style={{ color: 'white', fontSize: '0.85rem', cursor: 'pointer', opacity: 0.9, transition: 'opacity 0.3s', whiteSpace: 'nowrap', textDecoration: 'none' }} onMouseEnter={(e) => e.target.style.opacity = '1'} onMouseLeave={(e) => e.target.style.opacity = '0.9'}>Blog</a>
           <a href="https://cal.com/app-coaching-xcgvda" target="_blank" rel="noopener noreferrer" style={{ background: colors.limeGreen, color: colors.darkNavy, padding: '0.6rem 1.2rem', borderRadius: '6px', border: 'none', fontWeight: '700', fontSize: '0.8rem', cursor: 'pointer', fontFamily: "'Poppins', sans-serif", textDecoration: 'none', display: 'inline-block', whiteSpace: 'nowrap' }}>BOOK A CALL</a>
         </div>
 
@@ -880,10 +885,10 @@ export default function AppCoaching() {
           boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
           width: '100%'
         }} className="mobile-menu-dropdown">
-          <span onClick={() => { navigateTo('home'); setMobileMenuOpen(false); }} style={{ color: 'white', fontSize: '0.95rem', cursor: 'pointer', padding: '0.75rem 0', borderBottom: `1px solid rgba(255,255,255,0.1)` }}>Home</span>
-          <span onClick={() => { navigateTo('services'); setMobileMenuOpen(false); }} style={{ color: 'white', fontSize: '0.95rem', cursor: 'pointer', padding: '0.75rem 0', borderBottom: `1px solid rgba(255,255,255,0.1)` }}>Services</span>
-          <span onClick={() => { navigateTo('about'); setMobileMenuOpen(false); }} style={{ color: 'white', fontSize: '0.95rem', cursor: 'pointer', padding: '0.75rem 0', borderBottom: `1px solid rgba(255,255,255,0.1)` }}>About</span>
-          <span onClick={() => { navigateTo('blog'); setMobileMenuOpen(false); }} style={{ color: 'white', fontSize: '0.95rem', cursor: 'pointer', padding: '0.75rem 0' }}>Blog</span>
+          <a href="/" onClick={(e) => { e.preventDefault(); navigateTo('home'); setMobileMenuOpen(false); }} style={{ color: 'white', fontSize: '0.95rem', cursor: 'pointer', padding: '0.75rem 0', borderBottom: `1px solid rgba(255,255,255,0.1)`, textDecoration: 'none' }}>Home</a>
+          <a href="/services" onClick={(e) => { e.preventDefault(); navigateTo('services'); setMobileMenuOpen(false); }} style={{ color: 'white', fontSize: '0.95rem', cursor: 'pointer', padding: '0.75rem 0', borderBottom: `1px solid rgba(255,255,255,0.1)`, textDecoration: 'none' }}>Services</a>
+          <a href="/about" onClick={(e) => { e.preventDefault(); navigateTo('about'); setMobileMenuOpen(false); }} style={{ color: 'white', fontSize: '0.95rem', cursor: 'pointer', padding: '0.75rem 0', borderBottom: `1px solid rgba(255,255,255,0.1)`, textDecoration: 'none' }}>About</a>
+          <a href="/blog" onClick={(e) => { e.preventDefault(); navigateTo('blog'); setMobileMenuOpen(false); }} style={{ color: 'white', fontSize: '0.95rem', cursor: 'pointer', padding: '0.75rem 0', textDecoration: 'none' }}>Blog</a>
         </div>
       )}
 
@@ -950,9 +955,9 @@ export default function AppCoaching() {
           </p>
         </div>
 
-        <button onClick={() => navigateTo('contact')} style={{ background: colors.limeGreen, color: '#4a5568', border: 'none', padding: 'clamp(0.6rem, 2vh, 1rem) clamp(1rem, 4vw, 2.5rem)', fontSize: 'clamp(0.8rem, 2vw, 1rem)', fontWeight: '700', borderRadius: '8px', cursor: 'pointer', fontFamily: "'Poppins', sans-serif", whiteSpace: 'nowrap' }}>
+        <a href="/contact" onClick={(e) => { e.preventDefault(); navigateTo('contact'); }} style={{ background: colors.limeGreen, color: '#4a5568', border: 'none', padding: 'clamp(0.6rem, 2vh, 1rem) clamp(1rem, 4vw, 2.5rem)', fontSize: 'clamp(0.8rem, 2vw, 1rem)', fontWeight: '700', borderRadius: '8px', cursor: 'pointer', fontFamily: "'Poppins', sans-serif", whiteSpace: 'nowrap', textDecoration: 'none', display: 'inline-block' }}>
           BOOK A CALL →
-        </button>
+        </a>
       </section>
 
       {/* How I Can Help You - Services Section */}
@@ -1620,12 +1625,12 @@ export default function AppCoaching() {
             gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
             gap: '1rem'
           }}>
-            <img src="/aaron-headshot-casual-1.jpg" alt="Aaron moment" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
-            <img src="/PSX_20241105_115531.jpg" alt="Aaron candid" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
-            <img src="/aaron-headshot-casual-3.jpg" alt="Aaron memory" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
-            <img src="/PSX_20171114_215601.jpg" alt="Aaron moment" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
-            <img src="/WP_20161020_19_07_16_Rich.jpg" alt="Aaron candid" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
-            <img src="/20250329_194859.jpg" alt="Aaron memory" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img src="/aaron-headshot-casual-1.jpg" alt="Aaron Pacheco, founder of APP Coaching, casual portrait" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img src="/PSX_20241105_115531.jpg" alt="Aaron Pacheco at a work event" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img src="/aaron-headshot-casual-3.jpg" alt="Aaron Pacheco, finance and AI coach" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img src="/PSX_20171114_215601.jpg" alt="Aaron Pacheco early career photo" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img src="/WP_20161020_19_07_16_Rich.jpg" alt="Aaron Pacheco during his finance career" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img src="/20250329_194859.jpg" alt="Aaron Pacheco, APP Coaching founder, recent photo" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
           </div>
         </div>
 
@@ -1916,12 +1921,13 @@ export default function AppCoaching() {
 
         {/* Privacy Policy / Terms link */}
         <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-          <span
-            onClick={() => navigateTo('privacy')}
+          <a
+            href="/privacy"
+            onClick={(e) => { e.preventDefault(); navigateTo('privacy'); }}
             style={{ color: colors.textMuted, fontSize: '0.9rem', cursor: 'pointer', textDecoration: 'underline', textDecorationColor: colors.limeGreen, textDecorationThickness: '2px' }}
           >
             Privacy Policy & Terms of Service
-          </span>
+          </a>
         </div>
       </section>
     </div>
@@ -1959,7 +1965,7 @@ export default function AppCoaching() {
             </p>
           </div>
 
-          <h1 style={{ fontSize: '1.8rem', color: colors.darkNavy, fontFamily: "'Poppins', sans-serif", fontWeight: '800', marginBottom: '1.5rem' }}>Privacy Policy</h1>
+          <h2 style={{ fontSize: '1.8rem', color: colors.darkNavy, fontFamily: "'Poppins', sans-serif", fontWeight: '800', marginBottom: '1.5rem' }}>Privacy Policy</h2>
 
           <div style={sectionStyle}>
             <h2 style={h2Style}>1. Who We Are</h2>
@@ -2041,7 +2047,7 @@ export default function AppCoaching() {
 
           <hr style={{ border: 'none', borderTop: `2px solid ${colors.borderGray}`, margin: '3rem 0' }} />
 
-          <h1 style={{ fontSize: '1.8rem', color: colors.darkNavy, fontFamily: "'Poppins', sans-serif", fontWeight: '800', marginBottom: '1.5rem' }}>Terms of Service</h1>
+          <h2 style={{ fontSize: '1.8rem', color: colors.darkNavy, fontFamily: "'Poppins', sans-serif", fontWeight: '800', marginBottom: '1.5rem' }}>Terms of Service</h2>
 
           <div style={sectionStyle}>
             <h2 style={h2Style}>1. Acceptance of Terms</h2>
@@ -2113,12 +2119,13 @@ export default function AppCoaching() {
           </div>
 
           <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-            <span
-              onClick={() => navigateTo('about')}
+            <a
+              href="/about"
+              onClick={(e) => { e.preventDefault(); navigateTo('about'); }}
               style={{ color: colors.darkNavy, fontSize: '0.95rem', cursor: 'pointer', fontWeight: '600', textDecoration: 'underline', textDecorationColor: colors.limeGreen }}
             >
               ← Back to About
-            </span>
+            </a>
           </div>
 
         </section>
@@ -2358,14 +2365,18 @@ export default function AppCoaching() {
                     .filter(p => p.id !== selectedBlogPost)
                     .slice(0, 3)
                     .map((relatedPost) => (
-                      <div
+                      <a
                         key={relatedPost.id}
-                        onClick={() => {
+                        href={`/blog/${relatedPost.slug}`}
+                        onClick={(e) => {
+                          e.preventDefault();
                           setSelectedBlogPost(relatedPost.id);
-                          window.location.hash = `blog/${generateSlug(relatedPost.title)}`;
+                          navigateTo('blog', relatedPost.slug);
                           window.scrollTo(0, 0);
                         }}
                         style={{
+                          display: 'block',
+                          textDecoration: 'none',
                           border: `1px solid ${colors.borderGray}`,
                           borderRadius: '8px',
                           overflow: 'hidden',
@@ -2423,7 +2434,7 @@ export default function AppCoaching() {
                             {formatDate(relatedPost.date)}
                           </p>
                         </div>
-                      </div>
+                      </a>
                     ))}
                 </div>
               </div>
@@ -2663,7 +2674,8 @@ export default function AppCoaching() {
                       return tagMatch && searchMatch;
                     })
                     .map((post) => (
-                    <button key={post.id} onClick={() => {
+                    <a key={post.id} href={`/blog/${post.slug}`} onClick={(e) => {
+                      e.preventDefault();
                       setSelectedBlogPost(post.id);
                       navigateTo('blog', post.slug);
                     }} style={{
@@ -2721,7 +2733,7 @@ export default function AppCoaching() {
                       <p style={{ fontSize: '0.85rem', color: colors.darkNavy, fontStyle: 'italic', fontWeight: '500' }}>
                         {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
                       </p>
-                    </button>
+                    </a>
                   ))}
                   {blogPosts.filter((post) => {
                     const tagMatch = selectedTags.length === 0 || (post.tags && post.tags.some(tag => selectedTags.includes(tag)));
@@ -2873,8 +2885,10 @@ export default function AppCoaching() {
                                 {isExpanded ? '↑ Show Less' : '↓ Show More'}
                               </button>
                             )}
-                            <button
-                              onClick={() => {
+                            <a
+                              href={`/blog/${blogPosts.find(p => p.id === snippet.postId)?.slug || ''}`}
+                              onClick={(e) => {
+                                e.preventDefault();
                                 const post = blogPosts.find(p => p.id === snippet.postId);
                                 if (post) {
                                   setSelectedBlogPost(post.id);
@@ -2891,13 +2905,15 @@ export default function AppCoaching() {
                                 fontWeight: '600',
                                 cursor: 'pointer',
                                 transition: 'all 0.2s ease',
-                                textAlign: 'center'
+                                textAlign: 'center',
+                                textDecoration: 'none',
+                                display: 'inline-block'
                               }}
                               onMouseEnter={(e) => { e.currentTarget.style.opacity = '0.8'; }}
                               onMouseLeave={(e) => { e.currentTarget.style.opacity = '1'; }}
                             >
                               Read Full Post
-                            </button>
+                            </a>
                           </div>
                           {snippet.categories && snippet.categories.length > 0 && (
                             <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: '1rem' }}>
@@ -3276,7 +3292,7 @@ export default function AppCoaching() {
         Coaching • Excel • Finance • AI • Operations
       </p>
       <p style={{ fontSize: '0.8rem', opacity: '0.7', marginTop: '0.75rem' }}>
-        <span onClick={() => navigateTo('privacy')} style={{ cursor: 'pointer', textDecoration: 'underline' }}>Privacy Policy & Terms of Service</span>
+        <a href="/privacy" onClick={(e) => { e.preventDefault(); navigateTo('privacy'); }} style={{ cursor: 'pointer', textDecoration: 'underline', color: 'inherit' }}>Privacy Policy & Terms of Service</a>
       </p>
     </footer>
   );
@@ -3296,7 +3312,7 @@ export default function AppCoaching() {
       <Footer />
 
       {/* Floating "Get in Touch" CTA Button - Bottom Right */}
-      <button onClick={() => navigateTo('contact')} style={{
+      <a href="/contact" onClick={(e) => { e.preventDefault(); navigateTo('contact'); }} style={{
         position: 'fixed',
         bottom: '2rem',
         right: '2rem',
@@ -3311,10 +3327,12 @@ export default function AppCoaching() {
         fontFamily: "'Poppins', sans-serif",
         boxShadow: '0 4px 16px rgba(0, 255, 65, 0.3)',
         zIndex: 99,
-        transition: 'all 0.3s ease'
+        transition: 'all 0.3s ease',
+        textDecoration: 'none',
+        display: 'inline-block'
       }} onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.05)'; e.currentTarget.style.boxShadow = '0 6px 20px rgba(0, 0, 0, 0.4)'; }} onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.boxShadow = '0 4px 16px rgba(0, 0, 0, 0.3)'; }}>
         💬 Get in Touch
-      </button>
+      </a>
     </div>
   );
 }

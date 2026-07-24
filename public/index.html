@@ -4,6 +4,12 @@
     <!-- Essential Meta Tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google Fonts: loaded here (not via JS @import) so font requests start immediately
+         instead of waiting for the JS bundle to load, parse, and inject a <style> tag. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet" />
     <meta name="theme-color" content="#1f3a7d" />
     <meta name="description" content="Move from confusion to clarity. 1-on-1 AI, Excel & Finance coaching by Aaron Pacheco in Australia. Master self-sufficiency." />
     <meta name="keywords" content="AI coaching, Excel coaching, Finance coaching, Business coaching, Australia" />
@@ -31,48 +37,14 @@
     <!-- Canonical URL (prevents duplicate content issues) -->
     <link rel="canonical" href="https://appcoaching.io/" />
 
-    <!-- Schema.org Markup (Organization) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "APP Coaching",
-      "url": "https://appcoaching.io",
-      "logo": "https://appcoaching.io/Aaron_Pacheco_300dpi_001_6x6.jpg",
-      "description": "1-on-1 AI, Excel & Finance coaching for founders and professionals",
-      "foundingDate": "2026-06-26",
-      "founder": {
-        "@type": "Person",
-        "name": "Aaron Pacheco",
-        "jobTitle": "Coach",
-        "image": "https://appcoaching.io/Aaron_Pacheco_300dpi_001_6x6.jpg"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/in/aaronpacheco"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "",
-        "contactType": "Customer Support",
-        "email": "aarcheco@gmail.com"
-      }
-    }
-    </script>
-
-    <!-- Schema.org Markup (Service) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Personal Coaching",
-      "provider": {
-        "@type": "Organization",
-        "name": "APP Coaching"
-      },
-      "areaServed": "AU",
-      "description": "1-on-1 coaching in AI, Excel, Finance, and Business Operations"
-    }
-    </script>
+    <!--
+      Note: Organization/Service/Person schema is intentionally NOT duplicated here as static
+      JSON-LD. It is injected dynamically per-page by src/App.jsx (see organizationSchema,
+      personSchema, and pageConfigs) via updateMetaTags(), which keeps a single accurate source
+      of truth instead of two schema blocks that can drift out of sync. Netlify prerendering
+      (enabled in site settings) ensures bots that don't execute JS still receive the fully
+      rendered, JS-injected version of this markup.
+    -->
 
     <title>Your Most Expensive Problem: Confusion | APP Coaching</title>
   </head>

@@ -2,7 +2,7 @@
 title: "Finance Coaching: Why Smart People Struggle With Money"
 date: 2026-07-13
 id: 003
-excerpt: "Accountants can't track their own finances. Business owners don't know if they're making money. If confusion this widespread is normal at the top, what does that say about personal finance literacy for everyone else?"
+excerpt: "Accountants can't track their own finances. If confusion this widespread is normal at the top, what does that say about the rest of us?"
 heroImage: /blog/finance-coaching-hero.jpg
 categories: ["Personal Finance"]
 tags: ["Financial Literacy"]

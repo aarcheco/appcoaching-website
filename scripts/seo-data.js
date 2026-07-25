@@ -53,7 +53,7 @@ const pageConfigs = {
   home: {
     id: 'home',
     title: 'APP Coaching | Affordable Finance, Excel & AI Coaching',
-    description: 'Expert coaching in Excel, AI & Finance without premium prices. Build clarity, master efficient systems, and become self-sufficient through practical 1-on-1 coaching.',
+    description: 'Expert coaching in Excel, AI & Finance without premium prices. Build clarity, master efficient systems, and become self-sufficient.',
     canonical: 'https://appcoaching.io/',
     ogType: 'website',
     schema: {

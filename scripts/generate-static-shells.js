@@ -215,8 +215,12 @@ try {
       url: canonicalUrl,
       publisher: organizationSchema
     };
+    // Skip the " | APP Coaching" suffix on titles that are already long — same rule as
+    // updateBlogPostMetaTags() in src/App.jsx, kept in sync so the baked <title> matches
+    // what the client sets after JS loads.
+    const pageTitle = post.title.length > 50 ? post.title : `${post.title} | APP Coaching`;
     const html = renderPage(template, {
-      title: `${post.title} | APP Coaching`,
+      title: pageTitle,
       description: post.excerpt,
       canonical: canonicalUrl,
       ogType: 'article',

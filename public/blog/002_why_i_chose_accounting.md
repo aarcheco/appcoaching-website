@@ -2,7 +2,7 @@
 title: "Why I Chose Accounting: The Journey from Rule-Follower to Translator"
 date: 2026-07-10
 id: 002
-excerpt: From my mum's exactness to PwC's pressure to Coronis's transformation—how accounting taught me that the real value isn't processing numbers, it's making them make sense
+excerpt: From my mum's exactness to PwC's pressure to Coronis—how accounting taught me the real value isn't processing numbers, it's making them make sense.
 heroImage: https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80
 categories: ["Accounting & Finance Career", "Business Finance"]
 tags: ["Career Coaching", "Business Finance"]

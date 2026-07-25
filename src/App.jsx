@@ -50,7 +50,7 @@ const pageConfigs = {
   home: {
     id: 'home',
     title: 'APP Coaching | Affordable Finance, Excel & AI Coaching',
-    description: 'Expert coaching in Excel, AI & Finance without premium prices. Build clarity, master efficient systems, and become self-sufficient through practical 1-on-1 coaching.',
+    description: 'Expert coaching in Excel, AI & Finance without premium prices. Build clarity, master efficient systems, and become self-sufficient.',
     canonical: 'https://appcoaching.io/',
     ogType: 'website',
     schema: {
@@ -281,7 +281,10 @@ export default function AppCoaching() {
     const canonicalUrl = `https://appcoaching.io/blog/${post.slug}`;
 
     // Update title and meta description
-    document.title = `${post.title} | APP Coaching`;
+    // Skip the " | APP Coaching" suffix on titles that are already long — keeping it
+    // would push the <title> well past Google's ~60-char display budget. Post titles
+    // themselves are left untouched (they're the real on-page headline copy).
+    document.title = post.title.length > 50 ? post.title : `${post.title} | APP Coaching`;
 
     let descMeta = document.querySelector('meta[name="description"]');
     if (!descMeta) {
@@ -2731,9 +2734,9 @@ export default function AppCoaching() {
                           {post.id}
                         </div>
                       </div>
-                      <h3 style={{ fontSize: '1.4rem', color: colors.darkNavy, marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700', lineHeight: '1.4' }}>
+                      <h2 style={{ fontSize: '1.4rem', color: colors.darkNavy, marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700', lineHeight: '1.4' }}>
                         {post.title}
-                      </h3>
+                      </h2>
                       <p style={{ fontSize: '0.95rem', color: colors.textMuted, marginBottom: '1rem', lineHeight: '1.6' }}>
                         {post.excerpt}
                       </p>
@@ -2860,9 +2863,9 @@ export default function AppCoaching() {
                             {snippet.type === 'prompt' && '🤖 PAUL\'s Prompt'}
                             {snippet.type === 'formula' && '📊 PAUL\'s Formula'}
                           </div>
-                          <h3 style={{ fontSize: '1.2rem', color: colors.darkNavy, marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
+                          <h2 style={{ fontSize: '1.2rem', color: colors.darkNavy, marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
                             {snippet.title}
-                          </h3>
+                          </h2>
                           <p style={{ fontSize: '0.95rem', color: colors.textMuted, lineHeight: '1.6', marginBottom: '1rem', whiteSpace: 'pre-wrap', wordWrap: 'break-word' }}>
                             {displayText}
                             {!isExpanded && needsExpand && '...'}

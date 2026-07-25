@@ -1,13 +1,16 @@
-// ===== SHARED SEO CONFIG — SINGLE SOURCE OF TRUTH =====
-// This file is imported two different ways and must stay plain CommonJS
-// (module.exports, no ES `export`/JSX) so both consumers can read it as-is:
-//   1. src/App.jsx (via webpack/babel's CommonJS interop, at runtime in the browser)
-//      — drives the client-side per-page <title>/<meta>/JSON-LD injection.
-//   2. scripts/generate-static-shells.js (via plain `require()` in Node, at build time)
-//      — bakes the same title/meta/canonical/JSON-LD into real static HTML per route,
-//        so crawlers that don't run JS (or aren't on Netlify's prerender allowlist)
-//        still see correct, accurate metadata.
-// If you change page titles/descriptions/schema, change them ONLY here.
+#!/usr/bin/env node
+// ===== SEO CONFIG FOR BUILD-TIME USE (Node, CommonJS) =====
+// IMPORTANT: this is intentionally a duplicate of the pageConfigs/organizationSchema/
+// personSchema block in src/App.jsx, kept in sync by hand (same pattern as
+// generateSlug() in scripts/publish-blog.js). It must live under scripts/, not src/ —
+// files under src/ are run through CRA's webpack/babel pipeline, which treats them as
+// ES modules; a plain `module.exports =` in one throws a hard runtime crash in the
+// browser ("ES Modules may not assign module.exports"). This file is only ever
+// `require()`'d directly by plain Node scripts (scripts/generate-static-shells.js),
+// which never touches webpack, so CommonJS here is safe.
+//
+// If you change page titles/descriptions/schema, update BOTH this file and the
+// matching block in src/App.jsx.
 
 const organizationSchema = {
   '@context': 'https://schema.org',

@@ -23,14 +23,16 @@
  * interactive app — same as today, except real users now see meaningful
  * content for an instant instead of a blank page while the bundle loads.
  *
- * SINGLE SOURCE OF TRUTH: all title/description/canonical/schema values
- * come from src/seo-config.js — the exact same file src/App.jsx imports for
- * its client-side <title>/meta injection. Change copy in one place only.
+ * SEO DATA: title/description/canonical/schema values come from ./seo-data.js, a
+ * hand-kept duplicate of the same block in src/App.jsx (see the comment there for why
+ * it isn't a shared import — a shared CommonJS file under src/ crashes the production
+ * bundle at runtime under CRA's webpack/babel pipeline). If you change page copy,
+ * update both.
  */
 
 const fs = require('fs');
 const path = require('path');
-const { organizationSchema, personSchema, pageConfigs } = require('../src/seo-config');
+const { organizationSchema, personSchema, pageConfigs } = require('./seo-data');
 
 const BUILD_DIR = path.join(__dirname, '../build');
 const TEMPLATE_PATH = path.join(BUILD_DIR, 'index.html');

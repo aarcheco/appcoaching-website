@@ -2,7 +2,7 @@
 title: "How to Build a Website With AI (No Code, Under $100)"
 date: 2026-07-15
 id: 004
-excerpt: "Google Trends shows 'AI build website' is the fastest-growing search. Here's exactly how to use Claude, Squarespace, or Lovable to build your site without code, in natural language, for less than $100 total."
+excerpt: "Here's exactly how to use Claude, Squarespace, or Lovable to build your site without code, in natural language, for less than $100 total."
 heroImage: /blog/airtasker-jobs-hero.jpg
 categories: ["Website Building", "Business AI"]
 tags: ["No-Code", "AI Website", "Web Development"]

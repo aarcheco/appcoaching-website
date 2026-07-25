@@ -121,10 +121,22 @@ function renderPage(template, { title, description, canonical, ogType = 'website
 }
 
 function writeRoutePage(routePath, html) {
-  const dir = routePath === '' ? BUILD_DIR : path.join(BUILD_DIR, routePath);
-  fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, 'index.html'), html);
-  console.log(`  ✓ build/${routePath ? routePath + '/' : ''}index.html`);
+  if (routePath === '') {
+    // Homepage stays as build/index.html — the actual site root / SPA fallback.
+    fs.writeFileSync(path.join(BUILD_DIR, 'index.html'), html);
+    console.log('  ✓ build/index.html');
+    return;
+  }
+  // Flat "<route>.html" file, NOT "<route>/index.html". Netlify resolves a request for
+  // "/services" straight to "services.html" with no redirect. A directory + index.html
+  // instead gets 301-redirected by Netlify to add a trailing slash ("/services/"),
+  // which then mismatches the no-trailing-slash URLs in sitemap.xml, canonical tags,
+  // and every internal <a href> — an avoidable extra hop and a canonical/served-URL
+  // mismatch a crawler audit flags. Flat files keep one consistent URL everywhere.
+  const filePath = path.join(BUILD_DIR, `${routePath}.html`);
+  fs.mkdirSync(path.dirname(filePath), { recursive: true });
+  fs.writeFileSync(filePath, html);
+  console.log(`  ✓ build/${routePath}.html`);
 }
 
 try {
@@ -139,7 +151,11 @@ try {
   const staticBodyContent = {
     home: {
       h1: 'Your Most Expensive Problem: Confusion',
-      paragraphs: [pageConfigs.home.description]
+      paragraphs: [
+        pageConfigs.home.description,
+        organizationSchema.description,
+        'Coaching areas: Finance Literacy, Excel & AI Skills, and Career Mentoring — practical, 1-on-1, and built to make you self-sufficient rather than dependent on ongoing coaching.'
+      ]
     },
     services: {
       h1: 'APP Coaching Services',
@@ -153,11 +169,18 @@ try {
     },
     about: {
       h1: 'About Aaron Pacheco',
-      paragraphs: [pageConfigs.about.description]
+      paragraphs: [
+        pageConfigs.about.description,
+        personSchema.description,
+        `${personSchema.jobTitle}. Background includes Flight Centre, PwC, Coronis Group, and Aveo Group.`
+      ]
     },
     contact: {
       h1: 'Get in Touch',
-      paragraphs: [pageConfigs.contact.description]
+      paragraphs: [
+        pageConfigs.contact.description,
+        'The discovery call is a free, no-pressure 15-minute conversation about where confusion is costing you most — in your numbers, your tools, or your career — and whether coaching is the right fit.'
+      ]
     },
     privacy: {
       h1: 'Privacy Policy & Terms of Service',
@@ -218,7 +241,7 @@ try {
     // Skip the " | APP Coaching" suffix on titles that are already long — same rule as
     // updateBlogPostMetaTags() in src/App.jsx, kept in sync so the baked <title> matches
     // what the client sets after JS loads.
-    const pageTitle = post.title.length > 50 ? post.title : `${post.title} | APP Coaching`;
+    const pageTitle = post.title.length > 45 ? post.title : `${post.title} | APP Coaching`;
     const html = renderPage(template, {
       title: pageTitle,
       description: post.excerpt,

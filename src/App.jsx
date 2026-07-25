@@ -284,7 +284,7 @@ export default function AppCoaching() {
     // Skip the " | APP Coaching" suffix on titles that are already long — keeping it
     // would push the <title> well past Google's ~60-char display budget. Post titles
     // themselves are left untouched (they're the real on-page headline copy).
-    document.title = post.title.length > 50 ? post.title : `${post.title} | APP Coaching`;
+    document.title = post.title.length > 45 ? post.title : `${post.title} | APP Coaching`;
 
     let descMeta = document.querySelector('meta[name="description"]');
     if (!descMeta) {

@@ -26,6 +26,8 @@ tags: ["Excel Training", "AI Tools", "Networking", "Career Coaching"]
 <p>A colleague from a decade-old job remembered me and asked for Excel coaching — proof that being approachable and genuinely skilled still gets you work in an AI world. I built his entire 33-sheet, self-marking Excel course with instant feedback (built with Claude) in under 2 hours, and because it's built from natural language rather than typed by hand, that same skeleton now reskins for any industry in a fraction of that time. Download a free 10-tab practice workbook sample below to see exactly how it teaches.</p>
 </blockquote>
 
+<img src="/blog/excel-mastery-training-hero.jpg" alt="Excel training workbook built with Claude AI - self-marking spreadsheet grid showing instant feedback practice mechanic" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0; display: block;">
+
 <p style="text-align: center; color: #6b7280; font-size: 0.95rem; font-style: italic; margin: -1rem 0 2rem;">Excel training built with Claude — a real 33-sheet, self-marking course, not a demo.</p>
 
 <details style="background: #f7f9fc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; margin: 2rem 0;">
@@ -181,20 +183,22 @@ tags: ["Excel Training", "AI Tools", "Networking", "Career Coaching"]
 
 <p style="text-align: center; margin: 1.5rem 0;"><a href="/downloads/Excel_Mastery_Training_Sample.xlsx" style="background: #00FF00; color: #1f3a7d; padding: 0.75rem 1.75rem; border-radius: 6px; text-decoration: none; font-weight: 700; display: inline-block;">⬇ Download the Sample (.xlsx)</a></p>
 
+<p>To be clear: what you're downloading is only a sample extract, enough to show you what's genuinely possible when this is built properly. If you want to build something like this yourself — for you, for a student, or for someone on your team — the comprehensive PAUL's Prompt further down this article will get you most of the way there. If you'd rather I just build it for you (or walk you through doing it), <a href="https://cal.com/app-coaching-xcgvda" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">book a free discovery call</a> and I'll show you exactly how.</p>
+
 <h2 id="the-catch">The Catch: You Still Need to Know Excel</h2>
 
 <p>Here's the part I don't want glossed over. None of this works if the person driving it doesn't actually know Excel. Claude wrote the scripts, generated the formulas, and rebuilt the file a dozen times in one sitting — but I still had to review every flagged error from the recalculation gate and judge which ones were real bugs versus false alarms. I still had to know that an <code>AVERAGEIFS</code> returning <code>#DIV/0!</code> on a zero-match condition is expected behaviour, not a formula written wrong. I still had to know what "good" looks like in a self-marking quiz mechanic, in a PivotTable, in a Power Query step — because Claude can build fast, but it can't tell you whether what it built is actually teaching the right thing. The same discipline applies every time I reskin this for a new client: I still have to check that the new dataset and formulas make sense for that industry, not just swap in new column headers and hope.</p>
 
 <p>This is the same principle behind <a href="/blog/how-to-build-a-website-with-ai-no-code-under-100" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">building a website with AI</a>: the tool collapses the time it takes to produce something, it doesn't collapse the expertise needed to know if the output is right. If you can't read a formula, you can't catch the one formula in 2,126 that's subtly wrong. AI is a force multiplier on existing skill, not a replacement for it.</p>
 
-<h3 style="margin-top: 2rem;">PAUL's Prompt (Build Your Own Excel Training Workbook)</h3>
+<blockquote style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
+<strong>📋 PAUL's Prompt (Build Your Own Excel Training Workbook)</strong>
+<p>If you want to build your own reusable, self-marking Excel training workbook with <a href="https://claude.ai" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Claude</a>, this is the comprehensive version of the exact structure that produced this one:</p>
 
-<p><strong>If you want to build your own reusable, self-marking Excel training workbook with <a href="https://claude.ai" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Claude</a>, this is the comprehensive version of the exact structure that produced this one:</strong></p>
-
-<details style="background: #f7f9fc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; margin: 1rem 0;">
+<details style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; margin: 1rem 0;">
   <summary style="cursor: pointer; font-weight: 700; color: #1f3a7d; user-select: none;">📋 See Full Prompt (Click to Expand)</summary>
   <div style="margin-top: 1rem;">
-    <p style="background: #ffffff; border-left: 4px solid #00FF00; padding: 1.5rem; color: #1f3a7d; font-family: monospace; font-size: 0.9rem; line-height: 1.8; margin: 1rem 0; white-space: pre-wrap;">I want to build a self-marking Excel training workbook using Python (openpyxl), not by typing it into Excel by hand. Before you build anything, interview me and wait for my answers:
+    <p style="background: #f9fafb; border-left: 4px solid #00FF00; padding: 1.5rem; color: #1f3a7d; font-family: monospace; font-size: 0.9rem; line-height: 1.8; margin: 1rem 0; white-space: pre-wrap;">I want to build a self-marking Excel training workbook using Python (openpyxl), not by typing it into Excel by hand. Before you build anything, interview me and wait for my answers:
 
 (1) Who is this training for? (their job title, industry, current Excel skill level)
 (2) What topics should it cover, and in what order or sessions?
@@ -223,6 +227,7 @@ Flag anything you're not fully confident is correct so I can review it myself be
     <button onclick="navigator.clipboard.writeText(document.getElementById('prompt-training-full').textContent).then(()=>{const b=this;const orig=b.textContent;b.textContent='✅ Copied!';b.style.background='#1f3a7d';b.style.color='white';setTimeout(()=>{b.textContent=orig;b.style.background='#00FF00';b.style.color='#1f3a7d';},2000);})" style="background: #00FF00; color: #1f3a7d; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 0.95rem; margin-top: 1rem;">📋 Copy Prompt</button>
   </div>
 </details>
+</blockquote>
 
 <div id="prompt-training-full" style="display: none;">I want to build a self-marking Excel training workbook using Python (openpyxl), not by typing it into Excel by hand. Before you build anything, interview me and wait for my answers:
 

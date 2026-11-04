@@ -22,6 +22,12 @@ const generateSlug = (title) => {
     .replace(/-+/g, '-');
 };
 
+// gray-matter turns unquoted YAML dates into Date objects; store plain YYYY-MM-DD.
+const toIsoDate = (value) => {
+  if (value instanceof Date) return value.toISOString().slice(0, 10);
+  return String(value).slice(0, 10);
+};
+
 console.log('📝 Generating blog manifest...');
 
 try {
@@ -43,14 +49,25 @@ try {
     const content = fs.readFileSync(filePath, 'utf-8');
     const { data, content: bodyContent } = matter(content);
 
+    // Optional SEO front matter (all safe to omit):
+    //   seoTitle:        <title> tag override (keeps the H1 and URL slug unchanged)
+    //   metaDescription: meta description override (defaults to excerpt)
+    //   updated:         YYYY-MM-DD of the last meaningful edit (schema dateModified, sitemap lastmod)
+    //   faq:             list of { q, a } — rendered as an FAQ section + FAQPage schema
     return {
       id: data.id,
       filename: file,
       title: data.title,
       slug: generateSlug(data.title),
-      date: data.date,
+      date: toIsoDate(data.date),
+      updated: data.updated ? toIsoDate(data.updated) : undefined,
       excerpt: data.excerpt,
-      heroImage: data.heroImage
+      seoTitle: data.seoTitle || undefined,
+      metaDescription: data.metaDescription || undefined,
+      heroImage: data.heroImage,
+      categories: data.categories || [],
+      tags: data.tags || [],
+      faq: Array.isArray(data.faq) ? data.faq.filter((item) => item && item.q && item.a) : undefined
     };
   });
 

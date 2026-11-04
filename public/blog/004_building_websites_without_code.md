@@ -6,20 +6,19 @@ excerpt: "Here's exactly how to use Claude, Squarespace, or Lovable to build you
 heroImage: /blog/airtasker-jobs-hero.jpg
 categories: ["Website Building", "Business AI"]
 tags: ["No-Code", "AI Website", "Web Development"]
+updated: 2026-11-05
+faq:
+  - q: "How much does it cost to build a website with AI?"
+    a: "Using the three paths in this guide: the easy path (Durable or Squarespace) costs about $20 a month, the medium path (Lovable or Wix) about $50 a month, and the advanced path (Claude, GitHub and Netlify) about $32 a month, or roughly $384 in year one. Hiring someone on Airtasker for a simple site typically costs $500 to $2,000."
+  - q: "Do I need to know how to code to build a website with AI?"
+    a: "No. All three paths use natural language: you describe the site in plain English and the AI tool builds it. The advanced path involves learning basic Git so you can push changes to GitHub, but you don't write the code yourself."
+  - q: "How long does it take to build a website with AI?"
+    a: "Durable can generate a working site in about 2 minutes. Lovable typically takes 1 to 2 hours for a custom design, and the Claude, GitHub and Netlify path takes 2 to 4 hours."
+  - q: "Which AI website builder should I choose?"
+    a: "Choose Durable or Squarespace if you want to be live today with professional templates. Choose Lovable or Wix if you need design control or want to sell products. Choose Claude with GitHub and Netlify if you want to own your code, build complex features and avoid vendor lock-in."
+  - q: "Was appcoaching.io built with AI?"
+    a: "Yes. appcoaching.io was built with Claude and deploys through GitHub and Netlify, the advanced path described in this guide."
 ---
-
-<!-- Schema Markup for Google Rich Snippets -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "How to Build a Website With AI (No Code, Under $100)",
-  "image": "/blog/airtasker-jobs-hero.jpg",
-  "author": { "@type": "Person", "name": "Aaron Pacheco" },
-  "datePublished": "2026-07-15",
-  "description": "How to build a website with AI without writing code. Three proven paths: easy (Squarespace), medium (Lovable), advanced (Claude). All use natural language. All cost under $100."
-}
-</script>
 
 <blockquote style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📖 PAUL's Quick Read</strong>

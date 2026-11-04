@@ -14,6 +14,8 @@ const BUSINESS_ID = `${SITE_URL}/#business`;
 const PERSON_ID = `${SITE_URL}/#aaron`;
 const WEBSITE_ID = `${SITE_URL}/#website`;
 const LINKEDIN_URL = 'https://www.linkedin.com/in/aaronpacheco';
+// Google Business Profile (Maps listing) — links the site and the profile for local search
+const GOOGLE_MAPS_URL = 'https://maps.google.com/?cid=16175503403108466611';
 const LOGO_URL = `${SITE_URL}/Aaron_Pacheco_300dpi_001_6x6.jpg`;
 
 // Local SEO: Brisbane-based, serving Brisbane, Queensland and the rest of Australia online.
@@ -87,7 +89,8 @@ const organizationSchema = {
   areaServed,
   founder: { '@id': PERSON_ID },
   knowsAbout: ['Financial literacy', 'Microsoft Excel', 'Artificial intelligence', 'Business operations'],
-  sameAs: [LINKEDIN_URL],
+  hasMap: GOOGLE_MAPS_URL,
+  sameAs: [LINKEDIN_URL, GOOGLE_MAPS_URL],
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'customer service',

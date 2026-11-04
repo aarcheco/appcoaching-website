@@ -13,10 +13,13 @@
 # homepage with a 200 status for every made-up URL (a "soft 404"), which wastes crawl budget
 # and lets junk URLs get indexed. Do not re-add it. Do not add a "/blog/*" rule either.
 
-# Trailing-slash variants → the canonical no-slash URL (one URL per page everywhere)
+# Trailing-slash variants → the canonical no-slash URL (one URL per page everywhere).
+# NOTE: Netlify matches rules with or without a trailing slash, so never add a
+# placeholder rule like "/blog/:slug/  /blog/:slug  301": for a slug with no file it
+# matches "/blog/<slug>" too and redirects to itself forever. Fixed-path rules below are
+# safe because each target is a real file, which Netlify serves before evaluating rules.
 /services/      /services      301
 /about/         /about         301
 /blog/          /blog          301
 /contact/       /contact       301
 /privacy/       /privacy       301
-/blog/:slug/    /blog/:slug    301

@@ -6,20 +6,20 @@ excerpt: "Built with Claude in under 2 hours: a self-marking, instant-feedback E
 heroImage: /blog/excel-mastery-training-hero.jpg
 categories: ["Excel Coaching", "Career Coaching"]
 tags: ["Excel Training", "AI Tools", "Networking", "Career Coaching"]
+seoTitle: "Custom Excel Training Built With AI in Under 2 Hours | Brisbane"
+updated: 2026-11-05
+faq:
+  - q: "Can AI build an Excel training course?"
+    a: "Yes, with an expert driving it. Using Claude, I built a 33-sheet, self-marking Excel course with 2,126 formulas and instant feedback in under 2 hours. AI speeds up the build, but you still need to know Excel well enough to check that every formula and exercise teaches the right thing."
+  - q: "What does the Excel course cover?"
+    a: "It runs over three coaching sessions: formulas and data hygiene; helper columns, conditional formatting, data validation, charting and Evaluate Formula; then PivotTables, PivotCharts and Power Query on a larger dataset. It includes self-marking exercises and three 50-question exams."
+  - q: "Can the Excel course be tailored to my team or industry?"
+    a: "Yes. Because the workbook is generated from a reusable skeleton, I can reskin it with practice data from your field, such as procurement, accounts payable or HR, in a fraction of the original build time."
+  - q: "Is there a free Excel practice workbook?"
+    a: "Yes. You can download a free 10-tab sample practice workbook from this post to see exactly how the self-marking exercises work."
+  - q: "Do you offer Excel training in Brisbane?"
+    a: "Yes. I'm based in Brisbane and coach individuals and teams in Brisbane and online across Queensland and the rest of Australia."
 ---
-
-<!-- Schema Markup for Google Rich Snippets -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "I Build a Bespoke Excel Course for Any Client in Under 2 Hours",
-  "image": "/blog/excel-mastery-training-hero.jpg",
-  "author": { "@type": "Person", "name": "Aaron Pacheco" },
-  "datePublished": "2026-07-27",
-  "description": "A former Flight Centre colleague remembered me years later and asked for Excel coaching. Here's how Claude helped me build a 33-sheet, 2,126-formula, self-marking Excel course with instant feedback in under 2 hours — and why that same skeleton now lets me build a genuinely bespoke version for procurement, accounts payable, HR, or any other team in a fraction of the time it took the first one. Includes a free downloadable Excel practice workbook."
-}
-</script>
 
 <blockquote style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📖 PAUL's Quick Read</strong>

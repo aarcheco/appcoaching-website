@@ -9,176 +9,309 @@ import React, { useState, useEffect, useCallback } from 'react';
 // `module.exports =` inside one throws a hard runtime crash ("ES Modules may not assign
 // module.exports") that silently breaks the app for every visitor. This bit us once
 // already; keep this file self-contained.
-const organizationSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'APP Coaching',
-  url: 'https://appcoaching.io',
-  logo: 'https://appcoaching.io/Aaron_Pacheco_300dpi_001_6x6.jpg',
-  description: 'AI, Excel & Finance coaching to move you from confusion to clarity and self-sufficiency.',
-  sameAs: ['https://www.linkedin.com/in/aaronpacheco'],
-  contactPoint: {
-    '@type': 'ContactPoint',
-    contactType: 'Customer Service',
-    email: 'aarcheco@gmail.com',
-    url: 'https://cal.com/app-coaching-xcgvda'
-  },
-  founder: {
-    '@type': 'Person',
-    name: 'Aaron Pacheco',
-    url: 'https://appcoaching.io/about'
-  }
+const SITE_URL = 'https://appcoaching.io';
+const BUSINESS_ID = `${SITE_URL}/#business`;
+const PERSON_ID = `${SITE_URL}/#aaron`;
+const WEBSITE_ID = `${SITE_URL}/#website`;
+const LINKEDIN_URL = 'https://www.linkedin.com/in/aaronpacheco';
+const LOGO_URL = `${SITE_URL}/Aaron_Pacheco_300dpi_001_6x6.jpg`;
+
+// Local SEO: Brisbane-based, serving Brisbane, Queensland and the rest of Australia online.
+// Service-area business — no street address is published on purpose.
+const businessAddress = {
+  '@type': 'PostalAddress',
+  addressLocality: 'Brisbane',
+  addressRegion: 'QLD',
+  addressCountry: 'AU'
 };
+
+const areaServed = [
+  { '@type': 'City', name: 'Brisbane', sameAs: 'https://en.wikipedia.org/wiki/Brisbane' },
+  { '@type': 'State', name: 'Queensland', sameAs: 'https://en.wikipedia.org/wiki/Queensland' },
+  { '@type': 'Country', name: 'Australia' }
+];
+
+const serviceList = [
+  {
+    name: 'Finance Coaching',
+    description: 'Career coaching for young professionals in finance. Personal & business finance strategy, profit margins, cash flow clarity.'
+  },
+  {
+    name: 'Excel Coaching',
+    description: 'Data analysis, visualization, custom modeling, dashboards, pivot tables, and automation of repetitive tasks.'
+  },
+  {
+    name: 'AI Coaching',
+    description: 'Master prompting, AI workflows, agentic AI, custom AI tools, and AI adoption strategy.'
+  },
+  {
+    name: 'Operations & Workflow Coaching',
+    description: 'Process design, workflow optimization, task automation, systems thinking, and operational efficiency.'
+  }
+].map((s) => ({
+  '@type': 'Service',
+  name: s.name,
+  serviceType: s.name,
+  description: s.description,
+  provider: { '@id': BUSINESS_ID },
+  areaServed
+}));
 
 const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
+  '@id': PERSON_ID,
   name: 'Aaron Pacheco',
-  url: 'https://appcoaching.io/about',
-  image: 'https://appcoaching.io/Aaron_Pacheco_300dpi_001_6x6.jpg',
+  url: `${SITE_URL}/about`,
+  image: `${SITE_URL}/aaron-headshot-professional.jpg`,
   jobTitle: 'Founder & Coach - AI, Excel & Finance',
-  description: 'Brisbane-based finance professional specializing in Excel mastery, AI coaching, and financial clarity for businesses and individuals.',
-  worksFor: {
-    '@type': 'Organization',
-    name: 'APP Coaching'
-  },
-  knowsAbout: ['Excel', 'Finance', 'AI', 'Business Operations', 'Coaching'],
-  sameAs: ['https://linkedin.com/in/aaronpacheco']
+  description: 'Brisbane-based qualified accountant and finance professional specialising in Excel mastery, AI coaching, and financial clarity for individuals and teams.',
+  homeLocation: { '@type': 'Place', name: 'Brisbane, Queensland, Australia' },
+  worksFor: { '@id': BUSINESS_ID },
+  alumniOf: { '@type': 'CollegeOrUniversity', name: 'Queensland University of Technology (QUT)' },
+  knowsAbout: ['Microsoft Excel', 'Financial literacy', 'Personal finance', 'Accounting', 'Artificial intelligence', 'Prompt engineering', 'Business operations', 'Coaching'],
+  sameAs: [LINKEDIN_URL]
 };
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  '@id': BUSINESS_ID,
+  name: 'APP Coaching',
+  alternateName: 'AppCoaching.io',
+  url: SITE_URL,
+  logo: LOGO_URL,
+  image: LOGO_URL,
+  description: 'Brisbane-based 1-on-1 coaching in finance, Excel and AI, delivered in Brisbane and online across Australia, to move you from confusion to clarity and self-sufficiency.',
+  address: businessAddress,
+  areaServed,
+  founder: { '@id': PERSON_ID },
+  knowsAbout: ['Financial literacy', 'Microsoft Excel', 'Artificial intelligence', 'Business operations'],
+  sameAs: [LINKEDIN_URL],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'customer service',
+    email: 'aarcheco@gmail.com',
+    url: 'https://cal.com/app-coaching-xcgvda',
+    areaServed: 'AU',
+    availableLanguage: 'English'
+  },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Coaching services',
+    itemListElement: serviceList.map((service) => ({ '@type': 'Offer', itemOffered: service }))
+  }
+};
+
+const websiteSchema = {
+  '@type': 'WebSite',
+  '@id': WEBSITE_ID,
+  url: `${SITE_URL}/`,
+  name: 'APP Coaching',
+  inLanguage: 'en-AU',
+  publisher: { '@id': BUSINESS_ID }
+};
+
+// Strips the top-level @context so an entity can sit inside an @graph.
+const asGraphNode = ({ '@context': _ctx, ...rest }) => rest;
+
+const webPageNode = ({ type = 'WebPage', url, name, description, extra = {} }) => ({
+  '@type': type,
+  '@id': `${url}#webpage`,
+  url,
+  name,
+  description,
+  inLanguage: 'en-AU',
+  isPartOf: { '@id': WEBSITE_ID },
+  about: { '@id': BUSINESS_ID },
+  ...extra
+});
+
+const breadcrumb = (items) => ({
+  '@type': 'BreadcrumbList',
+  itemListElement: items.map(([name, url], i) => ({ '@type': 'ListItem', position: i + 1, name, item: url }))
+});
 
 const pageConfigs = {
   home: {
     id: 'home',
-    title: 'APP Coaching | Affordable Finance, Excel & AI Coaching',
-    description: 'Expert coaching in Excel, AI & Finance without premium prices. Build clarity, master efficient systems, and become self-sufficient.',
-    canonical: 'https://appcoaching.io/',
+    title: 'Finance, Excel & AI Coaching in Brisbane | APP Coaching',
+    description: '1-on-1 finance, Excel and AI coaching from a Brisbane-based qualified accountant. Coaching in Brisbane and online across Australia. Book a free discovery call.',
+    canonical: `${SITE_URL}/`,
     ogType: 'website',
+    lastmod: '2026-11-05',
     schema: {
       '@context': 'https://schema.org',
-      '@type': ['WebPage', 'Organization'],
-      name: 'APP Coaching',
-      url: 'https://appcoaching.io/',
-      description: 'Expert coaching in Excel, AI & Finance without premium prices. Build clarity, master efficient systems, and become self-sufficient.',
-      ...organizationSchema
+      '@graph': [
+        asGraphNode(organizationSchema),
+        asGraphNode(personSchema),
+        websiteSchema,
+        webPageNode({
+          url: `${SITE_URL}/`,
+          name: 'Finance, Excel & AI Coaching in Brisbane | APP Coaching',
+          description: '1-on-1 finance, Excel and AI coaching from a Brisbane-based qualified accountant. Coaching in Brisbane and online across Australia.'
+        })
+      ]
     }
   },
   services: {
     id: 'services',
-    title: 'APP Coaching | Services',
-    description: 'Expert coaching in Finance, Excel, AI, and Business Operations—without premium prices. Tailored solutions to move you from confusion to capability.',
-    canonical: 'https://appcoaching.io/services',
+    title: 'Finance, Excel & AI Coaching Services | Brisbane | APP Coaching',
+    description: 'Finance, Excel, AI and operations coaching from a Brisbane-based qualified accountant. 1-on-1 sessions in Brisbane and online across Australia.',
+    canonical: `${SITE_URL}/services`,
+    lastmod: '2026-11-05',
     schema: {
       '@context': 'https://schema.org',
-      '@type': ['WebPage', 'LocalBusiness'],
-      name: 'APP Coaching Services',
-      description: 'Expert coaching services in AI, Excel, Finance, and Business Operations.',
-      url: 'https://appcoaching.io/services',
-      hasOfferingDetails: [
-        {
-          '@type': 'Service',
-          name: 'Finance Coaching',
-          description: 'Career coaching for young professionals in finance. Personal & business finance strategy, profit margins, cash flow clarity.',
-          provider: { '@type': 'Organization', name: 'APP Coaching' },
-          areaServed: 'AU'
-        },
-        {
-          '@type': 'Service',
-          name: 'Excel Coaching',
-          description: 'Data analysis, visualization, custom modeling, dashboards, pivot tables, and automation of repetitive tasks.',
-          provider: { '@type': 'Organization', name: 'APP Coaching' },
-          areaServed: 'AU'
-        },
-        {
-          '@type': 'Service',
-          name: 'AI Coaching',
-          description: 'Master prompting, AI workflows, agentic AI, custom AI tools, and AI adoption strategy.',
-          provider: { '@type': 'Organization', name: 'APP Coaching' },
-          areaServed: 'AU'
-        },
-        {
-          '@type': 'Service',
-          name: 'Operations & Workflow Coaching',
-          description: 'Process design, workflow optimization, task automation, systems thinking, and operational efficiency.',
-          provider: { '@type': 'Organization', name: 'APP Coaching' },
-          areaServed: 'AU'
-        }
+      '@graph': [
+        webPageNode({
+          url: `${SITE_URL}/services`,
+          name: 'APP Coaching Services',
+          description: 'Finance, Excel, AI and operations coaching in Brisbane and online across Australia.',
+          extra: { mainEntity: { '@id': BUSINESS_ID } }
+        }),
+        asGraphNode(organizationSchema),
+        breadcrumb([['Home', `${SITE_URL}/`], ['Services', `${SITE_URL}/services`]])
       ]
     }
   },
   about: {
     id: 'about',
-    title: 'APP Coaching | About Aaron Pacheco',
-    description: 'Meet Aaron Pacheco: Finance professional with 10+ years of experience. Expert in Excel, AI adoption, and Finance coaching—without premium prices.',
-    canonical: 'https://appcoaching.io/about',
+    title: 'About Aaron Pacheco, Brisbane Finance Coach | APP Coaching',
+    description: 'Meet Aaron Pacheco: Brisbane-based qualified accountant with 10+ years in finance at PwC, Flight Centre and more. Excel, AI and finance coach.',
+    canonical: `${SITE_URL}/about`,
+    lastmod: '2026-11-05',
     schema: {
       '@context': 'https://schema.org',
-      '@type': ['ProfilePage', 'AboutPage'],
-      name: 'About Aaron Pacheco',
-      description: 'Aaron Pacheco - Founder of APP Coaching, finance professional, Excel expert, AI coach, and operations specialist.',
-      url: 'https://appcoaching.io/about',
-      mainEntity: {
-        ...personSchema,
-        alumniOf: { '@type': 'EducationalOrganization', name: 'Queensland University of Technology (QUT)' },
-        affiliation: [
-          { '@type': 'Organization', name: 'Flight Centre' },
-          { '@type': 'Organization', name: 'PwC' },
-          { '@type': 'Organization', name: 'Coronis Group' },
-          { '@type': 'Organization', name: 'Aveo Group' }
-        ]
-      }
+      '@graph': [
+        webPageNode({
+          type: ['ProfilePage', 'AboutPage'],
+          url: `${SITE_URL}/about`,
+          name: 'About Aaron Pacheco',
+          description: 'Aaron Pacheco - Brisbane-based founder of APP Coaching, qualified accountant, Excel expert, AI coach, and operations specialist.',
+          extra: { mainEntity: { '@id': PERSON_ID } }
+        }),
+        {
+          ...asGraphNode(personSchema),
+          affiliation: [
+            { '@type': 'Organization', name: 'Flight Centre' },
+            { '@type': 'Organization', name: 'PwC' },
+            { '@type': 'Organization', name: 'Coronis Group' },
+            { '@type': 'Organization', name: 'Aveo Group' }
+          ]
+        },
+        breadcrumb([['Home', `${SITE_URL}/`], ['About', `${SITE_URL}/about`]])
+      ]
     }
   },
   blog: {
     id: 'blog',
-    title: 'APP Coaching | Blog',
-    description: 'Career stories, Excel lessons, and AI insights from Aaron Pacheco. Actionable advice to build clarity and self-sufficiency in finance, Excel, and AI.',
-    canonical: 'https://appcoaching.io/blog',
+    title: 'Finance, Excel & AI Blog | APP Coaching Brisbane',
+    description: 'Practical finance, Excel and AI guides from Brisbane coach Aaron Pacheco, with prompts and workbooks you can use straight away.',
+    canonical: `${SITE_URL}/blog`,
+    lastmod: '2026-11-05',
     schema: {
       '@context': 'https://schema.org',
-      '@type': ['CollectionPage', 'Blog'],
-      name: 'APP Coaching Blog',
-      description: 'Blog posts about career journeys, clarity, finance, Excel mastery, AI adoption, and self-sufficiency lessons.',
-      url: 'https://appcoaching.io/blog',
-      author: { ...personSchema },
-      publisher: { ...organizationSchema }
+      '@graph': [
+        webPageNode({
+          type: ['CollectionPage', 'Blog'],
+          url: `${SITE_URL}/blog`,
+          name: 'APP Coaching Blog',
+          description: 'Practical finance, Excel and AI guides from Brisbane coach Aaron Pacheco.',
+          extra: { author: { '@id': PERSON_ID }, publisher: { '@id': BUSINESS_ID } }
+        }),
+        breadcrumb([['Home', `${SITE_URL}/`], ['Blog', `${SITE_URL}/blog`]])
+      ]
     }
   },
   contact: {
     id: 'contact',
-    title: 'Book a Discovery Call | Get in Touch | APP Coaching',
-    description: 'Ready to move from confusion to clarity? Book a free 15-minute discovery call with Aaron to discuss your coaching needs.',
-    canonical: 'https://appcoaching.io/contact',
+    title: 'Book a Free Discovery Call | APP Coaching Brisbane',
+    description: 'Book a free 15-minute discovery call with Aaron Pacheco, Brisbane-based finance, Excel and AI coach. Online across Australia.',
+    canonical: `${SITE_URL}/contact`,
+    lastmod: '2026-11-05',
     schema: {
       '@context': 'https://schema.org',
-      '@type': 'ContactPage',
-      name: 'Get in Touch',
-      description: 'Contact APP Coaching to book a discovery call.',
-      url: 'https://appcoaching.io/contact'
+      '@graph': [
+        webPageNode({
+          type: 'ContactPage',
+          url: `${SITE_URL}/contact`,
+          name: 'Book a Discovery Call',
+          description: 'Contact APP Coaching in Brisbane to book a free discovery call.'
+        }),
+        breadcrumb([['Home', `${SITE_URL}/`], ['Contact', `${SITE_URL}/contact`]])
+      ]
     }
   },
   privacy: {
     id: 'privacy',
     title: 'Privacy Policy & Terms of Service | APP Coaching',
     description: 'Read APP Coaching\'s Privacy Policy and Terms of Service, covering data collection, cookies, and the terms for using this site and our coaching services.',
-    canonical: 'https://appcoaching.io/privacy',
+    canonical: `${SITE_URL}/privacy`,
+    lastmod: '2026-07-24',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
       name: 'Privacy Policy & Terms of Service',
       description: 'Privacy Policy and Terms of Service for APP Coaching.',
-      url: 'https://appcoaching.io/privacy'
+      url: `${SITE_URL}/privacy`
     }
   }
+};
+
+// Builds the full JSON-LD @graph for one blog post: BlogPosting + breadcrumb (+ FAQPage).
+const buildBlogPostSchema = (post) => {
+  const url = `${SITE_URL}/blog/${post.slug}`;
+  const image = post.heroImage && post.heroImage.startsWith('/') ? `${SITE_URL}${post.heroImage}` : post.heroImage;
+  const graph = [
+    {
+      '@type': 'BlogPosting',
+      '@id': `${url}#article`,
+      headline: post.title,
+      description: post.excerpt,
+      image: image ? [image] : undefined,
+      datePublished: post.date,
+      dateModified: post.updated || post.date,
+      inLanguage: 'en-AU',
+      url,
+      mainEntityOfPage: url,
+      author: { '@id': PERSON_ID, '@type': 'Person', name: 'Aaron Pacheco', url: `${SITE_URL}/about` },
+      publisher: { '@id': BUSINESS_ID, '@type': 'ProfessionalService', name: 'APP Coaching', logo: { '@type': 'ImageObject', url: LOGO_URL } },
+      isPartOf: { '@id': `${SITE_URL}/blog#webpage` },
+      articleSection: post.categories && post.categories.length ? post.categories[0] : undefined,
+      keywords: post.tags && post.tags.length ? post.tags.join(', ') : undefined
+    },
+    breadcrumb([['Home', `${SITE_URL}/`], ['Blog', `${SITE_URL}/blog`], [post.title, url]])
+  ];
+  if (post.faq && post.faq.length) {
+    graph.push({
+      '@type': 'FAQPage',
+      '@id': `${url}#faq`,
+      mainEntity: post.faq.map((item) => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: { '@type': 'Answer', text: item.a }
+      }))
+    });
+  }
+  return { '@context': 'https://schema.org', '@graph': graph };
+};
+
+// Not part of the shared SEO block above: client-only config for unknown URLs.
+// (The static equivalent is build/404.html from scripts/generate-static-shells.js.)
+const notFoundConfig = {
+  id: 'notfound',
+  title: 'Page Not Found | APP Coaching',
+  description: 'This page could not be found. Explore finance, Excel and AI coaching from APP Coaching in Brisbane.',
+  canonical: null,
+  noindex: true,
+  schema: null
 };
 
 export default function AppCoaching() {
   // ===== GOOGLE ANALYTICS & GSC VERIFICATION =====
   useEffect(() => {
-    // Add GSC verification meta tag
-    const gscMeta = document.createElement('meta');
-    gscMeta.name = 'google-site-verification';
-    gscMeta.content = 'yi5jdpycQ4YPGxXSuWdH3vUpoVVGPuFO-RMCbwCybgc';
-    document.head.appendChild(gscMeta);
+    // GSC verification meta tag lives statically in public/index.html (and so in every
+    // generated page) — no need to inject a duplicate here.
 
     // Load Google Analytics script
     const script = document.createElement('script');
@@ -220,20 +353,24 @@ export default function AppCoaching() {
     }
     descMeta.content = pageConfig.description;
 
-    // Update or create canonical URL
+    // Update or create canonical URL (the not-found view has none)
     let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.rel = 'canonical';
-      document.head.appendChild(canonical);
+    if (!pageConfig.canonical) {
+      if (canonical) canonical.remove();
+    } else {
+      if (!canonical) {
+        canonical = document.createElement('link');
+        canonical.rel = 'canonical';
+        document.head.appendChild(canonical);
+      }
+      canonical.href = pageConfig.canonical;
     }
-    canonical.href = pageConfig.canonical;
 
     // Update Open Graph tags
     const ogTags = {
       'og:title': pageConfig.ogTitle || pageConfig.title,
       'og:description': pageConfig.ogDescription || pageConfig.description,
-      'og:url': pageConfig.canonical,
+      'og:url': pageConfig.canonical || `${SITE_URL}/`,
       'og:type': pageConfig.ogType || 'website'
     };
 
@@ -263,28 +400,63 @@ export default function AppCoaching() {
       tag.content = content;
     });
 
-    // Add schema.org markup if provided
-    if (pageConfig.schema) {
-      let schemaScript = document.getElementById(`schema-${pageConfig.id}`);
-      if (!schemaScript) {
-        schemaScript = document.createElement('script');
-        schemaScript.id = `schema-${pageConfig.id}`;
-        schemaScript.type = 'application/ld+json';
-        document.head.appendChild(schemaScript);
-      }
-      schemaScript.textContent = JSON.stringify(pageConfig.schema);
+    // Reset share image (a blog post may have swapped it for its hero image)
+    ['og:image', 'twitter:image'].forEach((key) => {
+      const attr = key.startsWith('og:') ? 'property' : 'name';
+      const tag = document.querySelector(`meta[${attr}="${key}"]`);
+      if (tag) tag.content = LOGO_URL;
+    });
+
+    // Robots: only the not-found view is noindex
+    setRobotsMeta(pageConfig.noindex ? 'noindex, follow' : 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1');
+
+    // One JSON-LD block per page, always id="schema-page". The build-time static
+    // pages (scripts/generate-static-shells.js) bake in the same id, so the client
+    // replaces it in place instead of leaving a stale or duplicate block behind.
+    setPageSchema(pageConfig.schema);
+  };
+
+  const setRobotsMeta = (value) => {
+    let robots = document.querySelector('meta[name="robots"]');
+    if (!robots) {
+      robots = document.createElement('meta');
+      robots.name = 'robots';
+      document.head.appendChild(robots);
     }
+    robots.content = value;
+  };
+
+  const setPageSchema = (schema) => {
+    let schemaScript = document.getElementById('schema-page');
+    if (!schema) {
+      if (schemaScript) schemaScript.remove();
+      return;
+    }
+    if (!schemaScript) {
+      schemaScript = document.createElement('script');
+      schemaScript.id = 'schema-page';
+      schemaScript.type = 'application/ld+json';
+      document.head.appendChild(schemaScript);
+    }
+    schemaScript.textContent = JSON.stringify(schema);
+  };
+
+  // Same rule as scripts/generate-static-shells.js — keep in sync.
+  const getBlogPostTitleTag = (post) => {
+    if (post.seoTitle) return post.seoTitle;
+    // Skip the " | APP Coaching" suffix on titles that are already long — keeping it
+    // would push the <title> well past Google's ~60-char display budget.
+    return post.title.length > 45 ? post.title : `${post.title} | APP Coaching`;
   };
 
   // Helper function to update blog post meta tags and schema
   const updateBlogPostMetaTags = (post) => {
-    const canonicalUrl = `https://appcoaching.io/blog/${post.slug}`;
+    const canonicalUrl = `${SITE_URL}/blog/${post.slug}`;
+    const description = post.metaDescription || post.excerpt;
+    const heroImage = post.heroImage && post.heroImage.startsWith('/') ? `${SITE_URL}${post.heroImage}` : post.heroImage;
 
-    // Update title and meta description
-    // Skip the " | APP Coaching" suffix on titles that are already long — keeping it
-    // would push the <title> well past Google's ~60-char display budget. Post titles
-    // themselves are left untouched (they're the real on-page headline copy).
-    document.title = post.title.length > 45 ? post.title : `${post.title} | APP Coaching`;
+    document.title = getBlogPostTitleTag(post);
+    setRobotsMeta('index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1');
 
     let descMeta = document.querySelector('meta[name="description"]');
     if (!descMeta) {
@@ -292,7 +464,7 @@ export default function AppCoaching() {
       descMeta.name = 'description';
       document.head.appendChild(descMeta);
     }
-    descMeta.content = post.excerpt;
+    descMeta.content = description;
 
     // Update canonical URL
     let canonical = document.querySelector('link[rel="canonical"]');
@@ -306,10 +478,10 @@ export default function AppCoaching() {
     // Update OG tags for blog post
     const ogTags = {
       'og:title': post.title,
-      'og:description': post.excerpt,
+      'og:description': description,
       'og:url': canonicalUrl,
       'og:type': 'article',
-      'og:image': post.heroImage
+      'og:image': heroImage
     };
 
     Object.entries(ogTags).forEach(([property, content]) => {
@@ -322,44 +494,29 @@ export default function AppCoaching() {
       tag.content = content;
     });
 
-    // Add BlogPosting schema
-    const blogSchema = {
-      '@context': 'https://schema.org',
-      '@type': 'BlogPosting',
-      headline: post.title,
-      image: post.heroImage,
-      author: personSchema,
-      datePublished: post.date,
-      description: post.excerpt,
-      url: canonicalUrl,
-      publisher: organizationSchema
-    };
+    const twitterTags = { 'twitter:title': post.title, 'twitter:description': description, 'twitter:image': heroImage };
+    Object.entries(twitterTags).forEach(([name, content]) => {
+      const tag = document.querySelector(`meta[name="${name}"]`);
+      if (tag) tag.content = content;
+    });
 
-    let schemaScript = document.getElementById('schema-blog-post');
-    if (!schemaScript) {
-      schemaScript = document.createElement('script');
-      schemaScript.id = 'schema-blog-post';
-      schemaScript.type = 'application/ld+json';
-      document.head.appendChild(schemaScript);
-    }
-    schemaScript.textContent = JSON.stringify(blogSchema);
+    // BlogPosting + BreadcrumbList (+ FAQPage) — same builder the static pages use
+    setPageSchema(buildBlogPostSchema(post));
   };
 
-  // Update meta tags when page changes
+  // Update meta tags whenever the page or selected blog post changes. One effect (not two)
+  // so going from a post back to the blog index also resets the title/description/schema.
   useEffect(() => {
-    const config = pageConfigs[currentPage] || pageConfigs.home;
-    updateMetaTags(config);
-  }, [currentPage]);
-
-  // Update blog post meta tags when post is selected
-  useEffect(() => {
-    if (currentPage === 'blog' && selectedBlogPost && blogPosts.length > 0) {
-      const post = blogPosts.find(p => p.id === selectedBlogPost);
-      if (post) {
-        updateBlogPostMetaTags(post);
-      }
+    const post = currentPage === 'blog' && selectedBlogPost ? blogPosts.find(p => p.id === selectedBlogPost) : null;
+    if (post) {
+      updateBlogPostMetaTags(post);
+      return;
     }
-  }, [selectedBlogPost, currentPage, blogPosts]);
+    const config = currentPage === 'notfound' ? notFoundConfig : (pageConfigs[currentPage] || pageConfigs.home);
+    updateMetaTags(config);
+    // The helpers only touch document.head and read module-level constants.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentPage, selectedBlogPost, blogPosts]);
 
   // Helper function to generate intelligent snippet titles based on content
   const generateSnippetTitle = (type, content) => {
@@ -416,36 +573,44 @@ export default function AppCoaching() {
       return { pageName, postSlug };
     };
 
-    const { pageName, postSlug } = getPageFromPath(window.location.pathname);
+    const VALID_PAGES = ['home', 'services', 'about', 'blog', 'contact', 'privacy'];
 
-    if (['home', 'services', 'about', 'blog', 'contact', 'privacy'].includes(pageName)) {
-      setCurrentPage(pageName);
+    // Unknown URLs show a proper "not found" view (and Netlify serves them with a real
+    // HTTP 404 via build/404.html) instead of silently rendering the homepage.
+    const applyRoute = () => {
+      const path = window.location.pathname.replace(/^\/|\/$/g, '');
+      const { pageName, postSlug } = getPageFromPath(window.location.pathname);
+      const tooDeep = path.split('/').length > (pageName === 'blog' ? 2 : 1);
 
-      // If viewing a specific blog post by slug
-      if (pageName === 'blog' && postSlug && blogPosts.length > 0) {
-        const post = blogPosts.find(p => p.slug === postSlug);
-        if (post) setSelectedBlogPost(post.id);
+      if (!VALID_PAGES.includes(pageName) || tooDeep) {
+        setCurrentPage('notfound');
+        return;
       }
-    } else {
-      // Default to home if invalid path
-      setCurrentPage('home');
-    }
+
+      if (pageName === 'blog' && postSlug) {
+        if (blogPosts.length === 0) {
+          // Posts still loading — show the blog shell; this effect re-runs once they arrive.
+          setCurrentPage('blog');
+          return;
+        }
+        const post = blogPosts.find(p => p.slug === postSlug);
+        if (post) {
+          setCurrentPage('blog');
+          setSelectedBlogPost(post.id);
+        } else {
+          setCurrentPage('notfound');
+        }
+        return;
+      }
+
+      setCurrentPage(pageName);
+      if (pageName === 'blog') setSelectedBlogPost(null);
+    };
+
+    applyRoute();
 
     // Listen for popstate (back/forward buttons)
-    const handlePopstate = () => {
-      const { pageName: newPageName, postSlug: newPostSlug } = getPageFromPath(window.location.pathname);
-
-      if (['home', 'services', 'about', 'blog', 'contact', 'privacy'].includes(newPageName)) {
-        setCurrentPage(newPageName);
-
-        if (newPageName === 'blog' && newPostSlug && blogPosts.length > 0) {
-          const post = blogPosts.find(p => p.slug === newPostSlug);
-          if (post) setSelectedBlogPost(post.id);
-        } else if (newPageName === 'blog') {
-          setSelectedBlogPost(null);
-        }
-      }
-    };
+    const handlePopstate = () => applyRoute();
 
     window.addEventListener('popstate', handlePopstate);
     return () => window.removeEventListener('popstate', handlePopstate);
@@ -478,10 +643,14 @@ export default function AppCoaching() {
             // routing permanently in sync.
             slug: item.slug || generateSlug(item.title),
             date: item.date,
+            updated: item.updated || null,
             excerpt: item.excerpt,
+            seoTitle: item.seoTitle || null,
+            metaDescription: item.metaDescription || null,
             heroImage: item.heroImage,
             categories: item.categories || [],
             tags: item.tags || [],
+            faq: item.faq || [],
             content: bodyContent,
             filename: item.filename
           };
@@ -948,7 +1117,11 @@ export default function AppCoaching() {
         justifyContent: 'center',
         alignItems: 'center'
       }}>
-        <img src="/aaron-archive-10.jpg" alt="Aaron Pacheco" style={{ marginBottom: 'clamp(1rem, 3vh, 2rem)', width: 'clamp(200px, 35vw, 320px)', height: 'auto', borderRadius: '12px', objectFit: 'contain' }} />
+        <img src="/aaron-archive-10.jpg" alt="Aaron Pacheco, Brisbane finance, Excel and AI coach" width="600" height="900" style={{ marginBottom: 'clamp(1rem, 3vh, 2rem)', width: 'clamp(200px, 35vw, 320px)', height: 'auto', borderRadius: '12px', objectFit: 'contain' }} />
+
+        <p style={{ fontSize: 'clamp(0.75rem, 2vw, 0.95rem)', fontWeight: '700', letterSpacing: '0.08em', textTransform: 'uppercase', color: colors.limeGreen, margin: '0 0 0.75rem', fontFamily: "'Poppins', sans-serif" }}>
+          Finance, Excel &amp; AI coaching · Brisbane &amp; online across Australia
+        </p>
 
         <h1 style={{ fontSize: 'clamp(1.8rem, 6vw, 3.5rem)', marginBottom: 'clamp(1rem, 2vh, 1.5rem)', lineHeight: '1.2', fontWeight: '800', fontFamily: "'Poppins', sans-serif", maxWidth: '900px' }}>
           Your Most Expensive Problem: Confusion.
@@ -1162,7 +1335,7 @@ export default function AppCoaching() {
           A Little About Me
         </h2>
         <div style={{ marginBottom: '2rem' }}>
-          <img src="/aaron-headshot-professional.jpg" alt="Aaron" style={{ width: '100%', maxWidth: '300px', borderRadius: '12px', objectFit: 'cover', margin: '0 auto 1.5rem' }} />
+          <img loading="lazy" decoding="async" src="/aaron-headshot-professional.jpg" alt="Aaron" style={{ width: '100%', maxWidth: '300px', borderRadius: '12px', objectFit: 'cover', margin: '0 auto 1.5rem' }} />
         </div>
         <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', maxWidth: '750px', margin: '0 auto' }}>
           I'm a <span style={{ color: colors.darkNavy, fontWeight: '700' }}>qualified finance professional and analyst</span> born and raised in the beautiful, ever-growing city of Brisbane, Australia, with 10+ years of real-world experience turning <span style={{ color: colors.darkNavy, fontWeight: '700' }}>confusion into clarity.</span> I've built financial models, designed dashboards, and helped Australian and international teams extract insight from data using Excel, AI, and optimized systems. My mission: <span style={{ color: colors.darkNavy, fontWeight: '700' }}>close the knowledge gap</span> and <span style={{ color: colors.darkNavy, fontWeight: '700' }}>empower you</span> to become self-sufficient. When I work with you, my goal isn't lifelong coaching—it's moving you from <span style={{ color: colors.darkNavy, fontWeight: '700' }}>confusion to confidence</span> as fast as possible. The reward for me is that moment when it clicks: when you realize you CAN read your numbers, CAN build systems, CAN use AI strategically. That's success.
@@ -1214,7 +1387,7 @@ export default function AppCoaching() {
           <div className="logo-carousel">
             {[...employers, ...employers].map((employer, idx) => (
               <div key={idx} className="logo-item">
-                <img
+                <img loading="lazy" decoding="async"
                   src={employer.logo}
                   alt={employer.name}
                   onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }}
@@ -1301,7 +1474,7 @@ export default function AppCoaching() {
             Services
           </h1>
           <p style={{ fontSize: '1rem', opacity: '0.95', maxWidth: '700px', margin: '0 auto', lineHeight: '1.7' }}>
-            I turn <span style={{ fontWeight: '700' }}>confusion into confidence</span>—in as few sessions as possible. As an Australian-based finance professional, I work with professionals locally and globally to build your <span style={{ fontWeight: '700' }}>self-sufficiency.</span> Excel mastery. AI competence. Optimized processes. Fast. Efficient. Done.
+            I turn <span style={{ fontWeight: '700' }}>confusion into confidence</span>—in as few sessions as possible. As a Brisbane-based finance professional, I work with professionals across Brisbane, Queensland, Australia and globally to build your <span style={{ fontWeight: '700' }}>self-sufficiency.</span> Excel mastery. AI competence. Optimized processes. Fast. Efficient. Done.
           </p>
         </section>
 
@@ -1594,7 +1767,7 @@ export default function AppCoaching() {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'start', marginBottom: '3rem' }}>
             <div style={{ textAlign: 'center' }}>
-              <img src="/aaron-archive-2.jpg" alt="Aaron's story" style={{ width: '100%', height: '350px', borderRadius: '12px', objectFit: 'cover' }} />
+              <img loading="lazy" decoding="async" src="/aaron-archive-2.jpg" alt="Aaron Pacheco earlier in his finance career" style={{ width: '100%', height: '350px', borderRadius: '12px', objectFit: 'cover' }} />
             </div>
             <div>
               <h3 style={{ fontSize: '1.3rem', color: colors.darkNavy, marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
@@ -1636,12 +1809,12 @@ export default function AppCoaching() {
             gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
             gap: '1rem'
           }}>
-            <img src="/aaron-headshot-casual-1.jpg" alt="Aaron Pacheco, founder of APP Coaching" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
-            <img src="/PSX_20241105_115531.jpg" alt="Aaron Pacheco at a work event" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
-            <img src="/aaron-headshot-casual-3.jpg" alt="Aaron Pacheco, finance and AI coach" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
-            <img src="/PSX_20171114_215601.jpg" alt="Aaron Pacheco earlier in his career" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
-            <img src="/WP_20161020_19_07_16_Rich.jpg" alt="Aaron Pacheco during his finance career" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
-            <img src="/20250329_194859.jpg" alt="Aaron Pacheco, APP Coaching founder" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img loading="lazy" decoding="async" src="/aaron-headshot-casual-1.jpg" alt="Aaron Pacheco, founder of APP Coaching" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img loading="lazy" decoding="async" src="/PSX_20241105_115531.jpg" alt="Aaron Pacheco at a work event" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img loading="lazy" decoding="async" src="/aaron-headshot-casual-3.jpg" alt="Aaron Pacheco, finance and AI coach" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img loading="lazy" decoding="async" src="/PSX_20171114_215601.jpg" alt="Aaron Pacheco earlier in his career" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img loading="lazy" decoding="async" src="/WP_20161020_19_07_16_Rich.jpg" alt="Aaron Pacheco during his finance career" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img loading="lazy" decoding="async" src="/20250329_194859.jpg" alt="Aaron Pacheco, APP Coaching founder" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
           </div>
         </div>
 
@@ -1656,7 +1829,7 @@ export default function AppCoaching() {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
             <div style={{ background: colors.offWhite, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-              <img src="/Flight-Centre-Logo-320x320-1.png" alt="Flight Centre" style={{ height: '60px', objectFit: 'contain', marginBottom: '1rem' }} />
+              <img loading="lazy" decoding="async" src="/Flight-Centre-Logo-320x320-1.png" alt="Flight Centre" style={{ height: '60px', objectFit: 'contain', marginBottom: '1rem' }} />
               <h3 style={{ fontSize: '1.1rem', color: colors.darkNavy, marginBottom: '0.5rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
                 Flight Centre Travel Group
               </h3>
@@ -1669,7 +1842,7 @@ export default function AppCoaching() {
             </div>
 
             <div style={{ background: colors.offWhite, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-              <img src="/Coronis_nbsnnc.webp" alt="Coronis" style={{ height: '60px', objectFit: 'contain', marginBottom: '1rem' }} />
+              <img loading="lazy" decoding="async" src="/Coronis_nbsnnc.webp" alt="Coronis" style={{ height: '60px', objectFit: 'contain', marginBottom: '1rem' }} />
               <h3 style={{ fontSize: '1.1rem', color: colors.darkNavy, marginBottom: '0.5rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
                 Coronis Group
               </h3>
@@ -1682,7 +1855,7 @@ export default function AppCoaching() {
             </div>
 
             <div style={{ background: colors.offWhite, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-              <img src="/Telstra-logo.jpg" alt="Telstra" style={{ height: '60px', objectFit: 'contain', marginBottom: '1rem' }} />
+              <img loading="lazy" decoding="async" src="/Telstra-logo.jpg" alt="Telstra" style={{ height: '60px', objectFit: 'contain', marginBottom: '1rem' }} />
               <h3 style={{ fontSize: '1.1rem', color: colors.darkNavy, marginBottom: '0.5rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
                 Telstra
               </h3>
@@ -1695,7 +1868,7 @@ export default function AppCoaching() {
             </div>
 
             <div style={{ background: colors.offWhite, padding: '2rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-              <img src="/Aveo-Logo.png" alt="Aveo Group" style={{ height: '60px', objectFit: 'contain', marginBottom: '1rem' }} />
+              <img loading="lazy" decoding="async" src="/Aveo-Logo.png" alt="Aveo Group" style={{ height: '60px', objectFit: 'contain', marginBottom: '1rem' }} />
               <h3 style={{ fontSize: '1.1rem', color: colors.darkNavy, marginBottom: '0.5rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
                 Aveo Group
               </h3>
@@ -1757,7 +1930,7 @@ export default function AppCoaching() {
               <div className="logo-carousel">
                 {[...employers, ...employers].map((employer, idx) => (
                   <div key={idx} className="logo-item">
-                    <img
+                    <img loading="lazy" decoding="async"
                       src={employer.logo}
                       alt={employer.name}
                       onError={(e) => { e.target.style.display = 'none'; }}
@@ -1776,7 +1949,7 @@ export default function AppCoaching() {
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'start' }}>
             <div style={{ textAlign: 'center', order: 2 }}>
-              <img src="/aaron-archive-4.jpg" alt="The problem realized" style={{ width: '100%', height: '280px', borderRadius: '12px', objectFit: 'cover' }} />
+              <img loading="lazy" decoding="async" src="/aaron-archive-4.jpg" alt="Aaron Pacheco reflecting on the confusion problem he set out to solve" style={{ width: '100%', height: '280px', borderRadius: '12px', objectFit: 'cover' }} />
             </div>
             <div style={{ order: 1 }}>
               <h3 style={{ fontSize: '1.2rem', color: colors.darkNavy, marginBottom: '1rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>
@@ -1946,6 +2119,30 @@ export default function AppCoaching() {
   };
 
   // ===== PRIVACY POLICY & TERMS PAGE =====
+  const NotFoundPage = () => {
+    const linkStyle = { color: colors.navy, fontWeight: '700', textDecoration: 'underline', textUnderlineOffset: '3px' };
+    const go = (page) => (e) => { e.preventDefault(); navigateTo(page); window.scrollTo(0, 0); };
+    return (
+      <section style={{ maxWidth: '720px', margin: '0 auto', padding: 'clamp(3rem, 10vh, 6rem) 1.5rem', textAlign: 'center' }}>
+        <p style={{ fontSize: '0.85rem', fontWeight: '700', letterSpacing: '0.08em', textTransform: 'uppercase', color: colors.navy, margin: '0 0 0.75rem', fontFamily: "'Poppins', sans-serif" }}>
+          Error 404
+        </p>
+        <h1 style={{ fontSize: 'clamp(1.8rem, 5vw, 2.6rem)', color: colors.darkNavy, fontFamily: "'Poppins', sans-serif", fontWeight: '800', margin: '0 0 1rem' }}>
+          This page doesn't exist
+        </h1>
+        <p style={{ fontSize: '1.05rem', lineHeight: '1.7', color: colors.textDark, margin: '0 0 2rem' }}>
+          The link may be old or mistyped. Here's where most people are headed:
+        </p>
+        <p style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap', margin: 0 }}>
+          <a href="/" onClick={go('home')} style={linkStyle}>Home</a>
+          <a href="/services" onClick={go('services')} style={linkStyle}>Coaching services</a>
+          <a href="/blog" onClick={go('blog')} style={linkStyle}>Blog</a>
+          <a href="/contact" onClick={go('contact')} style={linkStyle}>Book a discovery call</a>
+        </p>
+      </section>
+    );
+  };
+
   const PrivacyPage = () => {
     const sectionStyle = { marginBottom: '2.5rem' };
     const h2Style = { fontSize: '1.4rem', color: colors.darkNavy, fontFamily: "'Poppins', sans-serif", fontWeight: '700', marginBottom: '1rem', marginTop: '0.5rem' };
@@ -2152,7 +2349,7 @@ export default function AppCoaching() {
 
       const formatDate = (dateStr) => {
         const date = new Date(dateStr);
-        return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+        return date.toLocaleDateString('en-AU', { year: 'numeric', month: 'long', day: 'numeric' });
       };
 
       return (
@@ -2280,8 +2477,10 @@ export default function AppCoaching() {
               color: colors.textDark,
               fontFamily: "'Inter', sans-serif"
             }} dangerouslySetInnerHTML={{ __html: (() => {
-              // Convert markdown headings to HTML while preserving inline HTML
-              let html = post.content;
+              // Convert markdown headings to HTML while preserving inline HTML.
+              // Any hand-written JSON-LD in the post body is dropped — the complete
+              // BlogPosting/FAQPage schema is generated from front matter instead.
+              let html = post.content.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g, '');
               // Convert ### headings to <h3>
               html = html.replace(/^### (.+)$/gm, (match, text) => {
                 return `<h3 style="color: ${colors.navy}; font-size: 1.4rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; font-family: 'Poppins', sans-serif;">${text}</h3>`;
@@ -2294,6 +2493,23 @@ export default function AppCoaching() {
               html = html.replace(/^---$/gm, `<hr style="border: none; border-top: 2px solid ${colors.borderGray}; margin: 2.5rem 0;" />`);
               return html;
             })() }} />
+
+            {/* FAQ section — from the post's `faq` front matter; mirrored in the FAQPage schema */}
+            {post.faq && post.faq.length > 0 && (
+              <section aria-labelledby="post-faq-heading" style={{ marginTop: '3rem' }}>
+                <h2 id="post-faq-heading" style={{ color: colors.navy, fontSize: '1.6rem', fontWeight: '700', marginBottom: '1rem', fontFamily: "'Poppins', sans-serif" }}>
+                  Frequently Asked Questions
+                </h2>
+                {post.faq.map((item) => (
+                  <details key={item.q} style={{ borderBottom: `1px solid ${colors.borderGray}`, padding: '1rem 0' }}>
+                    <summary style={{ cursor: 'pointer', fontWeight: '700', color: colors.darkNavy, fontFamily: "'Poppins', sans-serif", fontSize: '1.05rem' }}>
+                      {item.q}
+                    </summary>
+                    <p style={{ margin: '0.75rem 0 0', lineHeight: '1.7', color: colors.textDark, fontFamily: "'Inter', sans-serif" }}>{item.a}</p>
+                  </details>
+                ))}
+              </section>
+            )}
 
             {/* About the Author section */}
             <div style={{
@@ -2324,7 +2540,7 @@ export default function AppCoaching() {
                 gap: '1.5rem',
                 alignItems: 'flex-start'
               }}>
-                <img
+                <img loading="lazy" decoding="async"
                   src="/aaron-headshot-professional.jpg"
                   alt="Aaron Pacheco"
                   style={{
@@ -2344,7 +2560,7 @@ export default function AppCoaching() {
                     lineHeight: '1.6',
                     color: colors.textDark
                   }}>
-                    <strong style={{ color: colors.darkNavy, fontSize: '1rem' }}>Aaron Pacheco</strong> is a finance professional who specializes in streamlining inefficient paths from input and data processing to clear output and actionable insight. Across his career at Flight Centre, PwC, Aveo, and others, he's built financial models, dashboards, and systems that cut through the noise and eliminate laborious manual work. His focus: turning confusion into clarity so you can make better decisions faster. Through APP Coaching, he's now scaling that expertise—helping smart people close the gap between confusion and confidence.
+                    <strong style={{ color: colors.darkNavy, fontSize: '1rem' }}>Aaron Pacheco</strong> is a Brisbane-based qualified accountant and finance professional who specializes in streamlining inefficient paths from input and data processing to clear output and actionable insight. Across his career at Flight Centre, PwC, Aveo, and others, he's built financial models, dashboards, and systems that cut through the noise and eliminate laborious manual work. His focus: turning confusion into clarity so you can make better decisions faster. Through APP Coaching, he's now scaling that expertise—helping smart people close the gap between confusion and confidence.
                   </p>
                 </div>
               </div>
@@ -2741,7 +2957,7 @@ export default function AppCoaching() {
                         {post.excerpt}
                       </p>
                       <p style={{ fontSize: '0.85rem', color: colors.darkNavy, fontStyle: 'italic', fontWeight: '500' }}>
-                        {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                        {new Date(post.date).toLocaleDateString('en-AU', { year: 'numeric', month: 'long', day: 'numeric' })}
                       </p>
                     </a>
                   ))}
@@ -3317,6 +3533,7 @@ export default function AppCoaching() {
       {currentPage === 'blog' && <BlogPage />}
       {currentPage === 'contact' && <ContactPage />}
       {currentPage === 'privacy' && <PrivacyPage />}
+      {currentPage === 'notfound' && <NotFoundPage />}
 
       <EmailSignupSection />
       <Footer />

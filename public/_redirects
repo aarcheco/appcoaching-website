@@ -1,39 +1,22 @@
-# Netlify SPA (Single Page Application) routing configuration
-# This allows clean URLs to work with React Router / History API
+# Netlify redirects for appcoaching.io
+#
+# How routing works now:
+# - Every real page is a static file generated at build time by
+#   scripts/generate-static-shells.js (index.html, services.html, about.html, blog.html,
+#   blog/<slug>.html, contact.html, privacy.html). Netlify serves "/services" straight from
+#   "services.html", so no rewrite rule is needed for them.
+# - Any URL that doesn't match a file gets build/404.html with a real HTTP 404 status
+#   (Netlify does this automatically when a 404.html exists). That 404 page still loads
+#   the React app, which shows a "page not found" view with links back into the site.
+#
+# The old catch-all rule ("/*  /index.html  200") was removed on purpose: it returned the
+# homepage with a 200 status for every made-up URL (a "soft 404"), which wastes crawl budget
+# and lets junk URLs get indexed. Do not re-add it. Do not add a "/blog/*" rule either.
 
-# IMPORTANT: Netlify _redirects rules are matched top-to-bottom, first match wins.
-# Specific static-file rules MUST come before the catch-all "/*" rule below,
-# otherwise every asset request (images, JSON, etc.) gets swallowed by the
-# catch-all and served index.html instead of the real file.
-
-# Note: no explicit rules are needed for real static files (robots.txt, sitemap.xml,
-# blog-posts.json, or the .md files in public/blog/) — Netlify always serves an existing
-# file directly, before ever evaluating _redirects rules below. A rule such as
-# "/blog/* /blog/:splat 200" was previously added here thinking it was needed for this,
-# but it actually broke the site: it intercepted requests to CLIENT-SIDE blog post routes
-# like /blog/my-post-slug (which are not real files, they're React routes) and rewrote them
-# to themselves, which don't exist as files, producing a real HTTP 404 instead of falling
-# through to index.html. This took down every blog post URL. Do not re-add a /blog/* rule.
-
-# Rewrite all remaining requests to index.html while preserving the URL
-# This tells Netlify to serve index.html for all requests that don't match static files
-/*  /index.html  200
-
-# Cache control headers for different file types
-# Static assets with long cache duration
-[[headers]]
-  for = "/static/**"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-# HTML files with no-cache to ensure fresh content
-[[headers]]
-  for = "/*.html"
-  [headers.values]
-    Cache-Control = "public, max-age=3600, must-revalidate"
-
-# JSON files
-[[headers]]
-  for = "/*.json"
-  [headers.values]
-    Cache-Control = "public, max-age=3600"
+# Trailing-slash variants → the canonical no-slash URL (one URL per page everywhere)
+/services/      /services      301
+/about/         /about         301
+/blog/          /blog          301
+/contact/       /contact       301
+/privacy/       /privacy       301
+/blog/:slug/    /blog/:slug    301

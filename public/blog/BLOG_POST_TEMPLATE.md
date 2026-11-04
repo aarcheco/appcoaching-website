@@ -6,20 +6,14 @@ excerpt: "One-sentence hook that answers the reader's core question. Under 150 c
 heroImage: https://images.unsplash.com/photo-XXXXXXXXX?w=1200&q=80
 categories: ["Category Name"]
 tags: ["Tag1", "Tag2"]
+# --- Optional SEO fields (delete any you don't need) ---
+# seoTitle: "Search-friendly <title> under ~60 chars, e.g. include Brisbane"   # keeps H1 + URL unchanged
+# metaDescription: "Custom meta description, 120–155 chars"                       # defaults to excerpt
+# updated: 2026-07-XX                                                             # set when you meaningfully edit a post
+# faq:                                                                            # 3–5 real questions people search
+#   - q: "Question exactly as someone would type it?"
+#     a: "Direct 1–3 sentence answer. Plain text, no HTML."
 ---
-
-<!-- Schema Markup for Google Rich Snippets -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Article Title",
-  "image": "https://images.unsplash.com/photo-XXXXXXXXX?w=1200&q=80",
-  "author": { "@type": "Person", "name": "Aaron Pacheco" },
-  "datePublished": "2026-07-XX",
-  "description": "2-3 sentence description of the article. Should be unique from excerpt."
-}
-</script>
 
 <blockquote style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📖 PAUL's Quick Read</strong>
@@ -81,7 +75,7 @@ tags: ["Tag1", "Tag2"]
 - Tags are accurate
 
 ✅ **Content Structure (Required Order)**
-1. Schema markup (JSON-LD)
+1. (No hand-written schema needed — BlogPosting, Breadcrumb and FAQPage JSON-LD are generated automatically from the front matter at build time)
 2. PAUL's Quick Read (2-3 sentences, not author bio)
 3. Hero image (relevant, not selfie)
 4. Table of Contents with anchor links

@@ -8,19 +8,6 @@ categories: ["Accounting & Finance Career"]
 tags: ["Career Coaching", "Business AI"]
 ---
 
-<!-- Schema Markup for Google Rich Snippets -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Why I Built APP Coaching: A Founder's Origin Story",
-  "image": "/aaron-archive-10.jpg",
-  "author": { "@type": "Person", "name": "Aaron Pacheco" },
-  "datePublished": "2026-07-08",
-  "description": "From my mom's career to building forecasts that drive business decisions—how I discovered the power of efficient paths from problems to solutions"
-}
-</script>
-
 <blockquote style="background: linear-gradient(135deg, #00FF00 0%, rgba(255, 255, 255, 0.9) 100%); border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📖 PAUL's Quick Read</strong>
 <p>Smart people solve problems inefficiently not because they're incapable, but because nobody showed them the efficient path. AI and modern tools have collapsed the distance from problem to solution—but most people don't know this is possible. That realization led to APP Coaching: helping smart people find the shortest, smartest paths from confusion to clarity.</p>

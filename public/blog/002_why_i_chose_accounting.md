@@ -8,19 +8,6 @@ categories: ["Accounting & Finance Career", "Business Finance"]
 tags: ["Career Coaching", "Business Finance"]
 ---
 
-<!-- Schema Markup for Google Rich Snippets -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Why I Chose Accounting: The Journey from Rule-Follower to Translator",
-  "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80",
-  "author": { "@type": "Person", "name": "Aaron Pacheco" },
-  "datePublished": "2026-07-10",
-  "description": "From my mum's exactness to PwC's pressure to Coronis's transformation—how accounting taught me that the real value isn't processing numbers, it's making them make sense"
-}
-</script>
-
 <blockquote style="background: linear-gradient(135deg, #00FF00 0%, rgba(255, 255, 255, 0.9) 100%); border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📖 PAUL's Quick Read</strong>
 <p>Accounting taught Aaron that processing numbers is only half the job—the real value is translating what those numbers mean into clarity that drives decisions. From rule-follower to translator across Flight Centre, PwC, and beyond, he discovered that most smart people never learn this skill. Now he's teaching it.</p>

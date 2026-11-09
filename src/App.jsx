@@ -13,7 +13,7 @@ const SITE_URL = 'https://appcoaching.io';
 const BUSINESS_ID = `${SITE_URL}/#business`;
 const PERSON_ID = `${SITE_URL}/#aaron`;
 const WEBSITE_ID = `${SITE_URL}/#website`;
-const LINKEDIN_URL = 'https://www.linkedin.com/in/aaronpacheco';
+const LINKEDIN_URL = 'https://www.linkedin.com/in/aaron-pacheco-1603a1a5';
 // Google Business Profile (Maps listing) — links the site and the profile for local search
 const GOOGLE_MAPS_URL = 'https://maps.google.com/?cid=16175503403108466611';
 const LOGO_URL = `${SITE_URL}/Aaron_Pacheco_300dpi_001_6x6.jpg`;
@@ -67,10 +67,16 @@ const personSchema = {
   url: `${SITE_URL}/about`,
   image: `${SITE_URL}/aaron-headshot-professional.jpg`,
   jobTitle: 'Founder & Coach - AI, Excel & Finance',
-  description: 'Brisbane-based qualified accountant and finance professional specialising in Excel mastery, AI coaching, and financial clarity for individuals and teams.',
+  description: 'Brisbane-based Chartered Accountant and finance professional specialising in Excel mastery, AI coaching, and financial clarity for individuals and teams.',
   homeLocation: { '@type': 'Place', name: 'Brisbane, Queensland, Australia' },
   worksFor: { '@id': BUSINESS_ID },
   alumniOf: { '@type': 'CollegeOrUniversity', name: 'Queensland University of Technology (QUT)' },
+  hasCredential: {
+    '@type': 'EducationalOccupationalCredential',
+    name: 'Chartered Accountant (CA)',
+    credentialCategory: 'Professional membership',
+    recognizedBy: { '@type': 'Organization', name: 'Chartered Accountants Australia and New Zealand', url: 'https://www.charteredaccountantsanz.com' }
+  },
   knowsAbout: ['Microsoft Excel', 'Financial literacy', 'Personal finance', 'Accounting', 'Artificial intelligence', 'Prompt engineering', 'Business operations', 'Coaching'],
   sameAs: [LINKEDIN_URL]
 };
@@ -90,7 +96,7 @@ const organizationSchema = {
   founder: { '@id': PERSON_ID },
   knowsAbout: ['Financial literacy', 'Microsoft Excel', 'Artificial intelligence', 'Business operations'],
   hasMap: GOOGLE_MAPS_URL,
-  sameAs: [LINKEDIN_URL, GOOGLE_MAPS_URL],
+  sameAs: [GOOGLE_MAPS_URL],
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'customer service',
@@ -139,10 +145,10 @@ const pageConfigs = {
   home: {
     id: 'home',
     title: 'Finance, Excel & AI Coaching in Brisbane | APP Coaching',
-    description: '1-on-1 finance, Excel and AI coaching from a Brisbane-based qualified accountant. Coaching in Brisbane and online across Australia. Book a free discovery call.',
+    description: '1-on-1 finance, Excel and AI coaching from a Brisbane-based Chartered Accountant. Coaching in Brisbane and online across Australia. Book a free discovery call.',
     canonical: `${SITE_URL}/`,
     ogType: 'website',
-    lastmod: '2026-11-05',
+    lastmod: '2026-11-10',
     schema: {
       '@context': 'https://schema.org',
       '@graph': [
@@ -152,7 +158,7 @@ const pageConfigs = {
         webPageNode({
           url: `${SITE_URL}/`,
           name: 'Finance, Excel & AI Coaching in Brisbane | APP Coaching',
-          description: '1-on-1 finance, Excel and AI coaching from a Brisbane-based qualified accountant. Coaching in Brisbane and online across Australia.'
+          description: '1-on-1 finance, Excel and AI coaching from a Brisbane-based Chartered Accountant. Coaching in Brisbane and online across Australia.'
         })
       ]
     }
@@ -160,9 +166,9 @@ const pageConfigs = {
   services: {
     id: 'services',
     title: 'Finance, Excel & AI Coaching Services | Brisbane | APP Coaching',
-    description: 'Finance, Excel, AI and operations coaching from a Brisbane-based qualified accountant. 1-on-1 sessions in Brisbane and online across Australia.',
+    description: 'Finance, Excel, AI and operations coaching from a Brisbane-based Chartered Accountant. 1-on-1 sessions in Brisbane and online across Australia.',
     canonical: `${SITE_URL}/services`,
-    lastmod: '2026-11-05',
+    lastmod: '2026-11-10',
     schema: {
       '@context': 'https://schema.org',
       '@graph': [
@@ -180,9 +186,9 @@ const pageConfigs = {
   about: {
     id: 'about',
     title: 'About Aaron Pacheco, Brisbane Finance Coach | APP Coaching',
-    description: 'Meet Aaron Pacheco: Brisbane-based qualified accountant with 10+ years in finance at PwC, Flight Centre and more. Excel, AI and finance coach.',
+    description: 'Meet Aaron Pacheco: Brisbane-based Chartered Accountant with 10+ years in finance at PwC, Flight Centre and more. Excel, AI and finance coach.',
     canonical: `${SITE_URL}/about`,
-    lastmod: '2026-11-05',
+    lastmod: '2026-11-10',
     schema: {
       '@context': 'https://schema.org',
       '@graph': [
@@ -190,7 +196,7 @@ const pageConfigs = {
           type: ['ProfilePage', 'AboutPage'],
           url: `${SITE_URL}/about`,
           name: 'About Aaron Pacheco',
-          description: 'Aaron Pacheco - Brisbane-based founder of APP Coaching, qualified accountant, Excel expert, AI coach, and operations specialist.',
+          description: 'Aaron Pacheco - Brisbane-based founder of APP Coaching, Chartered Accountant, Excel expert, AI coach, and operations specialist.',
           extra: { mainEntity: { '@id': PERSON_ID } }
         }),
         {
@@ -1786,7 +1792,7 @@ export default function AppCoaching() {
                 My Professional Journey
               </h3>
               <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '1.5rem' }}>
-                I'm a qualified accountant with over a decade of experience in audit, finance operations, and strategic planning across Australian organizations. I started my career making Excel do impossible things—building financial models that told stories, dashboards that brought clarity to chaos, and systems that replaced manual work.
+                I'm a Chartered Accountant with over a decade of experience in audit, finance operations, and strategic planning across Australian organizations. I started my career making Excel do impossible things—building financial models that told stories, dashboards that brought clarity to chaos, and systems that replaced manual work.
               </p>
               <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '1.5rem' }}>
                 For years, Excel was my superpower. I knew it inside out. And I was proud of that. But here's what I've learned: <strong>the finance industry is changing fast.</strong> Skills that were essential 10 years ago are becoming obsolete. Will Excel formulas even be necessary in 5 years? Who knows. That uncertainty? It spurs me on. I refuse to be stuck in old ways. I'd rather take risks, learn constantly, and stay ahead than wake up regretting that I didn't adapt. Even if it costs me—the minimum I get is knowledge.
@@ -2563,7 +2569,7 @@ export default function AppCoaching() {
                     lineHeight: '1.6',
                     color: colors.textDark
                   }}>
-                    <strong style={{ color: colors.darkNavy, fontSize: '1rem' }}>Aaron Pacheco</strong> is a Brisbane-based qualified accountant and finance professional who specializes in streamlining inefficient paths from input and data processing to clear output and actionable insight. Across his career at Flight Centre, PwC, Aveo, and others, he's built financial models, dashboards, and systems that cut through the noise and eliminate laborious manual work. His focus: turning confusion into clarity so you can make better decisions faster. Through APP Coaching, he's now scaling that expertise—helping smart people close the gap between confusion and confidence.
+                    <strong style={{ color: colors.darkNavy, fontSize: '1rem' }}>Aaron Pacheco</strong> is a Brisbane-based Chartered Accountant and finance professional who specializes in streamlining inefficient paths from input and data processing to clear output and actionable insight. Across his career at Flight Centre, PwC, Aveo, and others, he's built financial models, dashboards, and systems that cut through the noise and eliminate laborious manual work. His focus: turning confusion into clarity so you can make better decisions faster. Through APP Coaching, he's now scaling that expertise—helping smart people close the gap between confusion and confidence.
                   </p>
                 </div>
               </div>

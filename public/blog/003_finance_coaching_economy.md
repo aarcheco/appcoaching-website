@@ -7,7 +7,7 @@ heroImage: /blog/finance-coaching-hero.jpg
 categories: ["Personal Finance"]
 tags: ["Financial Literacy"]
 seoTitle: "Finance Coaching Brisbane: Why Smart People Struggle With Money"
-updated: 2026-11-05
+updated: 2026-11-10
 faq:
   - q: "What is finance coaching?"
     a: "Finance coaching is working one-on-one with someone who helps you understand your own numbers: where your money actually goes, how to prioritise debt, savings and investing, and how compound growth plays out over time. The goal is to make decisions from clarity instead of guessing."
@@ -16,7 +16,7 @@ faq:
   - q: "Is finance coaching the same as financial advice?"
     a: "No. Finance coaching is education: it helps you understand your numbers and build better habits. It doesn't recommend specific financial products such as shares, super funds or loans. In Australia, that kind of personal advice must come from a licensed financial adviser."
   - q: "Do you offer finance coaching in Brisbane?"
-    a: "Yes. I'm a Brisbane-based qualified accountant, and I coach clients in Brisbane and online across Queensland and the rest of Australia. You can book a free 15-minute discovery call to see whether coaching is the right fit."
+    a: "Yes. I'm a Brisbane-based Chartered Accountant, and I coach clients in Brisbane and online across Queensland and the rest of Australia. You can book a free 15-minute discovery call to see whether coaching is the right fit."
 ---
 
 <blockquote style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">

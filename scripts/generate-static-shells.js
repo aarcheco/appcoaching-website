@@ -233,7 +233,7 @@ try {
         personSchema.description,
         `${personSchema.jobTitle}. Background includes Flight Centre, PwC, Coronis Group, and Aveo Group. Studied at Queensland University of Technology (QUT).`
       ],
-      extraHtml: '<p><a href="https://www.linkedin.com/in/aaronpacheco" rel="me">Aaron Pacheco on LinkedIn</a></p>'
+      extraHtml: '<p><a href="https://www.linkedin.com/in/aaron-pacheco-1603a1a5" rel="me">Aaron Pacheco on LinkedIn</a></p>'
     },
     contact: {
       h1: 'Get in Touch',
@@ -326,7 +326,7 @@ ${articleHtml}
         ${faqHtml}
         <section aria-label="About the author">
           <h2>About the author</h2>
-          <p><strong>Aaron Pacheco</strong> is a Brisbane-based qualified accountant and the founder of APP Coaching. He has 10+ years in finance at organisations including Flight Centre, PwC and Aveo, and coaches finance, Excel and AI skills in Brisbane and online across Australia. <a href="/contact">Book a free discovery call</a>.</p>
+          <p><strong>Aaron Pacheco</strong> is a Brisbane-based Chartered Accountant and the founder of APP Coaching. He has 10+ years in finance at organisations including Flight Centre, PwC and Aveo, and coaches finance, Excel and AI skills in Brisbane and online across Australia. <a href="/contact">Book a free discovery call</a>.</p>
         </section>
       </article>
       ${relatedHtml}
@@ -439,7 +439,7 @@ ${blogPosts
     'llms.txt',
     `# APP Coaching
 
-> APP Coaching (appcoaching.io) is a Brisbane, Queensland-based coaching business run by Aaron Pacheco, a qualified accountant with 10+ years in finance at organisations including PwC, Flight Centre and Aveo. It offers 1-on-1 coaching in personal finance literacy, Microsoft Excel and practical AI tools, in Brisbane and online across Australia.
+> APP Coaching (appcoaching.io) is a Brisbane, Queensland-based coaching business run by Aaron Pacheco, a Chartered Accountant with 10+ years in finance at organisations including PwC, Flight Centre and Aveo. It offers 1-on-1 coaching in personal finance literacy, Microsoft Excel and practical AI tools, in Brisbane and online across Australia.
 
 Coaching is education, not licensed financial advice: it covers understanding your numbers, budgeting systems, Excel skills and AI workflows, and does not recommend specific financial products. A free 15-minute discovery call is available.
 

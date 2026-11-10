@@ -2,241 +2,166 @@
 title: "How to Use AI to Set a Black Friday and Christmas Budget"
 date: 2026-11-11
 id: 006
-excerpt: "Rates are up, Black Friday is 27 November and Christmas is close. Here's how to use ChatGPT or Claude to build a festive budget, without oversharing."
-heroImage: /blog/christmas-budget-ai-hero.jpg
+excerpt: "Black Friday is 27 November and rates just went up. Grab your real spending numbers, let AI interview you, and walk out with a festive budget in 15 minutes."
+heroImage: /blog/black-friday-budget-hero.jpg
 categories: ["Personal Finance", "Business AI"]
 tags: ["Budgeting", "AI Tools", "Financial Literacy", "Cost of Living"]
 seoTitle: "Black Friday & Christmas Budget With AI | Australia"
 updated: 2026-11-11
 faq:
   - q: "How do I set a Christmas budget in Australia?"
-    a: "Start with one total figure you can afford without borrowing or dipping into bills money, then split it into categories such as gifts, food and drink, travel and a small buffer. Write it down before the sales start and track spending against it."
+    a: "Start with your actual spending from the last few months, work out what's left after bills, then pick one festive total and split it into gifts, food, travel and a small buffer. Write it down before the Black Friday sales start."
   - q: "Can I use ChatGPT or Claude to make a budget?"
-    a: "Yes. AI chatbots are good at turning rough numbers into a structured budget, gift list or spending plan. Give them rounded figures rather than bank statements, and always check the maths and the logic yourself."
+    a: "Yes. Give the AI your category totals and ask it to interview you one question at a time, then build the budget and a tracker. Always check the maths yourself."
   - q: "Is it safe to upload my bank statements to AI?"
-    a: "It's best not to. The Office of the Australian Information Commissioner advises against entering personal and sensitive information into AI tools, so remove names, account numbers and addresses and use rounded totals instead."
+    a: "It's best not to. The Office of the Australian Information Commissioner advises against entering personal and sensitive information into AI tools, so share category totals instead of raw statements or account details."
   - q: "When is Black Friday 2026 in Australia?"
-    a: "Black Friday falls on Friday 27 November 2026, with Cyber Monday on 30 November. Many retailers run sales for the whole week or longer, so it pays to set your list and limit before then."
+    a: "Black Friday is Friday 27 November 2026 and Cyber Monday is 30 November. Many retailers run sales across the whole week, so set your list and limit before then."
   - q: "How do I stop overspending in Black Friday sales?"
-    a: "Decide what you need before the sales start, set a dollar cap for the event, and only buy items that were already on your list. A 24-hour pause before checkout helps you separate a real need from a good-looking discount."
+    a: "Set one dollar cap for the event, only buy what was already on your list, and wait 24 hours before buying anything that wasn't. Log each purchase the same day."
 ---
 
 <blockquote style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📖 PAUL's Quick Read</strong>
-<p>Rates just went up again, Black Friday lands on 27 November, and your inbox is about to tell you everything "ends tonight". Before it does, spend ten minutes with ChatGPT, Claude, Copilot or Gemini and build a festive budget. The catch: give AI <strong>rounded numbers, not your bank statements</strong>, and you stay the one who checks the maths. Debits still have to equal credits.</p>
+<p>Black Friday is 27 November, rates just went up again, and Christmas is coming whether your bank account is ready or not. The fix takes about 15 minutes: pull your real spending numbers from your banking app, then let AI interview you one question at a time and build the budget for you. No bank statements uploaded, no spreadsheets from scratch.</p>
 </blockquote>
 
-<img src="/blog/christmas-budget-ai-hero.jpg" alt="How to use AI to set a Black Friday and Christmas budget in Australia - APP Coaching title card" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0; display: block;">
+<img src="/blog/black-friday-budget-hero.jpg" alt="Person holding navy, white, red and brown shopping bags - setting a Black Friday and Christmas budget with AI in Australia" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0; display: block;">
+
+<p style="text-align: center; color: #6b7280; font-size: 0.95rem; font-style: italic; margin: -1rem 0 2rem;">Photo by Iuliia Pilipeichenko on Unsplash</p>
 
 <details style="background: #f7f9fc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; margin: 2rem 0;">
   <summary style="cursor: pointer; font-weight: 700; font-size: 1.1rem; color: #1f3a7d;">📑 Table of Contents</summary>
   <ul style="margin-top: 1rem; line-height: 1.8; padding-left: 1.5rem;">
-    <li><a href="#short-answer">The Short Answer</a></li>
-    <li><a href="#confession">A Confession From an Accountant</a></li>
-    <li><a href="#why-this-year">Why This Year's Festive Budget Matters More</a></li>
-    <li><a href="#what-ai-is-good-at">What AI Is Good At (and Where It Isn't)</a></li>
-    <li><a href="#privacy-first">Privacy First: What Not to Paste Into a Chatbot</a></li>
-    <li><a href="#the-prompt">PAUL's Prompt: Build Your Festive Budget in 10 Minutes</a></li>
-    <li><a href="#worked-example">A Worked Example</a></li>
-    <li><a href="#black-friday-rules">Five Rules for Black Friday Week</a></li>
-    <li><a href="#check-the-output">Audit the Output Like It's Your Grad Year</a></li>
+    <li><a href="#two-kinds-of-sales-worry">Two Kinds of Sales Worry</a></li>
+    <li><a href="#why-this-year">Why This Year Feels Tighter</a></li>
+    <li><a href="#get-your-actuals">Step 1: Get Your Actuals</a></li>
+    <li><a href="#let-ai-interview-you">Step 2: Let AI Interview You</a></li>
+    <li><a href="#survive-black-friday">Step 3: Survive Black Friday Week</a></li>
+    <li><a href="#check-the-maths">Check the Maths Before You Trust It</a></li>
   </ul>
 </details>
 
-<h2 id="short-answer">The Short Answer</h2>
+<p>Yes, you can use AI to set your Black Friday and Christmas budget, and it's one of the best everyday uses for it. But AI can't budget with numbers it doesn't have. So step one is grabbing your actual spending, step two is letting ChatGPT, Claude, Copilot or Gemini interview you, and step three is sticking to the number it helps you land on.</p>
 
-<p>Yes, you can use AI to set a Black Friday and Christmas budget, and it's one of the most useful everyday things it does. Give a chatbot your rounded take-home pay, your fixed bills and a festive spending cap, and it'll hand back a category-by-category plan, a gift list with limits and a simple tracker. Two rules: <strong>never paste in raw bank statements or account details</strong>, and <strong>check every number it gives you</strong>.</p>
+<p>This is general education, not personal financial advice.</p>
 
-<p><em>This is general education, not personal financial advice.</em></p>
+<h2 id="two-kinds-of-sales-worry">Two Kinds of Sales Worry</h2>
 
-<h2 id="confession">A Confession From an Accountant</h2>
+<p>As a business coach, I hear a lot of worry this time of year. For many business owners it's the quiet period: customers head off on holidays and sales dip.</p>
 
-<p>My mum was an accountant, and the first rule she taught me was that <strong>debits equal credits</strong>. Everything must balance. If it doesn't, something's wrong, and it's usually you.</p>
+<p>For everyone else, it's the opposite problem. It's not a drought of sales, it's a flood of them. Every inbox, app and billboard is yelling "40% off, ends tonight", while you're also trying to buy presents for the whole family, the in-laws and the Secret Santa you drew at work.</p>
 
-<p>You'd think that would make accountants brilliant at their own money. Reader, it does not. I've sat with colleagues who could reconcile millions at work, then asked casually about their personal finances and heard: <em>"Honestly? I have no idea where my money goes."</em> These are people who build forecasts for a living. Their own December forecast is apparently "vibes".</p>
+<p>Different worry, same cure. Once you've got a budget, the anxiety drops, because you're not making it up at the checkout anymore. You already made the decision.</p>
 
-<p>I wrote about this in <a href="/blog/finance-coaching-why-smart-people-struggle-with-money" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">why smart people struggle with money</a>, and the conclusion still holds: it's not about intelligence. Nobody ever showed us the system. And nothing exposes a missing system faster than a "72 hours only" banner in late November.</p>
+<h2 id="why-this-year">Why This Year Feels Tighter</h2>
 
-<h2 id="why-this-year">Why This Year's Festive Budget Matters More</h2>
+<p>On Melbourne Cup Day the Reserve Bank lifted the cash rate to 4.85%, the fifth rise of 2026. <a href="https://www.savings.com.au/news/rba-lifts-cash-rate-to-4-85" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Savings.com.au estimates</a> that could add around $80 a month to repayments on a $500,000 mortgage, though it varies by loan.</p>
 
-<p>The timing this year is, to use the technical term, not ideal. On Melbourne Cup Day the Reserve Bank lifted the cash rate by 25 basis points to 4.85%, which <a href="https://www.savings.com.au/news/rba-lifts-cash-rate-to-4-85" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Savings.com.au reports</a> is the fifth rise of 2026 and the highest level since November 2008. The same article estimates repayments on a $500,000 mortgage could rise by around $80 a month, though actual changes will vary. Not quite the Cup Day result anyone was hoping for.</p>
+<p>At the same time, plenty of us are planning to lean on the sales. Pureprofile research of 1,015 Australians, <a href="https://itbrief.com.au/story/australians-cut-christmas-spending-as-cost-pressures-rise" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">reported by IT Brief</a>, found 58% plan to use sales events to help cover Christmas, 47% of Black Friday shoppers often spend more than planned, and 44% feel pressured by the promotions to spend money they didn't intend to.</p>
 
-<p>The RBA's own <a href="https://www.rba.gov.au/publications/smp/2026/nov/overview.html" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">November Statement on Monetary Policy</a> notes headline inflation was 3.9% over the year to the September quarter, and expects it to stay above 3% until the end of 2027. In plain English: prices are still climbing faster than the RBA wants, and borrowing costs have gone up to match.</p>
+<p>So more than half of us are using the sales to save money, and nearly half of us blow the budget in them. In accounting we'd call that a variance. And you can't have a variance without a budget to measure against, which is exactly the point.</p>
 
-<p>Then the sales season rolls in. Black Friday is <strong>Friday 27 November 2026</strong>, Cyber Monday is 30 November, and plenty of us are planning to lean on both. Pureprofile research of 1,015 Australians, <a href="https://itbrief.com.au/story/australians-cut-christmas-spending-as-cost-pressures-rise" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">reported by IT Brief</a>, found:</p>
+<h2 id="get-your-actuals">Step 1: Get Your Actuals</h2>
 
-<ul>
-  <li><strong>62%</strong> are feeling a moderate to high cost-of-living impact, and <strong>79%</strong> are adjusting their spending.</li>
-  <li><strong>58%</strong> plan to use sales events to help cover Christmas.</li>
-  <li><strong>47%</strong> of Black Friday shoppers say they often spend more than planned.</li>
-  <li><strong>44%</strong> say Black Friday promotions pressure them to spend money they didn't intend to, up from 34% a year earlier.</li>
-</ul>
+<p>This is the bit most budgeting advice skips. A budget built on guesses is just a wish list with numbers on it. Before you open any AI tool, you want to know what you actually spend. Pick whichever of these suits you.</p>
 
-<p>So more than half of us are using the sales to save money, and nearly half of us overspend in them. That's not a contradiction, that's a variance. And variances happen when nobody set a budget to measure against.</p>
+<h3>The quick way: your banking app</h3>
 
-<h2 id="what-ai-is-good-at">What AI Is Good At (and Where It Isn't)</h2>
+<p>Many banking apps already sort your spending into categories like groceries, transport, eating out and shopping. Open it, look at the last three months, and jot down the monthly total for each category. Round them to the nearest $10. Ten minutes, tops.</p>
 
-<p>Australians are already bringing AI along for the ride. Shopify's 2026 Holiday Retail Report, <a href="https://itbrief.com.au/story/australians-to-spend-more-this-bfcm-as-ai-shopping-grows" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">covered by IT Brief</a>, found 62% of Australians expect to use AI for at least one holiday shopping task this year, and that we plan to spend an average of $346 over the Black Friday–Cyber Monday weekend, up from $324 a year earlier.</p>
+<h3>The Excel way: CSV export and a PivotTable</h3>
 
-<p>Most of that is AI helping people <em>find things to buy</em>. Which is a bit like hiring an accountant to help you spend faster. I'd rather you point it at the other side of the ledger: <strong>deciding what you can afford</strong>.</p>
-
-<table style="width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: 0.95rem;">
-  <tr style="background: #f7f9fc; border: 1px solid #e5e7eb;">
-    <th style="padding: 12px; text-align: left; color: #1f3a7d; font-weight: 700; border: 1px solid #e5e7eb;">Good jobs for AI</th>
-    <th style="padding: 12px; text-align: left; color: #1f3a7d; font-weight: 700; border: 1px solid #e5e7eb;">Keep these for yourself</th>
-  </tr>
-  <tr style="border: 1px solid #e5e7eb;">
-    <td style="padding: 12px; border: 1px solid #e5e7eb;">Turning rough totals into a category budget</td>
-    <td style="padding: 12px; border: 1px solid #e5e7eb;">Deciding what you can genuinely afford this year</td>
-  </tr>
-  <tr style="border: 1px solid #e5e7eb; background: #fafbfc;">
-    <td style="padding: 12px; border: 1px solid #e5e7eb;">Building a gift list with a per-person cap</td>
-    <td style="padding: 12px; border: 1px solid #e5e7eb;">Anything involving credit, loans or buy now, pay later decisions</td>
-  </tr>
-  <tr style="border: 1px solid #e5e7eb;">
-    <td style="padding: 12px; border: 1px solid #e5e7eb;">Creating a simple tracker you can paste into Excel or Google Sheets</td>
-    <td style="padding: 12px; border: 1px solid #e5e7eb;">Checking the maths (AI can and does get sums wrong)</td>
-  </tr>
-  <tr style="border: 1px solid #e5e7eb; background: #fafbfc;">
-    <td style="padding: 12px; border: 1px solid #e5e7eb;">Brainstorming cheaper gift and hosting ideas</td>
-    <td style="padding: 12px; border: 1px solid #e5e7eb;">Personal financial advice for your situation</td>
-  </tr>
-</table>
-
-<p>Trust is a fair concern. A <a href="https://itbrief.com.au/story/australians-turn-to-ai-for-money-advice-survey-finds" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">July 2026 survey of 1,009 Australians</a> found 17% use AI to help inform financial decisions, and 25% of those users had acted on AI-generated financial information without checking other sources. Budgeting is a low-risk place to start precisely because <strong>you</strong> supply the numbers and you can tick and bash every line.</p>
-
-<h2 id="privacy-first">Privacy First: What Not to Paste Into a Chatbot</h2>
-
-<p>Here's where I see people go wrong. The fastest-looking route is to upload twelve months of bank statements and type "make me a budget". Please don't. That's not a shortcut, that's a data breach with extra steps.</p>
-
-<p><a href="https://www.moneymag.com.au/mel-robbins-ai-money-tip-risk" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Money magazine</a> notes that the Office of the Australian Information Commissioner advises against entering personal and sensitive information into AI tools, and cites a Cisco survey finding up to 29% of AI users were inputting account numbers and other financial information. Whatever a tool's settings, the safest data is the data you never typed in.</p>
-
-<p>The rule I teach in coaching: <strong>give AI the shape of your money, not the details of it.</strong></p>
-
-<ul>
-  <li><strong>Do share:</strong> rounded monthly take-home pay, rounded bill totals by category, your festive spending cap, how many people you buy for.</li>
-  <li><strong>Don't share:</strong> bank statements, account or card numbers, BSBs, your full name, address, employer, tax file number or login details.</li>
-  <li><strong>Swap names for labels:</strong> "Person A (teenager)", "Person B (colleague, Secret Santa)". The AI doesn't need to know that Uncle Gary regifts. Nobody does.</li>
-</ul>
-
-<p>If you want to analyse real transactions, export them to Excel, delete the identifying columns and summarise by category first. That's a two-minute PivotTable job. At Flight Centre I was the person people remembered as "good with Excel", so much so that a former colleague still remembered it a decade later. Turns out PivotTables are a lasting legacy.</p>
-
-<h2 id="the-prompt">PAUL's Prompt: Build Your Festive Budget in 10 Minutes</h2>
-
-<p>Copy this into ChatGPT, Claude, Copilot or Gemini. Fill in the square brackets with rounded numbers. Rounded. I'm looking at you, person about to paste in $5,013.47.</p>
-
-<blockquote style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
-<strong>📋 PAUL's Prompt (Festive Budget Builder)</strong>
-<p style="background: #ffffff; border-left: 4px solid #00FF00; padding: 1.5rem; color: #1f3a7d; font-family: monospace; font-size: 0.9rem; line-height: 1.8; margin: 1rem 0; white-space: pre-wrap;">Act as a practical budgeting assistant for someone in Australia. I'll give you rounded numbers only. Do not ask me for bank statements, account numbers or personal details.
-
-My situation (all figures rounded, per month, in AUD):
-- Take-home pay: [e.g. 5,000]
-- Fixed bills (rent/mortgage, utilities, insurance, phone, transport): [e.g. 3,200]
-- Usual everyday spending (groceries, fuel, etc.): [e.g. 1,000]
-- Amount I already have set aside for Christmas: [e.g. 400]
-
-My festive plans:
-- Number of people I buy gifts for: [e.g. 8], including any Secret Santa limits: [e.g. $30]
-- Am I hosting? [yes/no, roughly how many people]
-- Travel planned: [yes/no, rough cost]
-- Things I genuinely need and might buy in Black Friday sales: [list]
-
-Please:
-1. Suggest a total festive budget I can cover from savings and spare cash flow WITHOUT using credit, and show your working.
-2. Split it into categories: gifts, food and drink, hosting, travel, Black Friday "needs list", and a 5–10% buffer.
-3. Give me a per-person gift cap table.
-4. Create a simple tracker table (Item | Category | Budget | Actual | Difference) I can paste into Excel or Google Sheets.
-5. List 5 questions I should ask myself before buying anything on Black Friday.
-6. Flag any assumption you've made, and if my numbers don't add up, tell me plainly rather than forcing a budget.</p>
-</blockquote>
-
-<p>That last instruction is the important one. Chatbots are people-pleasers; left alone, they'll make the numbers fit. A good prompt gives the AI permission to say "mate, this doesn't work".</p>
-
-<h2 id="worked-example">A Worked Example</h2>
-
-<p>Here's what a sensible output might look like, using the example figures from the prompt. These are made-up illustrative numbers, not a benchmark for what anyone should spend.</p>
-
-<p>Take-home pay of $5,000, less $3,200 in fixed bills and $1,000 everyday spending, leaves $800 a month. With about six weeks to Christmas, setting aside $600 of that spare cash flow plus the $400 already saved gives a festive cap of <strong>$1,000</strong>, with a little left over for whatever December throws at you.</p>
-
-<table style="width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: 0.95rem;">
-  <tr style="background: #f7f9fc; border: 1px solid #e5e7eb;">
-    <th style="padding: 12px; text-align: left; color: #1f3a7d; font-weight: 700; border: 1px solid #e5e7eb;">Category</th>
-    <th style="padding: 12px; text-align: left; color: #1f3a7d; font-weight: 700; border: 1px solid #e5e7eb;">Budget</th>
-    <th style="padding: 12px; text-align: left; color: #1f3a7d; font-weight: 700; border: 1px solid #e5e7eb;">Notes</th>
-  </tr>
-  <tr style="border: 1px solid #e5e7eb;">
-    <td style="padding: 12px; border: 1px solid #e5e7eb;">Gifts</td>
-    <td style="padding: 12px; border: 1px solid #e5e7eb;">$420</td>
-    <td style="padding: 12px; border: 1px solid #e5e7eb;">7 people at $60 average</td>
-  </tr>
-  <tr style="border: 1px solid #e5e7eb; background: #fafbfc;">
-    <td style="padding: 12px; border: 1px solid #e5e7eb;">Secret Santa</td>
-    <td style="padding: 12px; border: 1px solid #e5e7eb;">$30</td>
-    <td style="padding: 12px; border: 1px solid #e5e7eb;">Fixed by the group. Socks are a valid strategy.</td>
-  </tr>
-  <tr style="border: 1px solid #e5e7eb;">
-    <td style="padding: 12px; border: 1px solid #e5e7eb;">Food, drink and hosting</td>
-    <td style="padding: 12px; border: 1px solid #e5e7eb;">$300</td>
-    <td style="padding: 12px; border: 1px solid #e5e7eb;">Ask guests to bring a dish</td>
-  </tr>
-  <tr style="border: 1px solid #e5e7eb; background: #fafbfc;">
-    <td style="padding: 12px; border: 1px solid #e5e7eb;">Black Friday needs list</td>
-    <td style="padding: 12px; border: 1px solid #e5e7eb;">$170</td>
-    <td style="padding: 12px; border: 1px solid #e5e7eb;">Only items already on the list</td>
-  </tr>
-  <tr style="border: 1px solid #e5e7eb;">
-    <td style="padding: 12px; border: 1px solid #e5e7eb;">Buffer</td>
-    <td style="padding: 12px; border: 1px solid #e5e7eb;">$80</td>
-    <td style="padding: 12px; border: 1px solid #e5e7eb;">8%, for the present you forgot</td>
-  </tr>
-  <tr style="border: 1px solid #e5e7eb; background: #f7f9fc;">
-    <td style="padding: 12px; border: 1px solid #e5e7eb;"><strong>Total</strong></td>
-    <td style="padding: 12px; border: 1px solid #e5e7eb;"><strong>$1,000</strong></td>
-    <td style="padding: 12px; border: 1px solid #e5e7eb;">Balances. Mum would be proud.</td>
-  </tr>
-</table>
-
-<p>Notice the Black Friday line is a <strong>budget category</strong>, not a hunting licence. If the sale saves you $40 on something on the list, great. That $40 goes back into the buffer, not into a second thing you "might as well grab while it's cheap".</p>
-
-<p>Paste the tracker into a spreadsheet, add <code>=Budget-Actual</code>, and you'll see at a glance which categories are running hot. If you want to see how far a little spreadsheet structure can go, my post on <a href="/blog/i-build-a-bespoke-excel-course-for-any-client-in-under-2-hours" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">building an Excel course with AI</a> gets nerdier.</p>
-
-<h2 id="black-friday-rules">Five Rules for Black Friday Week</h2>
-
-<p>Once the budget exists, these habits protect it:</p>
+<p>If you want more control (or your app's categories are a bit creative), export your transactions as a CSV file from internet banking and open it in Excel.</p>
 
 <ol>
-  <li><strong>Write the list before 27 November.</strong> If it isn't on the list, it isn't a deal. It's a new purchase wearing a red sticker.</li>
-  <li><strong>Set one dollar cap for the whole event.</strong> One number is easier to stick to than ten.</li>
-  <li><strong>Pause for 24 hours</strong> on anything over a threshold you choose, say $100. Most "ends tonight" urgency survives a night's sleep. Funny how the sale often does too.</li>
-  <li><strong>Unsubscribe or mute sale emails</strong> for the week if they pull you in. Pureprofile's research found 37% now call the sales period too overwhelming.</li>
-  <li><strong>Log every purchase the same day.</strong> Thirty seconds in your tracker beats a January bank-statement jump scare.</li>
+  <li>Delete anything identifying: account numbers, BSBs, names and reference numbers.</li>
+  <li>Add a Category column and tag each transaction (groceries, fuel, subscriptions and so on).</li>
+  <li>Insert a PivotTable with Category in Rows and Amount in Values.</li>
+  <li>Divide by the number of months to get a monthly average.</li>
 </ol>
 
-<p>You can also make AI your sceptical mate at the checkout. Try: <em>"I'm about to buy [item] for [price] in a Black Friday sale. It wasn't on my list. Ask me three blunt questions to check whether I actually need it."</em> It's surprisingly good at being the friend who asks, "Do you though?"</p>
+<p>Back at Flight Centre I was the person people came to for Excel help, and a PivotTable is still the fastest way I know to see where money actually goes. If you want to get faster at this, it's exactly the kind of thing we cover in <a href="/services" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Excel coaching</a>.</p>
 
-<h2 id="check-the-output">Audit the Output Like It's Your Grad Year</h2>
+<h3>What to share with AI (and what not to)</h3>
 
-<p>I started my career in the PwC graduate program, in audit. You learn fast in audit that being right isn't enough; you have to be right <em>and</em> quick, with someone reviewing every workpaper. That's exactly the relationship you want with an AI budget: <strong>AI produces drafts, you produce decisions.</strong> You're the reviewer. Three quick checks before you sign off:</p>
+<p>Either way, what you end up with is a short list of category totals. That's all the AI needs. <a href="https://www.moneymag.com.au/mel-robbins-ai-money-tip-risk" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Money magazine</a> notes the Office of the Australian Information Commissioner advises against entering personal and sensitive information into AI tools. So share the totals, not the statements. No account numbers, no BSBs, no full names, no logins.</p>
+
+<p>Think of it this way: give AI the shape of your money, not the details of it.</p>
+
+<h2 id="let-ai-interview-you">Step 2: Let AI Interview You</h2>
+
+<p>Here's the trick that makes this work. Instead of dumping everything into one giant message, get the AI to interview you, one question at a time. It feels like sitting down with someone who asks good questions, and it means nothing gets missed (like the cousin you forgot you drew in Kris Kringle).</p>
+
+<p>Copy the prompt below, paste it into your AI tool of choice, and answer as it goes.</p>
+
+<blockquote style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
+<strong>📋 PAUL's Prompt (Festive Budget Interview)</strong>
+<p>Paste this into ChatGPT, Claude, Copilot or Gemini, then answer its questions with your rounded category totals.</p>
+
+<details style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; margin: 1rem 0;">
+  <summary style="cursor: pointer; font-weight: 700; color: #1f3a7d;">📋 See Full Prompt (Click to Expand)</summary>
+  <p class="paul-prompt">I want you to help me build a Black Friday and Christmas budget. I'm in Australia and all amounts are in AUD.
+
+Interview me ONE question at a time. Wait for my answer before asking the next question. I'll give you rounded numbers only, so never ask for bank statements, account numbers, BSBs or personal details.
+
+Cover these, in this order:
+1. My monthly take-home pay.
+2. My fixed bills each month (rent or mortgage, utilities, insurance, phone, transport).
+3. My actual everyday spending by category for the last three months (I'll paste totals from my banking app or Excel).
+4. How much I already have set aside for Christmas.
+5. Who I'm buying gifts for (I'll use labels like "Mum" or "Work Secret Santa", not full names) and any group spending limits.
+6. Whether I'm hosting or travelling, and roughly what that costs.
+7. Anything I genuinely need that I'm hoping to buy in the Black Friday sales.
+
+When you have everything:
+- Show me how much I can spend on Christmas without using credit, and show your working.
+- Split it into gifts, food and drink, hosting or travel, a Black Friday "needs list" and a 5 to 10% buffer.
+- Give me a per-person gift limit.
+- Build a tracker table (Item | Category | Budget | Actual | Difference) I can paste into Excel or Google Sheets.
+- If my numbers don't add up, tell me plainly. Don't force a budget to fit.</p>
+</details>
+</blockquote>
+
+<p>That last line matters more than it looks. AI tools are people-pleasers. Left alone, they'll make the numbers work even when they shouldn't. Giving it permission to say "this doesn't add up" is what turns it from a yes-man into a useful sounding board.</p>
+
+<h2 id="survive-black-friday">Step 3: Survive Black Friday Week</h2>
+
+<p>Black Friday is Friday 27 November and Cyber Monday is 30 November. Once your budget exists, a few simple habits keep it intact:</p>
 
 <ul>
-  <li><strong>Does it add up?</strong> Sum the categories yourself, or in a spreadsheet. Chatbots occasionally produce totals that don't match their own tables, with total confidence.</li>
-  <li><strong>Does it fit your real cash flow?</strong> A budget that only works if nothing else goes wrong in December isn't a budget. It's a wish list. Keep a buffer.</li>
-  <li><strong>Did it sneak in anything you didn't ask for?</strong> If an AI suggests a credit product, a payment plan or an investment, treat that as a cue to talk to a licensed professional, not a recommendation.</li>
+  <li>Write your list before the 27th. If it's not on the list, it's not a deal, it's a new purchase with a red sticker on it.</li>
+  <li>Set one dollar cap for the whole sales period. One number is much easier to stick to than ten.</li>
+  <li>Wait 24 hours on anything that wasn't on the list. Funny how often "ends tonight" is still on the next day.</li>
+  <li>Mute the sale emails for the week if they get to you.</li>
+  <li>Log each purchase in your tracker the same day. Thirty seconds now beats a January surprise.</li>
 </ul>
 
-<p>The hard part of money is rarely the maths. It's having a simple system you actually use when the pressure's on, and the festive season is when the pressure's on. Ask any accountant. Just maybe don't ask them where their own money went.</p>
+<p>And if you're about to cave, ask your AI: "I'm about to buy this for this price. It wasn't on my list. Ask me three blunt questions to check if I actually need it." It's like having a mate tap you on the shoulder at the checkout.</p>
 
-<p><em>This is general education, not personal financial advice. For advice about your own circumstances, speak with a licensed financial adviser.</em></p>
+<h2 id="check-the-maths">Check the Maths Before You Trust It</h2>
+
+<p>I started my career in audit at PwC, and the one habit audit drills into you is that nothing gets signed off until someone has checked it. Treat your AI budget the same way. The AI writes the draft, you're the reviewer.</p>
+
+<ul>
+  <li>Add the categories up yourself. AI occasionally gives you a table where the total doesn't match the rows, with complete confidence.</li>
+  <li>Make sure there's a buffer. A budget that only works if nothing goes wrong in December isn't a budget.</li>
+  <li>If it suggests a credit card, payment plan or investment, that's not a recommendation. That's your cue to speak to a licensed professional.</li>
+</ul>
+
+<p>The maths is rarely the hard part. As I wrote in <a href="/blog/finance-coaching-why-smart-people-struggle-with-money" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">why smart people struggle with money</a>, even accountants can't always tell you where their own money goes. What helps is a simple system you'll actually use when the pressure is on, and late November is when the pressure is on.</p>
+
+<p>This is general education, not personal financial advice. For advice about your own circumstances, speak with a licensed financial adviser.</p>
 
 <blockquote style="background: #f0fdf4; border: 1px solid #dcfce7; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>⬆️ PAUL's LevelUp</strong>
-<p>Higher rates and sticky inflation make this a year to decide your festive number before the sales decide it for you. Give AI rounded numbers, never your statements, let it do the structuring, and keep the judgement and the final review for yourself. Ten minutes this week beats a January of regret, and your ledger will balance on Boxing Day.</p>
+<p>Whether you're worried about too few sales or too many, a budget is what turns the worry into a plan. Get your actuals from your banking app or a quick PivotTable, let AI interview you one question at a time, and check its maths before you trust it. Fifteen minutes this week means you'll walk into Black Friday already knowing your number.</p>
 </blockquote>
 
 <section style="background: linear-gradient(135deg, #1f3a7d 0%, #2a4fa8 100%); color: white; border-radius: 12px; padding: 2.5rem; margin: 3rem 0; text-align: center;">
-  <h3 style="color: white; margin-top: 0;">Want a Budget System You'll Actually Use?</h3>
+  <h3 style="color: white; margin-top: 0;">Want Help Building a Budget You'll Actually Use?</h3>
 
-  <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 1.5rem; color: white;">I coach people in Brisbane and online across Australia to understand their money, build simple spreadsheets and use AI tools safely. No judgement, no jargon, and no bank statements required. Book a free 15-minute discovery call and we'll work out where to start.</p>
+  <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 1.5rem; color: white;">I coach people in Brisbane and online across Australia to understand their numbers, get comfortable in Excel and use AI tools safely. Book a free 15-minute discovery call and we'll work out where to start.</p>
 
   <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
     <a href="https://cal.com/app-coaching-xcgvda" style="background: #00FF41; color: #1f3a7d; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; display: inline-block;">Book a Free Discovery Call</a>

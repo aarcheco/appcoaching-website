@@ -2453,17 +2453,33 @@ export default function AppCoaching() {
               .blog-content strong {
                 font-weight: 700;
                 color: ${colors.darkNavy};
-                background: rgba(118, 215, 0, 0.2);
-                padding: 0.2rem 0.4rem;
-                border-radius: 3px;
               }
               .blog-content em {
                 font-style: italic;
+              }
+              .blog-content ul, .blog-content ol {
+                padding-left: 1.5rem;
+                margin: 0 0 1.5rem;
+              }
+              .blog-content li {
+                margin-bottom: 0.5rem;
+              }
+              .blog-content blockquote, .blog-content blockquote:hover {
+                cursor: auto;
+                transform: none;
+              }
+              .blog-content .paul-prompt {
+                font-family: monospace;
+                font-size: 0.9rem;
+                line-height: 1.7;
+                white-space: pre-wrap;
+                background: #ffffff;
+                border-left: 4px solid #00FF00;
+                padding: 1.25rem;
                 color: ${colors.navy};
-                text-decoration: underline;
-                text-decoration-color: ${colors.limeGreen};
-                text-decoration-thickness: 2px;
-                text-underline-offset: 2px;
+                margin: 1rem 0 0;
+                user-select: text;
+                -webkit-user-select: text;
               }
               .blog-content hr {
                 border: none;

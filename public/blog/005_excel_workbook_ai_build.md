@@ -6,8 +6,9 @@ excerpt: "Built with Claude in under 2 hours: a self-marking, instant-feedback E
 heroImage: /blog/excel-mastery-training-hero.jpg
 categories: ["Excel Coaching", "Career Coaching"]
 tags: ["Excel Training", "AI Tools", "Networking", "Career Coaching"]
-seoTitle: "Custom Excel Training Built With AI in Under 2 Hours | Brisbane"
-updated: 2026-11-05
+seoTitle: "Excel Training Brisbane: Free Practice Workbook + AI Course"
+metaDescription: "Excel training in Brisbane: a self-marking Excel course built with Claude, plus a free Excel practice workbook with exercises. 1-on-1 Excel tutor or team training."
+updated: 2026-11-11
 faq:
   - q: "Can AI build an Excel training course?"
     a: "Yes, with an expert driving it. Using Claude, I built a 33-sheet, self-marking Excel course with 2,126 formulas and instant feedback in under 2 hours. AI speeds up the build, but you still need to know Excel well enough to check that every formula and exercise teaches the right thing."
@@ -15,9 +16,9 @@ faq:
     a: "It runs over three coaching sessions: formulas and data hygiene; helper columns, conditional formatting, data validation, charting and Evaluate Formula; then PivotTables, PivotCharts and Power Query on a larger dataset. It includes self-marking exercises and three 50-question exams."
   - q: "Can the Excel course be tailored to my team or industry?"
     a: "Yes. Because the workbook is generated from a reusable skeleton, I can reskin it with practice data from your field, such as procurement, accounts payable or HR, in a fraction of the original build time."
-  - q: "Is there a free Excel practice workbook?"
+  - q: "Where can I get free Excel practice exercises?"
     a: "Yes. You can download a free 10-tab sample practice workbook from this post to see exactly how the self-marking exercises work."
-  - q: "Do you offer Excel training in Brisbane?"
+  - q: "Do you offer Excel training or an Excel tutor in Brisbane?"
     a: "Yes. I'm based in Brisbane and coach individuals and teams in Brisbane and online across Queensland and the rest of Australia."
 ---
 

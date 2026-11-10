@@ -6,7 +6,9 @@ excerpt: "Here's exactly how to use Claude, Squarespace, or Lovable to build you
 heroImage: /blog/airtasker-jobs-hero.jpg
 categories: ["Website Building", "Business AI"]
 tags: ["No-Code", "AI Website", "Web Development"]
-updated: 2026-11-05
+seoTitle: "Lovable AI vs Squarespace vs Claude: Build a Website With AI"
+metaDescription: "How to build a website with AI for under $100: Lovable AI, Squarespace, Durable and Claude compared on cost, build time and control. No code needed."
+updated: 2026-11-11
 faq:
   - q: "How much does it cost to build a website with AI?"
     a: "Using the three paths in this guide: the easy path (Durable or Squarespace) costs about $20 a month, the medium path (Lovable or Wix) about $50 a month, and the advanced path (Claude, GitHub and Netlify) about $32 a month, or roughly $384 in year one. Hiring someone on Airtasker for a simple site typically costs $500 to $2,000."
@@ -14,6 +16,8 @@ faq:
     a: "No. All three paths use natural language: you describe the site in plain English and the AI tool builds it. The advanced path involves learning basic Git so you can push changes to GitHub, but you don't write the code yourself."
   - q: "How long does it take to build a website with AI?"
     a: "Durable can generate a working site in about 2 minutes. Lovable typically takes 1 to 2 hours for a custom design, and the Claude, GitHub and Netlify path takes 2 to 4 hours."
+  - q: "What is Lovable AI?"
+    a: "Lovable is an AI website builder that reads your plain-English description and generates the actual code for your site. In this guide it's the medium path, at about $50 a month on the pro plan, with more design control than template builders."
   - q: "Which AI website builder should I choose?"
     a: "Choose Durable or Squarespace if you want to be live today with professional templates. Choose Lovable or Wix if you need design control or want to sell products. Choose Claude with GitHub and Netlify if you want to own your code, build complex features and avoid vendor lock-in."
   - q: "Was appcoaching.io built with AI?"
@@ -33,7 +37,7 @@ faq:
     <li><a href="#the-reality">Why AI Changes Everything</a></li>
     <li><a href="#comparison-table">Quick Comparison: Which Path?</a></li>
     <li><a href="#easy-path">Easy: Squarespace & Durable (Under $30/mo)</a></li>
-    <li><a href="#medium-path">Medium: Lovable & Wix ($50–$99/mo)</a></li>
+    <li><a href="#medium-path">Medium: Lovable AI & Wix ($50–$99/mo)</a></li>
     <li><a href="#advanced-path">Advanced: Claude + GitHub + Netlify ($32/mo)</a></li>
     <li><a href="#which-path">How to Choose Your AI Build Path</a></li>
   </ul>
@@ -196,7 +200,7 @@ Design style: Clean, modern, professional. Use the color palette I provided. Mak
 
 ---
 
-<h2 id="medium-path">Medium: Lovable & Wix ($50–$99/month)</h2>
+<h2 id="medium-path">Medium: Lovable AI & Wix ($50–$99/month)</h2>
 
 <div style="display: flex; gap: 0.75rem; margin: 1rem 0 1.5rem 0; flex-wrap: wrap;">
   <span style="background: #ff6b6b; color: white; padding: 0.4rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.85rem;">💜 Lovable</span>

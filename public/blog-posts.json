@@ -49,9 +49,10 @@
     "title": "I Build a Bespoke Excel Course for Any Client in Under 2 Hours",
     "slug": "i-build-a-bespoke-excel-course-for-any-client-in-under-2-hours",
     "date": "2026-07-27",
-    "updated": "2026-11-05",
+    "updated": "2026-11-11",
     "excerpt": "Built with Claude in under 2 hours: a self-marking, instant-feedback Excel course reskinned for procurement, AP, or HR — free practice workbook included.",
-    "seoTitle": "Custom Excel Training Built With AI in Under 2 Hours | Brisbane",
+    "seoTitle": "Excel Training Brisbane: Free Practice Workbook + AI Course",
+    "metaDescription": "Excel training in Brisbane: a self-marking Excel course built with Claude, plus a free Excel practice workbook with exercises. 1-on-1 Excel tutor or team training.",
     "heroImage": "/blog/excel-mastery-training-hero.jpg",
     "categories": [
       "Excel Coaching",
@@ -77,11 +78,11 @@
         "a": "Yes. Because the workbook is generated from a reusable skeleton, I can reskin it with practice data from your field, such as procurement, accounts payable or HR, in a fraction of the original build time."
       },
       {
-        "q": "Is there a free Excel practice workbook?",
+        "q": "Where can I get free Excel practice exercises?",
         "a": "Yes. You can download a free 10-tab sample practice workbook from this post to see exactly how the self-marking exercises work."
       },
       {
-        "q": "Do you offer Excel training in Brisbane?",
+        "q": "Do you offer Excel training or an Excel tutor in Brisbane?",
         "a": "Yes. I'm based in Brisbane and coach individuals and teams in Brisbane and online across Queensland and the rest of Australia."
       }
     ]
@@ -92,8 +93,10 @@
     "title": "How to Build a Website With AI (No Code, Under $100)",
     "slug": "how-to-build-a-website-with-ai-no-code-under-100",
     "date": "2026-07-15",
-    "updated": "2026-11-05",
+    "updated": "2026-11-11",
     "excerpt": "Here's exactly how to use Claude, Squarespace, or Lovable to build your site without code, in natural language, for less than $100 total.",
+    "seoTitle": "Lovable AI vs Squarespace vs Claude: Build a Website With AI",
+    "metaDescription": "How to build a website with AI for under $100: Lovable AI, Squarespace, Durable and Claude compared on cost, build time and control. No code needed.",
     "heroImage": "/blog/airtasker-jobs-hero.jpg",
     "categories": [
       "Website Building",
@@ -118,6 +121,10 @@
         "a": "Durable can generate a working site in about 2 minutes. Lovable typically takes 1 to 2 hours for a custom design, and the Claude, GitHub and Netlify path takes 2 to 4 hours."
       },
       {
+        "q": "What is Lovable AI?",
+        "a": "Lovable is an AI website builder that reads your plain-English description and generates the actual code for your site. In this guide it's the medium path, at about $50 a month on the pro plan, with more design control than template builders."
+      },
+      {
         "q": "Which AI website builder should I choose?",
         "a": "Choose Durable or Squarespace if you want to be live today with professional templates. Choose Lovable or Wix if you need design control or want to sell products. Choose Claude with GitHub and Netlify if you want to own your code, build complex features and avoid vendor lock-in."
       },
@@ -133,9 +140,10 @@
     "title": "Finance Coaching: Why Smart People Struggle With Money",
     "slug": "finance-coaching-why-smart-people-struggle-with-money",
     "date": "2026-07-13",
-    "updated": "2026-11-05",
+    "updated": "2026-11-11",
     "excerpt": "Accountants can't track their own finances. If confusion this widespread is normal at the top, what does that say about the rest of us?",
-    "seoTitle": "Finance Coaching Brisbane: Why Smart People Struggle With Money",
+    "seoTitle": "Financial Coaching: Why Smart People Struggle With Money",
+    "metaDescription": "What does a financial coach do? A Brisbane Chartered Accountant on why smart people struggle with money, and how financial coaching builds financial literacy.",
     "heroImage": "/blog/finance-coaching-hero.jpg",
     "categories": [
       "Personal Finance"
@@ -145,8 +153,8 @@
     ],
     "faq": [
       {
-        "q": "What is finance coaching?",
-        "a": "Finance coaching is working one-on-one with someone who helps you understand your own numbers: where your money actually goes, how to prioritise debt, savings and investing, and how compound growth plays out over time. The goal is to make decisions from clarity instead of guessing."
+        "q": "What does a financial coach do?",
+        "a": "A financial coach works one-on-one with you to help you understand your own numbers: where your money actually goes, how to prioritise debt, savings and investing, and how compound growth plays out over time. The goal is to make decisions from clarity instead of guessing."
       },
       {
         "q": "Why do smart people struggle with money?",
@@ -158,7 +166,7 @@
       },
       {
         "q": "Do you offer finance coaching in Brisbane?",
-        "a": "Yes. I'm a Brisbane-based qualified accountant, and I coach clients in Brisbane and online across Queensland and the rest of Australia. You can book a free 15-minute discovery call to see whether coaching is the right fit."
+        "a": "Yes. I'm a Brisbane-based Chartered Accountant, and I coach clients in Brisbane and online across Queensland and the rest of Australia. You can book a free 15-minute discovery call to see whether coaching is the right fit."
       }
     ]
   },
@@ -168,7 +176,10 @@
     "title": "Why I Chose Accounting: The Journey from Rule-Follower to Translator",
     "slug": "why-i-chose-accounting-the-journey-from-rule-follower-to-translator",
     "date": "2026-07-10",
+    "updated": "2026-11-11",
     "excerpt": "From my mum's exactness to PwC's pressure to Coronis—how accounting taught me the real value isn't processing numbers, it's making them make sense.",
+    "seoTitle": "Is Accounting a Good Career? From PwC Grad to Translator",
+    "metaDescription": "Is accounting a good career? A Chartered Accountant on the PwC graduate program, Flight Centre, and what accountants really do once the books balance.",
     "heroImage": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80",
     "categories": [
       "Accounting & Finance Career",
@@ -180,12 +191,16 @@
     ],
     "faq": [
       {
-        "q": "Why choose accounting as a career?",
-        "a": "Accounting suits people who like order and logic: the books either balance or they don't. Over a career, the most valuable skill becomes translating numbers into clear decisions for other people."
+        "q": "Is accounting a good career?",
+        "a": "For people who like order and logic, yes. Accounting suits people who like order and logic: the books either balance or they don't. Over a career, the most valuable skill becomes translating numbers into clear decisions for other people."
       },
       {
-        "q": "What is it like working in audit at a Big Four firm?",
+        "q": "What is the PwC graduate program like in audit?",
         "a": "Audit is time-poor and high-pressure: you gather evidence and review workpapers at speed, with accuracy non-negotiable. It's a fast way to learn efficient habits, especially in Excel."
+      },
+      {
+        "q": "What do accountants actually do?",
+        "a": "Day to day, accountants record transactions, reconcile accounts and prepare financial statements, forecasts and analysis. The most valuable part is translating what those numbers mean so decision-makers can act on them."
       },
       {
         "q": "What skills matter most for accountants today?",
@@ -203,7 +218,10 @@
     "title": "Why I Built APP Coaching: A Founder's Origin Story",
     "slug": "why-i-built-app-coaching-a-founders-origin-story",
     "date": "2026-07-08",
-    "excerpt": "From my mom's career to building forecasts that drive business decisions—how I discovered the power of efficient paths from problems to solutions",
+    "updated": "2026-11-11",
+    "excerpt": "From my mum's career to building forecasts that drive business decisions—how I discovered the power of efficient paths from problems to solutions",
+    "seoTitle": "Excel & AI Coaching Brisbane: Why I Started APP Coaching",
+    "metaDescription": "Brisbane Chartered Accountant Aaron Pacheco on why he started APP Coaching: 1-on-1 Excel tutoring, AI coaching and financial literacy, in Brisbane and online.",
     "heroImage": "/aaron-archive-10.jpg",
     "categories": [
       "Accounting & Finance Career"
@@ -228,6 +246,10 @@
       {
         "q": "Do you coach in person or online?",
         "a": "Both. Sessions run in Brisbane and online across Australia."
+      },
+      {
+        "q": "Do you offer Excel tutoring and AI coaching?",
+        "a": "Yes. I work 1-on-1 as an Excel tutor and AI coach, building your skills on your own real work so you can do it yourself afterwards, in Brisbane or online."
       }
     ]
   }

@@ -2,10 +2,13 @@
 title: "Why I Built APP Coaching: A Founder's Origin Story"
 date: 2026-07-08
 id: 001
-excerpt: From my mom's career to building forecasts that drive business decisions—how I discovered the power of efficient paths from problems to solutions
+excerpt: From my mum's career to building forecasts that drive business decisions—how I discovered the power of efficient paths from problems to solutions
 heroImage: /aaron-archive-10.jpg
 categories: ["Accounting & Finance Career"]
 tags: ["Career Coaching", "Business AI"]
+seoTitle: "Excel & AI Coaching Brisbane: Why I Started APP Coaching"
+metaDescription: "Brisbane Chartered Accountant Aaron Pacheco on why he started APP Coaching: 1-on-1 Excel tutoring, AI coaching and financial literacy, in Brisbane and online."
+updated: 2026-11-11
 faq:
   - q: "What is APP Coaching?"
     a: "APP Coaching is 1-on-1 coaching from Brisbane-based Chartered Accountant Aaron Pacheco in finance literacy, Excel and AI tools. The goal is to work through your real problems together until you can do it yourself."
@@ -15,6 +18,8 @@ faq:
     a: "Yes. AI can shrink hours of manual work into minutes, but you still need to understand the numbers to check what it produces. Coaching covers both: how to use the tools and how to check the output."
   - q: "Do you coach in person or online?"
     a: "Both. Sessions run in Brisbane and online across Australia."
+  - q: "Do you offer Excel tutoring and AI coaching?"
+    a: "Yes. I work 1-on-1 as an Excel tutor and AI coach, building your skills on your own real work so you can do it yourself afterwards, in Brisbane or online."
 ---
 
 <blockquote style="background: linear-gradient(135deg, #00FF00 0%, rgba(255, 255, 255, 0.9) 100%); border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">

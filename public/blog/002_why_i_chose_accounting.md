@@ -6,11 +6,16 @@ excerpt: From my mum's exactness to PwC's pressure to Coronis—how accounting t
 heroImage: https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80
 categories: ["Accounting & Finance Career", "Business Finance"]
 tags: ["Career Coaching", "Business Finance"]
+seoTitle: "Is Accounting a Good Career? From PwC Grad to Translator"
+metaDescription: "Is accounting a good career? A Chartered Accountant on the PwC graduate program, Flight Centre, and what accountants really do once the books balance."
+updated: 2026-11-11
 faq:
-  - q: "Why choose accounting as a career?"
-    a: "Accounting suits people who like order and logic: the books either balance or they don't. Over a career, the most valuable skill becomes translating numbers into clear decisions for other people."
-  - q: "What is it like working in audit at a Big Four firm?"
+  - q: "Is accounting a good career?"
+    a: "For people who like order and logic, yes. Accounting suits people who like order and logic: the books either balance or they don't. Over a career, the most valuable skill becomes translating numbers into clear decisions for other people."
+  - q: "What is the PwC graduate program like in audit?"
     a: "Audit is time-poor and high-pressure: you gather evidence and review workpapers at speed, with accuracy non-negotiable. It's a fast way to learn efficient habits, especially in Excel."
+  - q: "What do accountants actually do?"
+    a: "Day to day, accountants record transactions, reconcile accounts and prepare financial statements, forecasts and analysis. The most valuable part is translating what those numbers mean so decision-makers can act on them."
   - q: "What skills matter most for accountants today?"
     a: "Efficient Excel and AI skills save time, but the skill that moves the needle is explaining what the numbers mean in plain language so leaders can act on them."
   - q: "Do you offer career coaching for young finance professionals?"
@@ -29,7 +34,7 @@ faq:
   <ul style="margin-top: 1rem; line-height: 1.8; padding-left: 1.5rem;">
     <li><a href="#my-mum-was-an-accountant" style="color: #1f3a7d; font-weight: 600;">My Mum Was an Accountant</a></li>
     <li><a href="#high-school-the-click-moment" style="color: #1f3a7d; font-weight: 600;">High School: The Click Moment</a></li>
-    <li><a href="#university-taught-theory-pwc-taught-speed" style="color: #1f3a7d; font-weight: 600;">University Taught Theory. PwC Taught Speed.</a></li>
+    <li><a href="#university-taught-theory-pwc-taught-speed" style="color: #1f3a7d; font-weight: 600;">University Taught Theory. The PwC Graduate Program Taught Speed.</a></li>
     <li><a href="#flight-centre-eyes-opened" style="color: #1f3a7d; font-weight: 600;">Flight Centre: Eyes Opened</a></li>
     <li><a href="#coronis-changed-everything" style="color: #1f3a7d; font-weight: 600;">Coronis Changed Everything</a></li>
     <li><a href="#the-mentor-who-changed-my-perspective" style="color: #1f3a7d; font-weight: 600;">The Mentor Who Changed My Perspective</a></li>
@@ -55,7 +60,7 @@ faq:
 
 <p>So I pursued it.</p>
 
-<h2 id="university-taught-theory-pwc-taught-speed">University Taught Theory. PwC Taught Speed.</h2>
+<h2 id="university-taught-theory-pwc-taught-speed">University Taught Theory. The PwC Graduate Program Taught Speed.</h2>
 
 <p>University was textbooks and frameworks. How to record journal entries. How to prepare financial statements. The mechanics of accounting.</p>
 

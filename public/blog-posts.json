@@ -1,5 +1,48 @@
 [
   {
+    "id": 6,
+    "filename": "006_black_friday_christmas_budget_with_ai.md",
+    "title": "How to Use AI to Set a Black Friday and Christmas Budget",
+    "slug": "how-to-use-ai-to-set-a-black-friday-and-christmas-budget",
+    "date": "2026-11-11",
+    "updated": "2026-11-11",
+    "excerpt": "Rates are up, Black Friday is 27 November and Christmas is close. Here's how to use ChatGPT or Claude to build a festive budget, without oversharing.",
+    "seoTitle": "Black Friday & Christmas Budget With AI | Australia",
+    "heroImage": "/blog/christmas-budget-ai-hero.jpg",
+    "categories": [
+      "Personal Finance",
+      "Business AI"
+    ],
+    "tags": [
+      "Budgeting",
+      "AI Tools",
+      "Financial Literacy",
+      "Cost of Living"
+    ],
+    "faq": [
+      {
+        "q": "How do I set a Christmas budget in Australia?",
+        "a": "Start with one total figure you can afford without borrowing or dipping into bills money, then split it into categories such as gifts, food and drink, travel and a small buffer. Write it down before the sales start and track spending against it."
+      },
+      {
+        "q": "Can I use ChatGPT or Claude to make a budget?",
+        "a": "Yes. AI chatbots are good at turning rough numbers into a structured budget, gift list or spending plan. Give them rounded figures rather than bank statements, and always check the maths and the logic yourself."
+      },
+      {
+        "q": "Is it safe to upload my bank statements to AI?",
+        "a": "It's best not to. The Office of the Australian Information Commissioner advises against entering personal and sensitive information into AI tools, so remove names, account numbers and addresses and use rounded totals instead."
+      },
+      {
+        "q": "When is Black Friday 2026 in Australia?",
+        "a": "Black Friday falls on Friday 27 November 2026, with Cyber Monday on 30 November. Many retailers run sales for the whole week or longer, so it pays to set your list and limit before then."
+      },
+      {
+        "q": "How do I stop overspending in Black Friday sales?",
+        "a": "Decide what you need before the sales start, set a dollar cap for the event, and only buy items that were already on your list. A 24-hour pause before checkout helps you separate a real need from a good-looking discount."
+      }
+    ]
+  },
+  {
     "id": 5,
     "filename": "005_excel_workbook_ai_build.md",
     "title": "I Build a Bespoke Excel Course for Any Client in Under 2 Hours",

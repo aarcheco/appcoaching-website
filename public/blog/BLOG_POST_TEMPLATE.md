@@ -96,7 +96,7 @@ Never start a line with "## " or "---".</p>
 
 **Emphasis:** bold renders as a green highlight. Use it on the single most important phrase in a section (about 1 per section, never whole sentences in a row). No italics. No images in the body: the hero is the only image.
 
-**SEO:** before writing, check keyword volume and difficulty in OpenSEO (project "APP Coaching", Australia). Put the best-volume, low-difficulty question in the title, seoTitle, first paragraph, one H2 and the first FAQ. Use secondary keywords naturally in H2s and FAQs. Every post must have 3–5 FAQs in front matter (they render as the FAQ section and FAQPage schema).
+**SEO:** pick one primary keyword: the exact question Australians type into Google about the topic (check Google's "People also ask" and related searches via web search, and prefer specific, low-competition questions over broad terms). Put it in the title, seoTitle, metaDescription, first paragraph, one H2 and the first FAQ. Use secondary keywords naturally in H2s and FAQs. Every post must have 3–5 FAQs in front matter (they render as the FAQ section and FAQPage schema).
 
 **Products and affiliate links:** only link products Aaron has approved (currently PocketSmith for budgeting apps). When an affiliate link is used, add the line "Some links in this post are affiliate links, which means I may earn a commission at no extra cost to you." under the disclaimer.
 

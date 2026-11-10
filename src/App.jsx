@@ -311,6 +311,36 @@ const notFoundConfig = {
 };
 
 export default function AppCoaching() {
+  // ===== BLOG: "Copy prompt" buttons inside PAUL's Prompt boxes =====
+  // Post HTML is injected via dangerouslySetInnerHTML, so one delegated listener
+  // handles every <button class="paul-copy"> next to a <p class="paul-prompt">.
+  useEffect(() => {
+    const onClick = async (e) => {
+      const btn = e.target.closest && e.target.closest('.paul-copy');
+      if (!btn) return;
+      const box = btn.closest('.paul-prompt-box') || btn.parentElement;
+      const promptEl = box && box.querySelector('.paul-prompt');
+      if (!promptEl) return;
+      // textContent (not innerText) so it works while the <details> box is collapsed.
+      const text = promptEl.textContent.trim();
+      try {
+        await navigator.clipboard.writeText(text);
+      } catch (err) {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      }
+      const label = btn.textContent;
+      btn.textContent = '✅ Copied!';
+      setTimeout(() => { btn.textContent = label; }, 2000);
+    };
+    document.addEventListener('click', onClick);
+    return () => document.removeEventListener('click', onClick);
+  }, []);
+
   // ===== GOOGLE ANALYTICS & GSC VERIFICATION =====
   useEffect(() => {
     // GSC verification meta tag lives statically in public/index.html (and so in every
@@ -2453,6 +2483,20 @@ export default function AppCoaching() {
               .blog-content strong {
                 font-weight: 700;
                 color: ${colors.darkNavy};
+                background: rgba(118, 215, 0, 0.2);
+                padding: 0.2rem 0.4rem;
+                border-radius: 3px;
+              }
+              .blog-content .paul-copy {
+                background: #00FF41;
+                color: #1f3a7d;
+                border: none;
+                border-radius: 6px;
+                padding: 0.5rem 1rem;
+                font-weight: 700;
+                font-family: 'Poppins', sans-serif;
+                cursor: pointer;
+                margin-top: 1rem;
               }
               .blog-content em {
                 font-style: italic;

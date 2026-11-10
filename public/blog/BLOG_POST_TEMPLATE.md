@@ -50,7 +50,7 @@ faq:                                          # 3–5 questions people actually 
   <li>Numbered steps for anything done in order.</li>
 </ol>
 
-<blockquote style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
+<blockquote class="paul-prompt-box" style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📋 PAUL's Prompt (Short Name)</strong>
 <p>One line on where to paste it and what to do.</p>
 
@@ -60,6 +60,8 @@ faq:                                          # 3–5 questions people actually 
 Line breaks are kept exactly as typed.
 Never start a line with "## " or "---".</p>
 </details>
+
+<button type="button" class="paul-copy">📋 Copy prompt</button>
 </blockquote>
 
 <h2 id="section-4">Check the Output / Wrap-up</h2>
@@ -92,7 +94,11 @@ Never start a line with "## " or "---".</p>
 
 **Voice:** casual, plain Australian English, first person, like Aaron explaining it over a coffee. Get to the point. Light humour that comes from the situation (a red sticker, the Kris Kringle cousin), not forced puns. Personal experience only where it genuinely fits the step being explained (e.g. PwC audit → "check the output"; Flight Centre Excel → "PivotTable your spending").
 
-**Emphasis:** almost none. No bold or italics inside paragraphs or list items. Bold only appears as the box titles above. Use headings, short paragraphs and lists for structure instead.
+**Emphasis:** bold renders as a green highlight. Use it on the single most important phrase in a section (about 1 per section, never whole sentences in a row). No italics. No images in the body: the hero is the only image.
+
+**SEO:** before writing, check keyword volume and difficulty in OpenSEO (project "APP Coaching", Australia). Put the best-volume, low-difficulty question in the title, seoTitle, first paragraph, one H2 and the first FAQ. Use secondary keywords naturally in H2s and FAQs. Every post must have 3–5 FAQs in front matter (they render as the FAQ section and FAQPage schema).
+
+**Products and affiliate links:** only link products Aaron has approved (currently PocketSmith for budgeting apps). When an affiliate link is used, add the line "Some links in this post are affiliate links, which means I may earn a commission at no extra cost to you." under the disclaimer.
 
 **Hero image:** a free Unsplash photo (Unsplash License, not Unsplash+), saved to `public/blog/<short-slug>-hero.jpg` at 1200×630, with the photographer credit line under it. No faces as the focus, no brand logos, no text in the image. Don't generate title cards.
 

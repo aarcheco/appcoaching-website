@@ -6,6 +6,15 @@ excerpt: From my mom's career to building forecasts that drive business decision
 heroImage: /aaron-archive-10.jpg
 categories: ["Accounting & Finance Career"]
 tags: ["Career Coaching", "Business AI"]
+faq:
+  - q: "What is APP Coaching?"
+    a: "APP Coaching is 1-on-1 coaching from Brisbane-based Chartered Accountant Aaron Pacheco in finance literacy, Excel and AI tools. The goal is to work through your real problems together until you can do it yourself."
+  - q: "Who is APP Coaching for?"
+    a: "Smart people who are solving money, spreadsheet or admin problems the long way, from early-career finance professionals to anyone who wants to understand their own numbers and use AI tools well."
+  - q: "Can AI tools like Claude, ChatGPT and Gemini help with finance and Excel work?"
+    a: "Yes. AI can shrink hours of manual work into minutes, but you still need to understand the numbers to check what it produces. Coaching covers both: how to use the tools and how to check the output."
+  - q: "Do you coach in person or online?"
+    a: "Both. Sessions run in Brisbane and online across Australia."
 ---
 
 <blockquote style="background: linear-gradient(135deg, #00FF00 0%, rgba(255, 255, 255, 0.9) 100%); border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">

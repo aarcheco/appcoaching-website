@@ -1,3 +1,7 @@
 [build]
   command = "npm run build"
   publish = "build"
+
+# Tell Bing & other IndexNow search engines about new/updated pages after each production deploy.
+[[plugins]]
+  package = "/netlify/plugins/indexnow"

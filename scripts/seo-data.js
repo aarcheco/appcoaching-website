@@ -39,20 +39,20 @@ const areaServed = [
 
 const serviceList = [
   {
-    name: 'Finance Coaching',
-    description: 'Career coaching for young professionals in finance. Personal & business finance strategy, profit margins, cash flow clarity.'
+    name: 'AI for Personal Finance Coaching',
+    description: 'Use AI tools like ChatGPT, Claude and Gemini to understand spending, budgets, savings goals and big money decisions, in plain English.'
   },
   {
-    name: 'Excel Coaching',
-    description: 'Data analysis, visualization, custom modeling, dashboards, pivot tables, and automation of repetitive tasks.'
+    name: 'AI for Business Finance Coaching',
+    description: 'Use AI to read and explain your P&L, cash flow and reports, turn accounting exports into insights, and automate finance admin.'
   },
   {
-    name: 'AI Coaching',
-    description: 'Master prompting, AI workflows, agentic AI, custom AI tools, and AI adoption strategy.'
+    name: 'Excel + AI Skills Coaching',
+    description: 'Excel and Google Sheets skills, formulas, PivotTables and dashboards, built faster with AI, including custom team training.'
   },
   {
-    name: 'Operations & Workflow Coaching',
-    description: 'Process design, workflow optimization, task automation, systems thinking, and operational efficiency.'
+    name: 'Career Coaching for Finance Professionals',
+    description: 'AI skills, resume review, interview prep and career strategy for graduates, young accountants and analysts.'
   }
 ].map((s) => ({
   '@type': 'Service',
@@ -70,12 +70,12 @@ const personSchema = {
   name: 'Aaron Pacheco',
   url: `${SITE_URL}/about`,
   image: `${SITE_URL}/aaron-headshot-professional.jpg`,
-  jobTitle: 'Founder & Coach - AI, Excel & Finance',
-  description: 'Brisbane-based qualified accountant and finance professional specialising in Excel mastery, AI coaching, and financial clarity for individuals and teams.',
+  jobTitle: 'Chartered Accountant & AI Finance Coach',
+  description: 'Brisbane Chartered Accountant helping everyday Australians, young finance professionals and small business owners unlock their finances with AI.',
   homeLocation: { '@type': 'Place', name: 'Brisbane, Queensland, Australia' },
   worksFor: { '@id': BUSINESS_ID },
   alumniOf: { '@type': 'CollegeOrUniversity', name: 'Queensland University of Technology (QUT)' },
-  knowsAbout: ['Microsoft Excel', 'Financial literacy', 'Personal finance', 'Accounting', 'Artificial intelligence', 'Prompt engineering', 'Business operations', 'Coaching'],
+  knowsAbout: ['Artificial intelligence', 'Personal finance', 'Financial literacy', 'Accounting', 'Prompt engineering', 'Microsoft Excel', 'Coaching'],
   sameAs: [LINKEDIN_URL]
 };
 
@@ -88,11 +88,11 @@ const organizationSchema = {
   url: SITE_URL,
   logo: LOGO_URL,
   image: LOGO_URL,
-  description: 'Brisbane-based 1-on-1 coaching in finance, Excel and AI, delivered in Brisbane and online across Australia, to move you from confusion to clarity and self-sufficiency.',
+  description: 'Brisbane-based 1-on-1 coaching that helps Australians unlock their personal and business finances with AI, in Brisbane and online across Australia.',
   address: businessAddress,
   areaServed,
   founder: { '@id': PERSON_ID },
-  knowsAbout: ['Financial literacy', 'Microsoft Excel', 'Artificial intelligence', 'Business operations'],
+  knowsAbout: ['Artificial intelligence', 'Personal finance', 'Financial literacy', 'Microsoft Excel'],
   hasMap: GOOGLE_MAPS_URL,
   sameAs: [LINKEDIN_URL, GOOGLE_MAPS_URL],
   contactPoint: {
@@ -142,11 +142,11 @@ const breadcrumb = (items) => ({
 const pageConfigs = {
   home: {
     id: 'home',
-    title: 'Finance, Excel & AI Coaching in Brisbane | APP Coaching',
-    description: '1-on-1 finance, Excel and AI coaching from a Brisbane-based qualified accountant. Coaching in Brisbane and online across Australia. Book a free discovery call.',
+    title: 'AI Finance Coaching in Brisbane | APP Coaching',
+    description: 'Unlock your finances with AI. 1-on-1 coaching from a Brisbane Chartered Accountant on using ChatGPT, Claude and Gemini for personal and business finance.',
     canonical: `${SITE_URL}/`,
     ogType: 'website',
-    lastmod: '2026-11-05',
+    lastmod: '2026-11-11',
     schema: {
       '@context': 'https://schema.org',
       '@graph': [
@@ -155,25 +155,25 @@ const pageConfigs = {
         websiteSchema,
         webPageNode({
           url: `${SITE_URL}/`,
-          name: 'Finance, Excel & AI Coaching in Brisbane | APP Coaching',
-          description: '1-on-1 finance, Excel and AI coaching from a Brisbane-based qualified accountant. Coaching in Brisbane and online across Australia.'
+          name: 'AI Finance Coaching in Brisbane | APP Coaching',
+          description: 'Unlock your finances with AI: 1-on-1 coaching from a Brisbane Chartered Accountant, in Brisbane and online across Australia.'
         })
       ]
     }
   },
   services: {
     id: 'services',
-    title: 'Finance, Excel & AI Coaching Services | Brisbane | APP Coaching',
-    description: 'Finance, Excel, AI and operations coaching from a Brisbane-based qualified accountant. 1-on-1 sessions in Brisbane and online across Australia.',
+    title: 'AI Finance Coaching Services | Brisbane | APP Coaching',
+    description: 'AI for personal and business finance, Excel + AI skills and finance career coaching from a Brisbane Chartered Accountant. In Brisbane and online.',
     canonical: `${SITE_URL}/services`,
-    lastmod: '2026-11-05',
+    lastmod: '2026-11-11',
     schema: {
       '@context': 'https://schema.org',
       '@graph': [
         webPageNode({
           url: `${SITE_URL}/services`,
           name: 'APP Coaching Services',
-          description: 'Finance, Excel, AI and operations coaching in Brisbane and online across Australia.',
+          description: 'AI finance coaching in Brisbane and online across Australia.',
           extra: { mainEntity: { '@id': BUSINESS_ID } }
         }),
         asGraphNode(organizationSchema),
@@ -184,9 +184,9 @@ const pageConfigs = {
   about: {
     id: 'about',
     title: 'About Aaron Pacheco, Brisbane Finance Coach | APP Coaching',
-    description: 'Meet Aaron Pacheco: Brisbane-based qualified accountant with 10+ years in finance at PwC, Flight Centre and more. Excel, AI and finance coach.',
+    description: 'Meet Aaron Pacheco: Brisbane Chartered Accountant with 10+ years at PwC, Flight Centre and more, helping Australians unlock their finances with AI.',
     canonical: `${SITE_URL}/about`,
-    lastmod: '2026-11-05',
+    lastmod: '2026-11-11',
     schema: {
       '@context': 'https://schema.org',
       '@graph': [
@@ -194,7 +194,7 @@ const pageConfigs = {
           type: ['ProfilePage', 'AboutPage'],
           url: `${SITE_URL}/about`,
           name: 'About Aaron Pacheco',
-          description: 'Aaron Pacheco - Brisbane-based founder of APP Coaching, qualified accountant, Excel expert, AI coach, and operations specialist.',
+          description: 'Aaron Pacheco - Brisbane Chartered Accountant and founder of APP Coaching, helping Australians unlock their finances with AI.',
           extra: { mainEntity: { '@id': PERSON_ID } }
         }),
         {
@@ -212,10 +212,10 @@ const pageConfigs = {
   },
   blog: {
     id: 'blog',
-    title: 'Finance, Excel & AI Blog | APP Coaching Brisbane',
-    description: 'Practical finance, Excel and AI guides from Brisbane coach Aaron Pacheco, with prompts and workbooks you can use straight away.',
+    title: 'AI & Personal Finance Blog | APP Coaching Brisbane',
+    description: 'Practical guides on using AI for personal and business finance from Brisbane Chartered Accountant Aaron Pacheco, with prompts you can use straight away.',
     canonical: `${SITE_URL}/blog`,
-    lastmod: '2026-11-05',
+    lastmod: '2026-11-11',
     schema: {
       '@context': 'https://schema.org',
       '@graph': [
@@ -223,7 +223,7 @@ const pageConfigs = {
           type: ['CollectionPage', 'Blog'],
           url: `${SITE_URL}/blog`,
           name: 'APP Coaching Blog',
-          description: 'Practical finance, Excel and AI guides from Brisbane coach Aaron Pacheco.',
+          description: 'Practical guides on using AI for personal and business finance from Aaron Pacheco.',
           extra: { author: { '@id': PERSON_ID }, publisher: { '@id': BUSINESS_ID } }
         }),
         breadcrumb([['Home', `${SITE_URL}/`], ['Blog', `${SITE_URL}/blog`]])
@@ -233,9 +233,9 @@ const pageConfigs = {
   contact: {
     id: 'contact',
     title: 'Book a Free Discovery Call | APP Coaching Brisbane',
-    description: 'Book a free 15-minute discovery call with Aaron Pacheco, Brisbane-based finance, Excel and AI coach. Online across Australia.',
+    description: 'Book a free 15-minute discovery call with Aaron Pacheco, Brisbane Chartered Accountant and AI finance coach. Online across Australia.',
     canonical: `${SITE_URL}/contact`,
-    lastmod: '2026-11-05',
+    lastmod: '2026-11-11',
     schema: {
       '@context': 'https://schema.org',
       '@graph': [

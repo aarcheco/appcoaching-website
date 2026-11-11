@@ -6,6 +6,15 @@ excerpt: From my mum's exactness to PwC's pressure to Coronis—how accounting t
 heroImage: https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80
 categories: ["Accounting & Finance Career", "Business Finance"]
 tags: ["Career Coaching", "Business Finance"]
+faq:
+  - q: "Why choose accounting as a career?"
+    a: "Accounting suits people who like order and logic: the books either balance or they don't. Over a career, the most valuable skill becomes translating numbers into clear decisions for other people."
+  - q: "What is it like working in audit at a Big Four firm?"
+    a: "Audit is time-poor and high-pressure: you gather evidence and review workpapers at speed, with accuracy non-negotiable. It's a fast way to learn efficient habits, especially in Excel."
+  - q: "What skills matter most for accountants today?"
+    a: "Efficient Excel and AI skills save time, but the skill that moves the needle is explaining what the numbers mean in plain language so leaders can act on them."
+  - q: "Do you offer career coaching for young finance professionals?"
+    a: "Yes. APP Coaching offers career coaching for graduates and young accountants and analysts, in Brisbane and online across Australia."
 ---
 
 <blockquote style="background: linear-gradient(135deg, #00FF00 0%, rgba(255, 255, 255, 0.9) 100%); border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">

@@ -1,100 +1,109 @@
 ---
-title: "Article Title: Compelling and Keyword-Optimized"
-date: 2026-07-XX
+title: "Post Title: Answers the Question People Search"
+date: 2026-XX-XX
 id: 00X
-excerpt: "One-sentence hook that answers the reader's core question. Under 150 characters. This appears in blog listing."
-heroImage: https://images.unsplash.com/photo-XXXXXXXXX?w=1200&q=80
-categories: ["Category Name"]
-tags: ["Tag1", "Tag2"]
-# --- Optional SEO fields (delete any you don't need) ---
-# seoTitle: "Search-friendly <title> under ~60 chars, e.g. include Brisbane"   # keeps H1 + URL unchanged
-# metaDescription: "Custom meta description, 120–155 chars"                       # defaults to excerpt
-# updated: 2026-07-XX                                                             # set when you meaningfully edit a post
-# faq:                                                                            # 3–5 real questions people search
-#   - q: "Question exactly as someone would type it?"
-#     a: "Direct 1–3 sentence answer. Plain text, no HTML."
+excerpt: "One or two plain sentences, under ~160 characters. What the reader gets from this post."
+heroImage: /blog/<short-slug>-hero.jpg
+categories: ["Personal Finance"]            # Personal Finance | Excel Coaching | Career Coaching | Business AI | Accounting & Finance Career
+tags: ["Tag1", "Tag2", "Tag3"]
+seoTitle: "Search-Friendly Title Under 60 Chars | Australia"
+updated: 2026-XX-XX
+faq:                                          # 3–5 questions people actually type into Google
+  - q: "Question exactly as someone would type it?"
+    a: "Direct 1–3 sentence answer. Plain text, no HTML."
 ---
 
 <blockquote style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📖 PAUL's Quick Read</strong>
-<p>2-3 sentences summarizing the article. This is NOT the author bio. Focus on the main insight or value prop for the reader. Clear, punchy, benefit-focused.</p>
+<p>3–4 casual sentences: the problem, the fix, how long it takes. No bold or italics inside.</p>
 </blockquote>
 
-<img src="https://images.unsplash.com/photo-XXXXXXXXX?w=1200&q=80" alt="Relevant image description with keywords" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0; display: block;">
+<img src="/blog/<short-slug>-hero.jpg" alt="Describe the photo + the post's main keyword" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0; display: block;">
+
+<p style="text-align: center; color: #6b7280; font-size: 0.95rem; font-style: italic; margin: -1rem 0 2rem;">Photo by <Photographer Name> on Unsplash</p>
 
 <details style="background: #f7f9fc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; margin: 2rem 0;">
   <summary style="cursor: pointer; font-weight: 700; font-size: 1.1rem; color: #1f3a7d;">📑 Table of Contents</summary>
   <ul style="margin-top: 1rem; line-height: 1.8; padding-left: 1.5rem;">
     <li><a href="#section-1">Section 1 Heading</a></li>
     <li><a href="#section-2">Section 2 Heading</a></li>
-    <li><a href="#section-3">Section 3 Heading</a></li>
   </ul>
 </details>
 
-<h2 id="section-1">Section 1 Heading</h2>
+<p>Direct answer to the post's main question in 2–3 sentences. This is what Google and AI search will quote.</p>
 
-<p>Opening paragraph introducing the topic and the reader's problem. Keep paragraphs short (2-3 sentences max).</p>
+<p>This is general education, not personal financial advice.</p>   <!-- only if money is discussed -->
 
-<p>Second paragraph diving deeper. Use <strong>bold</strong> for key terms, not <em>italics</em>.</p>
+<h2 id="section-1">Aaron's Angle (the story or hook)</h2>
 
-<h2 id="section-2">Section 2 Heading</h2>
+<p>Short paragraphs, 1–3 sentences each.</p>
 
-<p>Additional content with specific insights, examples, or actionable advice.</p>
+<h2 id="section-2">Why Now (stats with sources)</h2>
 
-<h2 id="section-3">Section 3 Heading</h2>
+<p>2–4 cited figures max, each linked inline to the page it came from: <a href="https://source" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Source name</a>.</p>
 
-<p>Wrapping up the main content before the LevelUp section.</p>
+<h2 id="section-3">Step 1 / Step 2 / Step 3 (the how-to)</h2>
+
+<h3>Optional sub-heading</h3>
+
+<ol>
+  <li>Numbered steps for anything done in order.</li>
+</ol>
+
+<blockquote class="paul-prompt-box" style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
+<strong>📋 PAUL's Prompt (Short Name)</strong>
+<p>One line on where to paste it and what to do.</p>
+
+<details style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; margin: 1rem 0;">
+  <summary style="cursor: pointer; font-weight: 700; color: #1f3a7d;">📋 See Full Prompt (Click to Expand)</summary>
+  <p class="paul-prompt">Prompt text goes here, plain text only.
+Line breaks are kept exactly as typed.
+Never start a line with "## " or "---".</p>
+</details>
+
+<button type="button" class="paul-copy">📋 Copy prompt</button>
+</blockquote>
+
+<h2 id="section-4">Check the Output / Wrap-up</h2>
+
+<p>Link to 1–2 existing posts and to /services or /contact.</p>
 
 <blockquote style="background: #f0fdf4; border: 1px solid #dcfce7; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>⬆️ PAUL's LevelUp</strong>
-<p>2-3 sentences synthesizing the article's key takeaway. This should feel like a natural conclusion to the reader's journey. Inspirational but grounded.</p>
+<p>2–3 sentences: the one thing to remember and do this week.</p>
 </blockquote>
 
 <section style="background: linear-gradient(135deg, #1f3a7d 0%, #2a4fa8 100%); color: white; border-radius: 12px; padding: 2.5rem; margin: 3rem 0; text-align: center;">
-  <h3 style="color: white; margin-top: 0;">Ready to [Action/Outcome]?</h3>
-  
-  <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 1.5rem; color: white;">1-2 sentences positioning the CTA. Match the article's theme and emotion.</p>
-  
+  <h3 style="color: white; margin-top: 0;">Question-Style CTA Headline?</h3>
+
+  <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 1.5rem; color: white;">1–2 sentences tying the post to coaching. End with: Book a free 15-minute discovery call.</p>
+
   <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-    <a href="https://cal.com/app-coaching-xcgvda" style="background: #00FF41; color: #1f3a7d; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; display: inline-block;">Book a Session</a>
+    <a href="https://cal.com/app-coaching-xcgvda" style="background: #00FF41; color: #1f3a7d; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; display: inline-block;">Book a Free Discovery Call</a>
     <a href="/services" style="border: 2px solid #00FF41; color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; display: inline-block;">Learn More</a>
   </div>
 </section>
 
 ---
 
-## STANDARDIZATION CHECKLIST
+## LOCKED RULES (apply to every post)
 
-✅ **Frontmatter**
-- Title is compelling and keyword-optimized
-- Date is accurate (YYYY-MM-DD)
-- ID is unique and sequential
-- Excerpt is under 150 chars
-- heroImage is relevant (not a portrait)
-- Categories match the services page tags
-- Tags are accurate
+**Structure (in this order):** front matter → PAUL's Quick Read → hero image + Unsplash credit → Table of Contents → direct answer (+ disclaimer if money) → Aaron's angle → why now (2–4 cited stats) → how-to steps → PAUL's Prompt (collapsible box above) → check/wrap-up → PAUL's LevelUp → CTA. The FAQ section and all schema are generated automatically from front matter.
 
-✅ **Content Structure (Required Order)**
-1. (No hand-written schema needed — BlogPosting, Breadcrumb and FAQPage JSON-LD are generated automatically from the front matter at build time)
-2. PAUL's Quick Read (2-3 sentences, not author bio)
-3. Hero image (relevant, not selfie)
-4. Table of Contents with anchor links
-5. Content sections (h2 headings)
-6. PAUL's LevelUp (synthesis of main idea)
-7. CTA section with two buttons
+**Length:** 1,200–1,500 words of prose (the prompt text doesn't count). Long enough to rank for a how-to search, short enough to actually be read.
 
-✅ **Styling Guidelines**
-- PAUL's Quick Read: `background: #f9fafb;` (light gray)
-- PAUL's LevelUp: `background: #f0fdf4;` (light green)
-- Both use: `border-left: 4px solid #00FF00;` (green accent line)
-- Avoid: Bold gradients on blockquotes (too heavy)
-- CTA buttons: "Book a Session" (green bg, navy text) | "Learn More" (green border, white text)
+**Voice:** casual, plain Australian English, first person, like Aaron explaining it over a coffee. Get to the point. Light humour that comes from the situation (a red sticker, the Kris Kringle cousin), not forced puns. Personal experience only where it genuinely fits the step being explained (e.g. PwC audit → "check the output"; Flight Centre Excel → "PivotTable your spending").
 
-✅ **Content Quality**
-- Keep paragraphs short (2-3 sentences max)
-- Use bold for emphasis, not italics
-- Include 2-3 internal links where relevant
-- External links: use navy text with green underline
-- No author bio in Quick Read
-- No fake statistics or unverified claims
+**Emphasis:** bold renders as a green highlight. Use it on the single most important phrase in a section (about 1 per section, never whole sentences in a row). No italics. No images in the body: the hero is the only image.
 
+**SEO:** pick one primary keyword: the exact question Australians type into Google about the topic (check Google's "People also ask" and related searches via web search, and prefer specific, low-competition questions over broad terms). Put it in the title, seoTitle, metaDescription, first paragraph, one H2 and the first FAQ. Use secondary keywords naturally in H2s and FAQs. Every post must have 3–5 FAQs in front matter (they render as the FAQ section and FAQPage schema).
+
+**Products and affiliate links:** only link products Aaron has approved (currently PocketSmith for budgeting apps). When an affiliate link is used, add the line "Some links in this post are affiliate links, which means I may earn a commission at no extra cost to you." under the disclaimer.
+
+**Hero image:** a free Unsplash photo (Unsplash License, not Unsplash+), saved to `public/blog/<short-slug>-hero.jpg` at 1200×630, with the photographer credit line under it. No faces as the focus, no brand logos, no text in the image. Don't generate title cards.
+
+**Facts:** every current figure links to the page it came from. Never invent stats, quotes, client stories or personal anecdotes; personal details come only from the About page, existing posts, or what Aaron gives you.
+
+**Never:** business finance for trades/small business owners, specific financial products, personal advice, politics, or Aaron's employer.
+
+**Links:** use the inline link style shown above. Internal links: `/blog/<slug>`, `/services`, `/contact`.

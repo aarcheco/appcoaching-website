@@ -1,5 +1,49 @@
 [
   {
+    "id": 6,
+    "filename": "006_black_friday_christmas_budget_with_ai.md",
+    "title": "Black Friday 2026 in Australia: How to Budget for It With AI",
+    "slug": "black-friday-2026-in-australia-how-to-budget-for-it-with-ai",
+    "date": "2026-11-11",
+    "updated": "2026-11-11",
+    "excerpt": "Black Friday 2026 in Australia is Friday 27 November. Here's how to get your real spending numbers and let ChatGPT, Gemini or Claude build your Christmas budget first.",
+    "seoTitle": "Black Friday 2026 Australia: Budget for It With AI",
+    "heroImage": "/blog/black-friday-budget-hero.jpg",
+    "categories": [
+      "Personal Finance",
+      "Business AI"
+    ],
+    "tags": [
+      "Black Friday",
+      "Christmas Budget",
+      "AI Tools",
+      "Budgeting",
+      "Cost of Living"
+    ],
+    "faq": [
+      {
+        "q": "When is Black Friday in Australia in 2026?",
+        "a": "Black Friday 2026 is Friday 27 November, and Cyber Monday is Monday 30 November. Many Australian retailers run their sales across the whole week, so it pays to have your list and budget sorted before then."
+      },
+      {
+        "q": "How do I make a Christmas budget with ChatGPT, Gemini or Claude?",
+        "a": "Get your actual spending totals by category first, then paste a prompt that asks the AI to interview you one question at a time. Once it has your numbers, it can build the budget, a per-person gift limit and a tracker. Always check its maths."
+      },
+      {
+        "q": "Is it safe to upload my bank statements to AI?",
+        "a": "It's best not to upload raw statements. The Office of the Australian Information Commissioner advises against entering personal and sensitive information into AI tools, so crop out names and account numbers, or share category totals instead."
+      },
+      {
+        "q": "What budgeting app can I use in Australia to track my spending?",
+        "a": "Many Australian banking apps already group your spending by category. Dedicated budgeting apps like PocketSmith connect to your bank accounts and track where your money goes. Either gives you the actual numbers an AI budget needs."
+      },
+      {
+        "q": "How do I stop overspending in the Black Friday sales?",
+        "a": "Set one dollar cap for the whole sales period, only buy what was already on your list, and wait 24 hours before buying anything that wasn't. Log each purchase the same day."
+      }
+    ]
+  },
+  {
     "id": 5,
     "filename": "005_excel_workbook_ai_build.md",
     "title": "I Build a Bespoke Excel Course for Any Client in Under 2 Hours",
@@ -133,6 +177,24 @@
     "tags": [
       "Career Coaching",
       "Business Finance"
+    ],
+    "faq": [
+      {
+        "q": "Why choose accounting as a career?",
+        "a": "Accounting suits people who like order and logic: the books either balance or they don't. Over a career, the most valuable skill becomes translating numbers into clear decisions for other people."
+      },
+      {
+        "q": "What is it like working in audit at a Big Four firm?",
+        "a": "Audit is time-poor and high-pressure: you gather evidence and review workpapers at speed, with accuracy non-negotiable. It's a fast way to learn efficient habits, especially in Excel."
+      },
+      {
+        "q": "What skills matter most for accountants today?",
+        "a": "Efficient Excel and AI skills save time, but the skill that moves the needle is explaining what the numbers mean in plain language so leaders can act on them."
+      },
+      {
+        "q": "Do you offer career coaching for young finance professionals?",
+        "a": "Yes. APP Coaching offers career coaching for graduates and young accountants and analysts, in Brisbane and online across Australia."
+      }
     ]
   },
   {
@@ -149,6 +211,24 @@
     "tags": [
       "Career Coaching",
       "Business AI"
+    ],
+    "faq": [
+      {
+        "q": "What is APP Coaching?",
+        "a": "APP Coaching is 1-on-1 coaching from Brisbane-based Chartered Accountant Aaron Pacheco in finance literacy, Excel and AI tools. The goal is to work through your real problems together until you can do it yourself."
+      },
+      {
+        "q": "Who is APP Coaching for?",
+        "a": "Smart people who are solving money, spreadsheet or admin problems the long way, from early-career finance professionals to anyone who wants to understand their own numbers and use AI tools well."
+      },
+      {
+        "q": "Can AI tools like Claude, ChatGPT and Gemini help with finance and Excel work?",
+        "a": "Yes. AI can shrink hours of manual work into minutes, but you still need to understand the numbers to check what it produces. Coaching covers both: how to use the tools and how to check the output."
+      },
+      {
+        "q": "Do you coach in person or online?",
+        "a": "Both. Sessions run in Brisbane and online across Australia."
+      }
     ]
   }
 ]

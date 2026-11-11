@@ -311,6 +311,36 @@ const notFoundConfig = {
 };
 
 export default function AppCoaching() {
+  // ===== BLOG: "Copy prompt" buttons inside PAUL's Prompt boxes =====
+  // Post HTML is injected via dangerouslySetInnerHTML, so one delegated listener
+  // handles every <button class="paul-copy"> next to a <p class="paul-prompt">.
+  useEffect(() => {
+    const onClick = async (e) => {
+      const btn = e.target.closest && e.target.closest('.paul-copy');
+      if (!btn) return;
+      const box = btn.closest('.paul-prompt-box') || btn.parentElement;
+      const promptEl = box && box.querySelector('.paul-prompt');
+      if (!promptEl) return;
+      // textContent (not innerText) so it works while the <details> box is collapsed.
+      const text = promptEl.textContent.trim();
+      try {
+        await navigator.clipboard.writeText(text);
+      } catch (err) {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      }
+      const label = btn.textContent;
+      btn.textContent = '✅ Copied!';
+      setTimeout(() => { btn.textContent = label; }, 2000);
+    };
+    document.addEventListener('click', onClick);
+    return () => document.removeEventListener('click', onClick);
+  }, []);
+
   // ===== GOOGLE ANALYTICS & GSC VERIFICATION =====
   useEffect(() => {
     // GSC verification meta tag lives statically in public/index.html (and so in every
@@ -2457,13 +2487,43 @@ export default function AppCoaching() {
                 padding: 0.2rem 0.4rem;
                 border-radius: 3px;
               }
+              .blog-content .paul-copy {
+                background: #00FF41;
+                color: #1f3a7d;
+                border: none;
+                border-radius: 6px;
+                padding: 0.5rem 1rem;
+                font-weight: 700;
+                font-family: 'Poppins', sans-serif;
+                cursor: pointer;
+                margin-top: 1rem;
+              }
               .blog-content em {
                 font-style: italic;
+              }
+              .blog-content ul, .blog-content ol {
+                padding-left: 1.5rem;
+                margin: 0 0 1.5rem;
+              }
+              .blog-content li {
+                margin-bottom: 0.5rem;
+              }
+              .blog-content blockquote, .blog-content blockquote:hover {
+                cursor: auto;
+                transform: none;
+              }
+              .blog-content .paul-prompt {
+                font-family: monospace;
+                font-size: 0.9rem;
+                line-height: 1.7;
+                white-space: pre-wrap;
+                background: #ffffff;
+                border-left: 4px solid #00FF00;
+                padding: 1.25rem;
                 color: ${colors.navy};
-                text-decoration: underline;
-                text-decoration-color: ${colors.limeGreen};
-                text-decoration-thickness: 2px;
-                text-underline-offset: 2px;
+                margin: 1rem 0 0;
+                user-select: text;
+                -webkit-user-select: text;
               }
               .blog-content hr {
                 border: none;

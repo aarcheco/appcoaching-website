@@ -26,7 +26,7 @@ faq:
 
 <blockquote style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📖 PAUL's Quick Read</strong>
-<p>You can build a website with AI without writing code. Seriously. In 20 minutes. For less than lunch. People are paying $200 to $2,000 on Airtasker to hire someone to build a simple website—landing page, booking form, portfolio. Meanwhile, you can describe what you want to Claude or Durable in plain English and have it built, live, and deployed for under $100. Forever. No code. No developers. No markup language. This is the moment you realize websites aren't expensive anymore—they're trivial.</p>
+<p>You can build a website with AI without writing code. Seriously. In 20 minutes. For less than lunch. People are paying $200 to $2,000 on Airtasker to hire someone to build a simple website—landing page, booking form, portfolio. Meanwhile, you can describe what you want to Claude or Durable in plain English and have it built, live, and deployed for under $100. Forever. No code. No developers. No markup language. This is the moment you realise websites aren't expensive anymore—they're trivial.</p>
 </blockquote>
 
 <img src="/blog/airtasker-jobs-hero.jpg" alt="Screenshot of Airtasker job listings showing website builds priced $200-2000 while AI can build it for less than $100" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0; display: block;">
@@ -49,7 +49,7 @@ faq:
 
 <p>Scroll Airtasker right now and search "build me a website." You'll see hundreds of listings: $500–$2,000 each. Landing pages. Booking systems. Portfolios. Contact forms. Simple stuff. Things that now take 20 minutes and cost less than $100 to build yourself using AI.</p>
 
-<p>The insanity: People are spending $2,000 to hire someone to sit down with an AI tool and describe their website. Meanwhile, the AI does the actual building. Why not cut out the middleman? Why not sit down with the AI yourself, describe your website in plain English, and have it live the same day?</p>
+<p>The bit that breaks my accountant brain: people are spending $2,000 to hire someone to sit down with an AI tool and describe their website. Meanwhile, the AI does the actual building. Why not cut out the middleman? Why not sit down with the AI yourself, describe your website in plain English, and have it live the same day?</p>
 
 <p>That's what this article is about. The exact playbook. Three paths. All use AI. All use natural language. All cost less than lunch per month. All skip the $2,000 Airtasker markup.</p>
 
@@ -134,15 +134,15 @@ faq:
 
 <p><strong>How to use AI to build:</strong> <a href="https://durable.com/ai-website-builder" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Durable's AI literally reads English and builds your site.</a> You describe your business in natural sentences: "I'm a finance coach. I charge $100/session. I want a booking form." Durable generates the site. That's it.</p>
 
-<p><strong>Cost reality:</strong> Durable is $20/month. <a href="https://www.squarespace.com/pricing" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Squarespace</a> is $12–$33/month. Year 1 total: $240–$400. Compare to Airtasker: $500–$2,000. You save $1,600+ and get it done 10x faster.</p>
+<p><strong>Cost reality:</strong> Durable is $20/month. <a href="https://www.squarespace.com/pricing" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Squarespace</a> is $12–$33/month. Year 1 total: $240–$400. Compare to Airtasker: $500–$2,000. You save $1,600+ and get it done 10x faster. That's the kind of variance that makes an accountant sit up straight.</p>
 
 <p><strong>What you can build:</strong> Service booking sites (coaching, design, consulting). Freelancer portfolios. Small business landing pages. Lead generation. Anything that's "simple and professional."</p>
 
-<p><strong>How fast?</strong> Durable generates a working site from your description in about 2 minutes. Not exaggerating—it happens right in front of you.</p>
+<p><strong>How fast?</strong> Durable generates a working site from your description in about 2 minutes. Not exaggerating—it happens right in front of you, and it's done before a Drake song finishes.</p>
 
 <p><strong>Pros:</strong> Hosting included. Templates look professional. AI does the design. Drag-and-drop to tweak. Automatic backups and SSL. Customer support.</p>
 
-<p><strong>Cons:</strong> Limited customization. Locked into their platform. Harder to migrate if you outgrow.</p>
+<p><strong>Cons:</strong> Limited customisation. Locked into their platform. Harder to migrate if you outgrow.</p>
 
 <h3 style="margin-top: 2rem;">PAUL's Prompt (Easy Tier)</h3>
 
@@ -196,7 +196,7 @@ Once you have my answers, create a professional, custom website with these secti
 
 Design style: Clean, modern, professional. Use the color palette I provided. Make typography easy to read. Include plenty of white space. Ensure the site feels trustworthy and approachable.</div>
 
-<p><strong>Result:</strong> Durable AI interviews you about your business. You answer in natural language. AI builds a custom site instantly. You customize text and images. It's live.</p>
+<p><strong>Result:</strong> Durable AI interviews you about your business. You answer in natural language. AI builds a custom site instantly. You tweak the text and images. It's live.</p>
 
 ---
 
@@ -207,7 +207,7 @@ Design style: Clean, modern, professional. Use the color palette I provided. Mak
   <span style="background: #0c6efc; color: white; padding: 0.4rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.85rem;">🔷 Wix</span>
 </div>
 
-<p><strong>How to use AI to build:</strong> <a href="https://lovable.dev" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Lovable is an AI that reads your English descriptions and generates actual code.</a> You describe your website. It builds interactive components. You don't write a single line. You customize with plain language prompts. Rinse. Repeat.</p>
+<p><strong>How to use AI to build:</strong> <a href="https://lovable.dev" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Lovable is an AI that reads your English descriptions and generates actual code.</a> You describe your website. It builds interactive components. You don't write a single line. You customise with plain-language prompts. Rinse. Repeat.</p>
 
 <p><strong>Cost reality:</strong> Lovable is $50/month pro. <a href="https://www.wix.com/en-US/pricing" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Wix runs $14–$99/month.</a> Year 1: $600–$1,188. Still less than half of what Airtasker charges. And you have way more control.</p>
 
@@ -215,7 +215,7 @@ Design style: Clean, modern, professional. Use the color palette I provided. Mak
 
 <p><strong>How fast?</strong> Lovable takes you from description to working prototype in minutes, with 1–2 hours total to fully launch once you've refined the design.</p>
 
-<p><strong>Pros:</strong> More customization than Easy. AI speeds up design (Lovable). Better for e-commerce (Wix). Still zero code. Visual builder + natural language.</p>
+<p><strong>Pros:</strong> More customisation than Easy. AI speeds up design (Lovable). Better for e-commerce (Wix). Still zero code. Visual builder + natural language.</p>
 
 <p><strong>Cons:</strong> More expensive than Easy. Lovable is newer. Steeper learning curve. Platform-locked.</p>
 
@@ -339,7 +339,7 @@ INTERACTIVITY:
 
 Make the site feel trustworthy, professional, and aligned with the brand voice I described.</div>
 
-<p><strong>Result:</strong> Lovable builds with you. You answer the interview. Lovable generates components in real-time. You see it building live. You customize in plain language. You launch.</p>
+<p><strong>Result:</strong> Lovable builds with you. You answer the interview. Lovable generates components in real-time. You watch it build live. You customise in plain language. You launch.</p>
 
 ---
 
@@ -357,9 +357,9 @@ Make the site feel trustworthy, professional, and aligned with the brand voice I
 
 <p><strong>What you can build:</strong> Complex web apps. Databases and backend logic. Custom integrations (APIs, webhooks). Scalable infrastructure. Learning projects where you understand how everything works.</p>
 
-<p><strong>How fast?</strong> If you can write English, you can do this. My site (appcoaching.io) was built this way with Claude AI. I didn't write code. I described what I wanted. Claude built it.</p>
+<p><strong>How fast?</strong> If you can write English, you can do this. My site (appcoaching.io) was built this way with Claude AI. I didn't write code (trust me, nobody wants to see me try). I described what I wanted. Claude built it.</p>
 
-<p><strong>Pros:</strong> You own the code. You own infrastructure. Unlimited customization. Scalable forever. Most cost-effective long-term. No vendor lock-in. You learn.</p>
+<p><strong>Pros:</strong> You own the code. You own the infrastructure. Unlimited customisation. Scalable forever. Most cost-effective long-term. No vendor lock-in. You learn.</p>
 
 <p><strong>Cons:</strong> Steeper learning curve (Git, React deployment). Requires problem-solving. No drag-and-drop designer.</p>
 
@@ -525,7 +525,7 @@ Build this as a complete, production-ready application. Include all files necess
 
 <p><strong>Choose MEDIUM if:</strong> You need design control. You're selling products. You want custom branding. Squarespace feels limiting. You're willing to spend 1–2 hours.</p>
 
-<p><strong>Choose ADVANCED if:</strong> You want full ownership. You're building complex features. You want to understand how it works. You think long-term (scales forever). You're willing to learn Git.</p>
+<p><strong>Choose ADVANCED if:</strong> You want full ownership. You're building complex features. You want to understand how it works. You think long-term (scales forever). You're willing to learn Git (it's less scary than it sounds, and a lot less scary than a $2k invoice).</p>
 
 <blockquote style="background: #f0fdf4; border: 1px solid #dcfce7; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>⬆️ PAUL's LevelUp</strong>

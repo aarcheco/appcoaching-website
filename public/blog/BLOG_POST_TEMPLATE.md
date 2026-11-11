@@ -92,7 +92,25 @@ Never start a line with "## " or "---".</p>
 
 **Length:** 1,200–1,500 words of prose (the prompt text doesn't count). Long enough to rank for a how-to search, short enough to actually be read.
 
-**Voice:** casual, plain Australian English, first person, like Aaron explaining it over a coffee. Get to the point. Light humour that comes from the situation (a red sticker, the Kris Kringle cousin), not forced puns. Personal experience only where it genuinely fits the step being explained (e.g. PwC audit → "check the output"; Flight Centre Excel → "PivotTable your spending").
+**Voice:** casual, plain Australian English, first person, like Aaron explaining it over a coffee. Get to the point. Personal experience only where it genuinely fits the step being explained (e.g. PwC audit → "check the output"). Follow the VOICE GUIDE below.
+
+## VOICE GUIDE (Aaron's humour, from his own writing)
+
+Dose: 3–5 genuinely funny moments per post (an opening hook, a couple of asides, a twist near the end). The post must still be useful first; never a joke in every paragraph.
+
+Techniques he actually uses (use them, don't copy the examples word for word):
+- **Deadpan understatement after a failure:** "...we are eliminated quickly in the first round. Struggling to understand why." / "Mission failed successfully."
+- **Mock outrage that flips:** a list of trivial complaints, then the reveal that it was fine or great all along.
+- **Treating small things like big official events:** "the Annual Apple Juice Gala", "Brisbane's annual Matchy-Matchy tournament".
+- **Self-deprecating "When you..." set-ups:** "When you finally realise the reason you haven't earned a cent from your travel vlog is because you don't have a travel vlog."
+- **Bracketed asides that undercut the sentence:** "(or pride)", "(for once)", "(slash I didn't ask questions)".
+- **Wordplay and light puns:** "Polished off", "Strolling Marseille in a deille". One per post at most.
+- **Money and spreadsheet nods:** "more bucks in this photo than in my wallet", "ticking off the very first cell on my travel spreadsheet".
+- **Aussie phrasing:** footy, the lads, ol' mate, keen, "a wet chrissy in brissy", ngl/tbh sparingly.
+
+Approved personal topics (light references only): football (plays as a winger, came back after 2+ years out injured, Everton fan, benchwarmer jokes), travel (the 2024 Euro trip, keeps a travel spreadsheet, getting lost / wrong buses), music (hip-hop, Drake references, singing covers), being a new dad and recently married (no names, no photos, no details about family members). Never mention friends by name, gambling or betting, or Aaron's employer.
+
+Avoid: forced puns, emoji in body text, sarcasm aimed at readers, jokes about money stress that could feel like punching down.
 
 **Emphasis:** bold renders as a green highlight. Use it on the single most important phrase in a section (about 1 per section, never whole sentences in a row). No italics. No images in the body: the hero is the only image.
 

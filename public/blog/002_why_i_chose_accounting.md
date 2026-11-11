@@ -48,7 +48,7 @@ faq:
 
 <p>She taught me early: <strong>debits equal credits. Everything must balance.</strong> When you have a balanced ledger, you know you're right. Not "pretty sure." Not "probably." Right.</p>
 
-<p>In a world where most things are grey, accounting is black and white. There are rules. Clear rules. And if you follow them, you can prove you're correct. For a kid who liked order, logic, and being able to confirm his answers, that was everything.</p>
+<p>In a world where most things are grey, accounting is black and white. There are rules. Clear rules. And if you follow them, you can prove you're right. For a kid who liked order, logic, and being able to check his answers, that was everything. (Yes, I was an absolute blast at parties.)</p>
 
 <h2 id="high-school-the-click-moment">High School: The Click Moment</h2>
 
@@ -66,21 +66,21 @@ faq:
 
 <p>Then came the PwC graduate program. Audit. And everything I thought I knew about accounting got redefined in about three weeks.</p>
 
-<p>In audit, you're time-poor. Severely time-poor. You're under pressure to gather evidence, complete workpaper reviews, investigate discrepancies—all at speed, with accuracy non-negotiable. You can't afford to waste time. You can't afford to make mistakes. Both happen at once or the entire audit falls apart.</p>
+<p>In audit, you're time-poor. Severely time-poor. (Time-bankrupt, some weeks.) You're under pressure to gather evidence, complete workpaper reviews, investigate discrepancies—all at speed, with accuracy non-negotiable. You can't afford to waste time. You can't afford to make mistakes. Both happen at once or the entire audit falls apart.</p>
 
 <p>That's where I learned what actually mattered: <strong>not just being able to do accounting, but being able to do it fast.</strong></p>
 
 <p>Excel became my language. Not fancy Excel. <a href="/services" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Efficient Excel.</a> Formulas that worked. Processes that scaled. Shortcuts that saved hours without sacrificing accuracy. My colleagues were grinding through manual processes. I was automating. Thinking ahead about what would break when data changed. Building models that could handle what came next.</p>
 
-<p>Efficiency stopped being a nice-to-have. It became a competitive advantage.</p>
+<p>Efficiency stopped being a nice-to-have. It became my edge.</p>
 
 <h2 id="flight-centre-eyes-opened">Flight Centre: Eyes Opened</h2>
 
-<p>After PwC, I landed at Flight Centre as an Operations Accountant. Fresh out of grad year, armed with efficiency habits, ready to go.</p>
+<p>After PwC, I landed at Flight Centre as an Operations Accountant. Fresh out of grad year, armed with efficiency habits and plenty of confidence (possibly too much), ready to go.</p>
 
 <p>Then I looked around.</p>
 
-<p>Smart people everywhere. Graduates who understood financial concepts. People who should have been able to optimize their work. But they were building <a href="/services" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Excel models that took twice as long as they should</a>. Models with manual steps that broke when data changed. Reconciliations done by hand. Processes that were just—inefficient.</p>
+<p>Smart people everywhere. Graduates who understood financial concepts. People who should have been able to optimise their work. But they were building <a href="/services" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Excel models that took twice as long as they should</a>. Models with manual steps that broke when data changed. Reconciliations done by hand. Processes that were just—inefficient.</p>
 
 <p>Not because they were incapable. Because they'd never been shown the efficient path.</p>
 
@@ -92,17 +92,17 @@ faq:
 
 <p>Flight Centre planted the seed. Coronis made it grow.</p>
 
-<p>At Coronis, the CFO specifically brought me in to "revolutionize" our accounting and finance processes. Not just Excel—everything.</p>
+<p>At Coronis, the CFO specifically brought me in to "revolutionise" our accounting and finance processes. Not just Excel—everything.</p>
 
-<p>And what I found was staggering. Processes that weren't even in Excel. Systems that were archaic. Brilliant people who'd simply accepted "the way it's always been done" because nobody had shown them another option.</p>
+<p>And what I found was wild. Processes that weren't even in Excel. Systems that were archaic. Brilliant people who'd simply accepted "the way it's always been done" because nobody had shown them another option.</p>
 
-<p>Printing invoices. Wet-signing payments. Re-entering data across multiple spreadsheets. Year after year, the same convoluted workflows. Countless wasted hours.</p>
+<p>Printing invoices. Wet-signing payments. Re-entering data across multiple spreadsheets. Year after year, the same convoluted workflows. Basically the annual Re-Enter It Again Championships, except it ran every week. Countless wasted hours.</p>
 
-<p>I didn't just fix Excel. I transformed how we worked. Automated printing. Digitized approvals. Eliminated re-entry. Built systems that cut processing time dramatically and freed up the entire team to do real analysis instead of drowning in manual work.</p>
+<p>I didn't just fix Excel. I transformed how we worked. Automated printing. Digitised approvals. Eliminated re-entry. Built systems that cut processing time dramatically and freed up the entire team to do real analysis instead of drowning in manual work.</p>
 
 <p>The impact: time saved, money saved, people's stress reduced, and—most importantly—the company could finally see what their actual numbers were telling them.</p>
 
-<p>But here's what I didn't realize yet: <strong>my real value wasn't the efficiency I'd built. It was something else entirely.</strong></p>
+<p>But here's what I didn't realise yet: <strong>my real value wasn't the efficiency I'd built. It was something else entirely.</strong></p>
 
 <h2 id="the-mentor-who-changed-my-perspective">The Mentor Who Changed My Perspective</h2>
 
@@ -110,11 +110,11 @@ faq:
 
 <p>He pointed out that while my efficiency work was valuable, my actual skill—the thing that truly moved the needle for leaders and decision-makers—wasn't the spreadsheets or the speed. It was my ability to <a href="/services" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">take complex financial information and translate it into language people could actually understand and act on.</a></p>
 
-<p>Processing numbers? Replaceable. Analyzing numbers? Valuable, but still replaceable.</p>
+<p>Processing numbers? Replaceable. Analysing numbers? Valuable, but still replaceable.</p>
 
 <p>Translating numbers into clarity for the people who make decisions? <strong>That's irreplaceable.</strong></p>
 
-<p>That moment reframed my entire career. Everything I'd done—the efficiency, the optimization, the automation—was just the foundation. The real skill was taking all that and making it matter to the people who needed to understand it.</p>
+<p>That moment reframed my entire career. Everything I'd done—the efficiency, the optimisation, the automation—was just the foundation. The real skill was taking all that and making it matter to the people who needed to understand it.</p>
 
 <h2 id="the-career-arc-i-didnt-see-coming">The Career Arc I Didn't See Coming</h2>
 
@@ -124,10 +124,10 @@ faq:
 <li><strong>Accounting grad</strong> → rule-follower, black and white, everything must balance.</li>
 <li><strong>PwC</strong> → efficient processor, speed without sacrificing accuracy.</li>
 <li><strong>Flight Centre & Coronis</strong> → systems transformer, freeing people to do real work.</li>
-<li><strong>The mentor realization</strong> → translator, making complexity simple for decision-makers.</li>
+<li><strong>The mentor realisation</strong> → translator, making complexity simple for decision-makers.</li>
 </ul>
 
-<p>I chose accounting because I loved the exactness. The rules. The ability to prove you're right.</p>
+<p>I chose accounting because I loved the exactness. The rules. The ability to prove you're right. (Still do. Being recently married, I'm learning that last one doesn't transfer to every area of life.)</p>
 
 <p>But my career became valuable because I learned that the real skill isn't following the rules perfectly. It's understanding them so well that you can explain them to people who don't, in a way that moves them to action.</p>
 
@@ -135,7 +135,7 @@ faq:
 
 <blockquote style="background: linear-gradient(135deg, #00FF00 0%, rgba(255, 255, 255, 0.9) 100%); border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>🎯 PAUL's LevelUp</strong>
-<p>Your real skill isn't processing or analyzing—it's translating complexity into clarity. The accountants and finance professionals who advance are the ones who can explain the numbers in a way that makes leaders actually understand what to do.</p>
+<p>Your real skill isn't processing or analysing. It's translating complexity into clarity. The accountants and finance professionals who advance are the ones who can explain the numbers in a way that makes leaders actually understand what to do.</p>
 </blockquote>
 
 <section style="background: linear-gradient(135deg, #1f3a7d 0%, #2a4fa8 100%); color: white; border-radius: 12px; padding: 2.5rem; margin: 3rem 0; text-align: center;">

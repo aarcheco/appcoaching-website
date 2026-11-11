@@ -51,7 +51,7 @@ faq:
 
 <p>Black Friday is the day after US Thanksgiving, which falls on the fourth Thursday of November. In 2026 that makes it <strong>Friday 27 November</strong>, followed by Cyber Monday on Monday 30 November.</p>
 
-<p>In practice, Australian retailers don't wait for the actual day. Sales tend to stretch across the whole week (sometimes longer), and the "early access" emails start well before. So if you want a budget in place before the first "don't miss out" email, this week is the week.</p>
+<p>In practice, Australian retailers don't wait for the actual day. Sales tend to stretch across the whole week (sometimes longer), and the "early access" emails start well before. Consider it the opening ceremony of the Annual Inbox Siege. So if you want a budget in place before the first "don't miss out" email, this week is the week.</p>
 
 <h2 id="two-kinds-of-sales-worry">Two Kinds of Sales Worry</h2>
 
@@ -87,7 +87,7 @@ faq:
 
 <p>Want the full picture? Export your transactions from internet banking as a CSV file. Delete the columns with your name, account number and BSB, keeping just the date, description and amount. Then upload it and ask the AI to categorise every transaction and total each category by month.</p>
 
-<p>That used to be a PivotTable job in Excel (and back at Flight Centre I was the person people came to for exactly that). Now AI can do the sorting for you. You just check the categories look right.</p>
+<p>That used to be a PivotTable job in Excel (and back at Flight Centre I was the person people came to for exactly that). I also keep a spreadsheet for my travel plans, so trust me, I understand the urge to do it all by hand. Resist it. Now AI can do the sorting for you. You just check the categories look right.</p>
 
 <h3>What to share with AI (and what not to)</h3>
 
@@ -133,7 +133,7 @@ When you have everything:
 
 <h2 id="survive-black-friday">Step 3: Survive Black Friday Week</h2>
 
-<p>Once your budget exists, a few simple habits keep it intact through the Black Friday sales:</p>
+<p>Once your budget exists, a few simple habits keep it intact through the Black Friday sales (advice I'm giving myself too, as a new dad who has just discovered how many "essential" baby gadgets go on sale):</p>
 
 <ul>
   <li>Write your list before 27 November. If it's not on the list, it's not a deal. It's a new purchase with a red sticker on it.</li>

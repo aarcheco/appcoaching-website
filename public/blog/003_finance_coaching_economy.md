@@ -40,23 +40,23 @@ faq:
 
 <h2 id="the-gap">The Gap Nobody Talks About</h2>
 
-<p>Over the last 12 months, something became unmistakably clear: <strong>smart people struggle with personal finance because nobody taught them how.</strong></p>
+<p>Over the last 12 months, one thing became really clear: <strong>smart people struggle with personal finance because nobody taught them how.</strong></p>
 
-<p>Friends, family, and colleagues started casually talking to me about their money. "I don't know what to do with my savings." "Should I pay off debt or invest?" "I have no idea if I'm even on track." These weren't questions from financially illiterate people. These were smart professionals—people who managed budgets, made decisions every day, understood business.</p>
+<p>Friends, family and colleagues started casually talking to me about their money (turns out "I'm an accountant" is a great conversation starter, just not the conversation I was hoping for). "I don't know what to do with my savings." "Should I pay off debt or invest?" "I have no idea if I'm even on track." These weren't questions from financially illiterate people. These were smart professionals—people who managed budgets, made decisions every day, understood business.</p>
 
-<p>Yet they all had the same problem: <strong>people want to help each other with personal finance, but nobody knows how.</strong> There's no framework. No one's taught them. So people sit in confusion, wanting guidance but having nowhere to turn.</p>
+<p>Yet they all had the same problem: people want to help each other with personal finance, but nobody knows how. There's no framework. No one's taught them. So people sit in confusion, wanting guidance but having nowhere to turn.</p>
 
-<p>After 10+ years in accounting and finance roles, I spent the last 12 months as a business coach helping people understand their numbers. And it became obvious: <strong>financial literacy isn't about intelligence—it's about access to someone who knows how to explain it.</strong> That's what finance coaching actually is.</p>
+<p>After 10+ years in accounting and finance roles, I spent the last 12 months as a business coach helping people understand their numbers. And it became obvious: financial literacy isn't about intelligence—it's about having someone who can actually explain it. That's what finance coaching actually is.</p>
 
 <h2 id="financial-blindspots">The Core Financial Blindspots</h2>
 
 <p>I've worked with hundreds of people. Colleagues in corporate. Business clients. Friends asking for advice. They all share the same financial blindspots. Here are the ones that hold people back most:</p>
 
-<p><strong>You don't know where your money actually goes.</strong> Not roughly. Actually. Most people spend money, check their balance, and move on. They don't see the pattern. They don't know if they're getting ahead or slowly slipping backward month to month.</p>
+<p><strong>You don't know where your money actually goes.</strong> Not roughly. Actually. (I say this as someone who keeps a spreadsheet for his travel plans, so my bar for "actually" may be a little high.) Most people spend money, check their balance, and move on. They don't see the pattern. They don't know if they're getting ahead or slowly slipping backwards month to month.</p>
 
-<p><strong>You can't prioritize between debt payoff, savings, and investing.</strong> Should you pay off the credit card? Build emergency savings? Start investing? Without a framework, people guess. They feel stuck without understanding which move actually matters most for their situation.</p>
+<p><strong>You can't prioritise between debt payoff, savings, and investing.</strong> Should you pay off the credit card? Build emergency savings? Start investing? Without a framework, people guess. They feel stuck without understanding which move actually matters most for their situation.</p>
 
-<p><strong>You don't know the real impact of compound growth over time.</strong> Intellectually, maybe you've heard "invest early." But do you actually know the math? Do you understand why $200/month invested at 25 looks completely different at 35 than starting at 35? Most people don't.</p>
+<p><strong>You don't know the real impact of compound growth over time.</strong> Maybe you've heard "invest early." But do you actually know the maths? Do you understand why $200/month invested at 25 looks completely different at 35 than starting at 35? Most people don't.</p>
 
 <p><strong>Your psychological relationship with money holds you back.</strong> Some people pretend they don't have money so they don't have to spend it. Others spend without thinking. Some avoid looking at accounts entirely because of anxiety. Most people never examine why they do what they do with money—they just react.</p>
 
@@ -66,7 +66,7 @@ faq:
 
 <p>Here's what I noticed early on: <strong>even people who work with numbers for a living can't figure out their own.</strong></p>
 
-<p>I'd sit with colleagues in accounting and finance—people who could analyze business P&Ls, build forecasts, manage millions—and ask casually about their own finances. The answers were always the same:</p>
+<p>I'd sit with colleagues in accounting and finance—people who could analyse business P&Ls, build forecasts, manage millions—and casually ask about their own finances. The results of this highly scientific survey were always the same:</p>
 
 <p>"Honestly? I have no idea where my money goes."</p>
 
@@ -74,7 +74,7 @@ faq:
 
 <p>"I don't know if I should invest, pay off debt faster, or just keep saving."</p>
 
-<p>These were smart people. They understood numbers. But they'd never closed that gap between professional knowledge and personal application. The skills that worked at the office didn't automatically transfer home. Nobody had shown them how to apply their expertise to themselves.</p>
+<p>These were smart people. They understood numbers (other people's, mostly). But they'd never closed that gap between professional knowledge and personal application. The skills that worked at the office didn't automatically transfer home. Nobody had shown them how to apply their expertise to themselves.</p>
 
 <h2 id="business-owners">Business Owners Can't Read Their Own Numbers</h2>
 
@@ -102,7 +102,7 @@ faq:
 
 <p>That's the lightbulb. That's when money stops being this vague, stressful thing and becomes something they can actually manage. Something that can go further. Something that can work for them instead of against them.</p>
 
-<p>My favorite role I've ever had has been as a business coach. Not because of the title. Because of those moments when someone moves from confusion to capability. When they go from guessing to knowing. That's what fills my cup.</p>
+<p>My favourite role I've ever had has been as a business coach. Not because of the title. Because of those moments when someone goes from confusion to capability. From guessing to knowing. That's what fills my cup. It beats anything I've done on a footy field (admittedly a low bar for a winger who spent two-plus years on the sideline injured).</p>
 
 <p>And I genuinely believe that if more people had access to someone who could close that gap for them—right now, at the foundational level—their entire relationship with money would shift.</p>
 

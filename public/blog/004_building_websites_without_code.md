@@ -2,7 +2,7 @@
 title: "How to Build a Website With AI (No Code, Under $100)"
 date: 2026-07-15
 id: 004
-excerpt: "Here's exactly how to use Claude, Squarespace, or Lovable to build your site without code, in natural language, for less than $100 total."
+excerpt: "Here's exactly how to use Claude, Squarespace, or Lovable to build your site without code, in natural language, for about US$20–$25 a month."
 heroImage: /blog/airtasker-jobs-hero.jpg
 categories: ["Website Building", "Business AI"]
 tags: ["No-Code", "AI Website", "Web Development"]
@@ -11,13 +11,13 @@ metaDescription: "How to build a website with AI for under $100: Lovable AI, Squ
 updated: 2026-11-11
 faq:
   - q: "How much does it cost to build a website with AI?"
-    a: "Using the three paths in this guide: the easy path (Durable or Squarespace) costs about $20 a month, the medium path (Lovable or Wix) about $50 a month, and the advanced path (Claude, GitHub and Netlify) about $32 a month, or roughly $384 in year one. Hiring someone on Airtasker for a simple site typically costs $500 to $2,000."
+    a: "Using the three paths in this guide: the easy path (Durable or Squarespace) costs about US$25 a month, the medium path (Lovable or Wix) about US$17–$40 a month, and the advanced path (Claude, GitHub and Netlify) about US$20 a month plus a domain, or roughly US$250 in year one. Prices are as listed on each provider's site in November 2026. Hiring someone on Airtasker for a simple site typically costs $500 to $2,000."
   - q: "Do I need to know how to code to build a website with AI?"
     a: "No. All three paths use natural language: you describe the site in plain English and the AI tool builds it. The advanced path involves learning basic Git so you can push changes to GitHub, but you don't write the code yourself."
   - q: "How long does it take to build a website with AI?"
     a: "Durable can generate a working site in about 2 minutes. Lovable typically takes 1 to 2 hours for a custom design, and the Claude, GitHub and Netlify path takes 2 to 4 hours."
   - q: "What is Lovable AI?"
-    a: "Lovable is an AI website builder that reads your plain-English description and generates the actual code for your site. In this guide it's the medium path, at about $50 a month on the pro plan, with more design control than template builders."
+    a: "Lovable is an AI website builder that reads your plain-English description and generates the actual code for your site. In this guide it's the medium path, at about US$25 a month on the Pro plan (there's also a limited free plan), with more design control than template builders."
   - q: "Which AI website builder should I choose?"
     a: "Choose Durable or Squarespace if you want to be live today with professional templates. Choose Lovable or Wix if you need design control or want to sell products. Choose Claude with GitHub and Netlify if you want to own your code, build complex features and avoid vendor lock-in."
   - q: "Was appcoaching.io built with AI?"
@@ -26,7 +26,7 @@ faq:
 
 <blockquote style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📖 PAUL's Quick Read</strong>
-<p>You can build a website with AI without writing code. Seriously. In 20 minutes. For less than lunch. People are paying $200 to $2,000 on Airtasker to hire someone to build a simple website—landing page, booking form, portfolio. Meanwhile, you can describe what you want to Claude or Durable in plain English and have it built, live, and deployed for under $100. Forever. No code. No developers. No markup language. This is the moment you realise websites aren't expensive anymore—they're trivial.</p>
+<p>You can build a website with AI without writing code. Seriously. In 20 minutes. For less than lunch. People are paying $200 to $2,000 on Airtasker to hire someone to build a simple website—landing page, booking form, portfolio. Meanwhile, you can describe what you want to Claude or Durable in plain English and have it built, live, and deployed for under $100 to get started. No code. No developers. No markup language. This is the moment you realise websites aren't expensive anymore—they're trivial.</p>
 </blockquote>
 
 <img src="/blog/airtasker-jobs-hero.jpg" alt="Screenshot of Airtasker job listings showing website builds priced $200-2000 while AI can build it for less than $100" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0; display: block;">
@@ -36,9 +36,9 @@ faq:
   <ul style="margin-top: 1rem; line-height: 1.8; padding-left: 1.5rem;">
     <li><a href="#the-reality">Why AI Changes Everything</a></li>
     <li><a href="#comparison-table">Quick Comparison: Which Path?</a></li>
-    <li><a href="#easy-path">Easy: Squarespace & Durable (Under $30/mo)</a></li>
-    <li><a href="#medium-path">Medium: Lovable AI & Wix ($50–$99/mo)</a></li>
-    <li><a href="#advanced-path">Advanced: Claude + GitHub + Netlify ($32/mo)</a></li>
+    <li><a href="#easy-path">Easy: Squarespace & Durable (~$25/mo)</a></li>
+    <li><a href="#medium-path">Medium: Lovable AI & Wix ($17–$40/mo)</a></li>
+    <li><a href="#advanced-path">Advanced: Claude + GitHub + Netlify (~$20/mo)</a></li>
     <li><a href="#which-path">How to Choose Your AI Build Path</a></li>
   </ul>
 </details>
@@ -66,25 +66,27 @@ faq:
   <tr style="border: 1px solid #e5e7eb;">
     <td style="padding: 12px; border: 1px solid #e5e7eb;"><strong>Easy</strong></td>
     <td style="padding: 12px; border: 1px solid #e5e7eb;">Durable AI</td>
-    <td style="padding: 12px; border: 1px solid #e5e7eb;">$20</td>
+    <td style="padding: 12px; border: 1px solid #e5e7eb;">$25</td>
     <td style="padding: 12px; border: 1px solid #e5e7eb;">2 min</td>
     <td style="padding: 12px; border: 1px solid #e5e7eb;">Fastest launch</td>
   </tr>
   <tr style="border: 1px solid #e5e7eb; background: #fafbfc;">
     <td style="padding: 12px; border: 1px solid #e5e7eb;"><strong>Medium</strong></td>
     <td style="padding: 12px; border: 1px solid #e5e7eb;">Lovable AI</td>
-    <td style="padding: 12px; border: 1px solid #e5e7eb;">$50</td>
+    <td style="padding: 12px; border: 1px solid #e5e7eb;">$25</td>
     <td style="padding: 12px; border: 1px solid #e5e7eb;">1–2 hrs</td>
     <td style="padding: 12px; border: 1px solid #e5e7eb;">Custom design</td>
   </tr>
   <tr style="border: 1px solid #e5e7eb;">
     <td style="padding: 12px; border: 1px solid #e5e7eb;"><strong>Advanced</strong></td>
     <td style="padding: 12px; border: 1px solid #e5e7eb;">Claude AI</td>
-    <td style="padding: 12px; border: 1px solid #e5e7eb;">$32</td>
+    <td style="padding: 12px; border: 1px solid #e5e7eb;">$20</td>
     <td style="padding: 12px; border: 1px solid #e5e7eb;">2–4 hrs</td>
     <td style="padding: 12px; border: 1px solid #e5e7eb;">Own everything</td>
   </tr>
 </table>
+
+<p style="color: #6b7280; font-size: 0.95rem;">Prices are in US dollars as listed on each provider's website in November 2026, on monthly billing unless noted. They change often, so check before you sign up.</p>
 
 <table style="width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: 0.9rem;">
   <tr style="background: #f7f9fc; border: 1px solid #e5e7eb;">
@@ -113,9 +115,9 @@ faq:
   </tr>
   <tr style="border: 1px solid #e5e7eb; background: #fafbfc;">
     <td style="padding: 12px; border: 1px solid #e5e7eb; font-weight: 600;">Total Cost (Year 1)</td>
-    <td style="padding: 12px; border: 1px solid #e5e7eb;">$240</td>
-    <td style="padding: 12px; border: 1px solid #e5e7eb;">$600</td>
-    <td style="padding: 12px; border: 1px solid #e5e7eb;">$384</td>
+    <td style="padding: 12px; border: 1px solid #e5e7eb;">~$300</td>
+    <td style="padding: 12px; border: 1px solid #e5e7eb;">$210–$480</td>
+    <td style="padding: 12px; border: 1px solid #e5e7eb;">~$250</td>
   </tr>
   <tr style="border: 1px solid #e5e7eb;">
     <td style="padding: 12px; border: 1px solid #e5e7eb; font-weight: 600;">Customization</td>
@@ -125,7 +127,7 @@ faq:
   </tr>
 </table>
 
-<h2 id="easy-path">Easy: Squarespace & Durable (Under $30/month)</h2>
+<h2 id="easy-path">Easy: Squarespace & Durable (~$25/month)</h2>
 
 <div style="display: flex; gap: 0.75rem; margin: 1rem 0 1.5rem 0; flex-wrap: wrap;">
   <span style="background: #1f3a7d; color: white; padding: 0.4rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.85rem;">🤖 Durable</span>
@@ -134,7 +136,7 @@ faq:
 
 <p><strong>How to use AI to build:</strong> <a href="https://durable.com/ai-website-builder" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Durable's AI literally reads English and builds your site.</a> You describe your business in natural sentences: "I'm a finance coach. I charge $100/session. I want a booking form." Durable generates the site. That's it.</p>
 
-<p><strong>Cost reality:</strong> Durable is $20/month. <a href="https://www.squarespace.com/pricing" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Squarespace</a> is $12–$33/month. Year 1 total: $240–$400. Compare to Airtasker: $500–$2,000. You save $1,600+ and get it done 10x faster. That's the kind of variance that makes an accountant sit up straight.</p>
+<p><strong>Cost reality:</strong> Durable's Launch plan is $25/month (a little less on yearly billing). <a href="https://www.squarespace.com/pricing" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Squarespace</a> starts at $25/month, or $19/month if you pay annually. Year 1 total: roughly $230–$300. Compare to Airtasker: $500–$2,000. You save $1,600+ and get it done 10x faster. That's the kind of variance that makes an accountant sit up straight.</p>
 
 <p><strong>What you can build:</strong> Service booking sites (coaching, design, consulting). Freelancer portfolios. Small business landing pages. Lead generation. Anything that's "simple and professional."</p>
 
@@ -200,7 +202,7 @@ Design style: Clean, modern, professional. Use the color palette I provided. Mak
 
 ---
 
-<h2 id="medium-path">Medium: Lovable AI & Wix ($50–$99/month)</h2>
+<h2 id="medium-path">Medium: Lovable AI & Wix ($17–$40/month)</h2>
 
 <div style="display: flex; gap: 0.75rem; margin: 1rem 0 1.5rem 0; flex-wrap: wrap;">
   <span style="background: #ff6b6b; color: white; padding: 0.4rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.85rem;">💜 Lovable</span>
@@ -209,7 +211,7 @@ Design style: Clean, modern, professional. Use the color palette I provided. Mak
 
 <p><strong>How to use AI to build:</strong> <a href="https://lovable.dev" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Lovable is an AI that reads your English descriptions and generates actual code.</a> You describe your website. It builds interactive components. You don't write a single line. You customise with plain-language prompts. Rinse. Repeat.</p>
 
-<p><strong>Cost reality:</strong> Lovable is $50/month pro. <a href="https://www.wix.com/en-US/pricing" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Wix runs $14–$99/month.</a> Year 1: $600–$1,188. Still less than half of what Airtasker charges. And you have way more control.</p>
+<p><strong>Cost reality:</strong> Lovable Pro is about $25/month (there's a limited free plan to try it first). <a href="https://www.wix.com/plans" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Wix runs about $17–$40/month on its main plans.</a> Year 1: roughly $210–$480. Still less than half of what Airtasker charges. And you have way more control.</p>
 
 <p><strong>What you can build:</strong> E-commerce stores (sell products). Custom-branded business sites. Community platforms. Complex integrations. Anything beyond "simple landing page."</p>
 
@@ -343,7 +345,7 @@ Make the site feel trustworthy, professional, and aligned with the brand voice I
 
 ---
 
-<h2 id="advanced-path">Advanced: Claude + GitHub + Netlify ($32/month)</h2>
+<h2 id="advanced-path">Advanced: Claude + GitHub + Netlify (~$20/month)</h2>
 
 <div style="display: flex; gap: 0.75rem; margin: 1rem 0 1.5rem 0; flex-wrap: wrap;">
   <span style="background: #d97757; color: white; padding: 0.4rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.85rem;">✦ Claude</span>
@@ -353,7 +355,7 @@ Make the site feel trustworthy, professional, and aligned with the brand voice I
 
 <p><strong>How to use AI to build:</strong> <a href="https://claude.ai" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Claude is an AI that reads English and writes React code.</a> You describe your website in natural language. Claude builds it. You push to GitHub. Netlify auto-deploys. Want to change something? Ask Claude in English. Claude updates the code. You push. It's live in 30 seconds.</p>
 
-<p><strong>Cost reality:</strong> Claude $20/month. GitHub free. Netlify free tier (or $19/month pro). Domain ~$12/year. Year 1 total: $384. Compare: Airtasker $2k. Even Squarespace at $20/month is $240/year. This is the best long-term cost. Forever.</p>
+<p><strong>Cost reality:</strong> Claude Pro $20/month (a bit less on annual billing). GitHub free. Netlify free tier (paid plans from $9/month if you ever outgrow it). Domain ~$12/year. Year 1 total: about $250. Compare: Airtasker $2k. Even Squarespace at $25/month is $300/year. This is the best long-term cost.</p>
 
 <p><strong>What you can build:</strong> Complex web apps. Databases and backend logic. Custom integrations (APIs, webhooks). Scalable infrastructure. Learning projects where you understand how everything works.</p>
 
@@ -529,7 +531,7 @@ Build this as a complete, production-ready application. Include all files necess
 
 <blockquote style="background: #f0fdf4; border: 1px solid #dcfce7; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>⬆️ PAUL's LevelUp</strong>
-<p>Professional websites don't require $5k anymore. All three paths use AI. All three use natural language (no code). Squarespace (Easy) costs $20/month. Lovable (Medium) costs $50/month. Claude + GitHub + Netlify (Advanced) costs $32/month. The cost barrier is gone. The technology exists. The only question is: simplicity, customization, or ownership? Pick your path. Use the prompt. Launch today. Stop overpaying for work that's now trivial.</p>
+<p>Professional websites don't require $5k anymore. All three paths use AI. All three use natural language (no code). Squarespace or Durable (Easy) costs about $25/month. Lovable or Wix (Medium) costs about $17–$40/month. Claude + GitHub + Netlify (Advanced) costs about $20/month. The cost barrier is gone. The technology exists. The only question is: simplicity, customization, or ownership? Pick your path. Use the prompt. Launch today. Stop overpaying for work that's now trivial.</p>
 </blockquote>
 
 <section style="background: linear-gradient(135deg, #1f3a7d 0%, #2a4fa8 100%); color: white; border-radius: 12px; padding: 2.5rem; margin: 3rem 0; text-align: center;">

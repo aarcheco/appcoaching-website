@@ -249,6 +249,7 @@ try {
     }
   };
 
+  const HERO_PRELOADS = { home: '/hero-bg-home.webp', services: '/hero-bg-services.webp', about: '/aaron-archive-4.opt.webp' };
   Object.entries(staticBodyContent).forEach(([routeKey, content]) => {
     const config = pageConfigs[routeKey];
     const html = renderPage(template, {
@@ -257,7 +258,9 @@ try {
       canonical: config.canonical,
       ogType: config.ogType,
       schema: config.schema,
-      bodyHtml: simplePageBody(content)
+      bodyHtml: simplePageBody(content),
+      // Start the hero background download before the JS bundle runs (it's the LCP element).
+      headExtra: HERO_PRELOADS[routeKey] ? `<link rel="preload" as="image" href="${HERO_PRELOADS[routeKey]}" fetchpriority="high" />` : ''
     });
     writeRoutePage(routeKey === 'home' ? '' : routeKey, html);
   });

@@ -723,15 +723,15 @@ export default function AppCoaching() {
 
   // ===== EMPLOYER LOGOS =====
   const employers = [
-    { name: 'QUT', logo: '/QUT-Logo.jpg' },
-    { name: 'CAANZ', logo: '/images.png' },
-    { name: 'PwC', logo: '/PwC-logo-380x290-1.gif' },
-    { name: 'Flight Centre', logo: '/Flight-Centre-Logo-320x320-1.png' },
-    { name: 'Coronis Group', logo: '/Coronis_nbsnnc.webp' },
-    { name: 'RACQ', logo: '/racq-insurance-logo.webp' },
-    { name: 'Telstra', logo: '/Telstra-logo.jpg' },
-    { name: 'Aveo Group', logo: '/Aveo-Logo.png' },
-    { name: 'Kids Helpline', logo: '/LOGO133203970002567033.jpg' }
+    { name: 'QUT', logo: '/QUT-Logo.opt.webp' },
+    { name: 'CAANZ', logo: '/images.opt.webp' },
+    { name: 'PwC', logo: '/PwC-logo-380x290-1.opt.webp' },
+    { name: 'Flight Centre', logo: '/Flight-Centre-Logo-320x320-1.opt.webp' },
+    { name: 'Coronis Group', logo: '/Coronis_nbsnnc.opt.webp' },
+    { name: 'RACQ', logo: '/racq-insurance-logo.opt.webp' },
+    { name: 'Telstra', logo: '/Telstra-logo.opt.webp' },
+    { name: 'Aveo Group', logo: '/Aveo-Logo.opt.webp' },
+    { name: 'Kids Helpline', logo: '/LOGO133203970002567033.opt.webp' }
   ];
 
   // ===== SERVICE SEGMENTS =====
@@ -1010,7 +1010,7 @@ export default function AppCoaching() {
     <div>
       <style>{styles}</style>
       <section style={{
-        background: `linear-gradient(135deg, rgba(20, 35, 80, 0.88) 0%, rgba(25, 50, 120, 0.88) 50%), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=80')`,
+        background: `linear-gradient(135deg, rgba(20, 35, 80, 0.88) 0%, rgba(25, 50, 120, 0.88) 50%), url('/hero-bg-home.webp')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         color: 'white',
@@ -1022,7 +1022,7 @@ export default function AppCoaching() {
         justifyContent: 'center',
         alignItems: 'center'
       }}>
-        <img src="/aaron-archive-10.jpg" alt="Aaron Pacheco, Brisbane Chartered Accountant and AI finance coach" width="600" height="900" style={{ marginBottom: 'clamp(1rem, 3vh, 2rem)', width: 'clamp(180px, 30vw, 280px)', height: 'auto', borderRadius: '12px', objectFit: 'contain' }} />
+        <img src="/aaron-archive-10.opt.webp" alt="Aaron Pacheco, Brisbane Chartered Accountant and AI finance coach" width="600" height="900" style={{ marginBottom: 'clamp(1rem, 3vh, 2rem)', width: 'clamp(180px, 30vw, 280px)', height: 'auto', borderRadius: '12px', objectFit: 'contain' }} />
 
         <p style={{ fontSize: 'clamp(0.75rem, 2vw, 0.95rem)', fontWeight: '700', letterSpacing: '0.08em', textTransform: 'uppercase', color: colors.limeGreen, margin: '0 0 0.75rem', fontFamily: "'Poppins', sans-serif" }}>
           AI finance coaching · Brisbane &amp; online across Australia
@@ -1091,7 +1091,7 @@ export default function AppCoaching() {
       {/* About snippet */}
       <section style={{ padding: '4rem 1rem', maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
         <h2 style={sectionTitle}>A little about me</h2>
-        <img loading="lazy" decoding="async" src="/aaron-headshot-professional.jpg" alt="Aaron Pacheco, Chartered Accountant" style={{ width: '100%', maxWidth: '240px', borderRadius: '12px', objectFit: 'cover', margin: '0.5rem auto 1.5rem', display: 'block' }} />
+        <img loading="lazy" decoding="async" src="/aaron-headshot-professional.opt.webp" width="600" height="600" alt="Aaron Pacheco, Chartered Accountant" style={{ width: '100%', maxWidth: '240px', borderRadius: '12px', objectFit: 'cover', margin: '0.5rem auto 1.5rem', display: 'block' }} />
         <p style={{ fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', maxWidth: '720px', margin: '0 auto 1rem' }}>
           Brisbane born and bred, Chartered Accountant, and 10+ years in finance at places like PwC, Flight Centre, Telstra and Aveo. I've spent most of that time translating numbers into plain English for people who had better things to do. Now I teach people to get AI to do the heavy lifting, and to know when it's wrong.
         </p>
@@ -1116,7 +1116,7 @@ export default function AppCoaching() {
           <div className="logo-carousel">
             {[...employers, ...employers].map((employer, idx) => (
               <div key={idx} className="logo-item">
-                <img loading="lazy" decoding="async" src={employer.logo} alt={employer.name} />
+                <img loading="lazy" decoding="async" src={employer.logo} alt={employer.name} width="280" height="158" />
               </div>
             ))}
           </div>
@@ -1183,7 +1183,7 @@ export default function AppCoaching() {
       <div>
         <style>{styles}</style>
         <section style={{
-          background: `linear-gradient(135deg, rgba(31, 58, 125, 0.85) 0%, rgba(42, 79, 168, 0.85) 100%), url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&q=80')`,
+          background: `linear-gradient(135deg, rgba(31, 58, 125, 0.85) 0%, rgba(42, 79, 168, 0.85) 100%), url('/hero-bg-services.webp')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',
@@ -1417,17 +1417,17 @@ export default function AppCoaching() {
     const h2 = { fontSize: 'clamp(1.6rem, 4vw, 2.2rem)', color: colors.darkNavy, marginBottom: '1.5rem', fontFamily: "'Poppins', sans-serif", fontWeight: '800', textAlign: 'center' };
     const para = { fontSize: '1rem', color: colors.textMuted, lineHeight: '1.8', marginBottom: '1.25rem' };
     const track = [
-      { logo: '/PwC-logo-380x290-1.gif', name: 'PwC', role: 'Graduate, Audit', text: 'Where I learned to be fast and accurate at the same time, with someone checking every workpaper.' },
-      { logo: '/Flight-Centre-Logo-320x320-1.png', name: 'Flight Centre Travel Group', role: 'Accountant & Team Leader', text: 'Rebuilt outdated workbooks and broken macros into lean, formula-driven models that saved the team hours every day.' },
-      { logo: '/Coronis_nbsnnc.webp', name: 'Coronis Group', role: 'Accountant', text: 'Took finance from paper to paperless, with reporting the CFO and CEO actually used. A 40% efficiency gain in finance operations.' },
-      { logo: '/Telstra-logo.jpg', name: 'Telstra', role: 'Finance Analyst', text: 'Presented to 70+ junior accountants on turning numbers into plain English decisions.' },
-      { logo: '/Aveo-Logo.png', name: 'Aveo Group', role: 'Commercial Analyst', text: 'Automated manual reporting that saved a colleague 16 hours a week, and built a utilisation dashboard for leadership.' }
+      { logo: '/PwC-logo-380x290-1.opt.webp', name: 'PwC', role: 'Graduate, Audit', text: 'Where I learned to be fast and accurate at the same time, with someone checking every workpaper.' },
+      { logo: '/Flight-Centre-Logo-320x320-1.opt.webp', name: 'Flight Centre Travel Group', role: 'Accountant & Team Leader', text: 'Rebuilt outdated workbooks and broken macros into lean, formula-driven models that saved the team hours every day.' },
+      { logo: '/Coronis_nbsnnc.opt.webp', name: 'Coronis Group', role: 'Accountant', text: 'Took finance from paper to paperless, with reporting the CFO and CEO actually used. A 40% efficiency gain in finance operations.' },
+      { logo: '/Telstra-logo.opt.webp', name: 'Telstra', role: 'Finance Analyst', text: 'Presented to 70+ junior accountants on turning numbers into plain English decisions.' },
+      { logo: '/Aveo-Logo.opt.webp', name: 'Aveo Group', role: 'Commercial Analyst', text: 'Automated manual reporting that saved a colleague 16 hours a week, and built a utilisation dashboard for leadership.' }
     ];
     return (
       <div>
       <style>{styles}</style>
       <section style={{
-        background: `linear-gradient(135deg, rgba(31, 58, 125, 0.88) 0%, rgba(42, 79, 168, 0.88) 100%), url('/aaron-archive-4.jpg')`,
+        background: `linear-gradient(135deg, rgba(31, 58, 125, 0.88) 0%, rgba(42, 79, 168, 0.88) 100%), url('/aaron-archive-4.opt.webp')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         color: 'white',
@@ -1450,7 +1450,7 @@ export default function AppCoaching() {
       <section style={{ padding: '4rem 1rem', maxWidth: '1100px', margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'start', marginBottom: '4rem' }}>
           <div style={{ textAlign: 'center' }}>
-            <img loading="lazy" decoding="async" src="/aaron-archive-2.jpg" alt="Aaron Pacheco, Brisbane Chartered Accountant" style={{ width: '100%', height: '380px', borderRadius: '12px', objectFit: 'cover' }} />
+            <img loading="lazy" decoding="async" src="/aaron-archive-2.opt.webp" width="900" height="600" alt="Aaron Pacheco, Brisbane Chartered Accountant" style={{ width: '100%', height: '380px', borderRadius: '12px', objectFit: 'cover' }} />
           </div>
           <div>
             <h2 style={{ ...h2, textAlign: 'left' }}>Why I do this</h2>
@@ -1474,7 +1474,7 @@ export default function AppCoaching() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(170px, 1fr))', gap: '1rem' }}>
             {track.map((t) => (
               <div key={t.name} style={{ background: 'white', padding: '1.5rem', borderRadius: '12px', border: `1px solid ${colors.borderGray}`, textAlign: 'center' }}>
-                <img loading="lazy" decoding="async" src={t.logo} alt={t.name} style={{ height: '50px', maxWidth: '100%', objectFit: 'contain', marginBottom: '0.75rem' }} />
+                <img loading="lazy" decoding="async" src={t.logo} alt={t.name} width="280" height="158" style={{ height: '50px', maxWidth: '100%', objectFit: 'contain', marginBottom: '0.75rem' }} />
                 <h3 style={{ fontSize: '1rem', color: colors.darkNavy, margin: '0 0 0.25rem', fontFamily: "'Poppins', sans-serif", fontWeight: '700' }}>{t.name}</h3>
                 <p style={{ fontSize: '0.8rem', color: colors.textMuted, margin: '0 0 0.75rem' }}>{t.role}</p>
                 <p style={{ fontSize: '0.9rem', color: colors.textMuted, lineHeight: '1.6', margin: 0 }}>{t.text}</p>
@@ -1494,10 +1494,10 @@ export default function AppCoaching() {
             </p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem', marginTop: '2rem' }}>
-            <img loading="lazy" decoding="async" src="/aaron-headshot-casual-1.jpg" alt="Aaron Pacheco, founder of APP Coaching" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
-            <img loading="lazy" decoding="async" src="/PSX_20241105_115531.jpg" alt="Aaron Pacheco at a work event" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
-            <img loading="lazy" decoding="async" src="/aaron-headshot-casual-3.jpg" alt="Aaron Pacheco, AI finance coach" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
-            <img loading="lazy" decoding="async" src="/20250329_194859.jpg" alt="Aaron Pacheco, APP Coaching founder" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img loading="lazy" decoding="async" src="/aaron-headshot-casual-1.opt.webp" width="500" height="750" alt="Aaron Pacheco, founder of APP Coaching" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img loading="lazy" decoding="async" src="/PSX_20241105_115531.opt.webp" width="500" height="375" alt="Aaron Pacheco at a work event" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img loading="lazy" decoding="async" src="/aaron-headshot-casual-3.opt.webp" width="500" height="667" alt="Aaron Pacheco, AI finance coach" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
+            <img loading="lazy" decoding="async" src="/20250329_194859.opt.webp" width="500" height="667" alt="Aaron Pacheco, APP Coaching founder" style={{ width: '100%', height: '180px', borderRadius: '8px', objectFit: 'cover' }} />
           </div>
         </div>
 
@@ -1974,7 +1974,7 @@ export default function AppCoaching() {
                 alignItems: 'flex-start'
               }}>
                 <img loading="lazy" decoding="async"
-                  src="/aaron-headshot-professional.jpg"
+                  src="/aaron-headshot-professional.opt.webp"
                   alt="Aaron Pacheco"
                   style={{
                     width: '80px',
@@ -2059,7 +2059,7 @@ export default function AppCoaching() {
                         <div style={{ padding: '1.5rem' }}>
                           <p style={{
                             fontSize: '0.8rem',
-                            color: colors.limeGreen,
+                            color: '#15803d',
                             fontWeight: '700',
                             textTransform: 'uppercase',
                             letterSpacing: '0.5px',
@@ -2108,7 +2108,7 @@ export default function AppCoaching() {
       <div>
         <style>{styles}</style>
         <section style={{
-          background: `linear-gradient(135deg, rgba(31, 58, 125, 0.85) 0%, rgba(42, 79, 168, 0.85) 100%), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=80')`,
+          background: `linear-gradient(135deg, rgba(31, 58, 125, 0.85) 0%, rgba(42, 79, 168, 0.85) 100%), url('/hero-bg-home.webp')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',

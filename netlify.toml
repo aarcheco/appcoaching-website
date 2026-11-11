@@ -5,3 +5,19 @@
 # Tell Bing & other IndexNow search engines about new/updated pages after each production deploy.
 [[plugins]]
   package = "/netlify/plugins/indexnow"
+
+# Long-lived caching for fingerprinted build assets; a week for images.
+[[headers]]
+  for = "/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/blog/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"

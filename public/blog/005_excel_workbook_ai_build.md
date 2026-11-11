@@ -275,6 +275,6 @@ Flag anything you're not fully confident is correct so I can review it myself be
 
   <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
     <a href="https://cal.com/app-coaching-xcgvda" style="background: #00FF41; color: #1f3a7d; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; display: inline-block;">Book a Session</a>
-    <a href="/services" style="border: 2px solid #00FF41; color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; display: inline-block;">Learn More</a>
+    <a href="/services" style="border: 2px solid #00FF41; color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; display: inline-block;">Explore Coaching Services</a>
   </div>
 </section>

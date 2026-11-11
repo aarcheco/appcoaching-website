@@ -108,7 +108,7 @@ const NAV_HTML = `
 
 const FOOTER_HTML = `
     <footer>
-      <p>APP Coaching · Finance, Excel &amp; AI coaching · Brisbane, Queensland, Australia · Online across Australia</p>
+      <p>APP Coaching · AI finance coaching · Brisbane, Queensland, Australia · Online across Australia</p>
       <p><a href="/privacy">Privacy Policy &amp; Terms</a> · <a href="/feed.xml">RSS</a></p>
     </footer>`;
 
@@ -207,11 +207,11 @@ try {
   // ----- Static site pages -----
   const staticBodyContent = {
     home: {
-      h1: 'Your Most Expensive Problem: Confusion',
+      h1: 'Unlock your finances with AI',
       paragraphs: [
-        'Finance, Excel & AI coaching · Brisbane & online across Australia.',
+        'AI finance coaching · Brisbane & online across Australia.',
         pageConfigs.home.description,
-        'Coaching areas: Finance Literacy, Excel & AI Skills, and Career Mentoring — practical, 1-on-1, and built to make you self-sufficient rather than dependent on ongoing coaching.'
+        'I help everyday Australians, young finance professionals and small business owners use AI tools like ChatGPT, Claude and Gemini to turn their numbers into real answers, in plain English.'
       ],
       extraHtml: `<p><a href="/contact">Book a free 15-minute discovery call</a></p>\n      ${latestPostsHtml}`
     },
@@ -219,10 +219,10 @@ try {
       h1: 'APP Coaching Services',
       paragraphs: [
         pageConfigs.services.description,
-        'Finance Coaching — personal & business finance strategy, profit margins, cash flow clarity.',
-        'Excel Coaching — data analysis, visualization, custom modeling, dashboards, pivot tables, automation.',
-        'AI Coaching — prompting, AI workflows, agentic AI, custom AI tools, AI adoption strategy.',
-        'Operations & Workflow Coaching — process design, workflow optimization, task automation, systems thinking.'
+        'AI for Your Personal Finances — turn bank data into spending insights, budgets and savings goals with AI.',
+        'AI for Your Business Finances — use AI to explain your P&L, cash flow and reports, and automate finance admin.',
+        'Excel + AI Skills — formulas, PivotTables and dashboards, built faster with AI; custom team training.',
+        'Career Coaching for Finance Pros — AI skills, resumes, interviews and career strategy for graduates and young accountants.'
       ],
       extraHtml: '<p><a href="/contact">Book a free 15-minute discovery call</a></p>'
     },
@@ -249,6 +249,7 @@ try {
     }
   };
 
+  const HERO_PRELOADS = { home: '/hero-bg-home.webp', services: '/hero-bg-services.webp', about: '/aaron-archive-4.opt.webp' };
   Object.entries(staticBodyContent).forEach(([routeKey, content]) => {
     const config = pageConfigs[routeKey];
     const html = renderPage(template, {
@@ -257,7 +258,9 @@ try {
       canonical: config.canonical,
       ogType: config.ogType,
       schema: config.schema,
-      bodyHtml: simplePageBody(content)
+      bodyHtml: simplePageBody(content),
+      // Start the hero background download before the JS bundle runs (it's the LCP element).
+      headExtra: HERO_PRELOADS[routeKey] ? `<link rel="preload" as="image" href="${HERO_PRELOADS[routeKey]}" fetchpriority="high" />` : ''
     });
     writeRoutePage(routeKey === 'home' ? '' : routeKey, html);
   });
@@ -326,7 +329,7 @@ ${articleHtml}
         ${faqHtml}
         <section aria-label="About the author">
           <h2>About the author</h2>
-          <p><strong>Aaron Pacheco</strong> is a Brisbane-based qualified accountant and the founder of APP Coaching. He has 10+ years in finance at organisations including Flight Centre, PwC and Aveo, and coaches finance, Excel and AI skills in Brisbane and online across Australia. <a href="/contact">Book a free discovery call</a>.</p>
+          <p><strong>Aaron Pacheco</strong> is a Brisbane Chartered Accountant and the founder of APP Coaching. He has 10+ years in finance at organisations including PwC, Flight Centre and Aveo, and helps Australians unlock their personal and business finances with AI, in Brisbane and online. <a href="/contact">Book a free discovery call</a>.</p>
         </section>
       </article>
       ${relatedHtml}
@@ -358,7 +361,7 @@ ${articleHtml}
     '404.html',
     renderPage(template, {
       title: 'Page Not Found | APP Coaching',
-      description: 'This page could not be found. Explore finance, Excel and AI coaching from APP Coaching in Brisbane.',
+      description: 'This page could not be found. Explore AI finance coaching from APP Coaching in Brisbane.',
       canonical: null,
       noindex: true,
       schema: null,
@@ -439,9 +442,9 @@ ${blogPosts
     'llms.txt',
     `# APP Coaching
 
-> APP Coaching (appcoaching.io) is a Brisbane, Queensland-based coaching business run by Aaron Pacheco, a qualified accountant with 10+ years in finance at organisations including PwC, Flight Centre and Aveo. It offers 1-on-1 coaching in personal finance literacy, Microsoft Excel and practical AI tools, in Brisbane and online across Australia.
+> APP Coaching (appcoaching.io) is a Brisbane, Queensland-based coaching business run by Aaron Pacheco, a Chartered Accountant with 10+ years in finance at organisations including PwC, Flight Centre and Aveo. Its mission is helping Australians unlock their personal and business finances with AI: 1-on-1 coaching on using ChatGPT, Claude and Gemini for personal finance, small business finance, Excel + AI skills and finance careers, in Brisbane and online across Australia.
 
-Coaching is education, not licensed financial advice: it covers understanding your numbers, budgeting systems, Excel skills and AI workflows, and does not recommend specific financial products. A free 15-minute discovery call is available.
+Coaching is education, not licensed financial advice: it covers using AI to understand your numbers, budgeting systems, Excel skills and AI workflows, and does not recommend specific financial products. A free 15-minute discovery call is available.
 
 ## Main pages
 

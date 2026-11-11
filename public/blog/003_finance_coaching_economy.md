@@ -54,11 +54,11 @@ faq:
 
 <p><strong>You don't know where your money actually goes.</strong> Not roughly. Actually. (I say this as someone who keeps a spreadsheet for his travel plans, so my bar for "actually" may be a little high.) Most people spend money, check their balance, and move on. They don't see the pattern. They don't know if they're getting ahead or slowly slipping backwards month to month.</p>
 
-<p><strong>You can't prioritise between debt payoff, savings, and investing.</strong> Should you pay off the credit card? Build emergency savings? Start investing? Without a framework, people guess. They feel stuck without understanding which move actually matters most for their situation.</p>
+<p>You can't prioritise between debt payoff, savings, and investing. Should you pay off the credit card? Build emergency savings? Start investing? Without a framework, people guess. They feel stuck without understanding which move actually matters most for their situation.</p>
 
-<p><strong>You don't know the real impact of compound growth over time.</strong> Maybe you've heard "invest early." But do you actually know the maths? Do you understand why $200/month invested at 25 looks completely different at 35 than starting at 35? Most people don't.</p>
+<p>You don't know the real impact of compound growth over time. Maybe you've heard "invest early." But do you actually know the maths? Do you understand why $200/month invested at 25 looks completely different at 35 than starting at 35? Most people don't.</p>
 
-<p><strong>Your psychological relationship with money holds you back.</strong> Some people pretend they don't have money so they don't have to spend it. Others spend without thinking. Some avoid looking at accounts entirely because of anxiety. Most people never examine why they do what they do with money—they just react.</p>
+<p>Your psychological relationship with money holds you back. Some people pretend they don't have money so they don't have to spend it. Others spend without thinking. Some avoid looking at accounts entirely because of anxiety. Most people never examine why they do what they do with money—they just react.</p>
 
 <p>These aren't character flaws. They're gaps. Nobody taught you. Nobody showed you. And the longer they sit unfilled, the more they cost you—in money, in stress, in missed opportunity.</p>
 
@@ -84,7 +84,7 @@ faq:
 
 <p>Most of them couldn't. Not clearly.</p>
 
-<p>I'd teach them to read a balance sheet. To understand cash flow versus profit. To see what's actually happening in their numbers instead of just trusting whatever their accountant told them. The reaction was always the same: <em>"Wait, I didn't know I could understand this. I thought I had to just trust the numbers."</em></p>
+<p>I'd teach them to read a balance sheet. To understand cash flow versus profit. To see what's actually happening in their numbers instead of just trusting whatever their accountant told them. The reaction was always the same: "Wait, I didn't know I could understand this. I thought I had to just trust the numbers."</p>
 
 <p>These are intelligent people. They built businesses from scratch. They make strategic decisions every day. But the ability to look at their own P&L and know if they're winning or losing? That was a blind spot for most of them.</p>
 

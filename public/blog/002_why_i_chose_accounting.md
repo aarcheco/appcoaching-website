@@ -122,9 +122,9 @@ faq:
 
 <ul>
 <li><strong>Accounting grad</strong> → rule-follower, black and white, everything must balance.</li>
-<li><strong>PwC</strong> → efficient processor, speed without sacrificing accuracy.</li>
-<li><strong>Flight Centre & Coronis</strong> → systems transformer, freeing people to do real work.</li>
-<li><strong>The mentor realisation</strong> → translator, making complexity simple for decision-makers.</li>
+<li>PwC → efficient processor, speed without sacrificing accuracy.</li>
+<li>Flight Centre & Coronis → systems transformer, freeing people to do real work.</li>
+<li>The mentor realisation → translator, making complexity simple for decision-makers.</li>
 </ul>
 
 <p>I chose accounting because I loved the exactness. The rules. The ability to prove you're right. (Still do. Being recently married, I'm learning that last one doesn't transfer to every area of life.)</p>
@@ -134,7 +134,7 @@ faq:
 <p>That's what I wish I'd known when I started: the path from rule-follower to translator isn't just about technical skill. It's about understanding that your value compounds when you can bridge the gap between what the numbers say and what people need to hear.</p>
 
 <blockquote style="background: linear-gradient(135deg, #00FF00 0%, rgba(255, 255, 255, 0.9) 100%); border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
-<strong>🎯 PAUL's LevelUp</strong>
+🎯 PAUL's LevelUp
 <p>Your real skill isn't processing or analysing. It's translating complexity into clarity. The accountants and finance professionals who advance are the ones who can explain the numbers in a way that makes leaders actually understand what to do.</p>
 </blockquote>
 

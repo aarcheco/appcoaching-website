@@ -1,5 +1,91 @@
 [
   {
+    "id": 7,
+    "filename": "007_power_bi_vs_claude_supabase_dashboards.md",
+    "title": "Power BI Took Me Months. Claude and Supabase Took Minutes.",
+    "slug": "power-bi-took-me-months-claude-and-supabase-took-minutes",
+    "date": "2026-11-15",
+    "updated": "2026-11-15",
+    "excerpt": "I spent months on one Power BI dashboard in corporate. Claude built me a finance dashboard in minutes. Here's how to build a dashboard with AI, and where Power BI still wins.",
+    "seoTitle": "Build a Dashboard With AI: Power BI vs Claude + Supabase",
+    "metaDescription": "How to build a dashboard with AI using Claude and Supabase, from a Chartered Accountant who spent months on one Power BI dashboard. Plus where Power BI still wins.",
+    "heroImage": "/blog/ai-dashboard-hero.jpg",
+    "categories": [
+      "Business AI",
+      "Accounting & Finance Career"
+    ],
+    "tags": [
+      "Power BI",
+      "Supabase",
+      "Claude",
+      "AI Dashboards",
+      "Data Modelling"
+    ],
+    "faq": [
+      {
+        "q": "Can I build a dashboard with AI instead of Power BI?",
+        "a": "Yes. Load your data into a database like Supabase, connect Claude, and ask it to design the tables and build the dashboard. Power BI still suits large companies that need strict governance."
+      },
+      {
+        "q": "What is a star schema in Power BI?",
+        "a": "A way of organising data into fact tables, which hold events like transactions, and dimension tables, which describe things like dates, products and customers. Microsoft recommends it so Power BI can filter and summarise data efficiently."
+      },
+      {
+        "q": "How do I connect Claude to Supabase?",
+        "a": "Through Supabase's MCP server, which lets Claude list your tables, apply migrations and run SQL. Scope it to one test project and keep manual approval on while you learn."
+      },
+      {
+        "q": "Is Power BI still worth learning in 2026?",
+        "a": "If you work in a large organisation that runs on Microsoft, yes. Otherwise, AI tools and basic SQL will get you to a working dashboard much faster."
+      },
+      {
+        "q": "Is it safe to put company data into AI tools?",
+        "a": "Check your workplace's AI policy first, use a test project, and remove personal details such as names and account numbers."
+      }
+    ]
+  },
+  {
+    "id": "008",
+    "filename": "008_corporate_vs_small_business_career_growth.md",
+    "title": "Corporate vs Small Business: Where Your Career Grows Faster",
+    "slug": "corporate-vs-small-business-where-your-career-grows-faster",
+    "date": "2026-11-15",
+    "updated": "2026-11-15",
+    "excerpt": "Nearly a decade in corporate finance taught me the basics. A few months in an AI-forward small business taught me more. Here's why the small team wins on growth.",
+    "seoTitle": "Corporate vs Small Business: Which Grows Your Career Faster?",
+    "metaDescription": "Corporate vs small business: which grows your finance career faster? A Chartered Accountant on why an AI-forward small team taught him years of skills in months.",
+    "heroImage": "/blog/career-growth-hero.jpg",
+    "categories": [
+      "Career Coaching",
+      "Accounting & Finance Career"
+    ],
+    "tags": [
+      "Career Growth",
+      "Small Business",
+      "Corporate Careers",
+      "AI Skills",
+      "Finance Careers"
+    ],
+    "faq": [
+      {
+        "q": "Is it better to work for a corporate or a small business?",
+        "a": "For fast skill growth, an AI-forward small business usually wins: you own more, adopt new tools faster and work directly with the decision-maker."
+      },
+      {
+        "q": "Will working for a small business hurt my finance career?",
+        "a": "Not if you can show what you built and owned. A role where you ran whole processes and shipped AI projects is strong evidence for any future employer."
+      },
+      {
+        "q": "How do I know if a small business is AI-forward?",
+        "a": "Look for named AI tools in the job ad, and ask in the interview which tools the team uses day to day and what you could own in six months."
+      },
+      {
+        "q": "What skills should finance professionals learn in 2026?",
+        "a": "Practical AI tools and prompting, basic data skills like SQL, and explaining numbers clearly to people who don't work in finance."
+      }
+    ]
+  },
+  {
     "id": 6,
     "filename": "006_black_friday_christmas_budget_with_ai.md",
     "title": "Black Friday 2026 in Australia: How to Budget for It With AI",

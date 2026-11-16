@@ -1,5 +1,50 @@
 [
   {
+    "id": 9,
+    "filename": "009_common_excel_mistakes_mr_excel.md",
+    "title": "25 Common Excel Mistakes I Fixed for Years (and How I Became \"Mr Excel\" at Flight Centre)",
+    "slug": "25-common-excel-mistakes-i-fixed-for-years-and-how-i-became-mr-excel-at-flight-centre",
+    "date": "2026-11-17",
+    "updated": "2026-11-17",
+    "excerpt": "For years, broken spreadsheets found their way to my desk. Here are the 25 common Excel mistakes I fixed most, why each one hurts, and exactly how I fixed it.",
+    "seoTitle": "Common Excel Mistakes Accountants Make (and How to Fix Them)",
+    "metaDescription": "25 common Excel mistakes I fixed for years as Flight Centre's go-to Excel person, why each one hurts, and the simple fixes, plus an AI prompt to audit your file.",
+    "heroImage": "/blog/excel-mistakes-hero.jpg",
+    "categories": [
+      "Excel",
+      "Accounting & Finance Career"
+    ],
+    "tags": [
+      "Excel Mistakes",
+      "Excel Tips",
+      "Power Query",
+      "XLOOKUP",
+      "Spreadsheet Best Practice"
+    ],
+    "faq": [
+      {
+        "q": "What are the most common Excel mistakes?",
+        "a": "Messy data (monthly tabs, subtotals inside data, numbers stored as text), fragile formulas (hardcodes, nested IFs, VLOOKUP column numbers), manual copy-paste processes, files with no checks or instructions, and slow, bloated workbooks."
+      },
+      {
+        "q": "Is XLOOKUP better than VLOOKUP?",
+        "a": "For most work, yes. XLOOKUP does an exact match by default and points at the actual return column, so inserting a column won't quietly return the wrong data. Check your Excel version supports it."
+      },
+      {
+        "q": "How do I stop copying and pasting reports every month?",
+        "a": "Use Power Query to import and clean the data once, then press Refresh each month. Every step runs again automatically."
+      },
+      {
+        "q": "How do I make an Excel file easy to hand over?",
+        "a": "Keep data in Excel Tables, keep formulas short with helper columns, add a check tab and an instructions tab, and colour-code inputs."
+      },
+      {
+        "q": "Can AI check my Excel formulas?",
+        "a": "Yes. Upload a copy of the workbook to ChatGPT or Claude, or paste the formulas, and ask it to flag common mistakes. Remove sensitive data first and check your workplace's AI policy."
+      }
+    ]
+  },
+  {
     "id": 7,
     "filename": "007_power_bi_vs_claude_supabase_dashboards.md",
     "title": "Power BI Took Me Months. Claude and Supabase Took Minutes.",
@@ -54,7 +99,7 @@
     "excerpt": "Nearly a decade in corporate finance taught me the basics. A few months in an AI-forward small business taught me more. Here's why the small team wins on growth.",
     "seoTitle": "Corporate vs Small Business: Which Grows Your Career Faster?",
     "metaDescription": "Corporate vs small business: which grows your finance career faster? A Chartered Accountant on why an AI-forward small team taught him years of skills in months.",
-    "heroImage": "/blog/career-growth-hero.jpg",
+    "heroImage": "/blog/career-choice-hero.jpg",
     "categories": [
       "Career Coaching",
       "Accounting & Finance Career"

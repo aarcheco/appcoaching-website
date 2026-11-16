@@ -14,8 +14,8 @@ faq:
     a: "For fast skill growth, an AI-forward small business usually wins: you own more, adopt new tools faster and work directly with the decision-maker."
   - q: "Will working for a small business hurt my finance career?"
     a: "Not if you can show what you built and owned. A role where you ran whole processes and shipped AI projects is strong evidence for any future employer."
-  - q: "How do I know if a small business is AI-forward?"
-    a: "Look for named AI tools in the job ad, and ask in the interview which tools the team uses day to day and what you could own in six months."
+  - q: "How do I spot a small business finance role where I can grow fast?"
+    a: "Look for signs of flexible thinking and openness to ideas, a role close to the owner or director, and manual processes you could streamline with AI or good Excel. That's where a new hire can make a name quickly."
   - q: "What skills should finance professionals learn in 2026?"
     a: "Practical AI tools and prompting, basic data skills like SQL, and explaining numbers clearly to people who don't work in finance."
 ---
@@ -36,7 +36,7 @@ faq:
     <li><a href="#why-now">Why Now</a></li>
     <li><a href="#four-accelerators">Corporate vs Small Business: Four Things That Sped Up My Growth</a></li>
     <li><a href="#four-brakes">The Four Brakes in Corporate</a></li>
-    <li><a href="#find-the-role">How to Find an AI-Forward Small Business Role</a></li>
+    <li><a href="#find-the-role">Don't Write Off Small Business Finance Roles</a></li>
     <li><a href="#thrive-small-team">What It Takes to Thrive in a Small Team</a></li>
     <li><a href="#staying-in-corporate">Staying in Corporate for Now? Grow Anyway</a></li>
     <li><a href="#wrap-up">Work Smarter, Not Harder</a></li>
@@ -84,14 +84,23 @@ faq:
   <li>Slow change. A good idea becomes a working group, then a pilot, then a steering committee. By then, the tool has had three new versions.</li>
 </ol>
 
-<h2 id="find-the-role">How to Find an AI-Forward Small Business Role</h2>
+<h2 id="find-the-role">Don't Write Off Small Business Finance Roles</h2>
 
-<ol>
-  <li>Read job ads for signals. Look for named AI tools, words like "own" and "build", and roles reporting to a founder or director.</li>
-  <li>Ask the right interview questions. "What AI tools does the team use day to day?" "Who will I report to?" "What could I own in six months?"</li>
-  <li>Build one AI project you can show. A dashboard, an automation, a prompt kit. <strong>Proof beats a job title.</strong></li>
-  <li>Score the ad before you apply, using the prompt below.</li>
-</ol>
+<p>Truly AI-forward small businesses are still rare, so don't wait for the perfect job ad. Just keep an eye out, and don't scroll past a small business finance role because the logo isn't famous.</p>
+
+<p>The ones worth a closer look tend to show a few signs:</p>
+
+<ul>
+  <li>Flexible thinking. The ad or the interviewer talks about how things could be done, not just how they've always been done.</li>
+  <li>Open to ideas. You'd work close to the owner or director, and they actually want to hear your suggestions.</li>
+  <li>Room to improve. Words like "improve", "streamline" or "systems" in the ad, or an honest admission that some processes are still manual.</li>
+</ul>
+
+<p>That last one is gold. <strong>An archaic process is an opportunity in disguise.</strong> Streamline it with AI, or simply with clean, well-built Excel, and you'll make a name for yourself fast. In a small team, nobody forgets who fixed the month-end spreadsheet everyone hated.</p>
+
+<p>Good Excel is seriously underrated here. My next post covers the top Excel mistakes I kept seeing, and how I became the go-to "Mr Excel" at an ASX 200 global travel company by fixing broken files and building formulas the next generation of accountants could actually read.</p>
+
+<p>Before you apply, run the job ad through the prompt below.</p>
 
 <blockquote class="paul-prompt-box" style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📋 PAUL's Prompt (Job Ad Growth Check)</strong>
@@ -100,11 +109,11 @@ faq:
 <details style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; margin: 1rem 0;">
   <summary style="cursor: pointer; font-weight: 700; color: #1f3a7d;">📋 See Full Prompt (Click to Expand)</summary>
   <p class="paul-prompt">Act as a career coach for finance professionals.
-I'll paste a job ad below. Score it out of 10 on how fast I'd grow in this role, using four factors:
+I'll paste a job ad below. Score it out of 10 on how much room I'd have to grow and make a name for myself, using four factors:
 1. Ownership: would I own a whole process or function, or one slice?
-2. Tools: does it mention AI or modern tools, and would I be allowed to use them?
-3. Access: how close is the role to the person making decisions?
-4. Communication: will I explain numbers to non-finance people?
+2. Room to improve: does the ad hint at manual or outdated processes I could streamline with AI or better Excel?
+3. Access: how close is the role to the owner or person making decisions?
+4. Openness: does the business sound flexible and open to new ideas?
 For each factor, quote the line in the ad that tells you, give a score, and note what's unclear.
 Then give me 5 questions to ask in the interview to fill those gaps.
 Job ad:
@@ -148,7 +157,7 @@ Job ad:
 
 <blockquote style="background: #f0fdf4; border: 1px solid #dcfce7; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>⬆️ PAUL's LevelUp</strong>
-<p>Score your current role on the four growth factors. If it comes up short on most, it's not you, it's the setup. Build one AI project on the side this month and start looking at smaller, AI-forward teams.</p>
+<p>Score your current role on the four growth factors. If it comes up short on most, it's not you, it's the setup. Build one AI or Excel improvement on the side this month, and keep an eye out for small business roles with room to improve.</p>
 </blockquote>
 
 <section style="background: linear-gradient(135deg, #1f3a7d 0%, #2a4fa8 100%); color: white; border-radius: 12px; padding: 2.5rem; margin: 3rem 0; text-align: center;">

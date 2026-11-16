@@ -1,7 +1,7 @@
 ---
 title: "Post Title: Answers the Question People Search"
 date: 2026-XX-XX
-id: 00X
+id: X   # plain number, no leading zeros (the site uses the filename prefix anyway)
 excerpt: "One or two plain sentences, under ~160 characters. What the reader gets from this post."
 heroImage: /blog/<short-slug>-hero.jpg
 categories: ["Personal Finance"]            # Personal Finance | Excel Coaching | Career Coaching | Business AI | Accounting & Finance Career

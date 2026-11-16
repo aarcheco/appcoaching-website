@@ -1,7 +1,7 @@
 ---
 title: "Corporate vs Small Business: Where Your Career Grows Faster"
 date: 2026-11-15
-id: 008
+id: 8
 excerpt: "Nearly a decade in corporate finance taught me the basics. A few months in an AI-forward small business taught me more. Here's why the small team wins on growth."
 heroImage: /blog/career-growth-hero.jpg
 categories: ["Career Coaching", "Accounting & Finance Career"]
@@ -100,30 +100,30 @@ faq:
 
 <p>Good Excel is seriously underrated here. My next post covers the top Excel mistakes I kept seeing, and how I became the go-to "Mr Excel" at an ASX 200 global travel company by fixing broken files and building formulas the next generation of accountants could actually read.</p>
 
-<p>Before you apply, run the job ad through the prompt below.</p>
+<p>You don't have to trawl the job boards yourself, either. Turn on web search in ChatGPT, Claude or Gemini and let it do the digging with the prompt below.</p>
 
 <blockquote class="paul-prompt-box" style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
-<strong>📋 PAUL's Prompt (Job Ad Growth Check)</strong>
-<p>Paste this into ChatGPT, Gemini or Claude, then paste the job ad underneath.</p>
+<strong>📋 PAUL's Prompt (Small Business Job Scout)</strong>
+<p>Paste this into ChatGPT, Claude or Gemini with web search turned on, and fill in the brackets.</p>
 
 <details style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; margin: 1rem 0;">
   <summary style="cursor: pointer; font-weight: 700; color: #1f3a7d;">📋 See Full Prompt (Click to Expand)</summary>
-  <p class="paul-prompt">Act as a career coach for finance professionals.
-I'll paste a job ad below. Score it out of 10 on how much room I'd have to grow and make a name for myself, using four factors:
-1. Ownership: would I own a whole process or function, or one slice?
-2. Room to improve: does the ad hint at manual or outdated processes I could streamline with AI or better Excel?
-3. Access: how close is the role to the owner or person making decisions?
-4. Openness: does the business sound flexible and open to new ideas?
-For each factor, quote the line in the ad that tells you, give a score, and note what's unclear.
-Then give me 5 questions to ask in the interview to fill those gaps.
-Job ad:
-[paste here]</p>
+  <p class="paul-prompt">Act as a career scout for finance professionals in Australia.
+Search current job ads on SEEK, LinkedIn Jobs, Indeed and Jora for [role, e.g. assistant accountant or finance officer] roles in [city] posted in the last 14 days.
+Focus on small and medium businesses, and skip agency ads where the employer is hidden.
+Shortlist the 10 roles with the most room to grow, looking for:
+1. Variety: a mix of responsibilities, not one narrow task.
+2. Ownership: owning a process or function end to end.
+3. Room for creative thinking: openness to new ideas, or reporting directly to the owner or director.
+4. Streamlining: hints of manual or outdated processes to improve, or mentions of systems, automation, Excel or AI.
+For each role, give the job title, business, location and link, plus one line quoting the part of the ad that shows growth potential.
+Rank them from most to least promising, and list anything unclear I should ask about in an interview.</p>
 </details>
 
 <button type="button" class="paul-copy">📋 Copy prompt</button>
 </blockquote>
 
-<p>A low score isn't an automatic no. It just tells you which questions to push hardest on in the interview. If the answer to "what could I own in six months?" is a long pause, that's your answer too.</p>
+<p>Treat the shortlist as a starting point, not gospel. Open each ad yourself, and in the interview ask what you could own in six months. If the answer is a long pause, that's your answer too.</p>
 
 <h2 id="thrive-small-team">What It Takes to Thrive in a Small Team</h2>
 

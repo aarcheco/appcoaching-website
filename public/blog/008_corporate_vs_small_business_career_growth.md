@@ -3,7 +3,7 @@ title: "Corporate vs Small Business: Where Your Career Grows Faster"
 date: 2026-11-15
 id: 8
 excerpt: "Nearly a decade in corporate finance taught me the basics. A few months in an AI-forward small business taught me more. Here's why the small team wins on growth."
-heroImage: /blog/career-growth-hero.jpg
+heroImage: /blog/career-choice-hero.jpg
 categories: ["Career Coaching", "Accounting & Finance Career"]
 tags: ["Career Growth", "Small Business", "Corporate Careers", "AI Skills", "Finance Careers"]
 seoTitle: "Corporate vs Small Business: Which Grows Your Career Faster?"
@@ -25,9 +25,9 @@ faq:
 <p>I spent nearly a decade in corporate finance, from Big 4 audit to big-company analyst roles. Then I joined an AI-forward small business, and in months I grew skills that would've taken years. The difference wasn't talent. It was ownership, speed, new tools and a direct line to the person making decisions.</p>
 </blockquote>
 
-<img src="/blog/career-growth-hero.jpg" alt="Small yellow flower growing between wooden steps - corporate vs small business career growth" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0; display: block;">
+<img src="/blog/career-choice-hero.jpg" alt="Forest path splitting into two roads - choosing between a corporate and small business career" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0; display: block;">
 
-<p style="text-align: center; color: #6b7280; font-size: 0.95rem; font-style: italic; margin: -1rem 0 2rem;">Photo by Runic Earth on Unsplash</p>
+<p style="text-align: center; color: #6b7280; font-size: 0.95rem; font-style: italic; margin: -1rem 0 2rem;">Photo by Jens Lelie on Unsplash</p>
 
 <details style="background: #f7f9fc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; margin: 2rem 0;">
   <summary style="cursor: pointer; font-weight: 700; font-size: 1.1rem; color: #1f3a7d;">📑 Table of Contents</summary>
@@ -98,7 +98,7 @@ faq:
 
 <p>That last one is gold. <strong>An archaic process is an opportunity in disguise.</strong> Streamline it with AI, or simply with clean, well-built Excel, and you'll make a name for yourself fast. In a small team, nobody forgets who fixed the month-end spreadsheet everyone hated.</p>
 
-<p>Good Excel is seriously underrated here. My next post covers the top Excel mistakes I kept seeing, and how I became the go-to "Mr Excel" at an ASX 200 global travel company by fixing broken files and building formulas the next generation of accountants could actually read.</p>
+<p>Good Excel is seriously underrated here. My next post covers <a href="/blog/25-common-excel-mistakes-i-fixed-for-years-and-how-i-became-mr-excel-at-flight-centre" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">the 25 common Excel mistakes I kept seeing</a>, and how I became the go-to "Mr Excel" at an ASX 200 global travel company by fixing broken files and building formulas the next generation of accountants could actually read.</p>
 
 <p>You don't have to trawl the job boards yourself, either. Turn on web search in ChatGPT, Claude or Gemini and let it do the digging with the prompt below.</p>
 

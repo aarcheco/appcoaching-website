@@ -55,7 +55,10 @@ try {
     //   updated:         YYYY-MM-DD of the last meaningful edit (schema dateModified, sitemap lastmod)
     //   faq:             list of { q, a } — rendered as an FAQ section + FAQPage schema
     return {
-      id: data.id,
+      // The id comes from the filename prefix (e.g. 008_...md -> 8). Don't trust the
+      // front-matter value: YAML reads a leading-zero id like 010 as octal (= 8)
+      // and leaves 008 as the string "008".
+      id: parseInt(file.slice(0, 3), 10) || Number(data.id),
       filename: file,
       title: data.title,
       slug: generateSlug(data.title),

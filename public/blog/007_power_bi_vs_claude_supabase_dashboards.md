@@ -1,7 +1,7 @@
 ---
 title: "Power BI Took Me Months. Claude and Supabase Took Minutes."
 date: 2026-11-15
-id: 007
+id: 7
 excerpt: "I spent months on one Power BI dashboard in corporate. Claude built me a finance dashboard in minutes. Here's how to build a dashboard with AI, and where Power BI still wins."
 heroImage: /blog/ai-dashboard-hero.jpg
 categories: ["Business AI", "Accounting & Finance Career"]

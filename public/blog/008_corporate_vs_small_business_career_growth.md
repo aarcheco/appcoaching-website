@@ -8,7 +8,7 @@ categories: ["Career Coaching", "Accounting & Finance Career"]
 tags: ["Career Growth", "Small Business", "Corporate Careers", "AI Skills", "Finance Careers"]
 seoTitle: "Corporate vs Small Business: Which Grows Your Career Faster?"
 metaDescription: "Corporate vs small business: which grows your finance career faster? A Chartered Accountant on why an AI-forward small team taught him years of skills in months."
-updated: 2026-11-15
+updated: 2026-11-17
 faq:
   - q: "Is it better to work for a corporate or a small business?"
     a: "For fast skill growth, an AI-forward small business usually wins: you own more, adopt new tools faster and work directly with the decision-maker."
@@ -50,6 +50,8 @@ faq:
 <p>My CV reads like a tour of Australian corporate: PwC, Flight Centre, Telstra, RACQ, Aveo. I collected job titles the way other kids collected footy cards.</p>
 
 <p>Every role taught me something. But every role was also a slice: accounts payable here, a budget model there, one report for one team.</p>
+
+<p>To be fair, corporate gave me the foundations: audit discipline, proper processes and great mentors. They're exactly what let me move fast later.</p>
 
 <p>Then I joined an AI-forward small business. Within months I'd taken on far more than my job title said, and learned more than in any single corporate year. <strong>Months in a small team, years of corporate growth.</strong> Sleep, sadly, not included (new dad, different story).</p>
 

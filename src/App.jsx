@@ -315,12 +315,40 @@ export default function AppCoaching() {
   // Post HTML is injected via dangerouslySetInnerHTML, so one delegated listener
   // handles every <button class="paul-copy"> next to a <p class="paul-prompt">.
   useEffect(() => {
+    // GA4 custom events. Safe no-op if gtag hasn't loaded (e.g. blocked by an ad blocker).
+    const track = (name, params) => {
+      if (typeof window.gtag === 'function') window.gtag('event', name, params);
+    };
+
     const onClick = async (e) => {
-      const btn = e.target.closest && e.target.closest('.paul-copy');
+      if (!e.target.closest) return;
+
+      // Book-a-call clicks (any link to the Cal.com booking page) -> GA4 "book_call".
+      const calLink = e.target.closest('a[href*="cal.com"]');
+      if (calLink) {
+        const area = calLink.closest('nav, header, footer');
+        track('book_call', {
+          page_path: window.location.pathname,
+          cta_location: area ? area.tagName.toLowerCase() : 'page',
+        });
+        return;
+      }
+
+      const btn = e.target.closest('.paul-copy');
       if (!btn) return;
       const box = btn.closest('.paul-prompt-box') || btn.parentElement;
       const promptEl = box && box.querySelector('.paul-prompt');
       if (!promptEl) return;
+
+      // Prompt copies -> GA4 "prompt_copy", named from the box heading,
+      // e.g. "📋 PAUL's Prompt (Excel Workbook Auditor)" -> "Excel Workbook Auditor".
+      const heading = box.querySelector('strong');
+      const headingText = heading ? heading.textContent.trim() : '';
+      const nameMatch = headingText.match(/\(([^)]+)\)\s*$/);
+      track('prompt_copy', {
+        prompt_name: nameMatch ? nameMatch[1] : headingText || 'Unknown prompt',
+        page_path: window.location.pathname,
+      });
       // textContent (not innerText) so it works while the <details> box is collapsed.
       const text = promptEl.textContent.trim();
       try {

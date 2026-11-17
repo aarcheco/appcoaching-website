@@ -233,7 +233,7 @@ try {
         personSchema.description,
         `${personSchema.jobTitle}. Background includes Flight Centre, PwC, Coronis Group, and Aveo Group. Studied at Queensland University of Technology (QUT).`
       ],
-      extraHtml: '<p><a href="https://www.linkedin.com/in/aaronpacheco" rel="me">Aaron Pacheco on LinkedIn</a></p>'
+      extraHtml: '<p><a href="/contact">Book a free 15-minute discovery call</a></p>'
     },
     contact: {
       h1: 'Get in Touch',

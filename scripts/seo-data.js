@@ -17,7 +17,8 @@ const SITE_URL = 'https://appcoaching.io';
 const BUSINESS_ID = `${SITE_URL}/#business`;
 const PERSON_ID = `${SITE_URL}/#aaron`;
 const WEBSITE_ID = `${SITE_URL}/#website`;
-const LINKEDIN_URL = 'https://www.linkedin.com/in/aaronpacheco';
+// LinkedIn: add the APP Coaching company page to the business sameAs once it exists.
+// Aaron's personal profile is deliberately not linked.
 // Google Business Profile (Maps listing) — links the site and the profile for local search
 const GOOGLE_MAPS_URL = 'https://maps.google.com/?cid=16175503403108466611';
 const LOGO_URL = `${SITE_URL}/Aaron_Pacheco_300dpi_001_6x6.jpg`;
@@ -76,7 +77,12 @@ const personSchema = {
   worksFor: { '@id': BUSINESS_ID },
   alumniOf: { '@type': 'CollegeOrUniversity', name: 'Queensland University of Technology (QUT)' },
   knowsAbout: ['Artificial intelligence', 'Personal finance', 'Financial literacy', 'Accounting', 'Prompt engineering', 'Microsoft Excel', 'Coaching'],
-  sameAs: [LINKEDIN_URL]
+  hasCredential: {
+    '@type': 'EducationalOccupationalCredential',
+    credentialCategory: 'Professional certification',
+    name: 'Chartered Accountant (CA ANZ)',
+    recognizedBy: { '@type': 'Organization', name: 'Chartered Accountants Australia and New Zealand', url: 'https://www.charteredaccountantsanz.com' }
+  }
 };
 
 const organizationSchema = {
@@ -94,7 +100,7 @@ const organizationSchema = {
   founder: { '@id': PERSON_ID },
   knowsAbout: ['Artificial intelligence', 'Personal finance', 'Financial literacy', 'Microsoft Excel'],
   hasMap: GOOGLE_MAPS_URL,
-  sameAs: [LINKEDIN_URL, GOOGLE_MAPS_URL],
+  sameAs: [GOOGLE_MAPS_URL],
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'customer service',

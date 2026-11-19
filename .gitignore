@@ -4,3 +4,6 @@ build/
 .env
 .env.local
 npm-debug.log*
+
+# Generated at build time by scripts/publish-blog.js
+src/blogVersion.js

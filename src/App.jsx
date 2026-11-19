@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { BLOG_VERSION } from './blogVersion';
 
 // ===== PAGE CONFIGURATIONS FOR SEO (Static, outside component) =====
 // IMPORTANT: this object is intentionally duplicated in scripts/seo-data.js, which the
@@ -307,6 +308,14 @@ const buildBlogPostSchema = (post) => {
 
 // Not part of the shared SEO block above: client-only config for unknown URLs.
 // (The static equivalent is build/404.html from scripts/generate-static-shells.js.)
+// Robots on first load: the server already decides, and the client keeps its answer.
+// Real pages are static files served with "index"; unknown URLs get build/404.html
+// (HTTP 404) with "noindex". The client only changes robots after an in-app navigation,
+// so a page that renders oddly in a crawler (stale cache, failed fetch) can never noindex
+// a real URL, and a 404 can never flip itself to "index".
+const SERVED_AS_404 = typeof document !== 'undefined' && /noindex/i.test((document.querySelector('meta[name="robots"]') || {}).content || '');
+let clientNavigated = false;
+
 const notFoundConfig = {
   id: 'notfound',
   title: 'Page Not Found | APP Coaching',
@@ -475,7 +484,8 @@ export default function AppCoaching() {
     });
 
     // Robots: only the not-found view is noindex
-    setRobotsMeta(pageConfig.noindex ? 'noindex, follow' : 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1');
+    const noindex = clientNavigated ? !!pageConfig.noindex : SERVED_AS_404;
+    setRobotsMeta(noindex ? 'noindex, follow' : 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1');
 
     // One JSON-LD block per page, always id="schema-page". The build-time static
     // pages (scripts/generate-static-shells.js) bake in the same id, so the client
@@ -649,6 +659,12 @@ export default function AppCoaching() {
       const { pageName, postSlug } = getPageFromPath(window.location.pathname);
       const tooDeep = path.split('/').length > (pageName === 'blog' ? 2 : 1);
 
+      // The server answered 404 for this URL (e.g. /home): trust it on first load.
+      if (SERVED_AS_404 && !clientNavigated) {
+        setCurrentPage('notfound');
+        return;
+      }
+
       if (!VALID_PAGES.includes(pageName) || tooDeep) {
         setCurrentPage('notfound');
         return;
@@ -677,7 +693,7 @@ export default function AppCoaching() {
     applyRoute();
 
     // Listen for popstate (back/forward buttons)
-    const handlePopstate = () => applyRoute();
+    const handlePopstate = () => { clientNavigated = true; applyRoute(); };
 
     window.addEventListener('popstate', handlePopstate);
     return () => window.removeEventListener('popstate', handlePopstate);
@@ -688,13 +704,17 @@ export default function AppCoaching() {
     setBlogLoading(true);
     try {
       // Fetch manifest listing all blog posts (includes pre-parsed metadata)
-      const manifestResponse = await fetch('/blog-posts.json');
+      const manifestResponse = await fetch(`/blog-posts.json?v=${BLOG_VERSION}`);
       const manifest = await manifestResponse.json();
 
       // Fetch markdown content for each post
       const posts = await Promise.all(manifest.map(async (item) => {
         try {
-          const fileResponse = await fetch(`/blog/${item.filename}`);
+          // One retry: a post that fails to load must not vanish from the list, or its
+          // own URL would render as "not found".
+          let fileResponse = await fetch(`/blog/${item.filename}?v=${BLOG_VERSION}`);
+          if (!fileResponse.ok) fileResponse = await fetch(`/blog/${item.filename}?v=${BLOG_VERSION}&r=1`);
+          if (!fileResponse.ok) throw new Error(`HTTP ${fileResponse.status}`);
           const fileContent = await fileResponse.text();
 
           // Strip frontmatter using regex (YAML front matter between --- delimiters)
@@ -723,7 +743,15 @@ export default function AppCoaching() {
           };
         } catch (err) {
           console.error(`Error loading blog post ${item.filename}:`, err);
-          return null;
+          // Keep the post (title, URL, excerpt) so routing still finds it.
+          return {
+            id: item.id, title: item.title, slug: item.slug || generateSlug(item.title), date: item.date,
+            updated: item.updated || null, excerpt: item.excerpt, seoTitle: item.seoTitle || null,
+            metaDescription: item.metaDescription || null, heroImage: item.heroImage,
+            categories: item.categories || [], tags: item.tags || [], faq: item.faq || [],
+            content: `<p>${item.excerpt || ''}</p><p>This post didn't fully load. Please refresh the page.</p>`,
+            filename: item.filename
+          };
         }
       }));
 
@@ -743,6 +771,7 @@ export default function AppCoaching() {
 
   // Helper function to navigate to a page and update URL (using History API)
   const navigateTo = (page, postSlug = null) => {
+    clientNavigated = true;
     setCurrentPage(page);
 
     let url = `/${page}`;

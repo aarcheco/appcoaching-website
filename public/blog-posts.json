@@ -1,5 +1,46 @@
 [
   {
+    "id": 10,
+    "filename": "010_will_ai_replace_accountants_australia.md",
+    "title": "Will AI Replace Accountants in Australia? A Grad's Game Plan",
+    "slug": "will-ai-replace-accountants-in-australia-a-grads-game-plan",
+    "date": "2026-11-22",
+    "updated": "2026-11-22",
+    "excerpt": "AI won't replace accountants in Australia, but it is changing the junior job. Here's a four-step game plan for grads, plus a prompt that builds yours.",
+    "seoTitle": "Will AI Replace Accountants in Australia? Grad Guide",
+    "metaDescription": "Will AI replace accountants in Australia? No, but it's changing grad roles. A Chartered Accountant's 4-step plan to build AI skills, plus a copy-ready prompt.",
+    "heroImage": "/blog/ai-accountants-hero.jpg",
+    "categories": [
+      "Accounting & Finance Career",
+      "Career Coaching"
+    ],
+    "tags": [
+      "AI in Accounting",
+      "Graduate Accountant",
+      "Finance Careers",
+      "ChatGPT",
+      "Claude"
+    ],
+    "faq": [
+      {
+        "q": "Will AI replace accountants in Australia?",
+        "a": "Not as a profession. A report commissioned by CA ANZ projects a shortfall of 17,900 accounting, audit and finance professionals by 2035 and says AI will change the skills mix rather than reduce demand. What is changing is the junior work: more reviewing and explaining, less manual processing."
+      },
+      {
+        "q": "Is accounting still a good career with AI?",
+        "a": "For people who like logic and explaining numbers, yes. Routine processing is being automated, which pushes graduates into review, analysis and client conversations sooner. Those are the parts of the job that build a career."
+      },
+      {
+        "q": "What AI skills do graduate accountants need?",
+        "a": "Know how to use the AI tools your employer approves (such as ChatGPT, Claude, Copilot or Gemini) to draft, summarise and explain, how to check AI output against source documents, and how to keep client data out of tools that aren't approved."
+      },
+      {
+        "q": "How do I use AI as a graduate accountant without getting in trouble?",
+        "a": "Read your firm's AI policy first, only use approved tools, never paste client or personal data into public AI tools, and treat every AI answer as a draft you have to check and can explain."
+      }
+    ]
+  },
+  {
     "id": 9,
     "filename": "009_common_excel_mistakes_mr_excel.md",
     "title": "25 Common Excel Mistakes I Fixed for Years (and How I Became \"Mr Excel\" at Flight Centre)",

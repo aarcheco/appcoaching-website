@@ -82,16 +82,38 @@ faq:
 
 <p>Here's the big caveat: a lot depends on where you land as a grad.</p>
 
-<table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
-  <thead>
-    <tr><th style="text-align: left; padding: 0.5rem; border-bottom: 2px solid #1f3a7d;"></th><th style="text-align: left; padding: 0.5rem; border-bottom: 2px solid #1f3a7d;">AI-forward employer</th><th style="text-align: left; padding: 0.5rem; border-bottom: 2px solid #1f3a7d;">AI-resistant employer</th></tr>
-  </thead>
-  <tbody>
-    <tr><td style="padding: 0.5rem; border-bottom: 1px solid #e5e7eb;">Pro</td><td style="padding: 0.5rem; border-bottom: 1px solid #e5e7eb;">You help set up, manage and improve the AI from day one</td><td style="padding: 0.5rem; border-bottom: 1px solid #e5e7eb;">Doing it by hand builds real muscle memory for the process</td></tr>
-    <tr><td style="padding: 0.5rem; border-bottom: 1px solid #e5e7eb;">Con</td><td style="padding: 0.5rem; border-bottom: 1px solid #e5e7eb;">You may never do the process manually, so it's harder to spot when the agent is wrong</td><td style="padding: 0.5rem; border-bottom: 1px solid #e5e7eb;">Grads elsewhere are learning to automate while you tick and flick</td></tr>
-    <tr><td style="padding: 0.5rem; border-bottom: 1px solid #e5e7eb;">Your fix</td><td style="padding: 0.5rem; border-bottom: 1px solid #e5e7eb;">Do the process by hand at least once</td><td style="padding: 0.5rem; border-bottom: 1px solid #e5e7eb;">Learn AI tools on your own time with dummy data</td></tr>
-  </tbody>
-</table>
+<div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0;">
+  <div style="flex: 1 1 260px; min-width: 0; border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; background: #ffffff; box-shadow: 0 1px 3px rgba(31,58,125,0.08);">
+    <div style="background: #1f3a7d; color: #ffffff; padding: 1rem 1.25rem; font-weight: 700; font-size: 1.05rem;">🤖 AI-forward employer</div>
+    <div style="padding: 0.9rem 1.25rem; border-top: 1px solid #e5e7eb;">
+      <p style="margin: 0 0 0.25rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #1f3a7d;">✅ Pro</p>
+      <p style="margin: 0; line-height: 1.5; color: #1f2937;">You help set up, manage and improve the AI from day one.</p>
+    </div>
+    <div style="padding: 0.9rem 1.25rem; border-top: 1px solid #e5e7eb;">
+      <p style="margin: 0 0 0.25rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #1f3a7d;">⚠️ Con</p>
+      <p style="margin: 0; line-height: 1.5; color: #1f2937;">You may never do the process by hand, so it's harder to spot when the agent gets it wrong.</p>
+    </div>
+    <div style="padding: 0.9rem 1.25rem; border-top: 1px solid #e5e7eb; background: #f0fdf4; border-left: 4px solid #00FF00;">
+      <p style="margin: 0 0 0.25rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #1f3a7d;">🔧 Your fix</p>
+      <p style="margin: 0; line-height: 1.5; color: #1f2937;">Do the process by hand at least once.</p>
+    </div>
+  </div>
+  <div style="flex: 1 1 260px; min-width: 0; border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; background: #ffffff; box-shadow: 0 1px 3px rgba(31,58,125,0.08);">
+    <div style="background: #2a4fa8; color: #ffffff; padding: 1rem 1.25rem; font-weight: 700; font-size: 1.05rem;">✍️ AI-resistant employer</div>
+    <div style="padding: 0.9rem 1.25rem; border-top: 1px solid #e5e7eb;">
+      <p style="margin: 0 0 0.25rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #1f3a7d;">✅ Pro</p>
+      <p style="margin: 0; line-height: 1.5; color: #1f2937;">Doing it by hand builds real muscle memory for the process.</p>
+    </div>
+    <div style="padding: 0.9rem 1.25rem; border-top: 1px solid #e5e7eb;">
+      <p style="margin: 0 0 0.25rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #1f3a7d;">⚠️ Con</p>
+      <p style="margin: 0; line-height: 1.5; color: #1f2937;">Grads elsewhere are learning to automate while you tick and flick.</p>
+    </div>
+    <div style="padding: 0.9rem 1.25rem; border-top: 1px solid #e5e7eb; background: #f0fdf4; border-left: 4px solid #00FF00;">
+      <p style="margin: 0 0 0.25rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #1f3a7d;">🔧 Your fix</p>
+      <p style="margin: 0; line-height: 1.5; color: #1f2937;">Learn AI tools in your own time with dummy data.</p>
+    </div>
+  </div>
+</div>
 
 <p>I was firmly in the right-hand column. Big organisations, lots of manual work. At the time it felt slow, but it meant I understood every step of those processes in detail.</p>
 

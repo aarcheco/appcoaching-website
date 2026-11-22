@@ -2,27 +2,27 @@
 title: "Will AI Replace Accountants in Australia? A Grad's Game Plan"
 date: 2026-11-22
 id: 10
-excerpt: "AI won't replace accountants in Australia, but it is changing the junior job. Here's a four-step game plan for grads, plus a prompt that builds yours."
+excerpt: "AI won't replace accountants in Australia. The processes stay; what changes is who does them. A Chartered Accountant's game plan for grads, from PwC audit to head of finance."
 heroImage: /blog/ai-accountants-hero.jpg
 categories: ["Accounting & Finance Career", "Career Coaching"]
-tags: ["AI in Accounting", "Graduate Accountant", "Finance Careers", "ChatGPT", "Claude"]
+tags: ["AI in Accounting", "Graduate Accountant", "Finance Careers", "Finance Automation", "Claude"]
 seoTitle: "Will AI Replace Accountants in Australia? Grad Guide"
-metaDescription: "Will AI replace accountants in Australia? No, but it's changing grad roles. A Chartered Accountant's 4-step plan to build AI skills, plus a copy-ready prompt."
+metaDescription: "Will AI replace accountants in Australia? No, but it's changing grad roles. A Chartered Accountant's plan: tie back to source, learn the process, then automate."
 updated: 2026-11-22
 faq:
   - q: "Will AI replace accountants in Australia?"
-    a: "Not as a profession. A report commissioned by CA ANZ projects a shortfall of 17,900 accounting, audit and finance professionals by 2035 and says AI will change the skills mix rather than reduce demand. What is changing is the junior work: more reviewing and explaining, less manual processing."
+    a: "Not as a profession. A report commissioned by CA ANZ projects a shortfall of 17,900 accounting, audit and finance professionals by 2035 and says AI will change the skills mix rather than reduce demand. Finance processes will always exist; what changes is whether a person or an AI agent does each step."
   - q: "Is accounting still a good career with AI?"
-    a: "For people who like logic and explaining numbers, yes. Routine processing is being automated, which pushes graduates into review, analysis and client conversations sooner. Those are the parts of the job that build a career."
+    a: "Yes, for people who like logic and explaining numbers. Routine processing is being automated, which moves graduates into reviewing, analysing and setting up automation sooner. Those are the skills that build a career."
+  - q: "Should a graduate accountant work somewhere that uses AI?"
+    a: "There are pros and cons. An AI-forward employer gets you building and managing automation early. An employer that does things by hand teaches you the process in detail. Either way, make sure you learn both the process and the tools over time."
   - q: "What AI skills do graduate accountants need?"
-    a: "Know how to use the AI tools your employer approves (such as ChatGPT, Claude, Copilot or Gemini) to draft, summarise and explain, how to check AI output against source documents, and how to keep client data out of tools that aren't approved."
-  - q: "How do I use AI as a graduate accountant without getting in trouble?"
-    a: "Read your firm's AI policy first, only use approved tools, never paste client or personal data into public AI tools, and treat every AI answer as a draft you have to check and can explain."
+    a: "Know how to trace any number back to its source document, use the AI tools your employer approves (such as ChatGPT, Claude, Copilot or Gemini) to draft and check work, review AI output properly, and keep client data out of tools that aren't approved."
 ---
 
 <blockquote style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📖 PAUL's Quick Read</strong>
-<p>Uni's wrapping up, grad programs start in a couple of months, and everyone's asking if AI is about to take the job before you've even found the kitchen. Short answer: no, but it is changing what a junior accountant does all day. This post gives you a four-step game plan and a prompt that turns it into your own 90-day plan in about 20 minutes.</p>
+<p>Grads keep asking me if AI is about to take the job before they've even found the kitchen. It isn't. Accounting processes will always exist; the question is whether you do each step or an AI agent does. Here's what I learned going from PwC audit grad to head of finance in 10 years, and a game plan for starting your career right.</p>
 </blockquote>
 
 <img src="/blog/ai-accountants-hero.jpg" alt="Desk with a laptop, tablet, calculator and financial charts - will AI replace accountants in Australia" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0; display: block;">
@@ -32,98 +32,95 @@ faq:
 <details style="background: #f7f9fc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; margin: 2rem 0;">
   <summary style="cursor: pointer; font-weight: 700; font-size: 1.1rem; color: #1f3a7d;">📑 Table of Contents</summary>
   <ul style="margin-top: 1rem; line-height: 1.8; padding-left: 1.5rem;">
-    <li><a href="#my-grad-year">What My Grad Year Looked Like</a></li>
-    <li><a href="#will-ai-replace-accountants">Will AI Replace Accountants in Australia? What the Numbers Say</a></li>
-    <li><a href="#step-1">Step 1: Sort Your Work Into Three Piles</a></li>
-    <li><a href="#step-2">Step 2: Learn the AI Tools Your Firm Allows</a></li>
-    <li><a href="#step-3">Step 3: Become a Great Reviewer, Fast</a></li>
-    <li><a href="#step-4">Step 4: Double Down on the Human Bits</a></li>
-    <li><a href="#your-plan">Build Your 90-Day Plan With AI</a></li>
-    <li><a href="#is-accounting-still-a-good-career">So, Is Accounting Still a Good Career?</a></li>
+    <li><a href="#source-of-truth">Everything Ties Back to a Source Document</a></li>
+    <li><a href="#flight-centre">Flight Centre: Why Does My P&amp;L Look Like This?</a></li>
+    <li><a href="#will-ai-replace-accountants">Will AI Replace Accountants in Australia?</a></li>
+    <li><a href="#which-employer">AI-Forward or AI-Resistant Employer: Pros and Cons</a></li>
+    <li><a href="#work-smarter">Work Smarter, Not Harder</a></li>
+    <li><a href="#game-plan">Your Grad Game Plan</a></li>
+    <li><a href="#your-plan">Build Your Plan With AI</a></li>
   </ul>
 </details>
 
-<p>Will AI replace accountants in Australia? No. The profession is short of people, not about to run out of work. But AI is changing the junior job: less manual processing, more checking, explaining and judgement, and much sooner than it used to. The grads who do well will be the ones who use AI to do the grunt work faster and get good at the parts AI can't do.</p>
+<p>Will AI replace accountants in Australia? No. The processes accountants run, from bank reconciliations to month-end, will always exist. What's changing is who does each step: you, or an AI agent you set up and check. The grads who win will understand the process deeply enough to automate it, and know when the AI has got it wrong.</p>
 
-<h2 id="my-grad-year">What My Grad Year Looked Like</h2>
+<h2 id="source-of-truth">Everything Ties Back to a Source Document</h2>
 
-<p>I started my career in the audit graduate program at PwC. It was time-poor and high-pressure: gather the evidence, review the workpapers, move to the next file, and accuracy was never optional.</p>
+<p>I started in 2016 as a graduate auditor at PwC, on large ASX-listed clients across mining, not-for-profit, fashion retail and financial services. Different industries, same job: <strong>tie every number back to a source of truth</strong>.</p>
 
-<p>A lot of that first year was the stuff people now say AI will take over. Matching numbers to documents. Building the same schedules again. Ticking off the same checks, file after file.</p>
+<p>Day to day that meant vouching invoices (pick a ledger entry, find the invoice behind it), checking cash against bank confirmations, reconciling creditor balances to supplier statements, and counting stock and assets against the register. Glamorous? Not really. But it rewired my brain.</p>
 
-<p>Here's the thing though. The repetitive work wasn't what built my career. What built it was learning to <strong>spot when a number didn't make sense</strong> and then explain why to someone more senior. Later at Flight Centre, that became the habit that got me nicknamed "Mr Excel": people didn't come to me because I typed faster, they came because I could tell them why their file was wrong.</p>
+<p>One that stuck with me: an expense recorded in the wrong period. The ledger said one year, the invoice said another. Nobody had done anything dodgy; the entry just didn't match its source. That's the lesson. Finance systems are downstream. Every number in them started life as an invoice, a bank statement, a supplier statement, a quote or a purchase order. If you can trace it back, you can trust it.</p>
 
-<p>AI is going to speed up the typing. It still needs someone who knows when the answer is wrong.</p>
+<p>Audit basically bred that into me. And it turned out to be the most useful thing I learned all year.</p>
+
+<h2 id="flight-centre">Flight Centre: "Why Does My P&amp;L Look Like This?"</h2>
+
+<p>From 2017 I was an operations accountant at Flight Centre, then specialist accountant and assistant team leader. A lot of my week was bank reconciliations across store bank accounts, matched line by line in Excel. Tick, flick, repeat.</p>
+
+<p>The other half felt more like finance consulting. Store managers and leaders around Australia would ask one question in a hundred different ways: why does my P&amp;L look like this?</p>
+
+<p>The answer was always the same skill I learned in audit. An expense they didn't recognise? Traced it to the supplier invoice. A cost that looked huge? An entertainment bill. Revenue down? Timing, it landed in a different month. Something that wasn't theirs at all? Coded to the wrong cost centre. Like a detective, except the crime was usually a miscoded receipt.</p>
+
+<p>Once I could <strong>tie their P&amp;L back to a bank statement or an invoice</strong>, the conversation changed from "the numbers are wrong" to "ah, that makes sense." That's confidence in the numbers, and it's what you want as early as possible as a grad, whether you're keying entries in or checking someone else's.</p>
+
+<p>It's also where I started automating. My first real win was swapping copy-paste reporting for a Power Query refresh. Later I travelled to India to help onboard offshore teams for accounts payable, expense reimbursements and bank recs, and tracked their performance with a Power BI dashboard.</p>
 
 <h2 id="will-ai-replace-accountants">Will AI Replace Accountants in Australia? What the Numbers Say</h2>
 
-<p>If AI were about to wipe out accounting jobs, you'd expect firms to be cutting back on people. The forecasts point the other way.</p>
+<p>If AI were about to wipe out accounting jobs, you'd expect forecasts of fewer accountants. They point the other way:</p>
 
 <ul>
   <li>An Oxford Economics report commissioned by CA ANZ projects a <a href="https://www.accountantsdaily.com.au/business/22903-ai-changing-the-skills-mix-required-for-accountants" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">shortfall of 17,900 accounting, audit and finance professionals by 2035</a>, and says AI will change the skills mix rather than reduce demand.</li>
-  <li>Intuit surveyed 1,000 Australians aged 18 to 24, and <a href="https://itbrief.com.au/story/ai-makes-accounting-careers-more-attractive-to-gen-z" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">94% said AI was making a career in accounting and finance more attractive</a>. In the same research, 75% were worried about becoming overly reliant on AI. Fair.</li>
-  <li>PwC Australia is aiming for <a href="https://www.pwc.com.au/media/2026/pwc-australia-diversifies-assurance-graduate-intake-to-meet-demand.html" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">50% of its 2027 Assurance graduate intake to come from non-accounting backgrounds</a>, after historically drawing 95% from accounting majors.</li>
+  <li>Intuit surveyed 1,000 Australians aged 18 to 24, and <a href="https://itbrief.com.au/story/ai-makes-accounting-careers-more-attractive-to-gen-z" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">94% said AI was making a career in accounting and finance more attractive</a>, while 75% worried about becoming overly reliant on it. Fair.</li>
+  <li>PwC Australia is aiming for <a href="https://www.pwc.com.au/media/2026/pwc-australia-diversifies-assurance-graduate-intake-to-meet-demand.html" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">50% of its 2027 Assurance graduate intake to come from non-accounting backgrounds</a>.</li>
 </ul>
 
-<p>Put those together and the message is clear. <strong>The jobs are there, but the job description is changing.</strong> As one software CEO put it in <a href="https://cfotech.com.au/story/ai-reshapes-entry-level-work-leaders-warn-on-skills" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">CFOtech</a>, today's graduates will be moved into the position of first-line reviewer far quicker than the generations before them.</p>
+<p>I'm also seeing job titles change. More and more roles I see, in Australia and overseas, are titled "finance engineer", and they're filled by people with accounting backgrounds. That's the shift in one title: <strong>we're engineering the finance process, not just running it</strong>. The bank rec still has to happen. The question is who set up the agent doing it, who manages it, and who checks it ties back to the bank statement.</p>
 
-<p>That's the bit to prepare for. Here's how.</p>
+<h2 id="which-employer">AI-Forward or AI-Resistant Employer: Pros and Cons</h2>
 
-<h2 id="step-1">Step 1: Sort Your Work Into Three Piles</h2>
+<p>Here's the big caveat: a lot depends on where you land as a grad.</p>
 
-<p>Before you learn any tool, get clear on what the job actually is. Take your current role (or a grad job ad you're going for) and list every task you'd do in a normal week. Then sort each one into a pile:</p>
+<table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
+  <thead>
+    <tr><th style="text-align: left; padding: 0.5rem; border-bottom: 2px solid #1f3a7d;"></th><th style="text-align: left; padding: 0.5rem; border-bottom: 2px solid #1f3a7d;">AI-forward employer</th><th style="text-align: left; padding: 0.5rem; border-bottom: 2px solid #1f3a7d;">AI-resistant employer</th></tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding: 0.5rem; border-bottom: 1px solid #e5e7eb;">Pro</td><td style="padding: 0.5rem; border-bottom: 1px solid #e5e7eb;">You help set up, manage and improve the AI from day one</td><td style="padding: 0.5rem; border-bottom: 1px solid #e5e7eb;">Doing it by hand builds real muscle memory for the process</td></tr>
+    <tr><td style="padding: 0.5rem; border-bottom: 1px solid #e5e7eb;">Con</td><td style="padding: 0.5rem; border-bottom: 1px solid #e5e7eb;">You may never do the process manually, so it's harder to spot when the agent is wrong</td><td style="padding: 0.5rem; border-bottom: 1px solid #e5e7eb;">Grads elsewhere are learning to automate while you tick and flick</td></tr>
+    <tr><td style="padding: 0.5rem; border-bottom: 1px solid #e5e7eb;">Your fix</td><td style="padding: 0.5rem; border-bottom: 1px solid #e5e7eb;">Do the process by hand at least once</td><td style="padding: 0.5rem; border-bottom: 1px solid #e5e7eb;">Learn AI tools on your own time with dummy data</td></tr>
+  </tbody>
+</table>
 
-<ol>
-  <li><strong>AI can draft it.</strong> Summarising a document, writing a first version of an email, explaining an accounting standard in plain English, writing a formula, turning notes into a checklist.</li>
-  <li>AI can help, you finish it. Reconciliation notes, variance commentary, workpaper write-ups. AI speeds up the first draft; you supply the facts and the judgement.</li>
-  <li>Human only. Asking the client the awkward question, deciding if something is material, signing off, explaining bad news to a manager.</li>
-</ol>
+<p>I was firmly in the right-hand column. Big organisations, lots of manual work. At the time it felt slow, but it meant I understood every step of those processes in detail.</p>
 
-<p>Most grads are surprised how big pile one is. That's not a threat. It's time you get back to spend on pile three, which is where promotions come from.</p>
+<p>When I later moved into smaller businesses where technology was an open playing field, I could actually suggest changes. That manual knowledge is exactly what let me automate with confidence. I wrote more about that move in <a href="/blog/corporate-vs-small-business-where-your-career-grows-faster" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">corporate vs small business careers</a>.</p>
 
-<h2 id="step-2">Step 2: Learn the AI Tools Your Firm Allows</h2>
+<p>So if you end up somewhere manual, don't downplay it. You'll have knowledge the grads who went straight to AI won't. Just don't stay there so long you fall behind, because sooner or later every business will be using AI in some form.</p>
 
-<p>Start with the rules, not the tools. Find your firm's AI policy (ask in week one if nobody mentions it) and find out which tools are approved. Many workplaces use Copilot inside Microsoft 365; others allow ChatGPT, Claude or Gemini on a business plan.</p>
+<h2 id="work-smarter">Work Smarter, Not Harder</h2>
 
-<p>The non-negotiable: <strong>never paste client or personal data into an AI tool that isn't approved</strong>. Not a name, not a TFN, not "just the trial balance". If in doubt, leave it out. The same Intuit research found 94% of respondents raised concerns about data security when using AI tools, so you're in good company.</p>
+<p>In 10 years I've gone from grad accountant to head of finance. I don't think that happens if I'm still ticking and flicking.</p>
 
-<p>Then practise on dummy data. Some easy ones to try this week:</p>
+<p>Wherever I went, I automated what I could: Excel, then Power Query, then Power BI, then tools like Zapier. Even in businesses set in their ways, I pushed to do things differently. At Coronis, streamlining the processes I inherited freed up more than 40% of my capacity. At Aveo, redesigning manual data entry and reporting removed about 30 hours of work a week. These days I've designed an AI bank reconciliation agent with approval controls, which is a funny full circle for someone who spent his grad years doing bank recs by hand.</p>
 
-<ul>
-  <li>Ask it to explain revenue recognition like you're 15, then like you're a CFO. Compare the two.</li>
-  <li>Give it a made-up set of monthly expenses and ask for three lines of variance commentary.</li>
-  <li>Ask it to write an email to a "client" chasing missing invoices, polite but firm.</li>
-  <li>Paste a messy list of tasks and ask it to turn them into a checklist you'd hand to the next grad.</li>
-</ul>
+<p>Here's what I learned: <strong>working harder doesn't get the callbacks from recruiters</strong>. Results do. "Saved 30 hours a week" gets read. "Worked really hard" gets skimmed. Working smarter grows your resume faster, and that's what moves you up the ladder.</p>
 
-<p>Excel still matters, and AI can write and explain formulas for you too. But the bigger shift is getting comfortable asking an AI tool to do the first pass of almost anything written.</p>
+<p>The good news? The jump from doing it manually to automating it will be much faster for today's grads than it was for me.</p>
 
-<h2 id="step-3">Step 3: Become a Great Reviewer, Fast</h2>
-
-<p>If grads become first-line reviewers sooner, then <strong>checking AI output is the new core skill</strong>. Audit drilled one habit into me: nothing gets signed off until someone has checked it. AI makes that more important, not less, because it's confidently wrong in a way that looks very professional.</p>
-
-<p>A simple review routine for anything AI produces:</p>
+<h2 id="game-plan">Your Grad Game Plan</h2>
 
 <ol>
-  <li>Tie it back. Every number should trace to a source document or system report.</li>
-  <li>Recalculate the totals yourself. AI is better at maths than it used to be, but "better" isn't "audited".</li>
-  <li>Check any standard, rule or legislation it quotes against the actual source.</li>
-  <li>Ask: could I explain this to my manager without the AI in the room? If not, you're not done.</li>
+  <li>Learn to tie back. Each week, pick five transactions and trace each one to its source: invoice, bank statement, supplier statement, purchase order.</li>
+  <li>Learn the process by hand at least once. Do one bank rec, one accrual, one month-end task manually so you know what "right" looks like.</li>
+  <li>Learn the AI tools your firm allows. Read the AI policy first, and never paste client or personal data into an unapproved tool.</li>
+  <li>Review everything AI gives you. Tie it back to source, recalculate totals, and ask: could I explain this to my manager without the AI in the room?</li>
 </ol>
 
-<p>That last one is the test that protects you from the over-reliance worry. Use AI to go faster, not to skip understanding.</p>
+<h2 id="your-plan">Build Your Plan With AI</h2>
 
-<h2 id="step-4">Step 4: Double Down on the Human Bits</h2>
-
-<p>The most valuable thing I learned across PwC, Flight Centre and beyond wasn't processing numbers. It was translating them: telling someone what the numbers mean so they can make a decision. I wrote about that in <a href="/blog/why-i-chose-accounting-the-journey-from-rule-follower-to-translator" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">why I chose accounting</a>.</p>
-
-<p>AI can write the paragraph. It can't sit in the meeting, read the room, and notice the operations manager has gone quiet because the number you just showed them is their problem. <strong>Clear explaining is the skill AI makes more valuable</strong>, because everyone now has more numbers and less time.</p>
-
-<p>Practical ways to build it as a grad: volunteer to present a small piece of work, write a three-line summary at the top of every workpaper, and ask a senior after meetings what they noticed that you didn't. Think of it like footy: AI is the new teammate who never misses training. You don't beat them at running laps. You win your spot by reading the game.</p>
-
-<h2 id="your-plan">Build Your 90-Day Plan With AI</h2>
-
-<p>Here's the fun part: you can use AI to plan how you'll learn AI. The prompt below gets ChatGPT, Claude, Copilot or Gemini to <strong>interview you one question at a time</strong>, then build your three piles and a 90-day practice plan. Don't share your employer's confidential information or any client details while you do it.</p>
+<p>This prompt gets ChatGPT, Claude, Copilot or Gemini to <strong>interview you one question at a time</strong>, then build your plan. Don't share confidential employer or client details.</p>
 
 <blockquote class="paul-prompt-box" style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📋 PAUL's Prompt (Grad AI Game Plan)</strong>
@@ -131,48 +128,43 @@ faq:
 
 <details style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; margin: 1rem 0;">
   <summary style="cursor: pointer; font-weight: 700; color: #1f3a7d;">📋 See Full Prompt (Click to Expand)</summary>
-  <p class="paul-prompt">You are a practical career coach for a graduate or junior accountant in Australia. Help me build a 90-day plan to use AI tools well in my role.
+  <p class="paul-prompt">You are a practical career coach for a graduate or junior accountant in Australia. Help me build a 90-day plan to understand my finance processes and use AI tools well.
 
 Interview me ONE question at a time. Wait for my answer before asking the next one. Never ask for my employer's name, client names or any confidential or personal information.
 
 Cover these, in this order:
 1. My role or the role I'm applying for (audit, tax, business services, corporate finance, other) and how long I've been in it.
-2. The tasks I do in a normal week. Ask me to list them, then ask follow-up questions until the list feels complete.
-3. Which AI tools my workplace allows (if I don't know, tell me how to find out).
-4. My current comfort with AI tools and with Excel, from 1 to 5.
-5. One part of the job I find hardest or slowest.
+2. The tasks I do in a normal week. Ask follow-up questions until the list feels complete.
+3. Whether my workplace is AI-forward, cautious, or against AI, and which AI tools are approved (if I don't know, tell me how to find out).
+4. My comfort with AI tools and with Excel, from 1 to 5.
+5. One process I don't fully understand yet.
 6. How many hours a week I can spend practising.
 
 When you have everything:
-- Sort my tasks into three piles in a table: "AI can draft it", "AI helps, I finish it", "Human only". Give a one-line reason for each.
-- Build a 90-day plan in three 30-day blocks, with one weekly practice exercise I can do on made-up data.
-- Give me a 4-point checklist for reviewing AI output before I use it.
-- Suggest two ways to practise explaining numbers to non-accountants.
-- Be honest: if a task I listed shouldn't go near AI because of confidentiality, say so.</p>
+- For each task, tell me the source document it should tie back to.
+- Sort my tasks into a table: "AI can draft it", "AI helps, I finish it", "Human only", with a one-line reason each.
+- Based on my employer type, tell me what I risk missing out on (hands-on process knowledge or automation skills) and how to fill the gap.
+- Build a 90-day plan in three 30-day blocks, with one weekly exercise on made-up data.
+- Give me a 4-point checklist for reviewing AI output.
+- Be honest: if a task shouldn't go near AI because of confidentiality, say so.</p>
 </details>
 
 <button type="button" class="paul-copy">📋 Copy prompt</button>
 </blockquote>
 
-<p>When it's done, read the "human only" pile twice. That's your career. The rest is admin you're about to get faster at.</p>
+<p>Accounting is still a great career for people who like logic and explaining numbers. The process will always exist. Make sure you understand it well enough to be the one who engineers it, not the one wondering why the agent got the interesting work.</p>
 
-<h2 id="is-accounting-still-a-good-career">So, Is Accounting Still a Good Career?</h2>
-
-<p>For people who like logic and enjoy explaining numbers, yes. The forecast shortfall says firms will need people. AI says the people they need will spend less time on data entry and more time on review, analysis and conversations, which, to be fair, were always the good bits.</p>
-
-<p>The risk isn't AI replacing you. It's spending your first two years doing things manually that a colleague does in ten minutes with AI, then wondering why they got the interesting work. Mission failed successfully. Let's not.</p>
-
-<p>If you're weighing up where to start, my post on <a href="/blog/corporate-vs-small-business-where-your-career-grows-faster" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">corporate vs small business careers</a> is worth a read too. And if you want help building your AI and Excel skills for your first finance role, have a look at my <a href="/services" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">coaching services</a>.</p>
+<p>If you want help building your AI and Excel skills for your first finance role, have a look at my <a href="/services" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">coaching services</a>, or read <a href="/blog/why-i-chose-accounting-the-journey-from-rule-follower-to-translator" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">why I chose accounting</a>.</p>
 
 <blockquote style="background: #f0fdf4; border: 1px solid #dcfce7; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>⬆️ PAUL's LevelUp</strong>
-<p>AI won't replace accountants, but accountants who use AI well will get the better work sooner. This week, run the prompt above, find your firm's AI policy, and practise one task from your "AI can draft it" pile on made-up data.</p>
+<p>AI won't replace accountants, but accountants who understand the process and can automate it will climb faster. This week, trace five transactions back to their source documents, then run the prompt above.</p>
 </blockquote>
 
 <section style="background: linear-gradient(135deg, #1f3a7d 0%, #2a4fa8 100%); color: white; border-radius: 12px; padding: 2.5rem; margin: 3rem 0; text-align: center;">
   <h3 style="color: white; margin-top: 0;">Starting Your Finance Career and Want an Edge?</h3>
 
-  <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 1.5rem; color: white;">I coach graduates and young finance professionals 1-on-1 on AI tools, Excel and explaining numbers clearly, in Brisbane and online across Australia. Book a free 15-minute discovery call.</p>
+  <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 1.5rem; color: white;">I coach graduates and young finance professionals 1-on-1 on AI tools, Excel and understanding finance processes, in Brisbane and online across Australia. Book a free 15-minute discovery call.</p>
 
   <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
     <a href="https://cal.com/app-coaching-xcgvda" style="background: #00FF41; color: #1f3a7d; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 700; display: inline-block;">Book a Free Discovery Call</a>

@@ -1,5 +1,46 @@
 [
   {
+    "id": 10,
+    "filename": "010_will_ai_replace_accountants_australia.md",
+    "title": "Will AI Replace Accountants in Australia? A Grad's Game Plan",
+    "slug": "will-ai-replace-accountants-in-australia-a-grads-game-plan",
+    "date": "2026-11-22",
+    "updated": "2026-11-22",
+    "excerpt": "AI won't replace accountants in Australia. The processes stay; what changes is who does them. A Chartered Accountant's game plan for grads, from PwC audit to head of finance.",
+    "seoTitle": "Will AI Replace Accountants in Australia? Grad Guide",
+    "metaDescription": "Will AI replace accountants in Australia? No, but it's changing grad roles. A Chartered Accountant's plan: tie back to source, learn the process, then automate.",
+    "heroImage": "/blog/ai-accountants-hero.jpg",
+    "categories": [
+      "Accounting & Finance Career",
+      "Career Coaching"
+    ],
+    "tags": [
+      "AI in Accounting",
+      "Graduate Accountant",
+      "Finance Careers",
+      "Finance Automation",
+      "Claude"
+    ],
+    "faq": [
+      {
+        "q": "Will AI replace accountants in Australia?",
+        "a": "Not as a profession. A report commissioned by CA ANZ projects a shortfall of 17,900 accounting, audit and finance professionals by 2035 and says AI will change the skills mix rather than reduce demand. Finance processes will always exist; what changes is whether a person or an AI agent does each step."
+      },
+      {
+        "q": "Is accounting still a good career with AI?",
+        "a": "Yes, for people who like logic and explaining numbers. Routine processing is being automated, which moves graduates into reviewing, analysing and setting up automation sooner. Those are the skills that build a career."
+      },
+      {
+        "q": "Should a graduate accountant work somewhere that uses AI?",
+        "a": "There are pros and cons. An AI-forward employer gets you building and managing automation early. An employer that does things by hand teaches you the process in detail. Either way, make sure you learn both the process and the tools over time."
+      },
+      {
+        "q": "What AI skills do graduate accountants need?",
+        "a": "Know how to trace any number back to its source document, use the AI tools your employer approves (such as ChatGPT, Claude, Copilot or Gemini) to draft and check work, review AI output properly, and keep client data out of tools that aren't approved."
+      }
+    ]
+  },
+  {
     "id": 9,
     "filename": "009_common_excel_mistakes_mr_excel.md",
     "title": "25 Common Excel Mistakes I Fixed for Years (and How I Became \"Mr Excel\" at Flight Centre)",

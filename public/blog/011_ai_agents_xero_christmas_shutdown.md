@@ -133,6 +133,8 @@ faq:
 
 <p>Don't just take my word for it. Watch it happen. Daniel from The Rollout <a href="https://the-rollout.co/p/3-ways-to-connect-claude-to-xero-ffbd" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">recorded Claude working through Xero's bank reconcile screen</a> on the demo company, matching two bills to a $4,500 payment until Xero came back with "Totals match" (here's his <a href="https://www.youtube.com/watch?v=2qvFaHAlm-Q" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">full 16-minute video</a>). And it's not just Claude: on The Accounting Podcast, Blake Oliver and David Leary <a href="https://www.youtube.com/watch?v=56IF-Fd5R18" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">tested ChatGPT's agent mode reconciling inside Xero</a>. Watching a cursor tick off your bank rec without you is equal parts impressive and deeply unsettling.</p>
 
+<p>Only got a minute? Here's <a href="https://www.instagram.com/reel/DgGON-QR0OQ/" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">a short reel of an AI agent at work in Xero</a>.</p>
+
 <h2 id="where-agents-fail">Where the Agents Still Needed Me</h2>
 
 <p>Brutal honesty cuts both ways, so here's where the agents fell over:</p>

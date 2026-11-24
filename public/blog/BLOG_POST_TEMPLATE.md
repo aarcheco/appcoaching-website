@@ -92,6 +92,8 @@ Never start a line with "## " or "---".</p>
 
 **Length:** 1,200–1,500 words of prose (the prompt text doesn't count). Long enough to rank for a how-to search, short enough to actually be read.
 
+**Prompts must offer a schedule:** if the task a prompt does is recurring (daily, weekly, monthly: bank recs, invoice reminders, budget check-ins, reports), the prompt's last step asks the reader whether they want it set up as a scheduled routine so the agent runs it automatically, and how often/when (e.g. every weekday at 7am). If yes, the agent saves the confirmed rules so scheduled runs don't repeat the setup questions, sets up the schedule if the AI tool supports scheduled tasks, or otherwise tells them the simplest way to schedule it. The post's body should briefly say why: a routine that runs itself frees up mental capacity, and a prompt you have to remember to run isn't much of a win. One-off prompts (e.g. a career plan interview) skip this.
+
 **Voice:** casual, plain Australian English, first person, like Aaron explaining it over a coffee. Get to the point. Personal experience only where it genuinely fits the step being explained (e.g. PwC audit → "check the output"). Follow the VOICE GUIDE below.
 
 ## VOICE GUIDE (Aaron's humour, from his own writing)

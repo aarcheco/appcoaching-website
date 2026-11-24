@@ -1,5 +1,51 @@
 [
   {
+    "id": 11,
+    "filename": "011_ai_agents_xero_christmas_shutdown.md",
+    "title": "Your Bookkeeper's on Holiday. Your AI Agents Aren't: Xero Over the Christmas Shutdown",
+    "slug": "your-bookkeepers-on-holiday-your-ai-agents-arent-xero-over-the-christmas-shutdown",
+    "date": "2026-11-24",
+    "updated": "2026-11-24",
+    "excerpt": "AI agents can keep your Xero books ticking over the Christmas shutdown: bank recs, invoices, bills, payroll prep and reports. A brutally honest look at what that means for bookkeepers, grads and Xero experts.",
+    "seoTitle": "AI Bookkeeping in Xero Over the Christmas Shutdown",
+    "metaDescription": "Can AI agents run your Xero bookkeeping over the Christmas shutdown? I tested bank recs, AR, AP, payroll and reporting. A brutally honest take for bookkeepers.",
+    "heroImage": "/blog/christmas-shutdown-hero.jpg",
+    "categories": [
+      "Business AI",
+      "Accounting & Finance Career"
+    ],
+    "tags": [
+      "AI Bookkeeping",
+      "Xero",
+      "Claude",
+      "Christmas Shutdown",
+      "Bookkeepers",
+      "AI Agents"
+    ],
+    "faq": [
+      {
+        "q": "Can AI agents do bookkeeping in Xero?",
+        "a": "Yes. Connected to Xero, an AI agent can code bank transactions, enter bills, draft invoice reminders, prepare pay runs and write management report commentary. A person still needs to review the work, approve payments and lodge with the ATO."
+      },
+      {
+        "q": "Will AI replace bookkeepers in Australia?",
+        "a": "It's replacing the data entry part of the job fastest: coding, matching and keying. What's left is reviewing the agents' work, handling judgement calls and messy documents, approving payments and lodging BAS and STP. That needs fewer people, so the role is shrinking and changing rather than disappearing."
+      },
+      {
+        "q": "Is it safe to let an AI agent run my books over Christmas?",
+        "a": "Only with guardrails. Test it on Xero's demo company first, give it read-and-code access only, never let it pay, approve or lodge anything, and review its run log and exceptions when you're back."
+      },
+      {
+        "q": "Should I still become a bookkeeper?",
+        "a": "Not if the plan is data entry. If you like the work, aim for the parts agents can't do: reviewing and correcting agent output, payroll and BAS compliance, systems setup and advising business owners."
+      },
+      {
+        "q": "What still needs a human over the Christmas shutdown?",
+        "a": "Approving and paying bills and wages, paying super within the Payday Super timeframe, Single Touch Payroll, answering the agent's exceptions and lodging the December quarter BAS by 28 February."
+      }
+    ]
+  },
+  {
     "id": 10,
     "filename": "010_will_ai_replace_accountants_australia.md",
     "title": "Will AI Replace Accountants in Australia? A Grad's Game Plan",

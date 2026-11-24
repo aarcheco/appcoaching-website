@@ -11,9 +11,9 @@ metaDescription: "Can AI agents run your Xero bookkeeping over the Christmas shu
 updated: 2026-11-24
 faq:
   - q: "Can AI agents do bookkeeping in Xero?"
-    a: "Yes. Connected to Xero, an AI agent can code bank transactions, enter bills, draft invoice reminders, prepare pay runs and write management report commentary. A person still needs to review the work, approve payments and lodge with the ATO."
+    a: "Yes. Connected to Xero, an AI agent can code bank transactions, enter bills, send invoice reminders, prepare pay runs and write management report commentary, on a schedule. A person still needs to review the work, approve payments and lodge with the ATO."
   - q: "Will AI replace bookkeepers in Australia?"
-    a: "It's replacing the data entry part of the job fastest: coding, matching and keying. What's left is reviewing the agents' work, handling judgement calls and messy documents, approving payments and lodging BAS and STP. That needs fewer people, so the role is shrinking and changing rather than disappearing."
+    a: "It's already replacing the core of the job: coding, matching, keying and chasing. What's left is reviewing the agents' work, judgement calls, messy documents, approving payments and lodging BAS and STP. That needs far fewer people. The role isn't disappearing overnight, but most of the jobs in it are on borrowed time."
   - q: "Is it safe to let an AI agent run my books over Christmas?"
     a: "Only with guardrails. Test it on Xero's demo company first, give it read-and-code access only, never let it pay, approve or lodge anything, and review its run log and exceptions when you're back."
   - q: "Should I still become a bookkeeper?"
@@ -45,7 +45,7 @@ faq:
   </ul>
 </details>
 
-<p>Can AI agents do your bookkeeping in Xero over the Christmas shutdown? Yes. Bank recs, chasing invoices, entering bills, preparing payroll and writing up the month can all be handed to agents now. What still needs a person is reviewing their work, the judgement calls, and anything that moves money or goes to the ATO. That's great news for business owners. For bookkeepers and accounts officers, it's a warning.</p>
+<p>Can AI agents do your bookkeeping in Xero over the Christmas shutdown? Yes. Bank recs, chasing invoices, entering bills, preparing payroll and writing up the month can all be handed to agents now. What still needs a person is reviewing their work, the judgement calls, and anything that moves money or goes to the ATO. That's great news for business owners. For bookkeepers and accounts officers, it's not a warning. It's an eviction notice with a short settlement.</p>
 
 <h2 id="automating-my-old-job">I Automated My Old Job</h2>
 
@@ -63,7 +63,7 @@ faq:
 
 <p>Then January hits and someone faces three weeks of unreconciled transactions, a pile of bills and a pay run, with the December quarter BAS due by <a href="https://www.ato.gov.au/businesses-and-organisations/preparing-lodging-and-paying/business-activity-statements-bas/due-dates-for-lodging-and-paying-your-bas" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">28 February</a>. And if you pay anyone over the break, <a href="https://www.ato.gov.au/businesses-and-organisations/super-for-employers/payday-super/about-payday-super" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Payday Super</a> now means their super has to land in their fund within 7 business days of payday, Christmas or not.</p>
 
-<p>The old answer was to pay someone to work through the break, holiday rates and all, or to suffer the January catch-up. The new answer is to let the agents keep the books moving while everyone's at the beach. Is it free? Free-ish. It costs less than the office Christmas party bar tab. And the agents don't need a Kris Kringle, don't eat the last mince pie and never ask to leave early on Christmas Eve.</p>
+<p>The old answer was to pay someone to work through the break, holiday rates and all, or to suffer the January catch-up. The new answer is to put the agents on a schedule and let them keep the books moving while everyone's at the beach. Is it free? Free-ish. It costs less than the office Christmas party bar tab. And the agents don't need a Kris Kringle, don't eat the last mince pie and never ask to leave early on Christmas Eve.</p>
 
 <h2 id="what-the-agents-did">What I Handed the Agents</h2>
 
@@ -85,11 +85,11 @@ faq:
     <div style="background: #1f3a7d; color: #ffffff; padding: 1rem 1.25rem; font-weight: 700; font-size: 1.05rem;">📤 Accounts receivable</div>
     <div style="padding: 0.9rem 1.25rem; border-top: 1px solid #e5e7eb;">
       <p style="margin: 0 0 0.25rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #1f3a7d;">🤖 The agent did</p>
-      <p style="margin: 0; line-height: 1.5; color: #1f2937;">Found overdue invoices, drafted polite (Christmas-appropriate) reminder emails and updated the aged receivables summary.</p>
+      <p style="margin: 0; line-height: 1.5; color: #1f2937;">Found overdue invoices and sent the reminder emails itself, politely and on schedule, then updated the aged receivables summary.</p>
     </div>
     <div style="padding: 0.9rem 1.25rem; border-top: 1px solid #e5e7eb; background: #f0fdf4; border-left: 4px solid #00FF00;">
       <p style="margin: 0 0 0.25rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #1f3a7d;">🧑 I still did</p>
-      <p style="margin: 0; line-height: 1.5; color: #1f2937;">Read the drafts and hit send.</p>
+      <p style="margin: 0; line-height: 1.5; color: #1f2937;">Nothing, unless a customer rang or emailed to question an invoice. I didn't write a single reminder.</p>
     </div>
   </div>
   <div style="flex: 1 1 260px; min-width: 0; border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; background: #ffffff; box-shadow: 0 1px 3px rgba(31,58,125,0.08);">
@@ -127,7 +127,7 @@ faq:
   </div>
 </div>
 
-<p>Notice the pattern? The agent did the doing. I did the <strong>checking, approving and paying</strong>. That's not a small shift in a bookkeeper's job description. That's most of the job description gone.</p>
+<p>Notice the pattern? The agent did the doing. I did the <strong>checking, approving and paying</strong>, plus the odd phone call from a customer who wanted to argue about an invoice. That's not a small shift in a bookkeeper's job description. That's most of the job description gone.</p>
 
 <p>Xero is heading the same way. Its own AI, JAX, already reconciles bank transactions it's highly confident about, and Xero says <a href="https://www.xero.com/au/media-releases/new-ai-innovations-xerocon-denver/" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Auto Bank Reconciliation saves accountants and bookkeepers around 50% of their monthly bank rec time</a>, with more than 100 million transactions auto-reconciled since launch.</p>
 
@@ -145,7 +145,9 @@ faq:
 
 <h2 id="brutal-bit">The Brutal Bit: What This Means for Bookkeepers</h2>
 
-<p>Here's my honest assessment. The core duties of a bookkeeper or accounts officer in a small or medium business, the coding, matching, keying and chasing, are becoming obsolete. Not in ten years. The tools exist now, and the only thing slowing it down is how fast businesses adopt them.</p>
+<p>Here's my honest assessment. The core duties of a bookkeeper or accounts officer in a small or medium business, the coding, matching, keying and chasing, are obsolete. Not "in ten years". Now. The tools exist today, and the only thing keeping those jobs alive is how slowly businesses get around to switching them on.</p>
+
+<p>If 80% of your week is coding, matching, keying and chasing, then 80% of your job is now a subscription.</p>
 
 <p>What's left is real work, but it's less work:</p>
 
@@ -157,27 +159,31 @@ faq:
   <li>Explaining the numbers to the business owner</li>
 </ul>
 
-<p>That's a job for fewer people. A business that needed a full-time accounts officer might need a part-time reviewer. A bookkeeping practice that needed five staff for its client list might need two.</p>
+<p>That's a job for far fewer people. A business that needed a full-time accounts officer needs a part-time reviewer. A bookkeeping practice that needed five staff for its client list needs two, and the other three are fighting over a shrinking pile of review work.</p>
 
-<p>The industry surveys are more optimistic. Xero's research found <a href="https://smallbiztrends.com/ai-helps-accounting-practices-boost-productivity-without-cutting-jobs/" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">88% of firms expect AI won't affect team sizes over the next year</a>. Over the next year, sure. I'd love to see the five-year answer. Meanwhile <a href="https://www.accountantsdaily.com.au/technology/22527-accounting-firms-ai-investments-moving-beyond-just-clerical-tasks" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">two-thirds of Australian accounting firms</a> say automating transaction coding and reconciliations will have the biggest impact on their practices in the next two to three years. Those are the exact tasks a bookkeeper's week is built on.</p>
+<p>The industry surveys are more optimistic. Xero's research found <a href="https://smallbiztrends.com/ai-helps-accounting-practices-boost-productivity-without-cutting-jobs/" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">88% of firms expect AI won't affect team sizes over the next year</a>. Over the next year, sure. Ask them again in five. Nobody surveys the turkeys in November. Meanwhile <a href="https://www.accountantsdaily.com.au/technology/22527-accounting-firms-ai-investments-moving-beyond-just-clerical-tasks" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">two-thirds of Australian accounting firms</a> say automating transaction coding and reconciliations will have the biggest impact on their practices in the next two to three years. Those are the exact tasks a bookkeeper's week is built on.</p>
 
 <h2 id="grads">If You're a Grad (or Eyeing a Bookkeeping Course)</h2>
 
 <p>I'll be blunt because nobody was blunt with me: <strong>don't train for the data entry</strong>. If a course's selling point is that you'll learn to code transactions and reconcile bank accounts in Xero, you're learning the part of the job the agents already do.</p>
 
-<p>Learn it once, absolutely. You can't check an agent's bank rec if you've never done one. Then aim at the bits agents can't do: reviewing and correcting their work, payroll and BAS compliance, setting up the systems, and sitting across from a business owner explaining why their profit doesn't match their bank balance. I wrote more about this in <a href="/blog/will-ai-replace-accountants-in-australia-a-grads-game-plan" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">will AI replace accountants in Australia</a>.</p>
+<p>Doing a Cert IV in Accounting and Bookkeeping? Fine, it's still the path to registering as a BAS agent, and lodging is the part that's staying. Get it for that, not for the data entry.</p>
+
+<p>Learn the manual process once, absolutely. You can't check an agent's bank rec if you've never done one. Then aim at the bits agents can't do: reviewing and correcting their work, payroll and BAS compliance, setting up the systems, and sitting across from a business owner explaining why their profit doesn't match their bank balance. I wrote more about this in <a href="/blog/will-ai-replace-accountants-in-australia-a-grads-game-plan" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">will AI replace accountants in Australia</a>.</p>
 
 <h2 id="xero-experts">If You're the Office Xero Expert</h2>
 
-<p>Every business has one: the person who knows where everything lives in Xero and how the bank rules really work. If that's you, this is your moment, not your funeral.</p>
+<p>Every business has one: the person who knows where everything lives in Xero and how the bank rules really work. If that's you, this is either your moment or your funeral. Which one depends entirely on whether you're the person setting up the agents or the person they replace.</p>
 
-<p>Set the agents up before Christmas. Connect them to a demo company first, test them on a couple of weeks of real-looking transactions, and write down the rules: what they can code, what they flag, and what they never touch. Then over the break, check in on the run log for ten minutes from the beach instead of coming into the office.</p>
+<p>Set the agents up before Christmas. Connect them to a demo company first, test them on a couple of weeks of real-looking transactions, and write down the rules: what they can code, what they flag, and what they never touch. Put them on a schedule. Then over the break, check the run log for ten minutes from the beach instead of coming into the office.</p>
 
 <p>The person who sets up, supervises and improves the agents is the most valuable person in the finance team. Just try not to automate yourself out of a job in the process. Make sure everyone knows who built the thing. More reliable than Everton defending a lead on Boxing Day, and that's a low bar I'm happy to clear.</p>
 
 <h2 id="your-agent">Set Up Your Christmas Bank Rec Agent</h2>
 
-<p>This prompt sets up Claude, connected to Xero, as a <strong>bank rec agent with guardrails</strong>: it codes what it's sure about, flags everything else and never touches money. Try it on Xero's demo company before your real books.</p>
+<p>This prompt sets up Claude, connected to Xero, as a <strong>bank rec agent that runs on a schedule</strong>: it codes what it's sure about, flags everything else and never touches money. Try it on Xero's demo company before your real books.</p>
+
+<p>The schedule is the whole point. A prompt you have to remember to run every morning is just another job on your list. One that runs itself at 7am while you're asleep on the couch after Christmas lunch is a job you've actually got rid of, and the mental load goes with it. So the prompt finishes by asking if you want it on a schedule.</p>
 
 <blockquote class="paul-prompt-box" style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📋 PAUL's Prompt (Christmas Bank Rec Agent)</strong>
@@ -203,17 +209,23 @@ Each run:
 6. Then the exceptions list, each with the one question I need to answer.
 7. Finish with totals: transactions processed, transactions coded, exceptions, and anything over my limit.
 
-Ask me to confirm before you make your first change in Xero.</p>
+Ask me to confirm before you make your first change in Xero.
+
+Once I've confirmed the rules:
+1. Save them (patterns, dollar limit, never-touch list) so future runs use them without asking me again.
+2. Ask me if I want you to run this automatically on a schedule, and when (e.g. every weekday at 7am from [24 December] to [12 January]).
+3. If I say yes and you can create scheduled tasks, set it up. If you can't, tell me the simplest way to schedule it with the tools I have.
+4. On scheduled runs, only message me with the run log summary and the exceptions list. If there are no exceptions, keep it to one line.</p>
 </details>
 
 <button type="button" class="paul-copy">📋 Copy prompt</button>
 </blockquote>
 
-<p>Run it every few days over the break. When you're back in January, you're reviewing a run log and answering a short list of questions instead of facing three weeks of unreconciled transactions.</p>
+<p>When you're back in January, you're reviewing a run log and answering a short list of questions instead of facing three weeks of unreconciled transactions.</p>
 
 <blockquote style="background: #f0fdf4; border: 1px solid #dcfce7; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>⬆️ PAUL's LevelUp</strong>
-<p>The doing is going to the agents. The checking, approving and explaining is staying with people. Before you log off for Christmas, set up one agent on a demo company and see how much of your January it saves you.</p>
+<p>The doing is going to the agents. The checking, approving and explaining is staying with people. Before you log off for Christmas, set up one agent on a demo company, put it on a schedule, and see how much of your January it saves you.</p>
 </blockquote>
 
 <section style="background: linear-gradient(135deg, #1f3a7d 0%, #2a4fa8 100%); color: white; border-radius: 12px; padding: 2.5rem; margin: 3rem 0; text-align: center;">

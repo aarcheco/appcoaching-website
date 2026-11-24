@@ -51,7 +51,7 @@ faq:
 
 <p>I spent my grad years doing bank recs by hand. Tick, flick, repeat, across store bank accounts all over Australia. Last week I built the thing that replaces grad me. Grad me would like a word.</p>
 
-<p>Here's what I did. I set up a demo company in Xero and connected it to Claude through Xero's connector, so the AI could read and update the books. Then I gave the agents the jobs a bookkeeper or accounts officer does in a typical small or medium business: <strong>bank reconciliation, accounts receivable, accounts payable, payroll and management reporting</strong>.</p>
+<p>Here's what I did. I set up a demo company in Xero and connected it to Claude, so the AI could read the books and do the work in Xero itself. Then I gave the agents the jobs a bookkeeper or accounts officer does in a typical small or medium business: <strong>bank reconciliation, accounts receivable, accounts payable, payroll and management reporting</strong>.</p>
 
 <p>They did all five. Not perfectly, and I'll get to where they tripped up. But well enough that I sat there with a cold coffee thinking, "well, that's awkward for my profession."</p>
 
@@ -130,6 +130,8 @@ faq:
 <p>Notice the pattern? The agent did the doing. I did the <strong>checking, approving and paying</strong>, plus the odd phone call from a customer who wanted to argue about an invoice. That's not a small shift in a bookkeeper's job description. That's most of the job description gone.</p>
 
 <p>Xero is heading the same way. Its own AI, JAX, already reconciles bank transactions it's highly confident about, and Xero says <a href="https://www.xero.com/au/media-releases/new-ai-innovations-xerocon-denver/" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">Auto Bank Reconciliation saves accountants and bookkeepers around 50% of their monthly bank rec time</a>, with more than 100 million transactions auto-reconciled since launch.</p>
+
+<p>Don't just take my word for it. Watch it happen. Daniel from The Rollout <a href="https://the-rollout.co/p/3-ways-to-connect-claude-to-xero-ffbd" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">recorded Claude working through Xero's bank reconcile screen</a> on the demo company, matching two bills to a $4,500 payment until Xero came back with "Totals match" (here's his <a href="https://www.youtube.com/watch?v=2qvFaHAlm-Q" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">full 16-minute video</a>). And it's not just Claude: on The Accounting Podcast, Blake Oliver and David Leary <a href="https://www.youtube.com/watch?v=56IF-Fd5R18" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">tested ChatGPT's agent mode reconciling inside Xero</a>. Watching a cursor tick off your bank rec without you is equal parts impressive and deeply unsettling.</p>
 
 <h2 id="where-agents-fail">Where the Agents Still Needed Me</h2>
 

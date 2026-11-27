@@ -2,7 +2,7 @@
 title: "Which Process Should You Fix First? Follow the Time and the Money"
 date: 2026-11-28
 id: 14
-excerpt: "Don't fix the loudest process. Fix the one with the biggest payback. A simple scorecard for ranking processes by hours and dollars saved, with a worked example and two AI prompts."
+excerpt: "Don't fix the loudest process. Fix the one where better effectiveness and efficiency pays back most, then use AI to fix it. A simple scorecard, a worked example and two AI prompts."
 heroImage: /blog/process-priority-hero.jpg
 categories: ["Business AI", "Accounting & Finance Career"]
 tags: ["Process Improvement", "Finance Automation", "Prioritisation", "AI Prompts", "Efficiency"]
@@ -16,6 +16,8 @@ faq:
     a: "Effectiveness is how much a process moves the numbers that matter. Efficiency is how little time and money it takes. Fix the processes that are high-impact but inefficient first, and stop the ones with no impact at all."
   - q: "How do I calculate the cost of a manual process?"
     a: "Multiply hours per run by how often it runs to get hours per year, then multiply by an hourly cost that includes super and on-costs. Add the yearly cost of errors, rework and late fees."
+  - q: "Which processes are best for AI agents?"
+    a: "High-volume, rule-based processes like bill entry, bank reconciliations, invoice reminders and expense coding. Agents can run them on a schedule while a person reviews the exceptions and approves anything that moves money."
   - q: "Should I automate a broken process?"
     a: "No. Simplify or remove the unnecessary steps first. Automating a bad process just gets you bad results faster."
   - q: "How often should I review my process priorities?"
@@ -24,7 +26,7 @@ faq:
 
 <blockquote style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📖 PAUL's Quick Read</strong>
-<p>When you want to transform how your team works, don't start with the most annoying process or the shiniest tool. First ask who cares about it. Then start with the one where better <strong>effectiveness and efficiency</strong> saves or earns the most, and that's easy enough to actually fix. Here's the simple scorecard I use, a worked example and two prompts that do the maths for you.</p>
+<p>When you want to transform how your team works, don't start with the most annoying process or the shiniest tool. First ask who cares about it. Then start with the one where better <strong>effectiveness and efficiency</strong> saves or earns the most, and that's easy enough to actually fix. Then use AI and AI agents to fix it. Here's the simple scorecard I use, a worked example and two prompts that do the maths for you.</p>
 </blockquote>
 
 <img src="/blog/process-priority-hero.jpg" alt="Hand placing a sticky note on a wall - choosing which process to fix first" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0; display: block;">
@@ -36,10 +38,11 @@ faq:
   <ul style="margin-top: 1rem; line-height: 1.8; padding-left: 1.5rem;">
     <li><a href="#short-answer">The Short Answer</a></li>
     <li><a href="#how-i-learned">How I Learned to Pick</a></li>
-    <li><a href="#why-now">Why It's Worth Doing Now</a></li>
+    <li><a href="#two-questions">Two Questions for Every Process</a></li>
     <li><a href="#scorecard">The Scorecard, Step by Step</a></li>
     <li><a href="#example">A Worked Example</a></li>
-    <li><a href="#traps">Three Traps to Avoid</a></li>
+    <li><a href="#ai-fix">Where AI and AI Agents Fit</a></li>
+    <li><a href="#traps">Four Traps to Avoid</a></li>
     <li><a href="#your-prompts">Let AI Do the Maths</a></li>
   </ul>
 </details>
@@ -56,13 +59,20 @@ faq:
 
 <p>Neither happened because I fixed everything. They happened because I picked the processes that ate the most time, fixed those properly, then moved on. The early version of me tried to fix everything at once. Early me also had a travel spreadsheet with 14 tabs for a four-day trip. Priorities weren't his strong suit.</p>
 
-<h2 id="why-now">Why It's Worth Doing Now</h2>
+<h2 id="two-questions">Two Questions for Every Process</h2>
 
-<p>There's plenty to fix. A 2026 study found <a href="https://www.cpapracticeadvisor.com/2026/08/11/study-reveals-gap-between-the-ai-ambitions-of-accounting-teams-and-their-ability-to-execute/188332/" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">57% of month-end close cycles take seven days or more</a>, and that teams who set AI up properly are reclaiming around a quarter of their working time. Another put the cost of manual accounts payable at <a href="https://tipalti.com/global-finance-survey-2026/" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">an average of 10 hours a week</a>.</p>
+<p>Every process on your list gets the same two questions:</p>
 
-<p>But AI makes it tempting to automate whatever's in front of you. Picking the right process first is what turns "we tried some AI" into hours and dollars you can point to. It's also exactly what leaders mean when a job ad asks for "continuous improvement": keep making the business more effective and more efficient, one process at a time.</p>
+<ul>
+  <li><strong>How effective is it?</strong> Who uses the output, and how big is the number it moves? A process that drives a big income or cost line is worth a lot. One nobody uses is worth nothing, however well it's done.</li>
+  <li><strong>How efficient could it be?</strong> How much time, money and error is in it today, and how easily could you fix that?</li>
+</ul>
+
+<p>The best first fix is high on both: it matters a lot, and it's wasteful today. The scorecard below just puts numbers on those two questions.</p>
 
 <h2 id="scorecard">The Scorecard, Step by Step</h2>
+
+<p>There's plenty to fix. A 2026 study found <a href="https://www.cpapracticeadvisor.com/2026/08/11/study-reveals-gap-between-the-ai-ambitions-of-accounting-teams-and-their-ability-to-execute/188332/" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">57% of month-end close cycles take seven days or more</a>, and that teams who set AI up properly are reclaiming around a quarter of their working time. Another put manual accounts payable at <a href="https://tipalti.com/global-finance-survey-2026/" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">an average of 10 hours a week</a>. Picking the right process first is what turns "we tried some AI" into hours and dollars you can point to, and it's exactly what leaders mean when a job ad asks for continuous improvement.</p>
 
 <ol>
   <li><strong>Ask who cares.</strong> For each process, who uses the output and what decision does it change? If nobody can answer, stop it. That's the cheapest, fastest efficiency gain there is (I once found a team reconciling a bank account nobody had heard of).</li>
@@ -128,21 +138,32 @@ faq:
 
 <p>Not sure what hourly cost to use? Take the salary, divide by about 1,976 working hours a year (38 hours x 52 weeks) and add about 25% for super, leave and on-costs. An $80,000 salary works out at roughly $50 an hour. It doesn't need to be perfect. It needs to be the same for every process so the ranking is fair.</p>
 
-<h3 style="color: #1f3a7d;">What happened to number one?</h3>
+<h2 id="ai-fix">Where AI and AI Agents Fit</h2>
 
-<p>In the example, fixing supplier bill entry might mean an AI agent reads bills from the accounts inbox and drafts them in Xero, with a person reviewing and approving (I covered how that works in <a href="/blog/your-bookkeepers-on-holiday-your-ai-agents-arent-xero-over-the-christmas-shutdown" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">AI agents running Xero over the Christmas shutdown</a>). If that cuts 6 hours a week down to 1 hour of review, that's 260 hours, about $13,000 a year, back in the team's pocket. Then bank recs become number one, and you go again.</p>
+<p>Once you've picked number one, AI is usually the fastest way to fix it. It's new technology, and businesses will adopt it because it makes processes more efficient and cuts human error. Learning it on your own top process is the best way to get ahead of the curve.</p>
 
-<h2 id="traps">Three Traps to Avoid</h2>
+<ul>
+  <li><strong>High-volume, rule-based processes suit AI agents.</strong> Bill entry, bank recs, invoice reminders and expense coding can run on a schedule, with a person reviewing a short exceptions list.</li>
+  <li><strong>Analysis and reporting suit Claude and other AI assistants.</strong> Building the reconciliation check, the reporting pack or the dashboard in hours instead of weeks.</li>
+  <li><strong>Judgement-heavy work still needs you.</strong> Unusual transactions, approvals, and anything that moves money or goes to the ATO.</li>
+</ul>
+
+<p>In the example, fixing bill entry might mean an AI agent reads bills from the accounts inbox and drafts them in Xero, with a person reviewing and approving (I tested exactly this in <a href="/blog/your-bookkeepers-on-holiday-your-ai-agents-arent-xero-over-the-christmas-shutdown" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">AI agents running Xero over the Christmas shutdown</a>). If that cuts 6 hours a week down to 1 hour of review, that's 260 hours, about $13,000 a year, back in the team's pocket, with fewer keying errors. Then bank recs become number one, and you go again.</p>
+
+<p>But remember: AI makes a process faster. It doesn't make it matter. That's why the scorecard starts with "who cares?" and the value of the process, not with the tool.</p>
+
+<h2 id="traps">Four Traps to Avoid</h2>
 
 <ul>
   <li><strong>Fixing the fun one.</strong> The process with the coolest automation isn't always the one worth the most.</li>
   <li><strong>Fixing the rare one.</strong> A painful once-a-year job usually loses to a mildly annoying weekly one. Frequency is where the hours hide.</li>
   <li><strong>Automating a broken process.</strong> Simplify first. Automating a bad process just gets you bad results faster.</li>
+  <li><strong>Automating without understanding the impact.</strong> An AI agent will happily reconcile a bank account nobody needs, faster and more accurately than ever. That's an efficient waste. Know what the process does for the business before you automate it.</li>
 </ul>
 
 <h2 id="your-prompts">Let AI Do the Maths</h2>
 
-<p>Two prompts. The first costs out one process when you need a number for your manager. The second builds the whole scorecard and, because priorities change as you fix things, offers to re-score it every quarter on a schedule so you don't have to remember.</p>
+<p>Two prompts for Claude, ChatGPT or Gemini. The first costs out one process when you need a number for your manager. The second builds the whole scorecard and, because priorities change as you fix things, offers to re-score it every quarter on a schedule so you don't have to remember.</p>
 
 <blockquote class="paul-prompt-box" style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📋 PAUL's Prompt (Process Cost Calculator)</strong>
@@ -188,7 +209,7 @@ Step 2: Ask me for one blended hourly cost for the team (or estimate it from sal
 
 Step 3: Build a scorecard table with: process, who uses the output, hours per year, time cost per year ($), other costs and income held back per year ($), total value of fixing it per year ($), ease to fix (1 = hard, 5 = easy, with one line on why), and priority score (total value x ease).
 
-Step 4: Rank by priority score. For the top 3, suggest the first practical step to fix each, the tool or AI approach, and a realistic estimate of hours saved.
+Step 4: Rank by priority score. For the top 3, suggest the first practical step to fix each, whether Claude or an AI agent could run it (and on what schedule), what a person must still check, and a realistic estimate of hours saved and errors avoided.
 
 Step 5: Flag any process nobody uses (stop it, the cheapest fix of all), and any that should be simplified BEFORE it's automated.
 
@@ -204,7 +225,7 @@ Show your working so I can check the maths.</p>
 
 <blockquote style="background: #f0fdf4; border: 1px solid #dcfce7; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>⬆️ PAUL's LevelUp</strong>
-<p>Effective first: stop what nobody uses and focus on what moves the numbers. Then efficient: fix the process with the biggest payback for the least effort. This week, list your team's recurring processes, ask who uses each, cost them in hours and dollars, and pick number one.</p>
+<p>Effective first: stop what nobody uses and focus on what moves the numbers. Then efficient: fix the process with the biggest payback for the least effort, and let AI do the heavy lifting. This week, list your team's recurring processes, ask who uses each, cost them in hours and dollars, and pick number one.</p>
 </blockquote>
 
 <section style="background: linear-gradient(135deg, #1f3a7d 0%, #2a4fa8 100%); color: white; border-radius: 12px; padding: 2.5rem; margin: 3rem 0; text-align: center;">

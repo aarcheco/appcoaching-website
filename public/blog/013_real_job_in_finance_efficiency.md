@@ -98,7 +98,7 @@ faq:
   <li><strong>Trace every task to a lever.</strong> Does it affect revenue, cost, cash or risk? If the answer is "none", ask why you're doing it.</li>
   <li><strong>Find the biggest time sinks.</strong> The manual, repetitive jobs that eat hours every week.</li>
   <li><strong>Talk in hours and dollars.</strong> "This takes 6 hours a week, about $15,000 a year" gets attention. "This is a bit annoying" doesn't.</li>
-  <li><strong>Fix one thing properly.</strong> Then do the next one. My next post covers how to pick which process to fix first.</li>
+  <li><strong>Fix one thing properly.</strong> Then do the next one. My next post covers <a href="/blog/which-process-should-you-fix-first-follow-the-time-and-the-money" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">how to pick which process to fix first</a>.</li>
 </ol>
 
 <h2 id="your-prompt">Find Where Your Role Adds Value</h2>

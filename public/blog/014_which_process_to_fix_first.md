@@ -11,7 +11,9 @@ metaDescription: "Which process should you fix or automate first? Rank them by h
 updated: 2026-11-28
 faq:
   - q: "Which process should I automate first?"
-    a: "The one with the highest total yearly cost (time plus errors and delays) that is also reasonably easy to fix. Multiply the yearly cost by an ease score from 1 to 5 and start at the top of the list."
+    a: "First stop anything nobody uses. Then pick the process with the highest yearly value of fixing it (time, errors, delays and any income it holds back) that is also reasonably easy to fix. Multiply that value by an ease score from 1 to 5 and start at the top."
+  - q: "What do effectiveness and efficiency mean for process improvement?"
+    a: "Effectiveness is how much a process moves the numbers that matter. Efficiency is how little time and money it takes. Fix the processes that are high-impact but inefficient first, and stop the ones with no impact at all."
   - q: "How do I calculate the cost of a manual process?"
     a: "Multiply hours per run by how often it runs to get hours per year, then multiply by an hourly cost that includes super and on-costs. Add the yearly cost of errors, rework and late fees."
   - q: "Should I automate a broken process?"
@@ -22,7 +24,7 @@ faq:
 
 <blockquote style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📖 PAUL's Quick Read</strong>
-<p>When you want to transform how your team works, don't start with the most annoying process or the shiniest tool. Start with the one that costs the most time and money and is easy enough to actually fix. Here's the simple scorecard I use, a worked example and two prompts that do the maths for you.</p>
+<p>When you want to transform how your team works, don't start with the most annoying process or the shiniest tool. First ask who cares about it. Then start with the one where better <strong>effectiveness and efficiency</strong> saves or earns the most, and that's easy enough to actually fix. Here's the simple scorecard I use, a worked example and two prompts that do the maths for you.</p>
 </blockquote>
 
 <img src="/blog/process-priority-hero.jpg" alt="Hand placing a sticky note on a wall - choosing which process to fix first" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0; display: block;">
@@ -44,9 +46,9 @@ faq:
 
 <h2 id="short-answer">The Short Answer</h2>
 
-<p>Which process should you fix first? <strong>The one that saves the most time and money for the least effort.</strong> Work out what each process costs a year in hours and dollars, give it an ease score, multiply the two and start at the top. Not the one that annoys you most. Not the one with the coolest AI demo. The one with the biggest payback.</p>
+<p>Which process should you fix first? <strong>The one where improving it saves or earns the most for the least effort.</strong> First, stop anything nobody uses. Then work out what each process costs a year in hours and dollars, plus any income it holds back, give it an ease score, multiply and start at the top. Not the one that annoys you most. Not the one with the coolest AI demo. The one with the biggest payback.</p>
 
-<p>This follows on from <a href="/blog/your-real-job-in-finance-isnt-the-numbers-its-efficiency" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">why your real job in finance is efficiency</a>. That post is the why. This one's the how.</p>
+<p>This follows on from <a href="/blog/your-real-job-in-finance-isnt-the-numbers-its-efficiency" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">why your real job in finance is effectiveness and efficiency</a>. Quick recap: effective means working on what moves the numbers that matter; efficient means doing it with the least time and money, every time. That post is the why. This one's the how.</p>
 
 <h2 id="how-i-learned">How I Learned to Pick</h2>
 
@@ -58,16 +60,17 @@ faq:
 
 <p>There's plenty to fix. A 2026 study found <a href="https://www.cpapracticeadvisor.com/2026/08/11/study-reveals-gap-between-the-ai-ambitions-of-accounting-teams-and-their-ability-to-execute/188332/" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">57% of month-end close cycles take seven days or more</a>, and that teams who set AI up properly are reclaiming around a quarter of their working time. Another put the cost of manual accounts payable at <a href="https://tipalti.com/global-finance-survey-2026/" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">an average of 10 hours a week</a>.</p>
 
-<p>But AI makes it tempting to automate whatever's in front of you. Picking the right process first is what turns "we tried some AI" into hours and dollars you can point to.</p>
+<p>But AI makes it tempting to automate whatever's in front of you. Picking the right process first is what turns "we tried some AI" into hours and dollars you can point to. It's also exactly what leaders mean when a job ad asks for "continuous improvement": keep making the business more effective and more efficient, one process at a time.</p>
 
 <h2 id="scorecard">The Scorecard, Step by Step</h2>
 
 <ol>
+  <li><strong>Ask who cares.</strong> For each process, who uses the output and what decision does it change? If nobody can answer, stop it. That's the cheapest, fastest efficiency gain there is (I once found a team reconciling a bank account nobody had heard of).</li>
   <li><strong>List every recurring process.</strong> Brain-dump everything your team does daily, weekly, monthly and yearly. Bills, recs, reporting, payroll, expense claims, invoicing, chasing approvals.</li>
   <li><strong>Measure the time.</strong> Hours per run x runs per year = hours a year. Time it once with a stopwatch if you're guessing. Everyone underestimates.</li>
-  <li><strong>Put a dollar figure on it.</strong> Hours a year x an hourly cost that includes super and on-costs. Then add the cost of what goes wrong: errors, rework, late fees, cash sitting idle.</li>
+  <li><strong>Put a dollar figure on it.</strong> Hours a year x an hourly cost that includes super and on-costs. Then add the cost of what goes wrong: errors, rework, late fees, cash sitting idle. And if the process keeps income-earning staff stuck on admin, add the billable or care hours it costs you.</li>
   <li><strong>Score how easy it is to fix.</strong> 1 = a big system project, 5 = a rule, a template or an AI prompt could do it this week.</li>
-  <li><strong>Multiply and rank.</strong> Cost a year x ease = priority score. Start at the top.</li>
+  <li><strong>Multiply and rank.</strong> Value a year x ease = priority score. The biggest value is your effectiveness; the ease is how quickly you can make it efficient. Start at the top.</li>
   <li><strong>Re-score every quarter.</strong> Once you fix number one, everything moves up a spot.</li>
 </ol>
 
@@ -121,6 +124,8 @@ faq:
 
 <p>Notice the monthly reporting pack isn't first, even though it's probably the job everyone moans about. Bill entry quietly costs more, and it's easier to fix. That's exactly the kind of thing the scorecard catches and your gut misses.</p>
 
+<p>This example only counts costs. If a process holds back income, like care staff stuck on paperwork instead of delivering care hours, or tradies chasing paperwork instead of billing, add that lost income too. At Aveo, lifting care-staff utilisation through better rostering and reporting meant more care hours from the same team, and every extra care hour was income.</p>
+
 <p>Not sure what hourly cost to use? Take the salary, divide by about 1,976 working hours a year (38 hours x 52 weeks) and add about 25% for super, leave and on-costs. An $80,000 salary works out at roughly $50 an hour. It doesn't need to be perfect. It needs to be the same for every process so the ranking is fair.</p>
 
 <h3 style="color: #1f3a7d;">What happened to number one?</h3>
@@ -153,12 +158,15 @@ Interview me one question at a time:
 3. How long does each run take, and how many people are involved?
 4. What's a rough hourly cost for those people? If I'm not sure, estimate it from their salary and add about 25% for super and on-costs.
 5. What goes wrong when it's late or wrong (late fees, errors, rework, unhappy customers or staff)? Estimate a yearly dollar cost.
+6. Does this process hold back income? (e.g. fewer billable or care hours because staff are stuck on admin.) Estimate the income it could unlock.
+7. Who uses the output, and what decision does it change? If nobody can say, flag it.
 
 Then give me:
 1. Hours per year, and the dollar cost of those hours.
-2. The yearly cost of errors and delays.
-3. The total yearly cost of this process, in one line I could say to my manager.
-4. The 3 most likely ways to cut it (automate, simplify, stop or hand off), and how many hours each could save.
+2. The yearly cost of errors and delays, and any income it's holding back.
+3. The total yearly value of fixing it, in one line I could say to my manager.
+4. How effective it is today (does it move a number that matters?) and how efficient it is.
+5. The 3 most likely ways to improve it (stop, simplify, automate or hand off), and how many hours each could save.
 
 Show your working so I can check the maths.</p>
 </details>
@@ -174,15 +182,15 @@ Show your working so I can check the maths.</p>
   <summary style="cursor: pointer; font-weight: 700; color: #1f3a7d;">📋 See Full Prompt (Click to Expand)</summary>
   <p class="paul-prompt">You're my process improvement coach. Help me decide which process to fix first.
 
-Step 1: Interview me to list every recurring process in my team (ask me to brain-dump, then ask follow-ups until we have them all). For each, get: how often it runs, hours per run, people involved, and any costs from errors, delays or late fees.
+Step 1: Interview me to list every recurring process in my team (ask me to brain-dump, then ask follow-ups until we have them all). For each, get: how often it runs, hours per run, people involved, any costs from errors, delays or late fees, any income it holds back (e.g. billable or care hours lost to admin), and who uses the output.
 
 Step 2: Ask me for one blended hourly cost for the team (or estimate it from salaries plus about 25% on-costs).
 
-Step 3: Build a scorecard table with: process, hours per year, time cost per year ($), other costs per year ($), total cost per year ($), ease to fix (1 = hard, 5 = easy, with one line on why), and priority score (total cost x ease).
+Step 3: Build a scorecard table with: process, who uses the output, hours per year, time cost per year ($), other costs and income held back per year ($), total value of fixing it per year ($), ease to fix (1 = hard, 5 = easy, with one line on why), and priority score (total value x ease).
 
 Step 4: Rank by priority score. For the top 3, suggest the first practical step to fix each, the tool or AI approach, and a realistic estimate of hours saved.
 
-Step 5: Flag any process that should be simplified or stopped BEFORE it's automated.
+Step 5: Flag any process nobody uses (stop it, the cheapest fix of all), and any that should be simplified BEFORE it's automated.
 
 Step 6: Ask me if I want this re-scored on a schedule (e.g. the first Monday of each quarter), so the list stays current as we fix things. If yes, save the scorecard and my answers so future runs only ask what's changed. Set up the scheduled task if you can; if you can't, tell me the simplest way to schedule it with the tools I have.
 
@@ -196,7 +204,7 @@ Show your working so I can check the maths.</p>
 
 <blockquote style="background: #f0fdf4; border: 1px solid #dcfce7; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>⬆️ PAUL's LevelUp</strong>
-<p>Don't fix the loudest process. Fix the one with the biggest payback. This week, list your team's recurring processes, cost them in hours and dollars, and pick number one.</p>
+<p>Effective first: stop what nobody uses and focus on what moves the numbers. Then efficient: fix the process with the biggest payback for the least effort. This week, list your team's recurring processes, ask who uses each, cost them in hours and dollars, and pick number one.</p>
 </blockquote>
 
 <section style="background: linear-gradient(135deg, #1f3a7d 0%, #2a4fa8 100%); color: white; border-radius: 12px; padding: 2.5rem; margin: 3rem 0; text-align: center;">

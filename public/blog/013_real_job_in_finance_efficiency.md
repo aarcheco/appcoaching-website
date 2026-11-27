@@ -16,6 +16,8 @@ faq:
     a: "Effectiveness is impact: doing the work that moves the numbers that matter most. Efficiency is doing that work with the least time and money, consistently. You need both. An efficient process with no impact is still waste."
   - q: "Do not-for-profits try to make a profit?"
     a: "Yes. In Australia, the ACNC says a charity can make a surplus as long as it's used for its charitable purpose, and generating one is generally considered good practice. The surplus funds more of the mission."
+  - q: "How does AI help finance be more effective and efficient?"
+    a: "AI does what Excel tools like pivots and Power Query used to, much faster, and more besides: drafting emails, building reports and dashboards, and getting insight to executives sooner. Faster insight means faster, better decisions, which is effectiveness and efficiency together."
   - q: "Why do finance job ads ask for continuous improvement?"
     a: "Because leaders need finance people who keep finding ways to make the business more effective and efficient, not just people who produce the same reports every month."
   - q: "How can a graduate accountant add value quickly?"
@@ -24,7 +26,7 @@ faq:
 
 <blockquote style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📖 PAUL's Quick Read</strong>
-<p>Leaders care about two things: is the business <strong>effective</strong> (doing the work with the biggest impact on the numbers) and is it <strong>efficient</strong> (doing that work with the least time and money, every time)? That's true in a listed company, a family business and a charity. It's also why every finance job ad asks for continuous improvement. Here's how to think like that from day one, with a few stories from my career.</p>
+<p>Leaders care about two things: is the business <strong>effective</strong> (doing the work with the biggest impact on the numbers) and is it <strong>efficient</strong> (doing that work with the least time and money, every time)? That's true in a listed company, a family business and a charity. It's also why every finance job ad asks for continuous improvement. AI now makes both faster than ever. Here's how to think like that from day one, with a few stories from my career.</p>
 </blockquote>
 
 <img src="/blog/efficiency-profit-hero.jpg" alt="Hourglass with coins - time is money, effectiveness and efficiency drive profit for every organisation" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0; display: block;">
@@ -39,6 +41,7 @@ faq:
     <li><a href="#who-cares">Ask: Who Cares About This Process?</a></li>
     <li><a href="#income">Efficiency Grows Income, Not Just Savings</a></li>
     <li><a href="#costs">Efficiency Stops the Bleed</a></li>
+    <li><a href="#excel-to-ai">From Excel to AI: Same Job, Faster</a></li>
     <li><a href="#even-nfps">Even Not-for-Profits Run on This</a></li>
     <li><a href="#day-one">How to Think Like This From Day One</a></li>
     <li><a href="#your-prompt">Find Where Your Work Has Impact</a></li>
@@ -95,6 +98,21 @@ faq:
 
 <p>None of those processes was a disaster on its own. Together, they were hours of wages every week spent on work with little or no impact. That's the bottom line leaking out one task at a time.</p>
 
+<h2 id="excel-to-ai">From Excel to AI: Same Job, Faster</h2>
+
+<p>For most of my career, my efficiency engine was Excel. Pivot tables, Power Query and built-in checks and balances made my journals and reports faster, more accurate and easier for the next person to run. It's how I ended up as <a href="/blog/25-common-excel-mistakes-i-fixed-for-years-and-how-i-became-mr-excel-at-flight-centre" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">"Mr Excel" at Flight Centre</a>.</p>
+
+<p>AI does that same job, and a lot more:</p>
+
+<ul>
+  <li><strong>Spreadsheets:</strong> formulas, data cleaning and reconciliation checks in minutes instead of hours.</li>
+  <li><strong>Emails:</strong> the follow-ups, explanations and chasers drafted in seconds.</li>
+  <li><strong>Reports and dashboards:</strong> a new one built in an afternoon, not a month. I wrote about <a href="/blog/power-bi-took-me-months-claude-and-supabase-took-minutes" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">a dashboard that took me months in Power BI and minutes with AI</a>.</li>
+  <li><strong>Insight:</strong> the "so what" in front of executives faster, so they make effective decisions faster.</li>
+</ul>
+
+<p>That last one is the big shift. Efficiency used to mean saving finance's own time. With AI, it means speeding up the whole business's decisions, and a good decision made this week beats a perfect report delivered three weeks late. That's effectiveness and efficiency at the same time. Excel and I had a great run, and we're still friends. I'm just seeing other tools now.</p>
+
 <h2 id="even-nfps">Even Not-for-Profits Run on This</h2>
 
 <p>Here's the bit that surprises most young finance pros: not-for-profits care about effectiveness and efficiency just as much. They want a profit too. They just call it a surplus.</p>
@@ -111,6 +129,7 @@ faq:
   <li><strong>Learn the drivers.</strong> What moves the biggest income and cost lines? Ask. Nobody minds a grad asking that.</li>
   <li><strong>Ask who cares.</strong> For every process you touch: who uses the output, and what decision does it change? No answer, no process.</li>
   <li><strong>Rate it twice.</strong> How effective is it (size of impact) and how efficient is it (time and money it takes)?</li>
+  <li><strong>Let AI do the heavy lifting.</strong> Use it to build the check, the report or the email faster, so your time goes on the insight and the decision.</li>
   <li><strong>Talk in hours and dollars.</strong> "This takes 6 hours a week, about $15,000 a year, and nobody uses it" gets attention.</li>
   <li><strong>Improve one thing, then the next.</strong> That's continuous improvement. My next post covers how to pick which process to fix first.</li>
 </ol>

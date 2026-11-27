@@ -69,7 +69,7 @@ faq:
   <li><strong>List every recurring process.</strong> Brain-dump everything your team does daily, weekly, monthly and yearly. Bills, recs, reporting, payroll, expense claims, invoicing, chasing approvals.</li>
   <li><strong>Measure the time.</strong> Hours per run x runs per year = hours a year. Time it once with a stopwatch if you're guessing. Everyone underestimates.</li>
   <li><strong>Put a dollar figure on it.</strong> Hours a year x an hourly cost that includes super and on-costs. Then add the cost of what goes wrong: errors, rework, late fees, cash sitting idle. And if the process keeps income-earning staff stuck on admin, add the billable or care hours it costs you.</li>
-  <li><strong>Score how easy it is to fix.</strong> 1 = a big system project, 5 = a rule, a template or an AI prompt could do it this week.</li>
+  <li><strong>Score how easy it is to fix.</strong> 1 = a big system project, 5 = a rule, a template or an AI prompt could do it this week. AI has turned a lot of processes that used to be a 1 or 2 into a 4 or 5, so re-score anything you wrote off a year ago.</li>
   <li><strong>Multiply and rank.</strong> Value a year x ease = priority score. The biggest value is your effectiveness; the ease is how quickly you can make it efficient. Start at the top.</li>
   <li><strong>Re-score every quarter.</strong> Once you fix number one, everything moves up a spot.</li>
 </ol>

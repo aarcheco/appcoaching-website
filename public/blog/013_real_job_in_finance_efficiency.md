@@ -125,7 +125,7 @@ faq:
   <li><strong>Rate it twice.</strong> How effective is it (size of impact) and how efficient is it (time, money and errors)?</li>
   <li><strong>Learn AI on a real task.</strong> Pick one high-impact, inefficient process and use Claude or another AI tool to speed it up. Learning on real work beats any course.</li>
   <li><strong>Measure the result.</strong> Hours saved, dollars saved, errors avoided, income unlocked. "This took 6 hours a week; now it takes one" gets attention.</li>
-  <li><strong>Then the next one.</strong> That's continuous improvement. My next post covers how to pick which process to fix first.</li>
+  <li><strong>Then the next one.</strong> That's continuous improvement. My next post covers <a href="/blog/which-process-should-you-fix-first-follow-the-time-and-the-money" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">how to pick which process to fix first</a>.</li>
 </ol>
 
 <h2 id="your-prompt">Find Where Your Work Has Impact</h2>

@@ -38,7 +38,7 @@ faq:
   <ul style="margin-top: 1rem; line-height: 1.8; padding-left: 1.5rem;">
     <li><a href="#short-answer">The Short Answer</a></li>
     <li><a href="#how-i-learned">How I Learned to Pick</a></li>
-    <li><a href="#two-questions">Two Questions for Every Process</a></li>
+    <li><a href="#two-questions">How Effective? How Efficient?</a></li>
     <li><a href="#scorecard">The Scorecard, Step by Step</a></li>
     <li><a href="#example">A Worked Example</a></li>
     <li><a href="#ai-fix">Where AI and AI Agents Fit</a></li>
@@ -57,9 +57,9 @@ faq:
 
 <p>Wherever I've worked, I've automated what I could. At Coronis, streamlining the processes I inherited freed up more than 40% of my capacity. At Aveo, redesigning manual data entry and reporting removed about 30 hours of work a week.</p>
 
-<p>Neither happened because I fixed everything. They happened because I picked the processes that ate the most time, fixed those properly, then moved on. The early version of me tried to fix everything at once. Early me also had a travel spreadsheet with 14 tabs for a four-day trip. Priorities weren't his strong suit.</p>
+<p>Neither happened because I fixed everything. They happened because I picked the processes where better effectiveness and efficiency paid back most, fixed those properly, then moved on. The early version of me tried to fix everything at once. Early me also had a travel spreadsheet with 14 tabs for a four-day trip. Priorities weren't his strong suit.</p>
 
-<h2 id="two-questions">Two Questions for Every Process</h2>
+<h2 id="two-questions">How Effective? How Efficient?</h2>
 
 <p>Every process on your list gets the same two questions:</p>
 
@@ -132,7 +132,7 @@ faq:
 </div>
 <p style="color: #6b7280; font-size: 0.9rem; margin-top: -0.5rem;">Example numbers for a small finance team at $50 an hour, not a real business. Score = cost a year x ease.</p>
 
-<p>Notice the monthly reporting pack isn't first, even though it's probably the job everyone moans about. Bill entry quietly costs more, and it's easier to fix. That's exactly the kind of thing the scorecard catches and your gut misses.</p>
+<p>Notice the monthly reporting pack isn't first, even though it's probably the job everyone moans about. Bill entry quietly costs more, and it's easier to make efficient. That's exactly the kind of thing the scorecard catches and your gut misses. The value column is your effectiveness test. The ease column is your efficiency test.</p>
 
 <p>This example only counts costs. If a process holds back income, like care staff stuck on paperwork instead of delivering care hours, or tradies chasing paperwork instead of billing, add that lost income too. At Aveo, lifting care-staff utilisation through better rostering and reporting meant more care hours from the same team, and every extra care hour was income.</p>
 
@@ -155,7 +155,7 @@ faq:
 <h2 id="traps">Four Traps to Avoid</h2>
 
 <ul>
-  <li><strong>Fixing the fun one.</strong> The process with the coolest automation isn't always the one worth the most.</li>
+  <li><strong>Fixing the fun one.</strong> The process with the coolest automation isn't always the most effective one to fix.</li>
   <li><strong>Fixing the rare one.</strong> A painful once-a-year job usually loses to a mildly annoying weekly one. Frequency is where the hours hide.</li>
   <li><strong>Automating a broken process.</strong> Simplify first. Automating a bad process just gets you bad results faster.</li>
   <li><strong>Automating without understanding the impact.</strong> An AI agent will happily reconcile a bank account nobody needs, faster and more accurately than ever. That's an efficient waste. Know what the process does for the business before you automate it.</li>
@@ -221,7 +221,7 @@ Show your working so I can check the maths.</p>
 <button type="button" class="paul-copy">📋 Copy prompt</button>
 </blockquote>
 
-<p>Take the top process to your manager with its yearly cost and the hours you expect to save. If you need a hand building the fix, that's <a href="/services" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">what my coaching sessions are for</a>.</p>
+<p>Take the top process to your manager with its yearly value, the hours you expect to save and how much more effective and efficient the team will be. If you need a hand building the fix, that's <a href="/services" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">what my coaching sessions are for</a>.</p>
 
 <blockquote style="background: #f0fdf4; border: 1px solid #dcfce7; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>⬆️ PAUL's LevelUp</strong>

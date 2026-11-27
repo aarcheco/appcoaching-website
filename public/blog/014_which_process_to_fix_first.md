@@ -2,7 +2,7 @@
 title: "Which Process Should You Fix First? Follow the Time and the Money"
 date: 2026-11-28
 id: 14
-excerpt: "Don't fix the loudest process. Fix the one where better effectiveness and efficiency pays back most, then use AI to fix it. A simple scorecard, a worked example and two AI prompts."
+excerpt: "Don't fix the loudest process. Fix the one where better effectiveness and efficiency pays back most, then use AI to fix it. A simple scorecard, real career examples and an AI prompt that scores your own work."
 heroImage: /blog/process-priority-hero.jpg
 categories: ["Business AI", "Accounting & Finance Career"]
 tags: ["Process Improvement", "Finance Automation", "Prioritisation", "AI Prompts", "Efficiency"]
@@ -26,7 +26,7 @@ faq:
 
 <blockquote style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
 <strong>📖 PAUL's Quick Read</strong>
-<p>When you want to transform how your team works, don't start with the most annoying process or the shiniest tool. First ask who cares about it. Then start with the one where better <strong>effectiveness and efficiency</strong> saves or earns the most, and that's easy enough to actually fix. Then use AI and AI agents to fix it. Here's the simple scorecard I use, a worked example and two prompts that do the maths for you.</p>
+<p>When you want to transform how your team works, don't start with the most annoying process or the shiniest tool. First ask who cares about it. Then start with the one where better <strong>effectiveness and efficiency</strong> saves or earns the most, and that's easy enough to actually fix. Then use AI and AI agents to fix it. Here's the simple scorecard I use, real examples from my career and a prompt that scores your own responsibilities.</p>
 </blockquote>
 
 <img src="/blog/process-priority-hero.jpg" alt="Hand placing a sticky note on a wall - choosing which process to fix first" style="max-width: 100%; border-radius: 8px; margin: 1.5rem 0; display: block;">
@@ -43,7 +43,7 @@ faq:
     <li><a href="#example">A Worked Example</a></li>
     <li><a href="#ai-fix">Where AI and AI Agents Fit</a></li>
     <li><a href="#traps">Four Traps to Avoid</a></li>
-    <li><a href="#your-prompts">Let AI Do the Maths</a></li>
+    <li><a href="#your-prompts">Score Your Own Responsibilities</a></li>
   </ul>
 </details>
 
@@ -55,9 +55,17 @@ faq:
 
 <h2 id="how-i-learned">How I Learned to Pick</h2>
 
-<p>Wherever I've worked, I've automated what I could. At Coronis, streamlining the processes I inherited freed up more than 40% of my capacity. At Aveo, redesigning manual data entry and reporting removed about 30 hours of work a week.</p>
+<p>Early in my career I tried to fix everything at once. Early me also had a travel spreadsheet with 14 tabs for a four-day trip. Priorities weren't his strong suit. Here's what picking well has looked like since:</p>
 
-<p>Neither happened because I fixed everything. They happened because I picked the processes where better effectiveness and efficiency paid back most, fixed those properly, then moved on. The early version of me tried to fix everything at once. Early me also had a travel spreadsheet with 14 tabs for a four-day trip. Priorities weren't his strong suit.</p>
+<ul>
+  <li><strong>RACQ:</strong> I built a Process Improvement Initiatives framework and dashboard that captured 20+ initiatives, each with an estimated return on investment. Management reviewed it every fortnight and went with the highest estimated ROI first. That's this whole post in one dashboard.</li>
+  <li><strong>Flight Centre:</strong> I led the overhaul of accounts payable reporting to finance leaders and the CFO, covering over $100M a year. The size of that number is what made it effective to fix first.</li>
+  <li><strong>Coronis:</strong> as the sole accountant supporting the CFO, I automated bulk journal imports and streamlined every process I inherited, freeing up more than 40% of my capacity for higher-value work.</li>
+  <li><strong>Aveo:</strong> I cut manual accounts payable processing from 3 days to 1, part of redesigning manual data entry and reporting that removed about 30 hours of work a week.</li>
+  <li><strong>yourtown:</strong> I redesigned the budget models for every service line, which cut the budget cycle by about 50% and added controls that reduced errors. Faster and more accurate: efficient and effective.</li>
+</ul>
+
+<p>None of those happened because I fixed everything. They happened because I picked the processes where better effectiveness and efficiency paid back most, fixed those properly, then moved on to the next.</p>
 
 <h2 id="two-questions">How Effective? How Efficient?</h2>
 
@@ -161,59 +169,45 @@ faq:
   <li><strong>Automating without understanding the impact.</strong> An AI agent will happily reconcile a bank account nobody needs, faster and more accurately than ever. That's an efficient waste. Know what the process does for the business before you automate it.</li>
 </ul>
 
-<h2 id="your-prompts">Let AI Do the Maths</h2>
+<h2 id="your-prompts">Score Your Own Responsibilities</h2>
 
-<p>Two prompts for Claude, ChatGPT or Gemini. The first costs out one process when you need a number for your manager. The second builds the whole scorecard and, because priorities change as you fix things, offers to re-score it every quarter on a schedule so you don't have to remember.</p>
+<p>This prompt for Claude, ChatGPT or Gemini lists every process in your responsibilities, scores each one exactly like the worked example above, and ranks them. Because priorities change as you fix things, it finishes by offering to re-score your list every quarter on a schedule, so you don't have to remember.</p>
 
 <blockquote class="paul-prompt-box" style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
-<strong>📋 PAUL's Prompt (Process Cost Calculator)</strong>
-<p>Use it on one process at a time, then put the number in front of your manager.</p>
+<strong>📋 PAUL's Prompt (Responsibilities Scorecard)</strong>
+<p>Block out 30 minutes, answer its questions honestly, and take your top process to your manager.</p>
 
 <details style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; margin: 1rem 0;">
   <summary style="cursor: pointer; font-weight: 700; color: #1f3a7d;">📋 See Full Prompt (Click to Expand)</summary>
-  <p class="paul-prompt">You're my process improvement coach. Help me work out what ONE process really costs us.
+  <p class="paul-prompt">You're my process improvement coach. Help me score every process I'm responsible for and decide which to fix first.
 
-Interview me one question at a time:
-1. What's the process, step by step? (e.g. "entering supplier bills into Xero")
-2. How often does it run (daily, weekly, monthly)?
-3. How long does each run take, and how many people are involved?
-4. What's a rough hourly cost for those people? If I'm not sure, estimate it from their salary and add about 25% for super and on-costs.
-5. What goes wrong when it's late or wrong (late fees, errors, rework, unhappy customers or staff)? Estimate a yearly dollar cost.
-6. Does this process hold back income? (e.g. fewer billable or care hours because staff are stuck on admin.) Estimate the income it could unlock.
-7. Who uses the output, and what decision does it change? If nobody can say, flag it.
+Step 1: Interview me to list every process in my responsibilities. Ask me to brain-dump everything I do daily, weekly, monthly, quarterly and yearly, then ask follow-ups until we've got them all.
 
-Then give me:
-1. Hours per year, and the dollar cost of those hours.
-2. The yearly cost of errors and delays, and any income it's holding back.
-3. The total yearly value of fixing it, in one line I could say to my manager.
-4. How effective it is today (does it move a number that matters?) and how efficient it is.
-5. The 3 most likely ways to improve it (stop, simplify, automate or hand off), and how many hours each could save.
+Step 2: For each process, ask me (one process at a time, keep it quick):
+- How often it runs and how long each run takes
+- Who uses the output and what decision it changes
+- What goes wrong when it's late or wrong (errors, rework, late fees) and a rough yearly cost
+- Whether it holds back income (e.g. billable or care hours lost to admin)
 
-Show your working so I can check the maths.</p>
-</details>
+Step 3: Ask me for my hourly cost, or estimate it from my salary plus about 25% for super and on-costs.
 
-<button type="button" class="paul-copy">📋 Copy prompt</button>
-</blockquote>
+Step 4: Score every process like this:
+- Cost a year = (hours a year x hourly cost) + error and delay costs + income held back
+- Ease to fix, 1 to 5 (1 = big system project, 5 = a rule, template or AI prompt could fix it this week), with one line on why
+- Score = cost a year x ease
 
-<blockquote class="paul-prompt-box" style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; margin: 2rem 0; color: #1F3A7D; border-left: 4px solid #00FF00;">
-<strong>📋 PAUL's Prompt (Process Priority Scorecard)</strong>
-<p>Use it with your team for 30 minutes, then let it re-score each quarter.</p>
+Step 5: Show me the ranked list, highest score first, in this format for each process:
+#1 Process name
+Cost a year: [hours] hrs + [other costs] = $[total]
+Ease (1-5): [score]
+Score: [score]
+Who uses it: [answer]
 
-<details style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; margin: 1rem 0;">
-  <summary style="cursor: pointer; font-weight: 700; color: #1f3a7d;">📋 See Full Prompt (Click to Expand)</summary>
-  <p class="paul-prompt">You're my process improvement coach. Help me decide which process to fix first.
+Step 6: Flag any process nobody uses (stop it first, it's the cheapest fix) and any that should be simplified before it's automated.
 
-Step 1: Interview me to list every recurring process in my team (ask me to brain-dump, then ask follow-ups until we have them all). For each, get: how often it runs, hours per run, people involved, any costs from errors, delays or late fees, any income it holds back (e.g. billable or care hours lost to admin), and who uses the output.
+Step 7: For my top 3, tell me the first practical step to fix each, whether Claude or an AI agent could run it (and on what schedule), what I must still check, and a realistic estimate of hours saved and errors avoided.
 
-Step 2: Ask me for one blended hourly cost for the team (or estimate it from salaries plus about 25% on-costs).
-
-Step 3: Build a scorecard table with: process, who uses the output, hours per year, time cost per year ($), other costs and income held back per year ($), total value of fixing it per year ($), ease to fix (1 = hard, 5 = easy, with one line on why), and priority score (total value x ease).
-
-Step 4: Rank by priority score. For the top 3, suggest the first practical step to fix each, whether Claude or an AI agent could run it (and on what schedule), what a person must still check, and a realistic estimate of hours saved and errors avoided.
-
-Step 5: Flag any process nobody uses (stop it, the cheapest fix of all), and any that should be simplified BEFORE it's automated.
-
-Step 6: Ask me if I want this re-scored on a schedule (e.g. the first Monday of each quarter), so the list stays current as we fix things. If yes, save the scorecard and my answers so future runs only ask what's changed. Set up the scheduled task if you can; if you can't, tell me the simplest way to schedule it with the tools I have.
+Step 8: Ask me if I want this re-scored on a schedule (e.g. the first Monday of each quarter). If yes, save my list and answers so future runs only ask what's changed. Set up the scheduled task if you can; if you can't, tell me the simplest way to schedule it with the tools I have.
 
 Show your working so I can check the maths.</p>
 </details>

@@ -1,5 +1,50 @@
 [
   {
+    "id": 12,
+    "filename": "012_upload_bank_statement_to_chatgpt_safely.md",
+    "title": "Is It Safe to Upload Your Bank Statement to ChatGPT? A Privacy-Safe Way to Budget With AI",
+    "slug": "is-it-safe-to-upload-your-bank-statement-to-chatgpt-a-privacy-safe-way-to-budget-with-ai",
+    "date": "2026-11-28",
+    "updated": "2026-11-28",
+    "excerpt": "Uploading a raw bank statement to ChatGPT shares more than you think. Here's how Australians can budget with AI without handing over their personal details.",
+    "seoTitle": "Is It Safe to Upload Bank Statements to ChatGPT? (AU)",
+    "metaDescription": "Is it safe to upload your bank statement to ChatGPT? Not as-is. A Chartered Accountant's privacy-safe way for Australians to budget with AI, step by step.",
+    "heroImage": "/blog/bank-statement-ai-hero.jpg",
+    "categories": [
+      "Personal Finance"
+    ],
+    "tags": [
+      "ChatGPT",
+      "AI Budgeting",
+      "Privacy",
+      "Bank Statements",
+      "Claude",
+      "Budgeting"
+    ],
+    "faq": [
+      {
+        "q": "Is it safe to upload my bank statement to ChatGPT?",
+        "a": "Not as-is. A raw statement includes your name, address, BSB, account number and the names of people you pay. Export your transactions as a spreadsheet, delete the identifying details, turn off model training in the AI's settings, and only then share the numbers."
+      },
+      {
+        "q": "Can I connect my Australian bank account to ChatGPT?",
+        "a": "Not through ChatGPT's own finance feature. OpenAI's Finances feature, which links bank accounts, has only been announced for users in the U.S. Be very wary of any third-party site that asks for your internet banking login to connect your bank to an AI."
+      },
+      {
+        "q": "How do I use ChatGPT to budget without sharing personal information?",
+        "a": "Download your transactions as a CSV, keep only the date, description and amount columns, replace people's names with something generic, and paste in the cleaned data or just your category totals. Then ask the AI to interview you one question at a time and build the budget from your answers."
+      },
+      {
+        "q": "What should I never share with ChatGPT or other AI chatbots?",
+        "a": "Passwords, internet banking logins, full card numbers, your tax file number, your BSB and account number, ID documents, and other people's personal details. None of these are needed to build a budget."
+      },
+      {
+        "q": "Can I trust ChatGPT's budget calculations?",
+        "a": "Check them. AI tools can miscategorise transactions or make arithmetic mistakes. Make sure the category totals add back to the total of your original transactions before you rely on anything it tells you."
+      }
+    ]
+  },
+  {
     "id": 11,
     "filename": "011_ai_agents_xero_christmas_shutdown.md",
     "title": "Your Bookkeeper's on Holiday. Your AI Agents Aren't: Xero Over the Christmas Shutdown",
@@ -25,11 +70,11 @@
     "faq": [
       {
         "q": "Can AI agents do bookkeeping in Xero?",
-        "a": "Yes. Connected to Xero, an AI agent can code bank transactions, enter bills, draft invoice reminders, prepare pay runs and write management report commentary. A person still needs to review the work, approve payments and lodge with the ATO."
+        "a": "Yes. Connected to Xero, an AI agent can code bank transactions, enter bills, send invoice reminders, prepare pay runs and write management report commentary, on a schedule. A person still needs to review the work, approve payments and lodge with the ATO."
       },
       {
         "q": "Will AI replace bookkeepers in Australia?",
-        "a": "It's replacing the data entry part of the job fastest: coding, matching and keying. What's left is reviewing the agents' work, handling judgement calls and messy documents, approving payments and lodging BAS and STP. That needs fewer people, so the role is shrinking and changing rather than disappearing."
+        "a": "It's already replacing the core of the job: coding, matching, keying and chasing. What's left is reviewing the agents' work, judgement calls, messy documents, approving payments and lodging BAS and STP. That needs far fewer people. The role isn't disappearing overnight, but most of the jobs in it are on borrowed time."
       },
       {
         "q": "Is it safe to let an AI agent run my books over Christmas?",

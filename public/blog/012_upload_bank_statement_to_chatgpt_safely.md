@@ -113,6 +113,8 @@ faq:
 
 <p>Budgets also aren't a one-and-done job. That's why the prompt finishes by offering to set it up as a monthly check-in. A routine that runs itself takes the job off your mental to-do list. A prompt you have to remember to run is just another thing you'll forget until the next credit card statement lands.</p>
 
+<p>Only got a minute? Here's <a href="https://www.instagram.com/reel/DgNz1V3B7O5/" style="color: #1f3a7d; text-decoration: underline; text-decoration-color: #00FF00; text-decoration-thickness: 2px; font-weight: 600;">a short reel on using AI with your money</a>.</p>
+
 <h2 id="prompt">The Prompt: Let the AI Interview You</h2>
 
 <p>Paste this into ChatGPT, Claude or Copilot, then attach or paste your cleaned transactions when it asks.</p>
